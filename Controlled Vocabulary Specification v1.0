@@ -1,0 +1,1150 @@
+
+STRAUSSIAN DOCUMENTARY MEMORY
+
+CONTROLLED VOCABULARY SPECIFICATION
+Version 1.0
+
+Document Number: 000004
+Classification: Foundational Repository Specification
+Status: Final Draft for Constitutional Audit
+Authority: Establishes constitutional principles governing all controlled terminology in the Straussian Documentary Memory
+
+
+PURPOSE
+
+The Controlled Vocabulary Specification establishes the constitutional system by which every controlled term used in the Straussian Documentary Memory receives permanent identity, semantic definition, and governance.
+
+It establishes:
+
+- the constitutional principles governing semantic stability and terminology permanence;
+- the integration of controlled vocabularies with existing identifier families established in Identifier Specification v1.0 (THM, EPC, STS, ROL, LNG, OPM, HCO, QSS, VOC);
+- the distinction between Controlled Vocabulary Specification and Canonical Vocabulary Register (Specification defines rules; Register contains instances);
+- the distinction between textual labels, approved localizations, implementation representations, and canonical identifiers;
+- the canonical vocabulary record structure preserving each term's definition, provenance, and lifecycle;
+- the governance authority responsible for approving, revising, and deprecating controlled terms;
+- the vocabulary proposal, review, and approval process;
+- the distinction between editorial clarification, expanded guidance, and substantive semantic revision;
+- synonym governance ensuring one canonical meaning per governed concept;
+- multilingual and transcultural semantic stability;
+- versioning protocols for controlled terms;
+- the ontology–vocabulary boundary ensuring vocabulary remains subordinate to Documentary Ontology v1.1;
+- integration with Identifier Specification v1.0 and Relationship Specification v1.0;
+- forward compatibility for future constitutional specifications.
+
+This document does not:
+
+- populate the Canonical Vocabulary Register (that is a separate governed artifact);
+- enumerate all controlled concepts in use;
+- provide a glossary or terminology dictionary;
+- prescribe implementation-specific labels, user-interface terminology, or computational representations;
+- implement controlled vocabularies in software;
+- create domain-specific vocabularies (e.g., medical, legal, or scientific terms);
+- design user interfaces or query languages;
+- prescribe data formats or storage structures.
+
+Those matters belong to Register governance, implementations, localization efforts, or domain-specific extensions.
+
+The Controlled Vocabulary Specification answers one question:
+
+How are controlled concepts permanently identified through existing identifier families, semantically stabilized, governed, versioned, and maintained to ensure meaning remains stable across decades of technological change?
+
+
+I. CONSTITUTIONAL FOUNDATION AND DEPENDENCY
+
+
+This specification integrates with and is subordinate to three preceding constitutional specifications:
+
+**Documentary Ontology v1.1** (Document Number 000001)
+
+Defines what entities exist in the Repository (Works, Witnesses, Claims, Interpretations, Repository Artifacts, etc.). The Ontology is the constitutional foundation describing existence itself.
+
+**Identifier Specification v1.0** (Document Number 000002)
+
+Defines how entities receive permanent, unique identifiers and how identifier families are established. This Specification uses the nine identifier families created in Identifier Specification v1.0.
+
+**Relationship Specification v1.0** (Document Number 000003)
+
+Defines how entities relate to one another through canonical predicates and relationship assertions. Relationship Specification establishes Evidence Types and integration points where controlled vocabularies apply.
+
+**Controlled Vocabulary Specification v1.0** (This document)
+
+Defines how terminology used to classify, describe, and refer to entities is permanently governed. Vocabulary governance is subordinate to ontology, identifiers, and relationships.
+
+The dependency order is constitutional:
+
+```
+Documentary Ontology v1.1
+  ↓
+Identifier Specification v1.0
+  ↓
+Relationship Specification v1.0
+  ↓
+Controlled Vocabulary Specification v1.0
+  ↓
+Canonical Vocabulary Register (governed artifact)
+  ↓
+Implementations, localizations, and domain extensions
+```
+
+A **controlled concept** is a term whose semantic meaning is officially defined by the Repository and whose usage is constitutionally governed to prevent semantic drift.
+
+Controlled concepts use identifier families from Identifier Specification v1.0:
+
+- **THM** — Themes (conceptual domains, inquiry topics)
+- **EPC** — Epistemic Classifications (certainty, acceptance status)
+- **STS** — Status (lifecycle, review, revision, administrative states)
+- **ROL** — Roles (functions, positions)
+- **LNG** — Languages (natural language designations)
+- **OPM** — Operation Modes (operational states)
+- **HCO** — Hermeneutic Completeness (interpretation sufficiency)
+- **QSS** — Question Status (question lifecycle)
+- **VOC** — Vocabulary (meta-vocabulary governance)
+
+Not all Repository terminology is controlled. Uncontrolled terminology may vary freely across implementations, localizations, and user interfaces. Only terms whose semantic stability is constitutionally necessary receive identifier family assignment and governance.
+
+
+II. ONTOLOGY–VOCABULARY BOUNDARY
+
+
+### II.1 ONTOLOGY DETERMINES EXISTENCE
+
+Documentary Ontology v1.1 determines what entities exist.
+
+The Ontology defines entity classes (Work, Expression, Witness, Claim, Interpretation, etc.) and their properties. These are matters of constitutional existence—what is permitted to exist in the Repository.
+
+### II.2 VOCABULARY DETERMINES GOVERNED TERMINOLOGY
+
+Controlled Vocabulary Specification v1.0 determines how entities are classified, described, and referred to using governed terminology.
+
+Vocabulary defines standardized terms whose meanings are stable across implementations, languages, and time.
+
+The Specification does NOT create new entity classes. It does NOT change what exists. It provides standardized terminology for existing entities.
+
+### II.3 A CONTROLLED TERM IS NOT AN ENTITY CLASS
+
+The registration of a controlled concept (e.g., "natural right" as THM-000000089) does NOT create a new entity class.
+
+The concept "natural right" is a Theme (a classification value), not an entity.
+
+If a new entity class is necessary (e.g., "a conceptual entity representing natural right"), that requires amendment to Documentary Ontology v1.1.
+
+### II.4 VOCABULARY DOES NOT BYPASS ONTOLOGY GOVERNANCE
+
+Implementations may not use vocabulary additions to circumvent ontology governance.
+
+If an implementation discovers that existing entity classes and vocabulary terms are insufficient, the issue must be raised through:
+
+1. Amendment to Documentary Ontology v1.1 (if new entity classes are needed), or
+2. Amendment to this Specification (if new governing rules or identifier families are needed), or
+3. Register governance (if new controlled concepts within existing families are needed), or
+4. Implementation-local extensions (if the need is not constitutionally general).
+
+### II.5 DECISION HIERARCHY FOR UNCERTAIN CASES
+
+Where uncertainty exists about whether something should be a class, role, status, property, relationship, or controlled concept, this hierarchy applies:
+
+1. **Is it a kind of entity that must exist independently?** → Entity class (governed by Ontology)
+2. **Is it a functional designation or position within existing entities?** → Role (ROL family vocabulary)
+3. **Is it a temporary or volatile state of an entity?** → Status (STS family vocabulary)
+4. **Is it a relationship between entities?** → Predicate (governed by Relationship Specification)
+5. **Is it a classification or descriptor used across multiple entities?** → Controlled vocabulary (governed by this Specification)
+
+Example:
+
+- "Author" could be a Role (ROL-000000001) or an entity class. It is a Role because authorship is a function an Agent may bear relative to a Work. The Agent still exists whether or not it bears the Author role.
+- "Disputed" is a Status (STS-000000042) because it is a temporary classification of an entity's validity or acceptance, not a permanent property.
+- "Natural Right" is a Theme (THM-000000089) because it is a conceptual domain used to classify and organize inquiry, not an entity itself.
+
+### II.6 VOCABULARY GOVERNANCE RESPECTS ONTOLOGY
+
+All vocabulary governance proceeds within the constraints established by Documentary Ontology v1.1.
+
+If an ontology revision is necessary, the constitutional authority must first amend the Ontology, then assess whether vocabulary governance changes are required.
+
+Vocabulary governance never precedes or drives ontology governance. The Ontology governs.
+
+
+---
+
+## III. GOVERNING PRINCIPLES
+
+
+### III.1 SEMANTIC STABILITY
+
+The semantic meaning of a controlled concept shall remain stable across:
+
+- Decades of technological evolution;
+- Migrations between software systems and databases;
+- Changes in graph-database implementations (Neo4j, RDF, property graphs);
+- Translations into multiple languages;
+- Future specifications and extensions;
+- Different implementations and platforms.
+
+A controlled concept defined today shall mean the same thing fifty years from now, even if the words used to express it change and even if technological systems evolve radically.
+
+
+### III.2 PERMANENT CONTROLLED IDENTIFIERS
+
+Every controlled concept receives a permanent identifier using an established identifier family from Identifier Specification v1.0.
+
+Examples:
+
+- THM-000000001 (Theme concept)
+- EPC-000000001 (Epistemic Classification)
+- STS-000000001 (Status)
+- ROL-000000001 (Role)
+
+A controlled identifier is:
+
+- Unique within its identifier family;
+- Never reused;
+- Never reassigned;
+- Never changed;
+- Immutable in all Repository systems and implementations;
+- Independent of textual labels, aliases, or translations;
+- Permanently auditable.
+
+An identifier, once assigned to a controlled concept, identifies that concept forever.
+
+
+### III.3 ONE CONCEPT. ONE IDENTITY. ONE MEANING.
+
+The Repository seeks to assign one identifier to one concept within each family.
+
+Before assignment, the Vocabulary Governance Authority shall test whether the candidate concept already exists as a different identifier.
+
+If duplicates are discovered after assignment, neither is deleted or reassigned. The distinction is documented through lifecycle events, relationship assertions, or formal deprecation. Neither identifier is reused.
+
+
+### III.4 IDENTIFIER VERSUS LABEL
+
+A controlled identifier (THM-xxxxxxx, EPC-xxxxxxx, etc.) is distinct from:
+
+- Preferred textual labels (English, Italian, German, etc.);
+- Approved localizations or translations;
+- Aliases or alternative names;
+- Implementation representations (database values, Neo4j properties, RDF URIs, JSON-LD field names);
+- User-interface presentations.
+
+The identifier is the permanent designation.
+
+Labels, localizations, implementations, and interface presentations derive from the identifier but may change without altering the concept's identity.
+
+
+### III.5 CANONICAL LABELS AND APPROVED LOCALIZATIONS ARE GOVERNED
+
+The Repository designates:
+
+- One **preferred label** per concept in English;
+- One **preferred localization** per concept in each major language (Italian, German, French, etc.);
+- Any number of **non-preferred aliases** for human reference.
+
+Preferred labels and approved localizations are canonical terminology, governed through this Specification, and recorded in the Canonical Vocabulary Register.
+
+These labels may be revised through the vocabulary revision process, but only with formal governance.
+
+**User-interface presentation, implementation-specific terminology, and computational representations are NOT governed.**
+
+Implementations may present or represent controlled concepts in locally optimal ways (e.g., database enum names, Neo4j labels, API field names), provided they preserve the underlying identifier and its semantic meaning.
+
+Implementation representations are not canonical and are governed by technical specifications and implementation choices, not by this constitutional Specification.
+
+
+### III.6 VOCABULARY CLOSURE
+
+Only concepts registered in the Canonical Vocabulary Register may be used as canonical controlled terms.
+
+New controlled concepts require formal proposal, review, and approval through governance of the Canonical Vocabulary Register.
+
+New identifier families require formal amendment to Identifier Specification v1.0.
+
+Implementations may use ad hoc terms locally, but those do not become canonical unless formally registered through vocabulary governance.
+
+
+### III.7 MULTILINGUAL SEMANTIC STABILITY
+
+Controlled concepts remain stable across languages.
+
+A concept identified by THM-xxxxxxx or EPC-xxxxxxx has the same semantic meaning in English, Italian, German, French, and any other language, even if the preferred localizations differ.
+
+Linguistic translation must preserve semantic intent. Translation differences do not create new identifiers; they are documented as approved localizations of the same concept.
+
+No language's preference for a concept overrides the canonical identifier.
+
+
+### III.8 GOVERNANCE AUTHORITY
+
+All controlled vocabulary decisions (approval, revision, deprecation) are made by the Vocabulary Governance Authority, acting under this Specification.
+
+The Authority:
+
+- Maintains the Canonical Vocabulary Register;
+- Reviews new concept proposals;
+- Approves vocabulary additions, revisions, and deprecations;
+- Proposes amendments to Identifier Specification v1.0 when new identifier families are necessary;
+- Ensures no two concepts with the same identifier exist;
+- Enforces semantic stability across implementations;
+- Preserves complete audit history;
+- Manages vocabulary versioning;
+- Oversees multilingual equivalence and approved localizations;
+- Coordinates with Predicate Governance, Identifier Governance, and other constitutional authorities;
+- Respects the ontology–vocabulary boundary and defers to Documentary Ontology v1.1 when necessary.
+
+
+---
+
+## IV. CANONICAL VOCABULARY RECORD
+
+
+Every controlled concept entry in the Canonical Vocabulary Register shall include the following fields:
+
+| Field | Description | Canonical? |
+|-------|-------------|-----------|
+| **Identifier** | Unique identifier (THM-xxxxxxx, EPC-xxxxxxx, etc.); never changed, never reused | Yes |
+| **Identifier Family** | Family designation (Theme, Epistemic, Status, Role, Language, Operation, Hermeneutic, Question, Vocabulary) | Yes |
+| **Preferred English Label** | Primary English textual label for human readability and reference | Yes |
+| **Approved Localizations** | Preferred labels in other major languages (Italian, German, French, etc.) | Yes |
+| **Aliases** | Alternative English terms or common references (not separately identified; for human clarification only) | No |
+| **Formal Definition** | Precise semantic definition; what the concept means and how it is used | Yes |
+| **Scope Note** | Context and boundaries; explicit statement of what it does and does NOT include; exclusions | Yes |
+| **Usage Guidance** | When and how the concept should be applied; common applications; when NOT to use it | Yes |
+| **Cardinality and Co-occurrence** | For multi-valued or combinable concepts, rules on how many instances may co-occur; exclusivity or compatibility rules | Yes |
+| **Related Concepts** | Other identifiers in same or other families related by hierarchy, opposition, or semantic proximity | No |
+| **Governed Entity Classes** | Which ontology classes (per Documentary Ontology v1.1) this concept may classify or describe | Yes |
+| **Relationship Integration** | How this concept integrates with Relationship Specification v1.0 (if applicable); example assertions | Yes |
+| **Version History** | v1.0 definition and approval status; subsequent revisions with dates, nature of change, and responsible authority | Yes |
+| **Deprecation Status** | Active, Deprecated (with reason, date, and successor if applicable), or Withdrawn | Yes |
+| **Date Defined** | Date identifier was approved and assigned; assigned upon formal approval only | Yes |
+| **Date Last Revised** | Most recent revision date; assigned upon revision only | Yes |
+| **Responsible Authority** | Vocabulary Governance Authority or delegated body | Yes |
+| **Localization Guidance** | Non-normative guidance for translation into other languages; notes on cultural equivalence | No |
+| **Implementation Notes** | Non-normative, advisory guidance for software implementations; suggestions for database representation, Neo4j properties, API names, etc. | No |
+
+Fields marked "Canonical? Yes" are authoritative and governed through this Specification.
+
+Fields marked "Canonical? No" are advisory and not subject to constitutional governance.
+
+
+---
+
+## V. STATUS AND LIFECYCLE CLASSIFICATION
+
+
+### V.1 DISTINCT STATUS CATEGORIES WITHIN STS FAMILY
+
+**Lifecycle status, review/dispute status, revision status, and identifier-allocation status are constitutionally distinct.**
+
+They must NOT be collapsed into one undifferentiated vocabulary.
+
+The Repository requires differentiation across four status dimensions, all governed within the **STS (Status)** identifier family:
+
+1. **Lifecycle Status**: Primary status of an entity's existence and validity in the Repository (Active, Superseded, Withdrawn, Merged, Split, Tombstoned, etc.)
+
+2. **Review/Dispute Status**: Whether an entity's validity, accuracy, or interpretation is questioned (Disputed, Contested, Under Review, Confirmed, etc.)
+
+3. **Revision Status**: Whether an entity has undergone revision or correction (Revised, Corrected, Clarified, etc.), independent of lifecycle transitions.
+
+4. **Identifier-Allocation Status**: Administrative tracking of identifier reservations (Reserved, Assigned, Void, etc.). These apply to identifier-allocation records, not to admitted entities.
+
+Each category uses STS identifiers but is semantically distinct. Concepts within different status categories shall be clearly labeled and documented as separate in the Canonical Vocabulary Register.
+
+This preserves the Repository's ability to track multiple, non-exclusive status dimensions (e.g., an entity can be ACTIVE, DISPUTED, and REVISED simultaneously).
+
+
+### V.2 LIFECYCLE STATUS FOR ADMITTED ENTITIES
+
+Most admitted entities shall have exactly one current **Lifecycle Status**, such as:
+
+- Active (entity is current and canonical)
+- Superseded (replaced by another entity)
+- Withdrawn (determined to be invalid or erroneous)
+- Merged (unified with another entity)
+- Split (determined to contain multiple entities)
+- Tombstoned (deprecated but preserved)
+
+An entity's Lifecycle Status describes its standing in the Repository.
+
+
+### V.3 IDENTIFIER-ALLOCATION STATUS FOR ALLOCATION RECORDS
+
+Identifier-allocation records may have exactly one **Allocation Status**, such as:
+
+- Reserved (identifier number held but not yet assigned to a concept)
+- Assigned (identifier assigned to a concept)
+- Void (reserved identifier abandoned and marked as non-reusable)
+
+These statuses describe identifier-reservation records, not admitted entities themselves.
+
+An entity admitted to the Repository is not VOID; an unassigned identifier reservation may be marked VOID.
+
+
+### V.4 STATUS CATEGORY FIELD IN CANONICAL VOCABULARY RECORD
+
+Every STS-family concept includes a **Status Category** field:
+
+```
+STS-000000001
+  Preferred English Label: "active"
+  Status Category: "lifecycle"
+  Formal Definition: [...]
+  
+STS-000000015
+  Preferred English Label: "disputed"
+  Status Category: "review/dispute"
+  Formal Definition: [...]
+
+STS-000000030
+  Preferred English Label: "revised"
+  Status Category: "revision"
+  Formal Definition: [...]
+
+STS-000000050
+  Preferred English Label: "void"
+  Status Category: "identifier-allocation"
+  Formal Definition: [...]
+```
+
+This ensures implementations and users can distinguish among status dimensions.
+
+### V.5 CARDINALITY OF STATUS ASSIGNMENTS
+
+For admitted entities:
+
+- **Exactly one current Lifecycle Status** from STS family (Active, Superseded, Withdrawn, Merged, Split, Tombstoned, etc.)
+- **Zero or more Review/Dispute Statuses** from STS family (Disputed, Contested, Confirmed, etc.)
+- **Zero or more Revision Statuses** from STS family (Revised, Corrected, Clarified, etc.)
+
+For identifier-allocation records:
+
+- **Exactly one Allocation Status** (Reserved, Assigned, or Void)
+
+The Canonical Vocabulary Record for each status concept shall specify its cardinality and co-occurrence rules.
+
+
+---
+
+## VI. EPISTEMIC CLASSIFICATION VOCABULARY
+
+
+### VI.1 EPISTEMIC CLASSIFICATION FAMILY (EPC)
+
+The EPC identifier family governs epistemic classifications: statuses reflecting certainty, acceptance, or evidentiary basis of claims, attributions, and relationship assertions.
+
+This Specification recognizes and preserves the established **Repository Epistemic Hierarchy** from prior development:
+
+- **Documented Finding**: Direct, recoverable documentary evidence; highest evidentiary status
+- **Supported Inference**: Logical inference from documented findings; well-supported but not directly documented
+- **Working Hypothesis**: Proposed interpretation lacking full support; useful for inquiry but tentative
+- **Unresolved Question**: Genuinely open question; no consensus or adequate evidence
+- **Constitutional Principle**: Foundational assumption or framework principle (e.g., "relationships require evidence")
+
+This Specification PRESERVES and INCORPORATES this hierarchy into EPC governance. New EPC concepts must be reconciled with this hierarchy or formally justify their addition.
+
+### VI.2 REMOVAL OF AUTHORSHIP ATTRIBUTES FROM EPC
+
+**ANONYMOUS and PSEUDONYMOUS are NOT Epistemic Classifications.**
+
+These are authorship-designation attributes, not degrees of certainty.
+
+They are modeled through:
+
+1. **Roles (ROL family)**: Agents may bear roles with designations. Examples: "author (anonymous)", "author (pseudonymous)", "author (named)".
+
+2. **Authorship Relationship Assertions**: The predicate AUTHORED_BY (from Relationship Specification v1.0) connects a Work to an Agent. The relationship assertion may carry Epistemic Classifications indicating certainty.
+
+3. **Future Attribution Status (STS family)**: If constitutionally necessary, a separate status vocabulary in STS family may govern attribution-specific attributes. This is not imposed here.
+
+Example:
+
+```
+WORK --authored_by--> AGENT
+  epistemic_status: EPC-000000002 (supported inference)
+  [The authorship attribution is well-supported but not definitively documented]
+
+AGENT role: ROL-000000001 (author)
+  attribution: "anonymous" or "pseudonymous" (as metadata, not as controlled concept)
+  [The agent is designated as anonymous in authorship]
+```
+
+This preserves the distinction between:
+- Certainty about who authored (Epistemic Classification)
+- Identity of the author (Role assignment)
+- Whether the author is named or anonymous (Attribution designation)
+
+---
+
+## VII. EVIDENCE TYPE
+
+
+### VII.1 EVIDENCE TYPE IS NOT A CONTROLLED VOCABULARY FAMILY
+
+Evidence Type is defined in **Relationship Specification v1.0, Section IV.2**, as a property of Relationship Assertions.
+
+Evidence Type is **NOT a controlled vocabulary family in this Specification.**
+
+Instead, Evidence Type is a **relationship-assertion property** governed by Relationship Specification v1.0.
+
+Relationship Specification v1.0 defines five Evidence Type values:
+
+- DOCUMENTARY
+- PROCEDURAL
+- COMPARATIVE
+- STRUCTURAL
+- REPOSITORY
+
+These are categorical constants with specific meanings tied to Relationship Assertion validation. They are constants in the Relationship Specification, not entities in the Controlled Vocabulary Register.
+
+### VII.2 EVIDENCE TYPE IS MUTUALLY EXCLUSIVE
+
+Evidence Types are mutually exclusive. A single Relationship Assertion has exactly one Evidence Type.
+
+However, a claim or entity may be supported by multiple Relationship Assertions with different Evidence Types:
+
+```
+CLAIM
+  ├─ supported by RELATIONSHIP-A (Evidence Type: DOCUMENTARY)
+  ├─ supported by RELATIONSHIP-B (Evidence Type: PROCEDURAL)
+  └─ supported by RELATIONSHIP-C (Evidence Type: COMPARATIVE)
+
+The claim is supported by three relationships with three different evidence types.
+```
+
+Cardinality rule: **One Relationship Assertion = One Evidence Type.**
+
+This is governed by Relationship Specification v1.0, not by Controlled Vocabulary Specification v1.0.
+
+
+---
+
+## VIII. VOCABULARY GOVERNANCE
+
+
+### VIII.1 VOCABULARY GOVERNANCE AUTHORITY
+
+Vocabulary governance is the responsibility of the Repository's Constitutional Authority, acting through a designated **Vocabulary Governance Authority (VGA)**.
+
+The VGA:
+
+- Maintains the Canonical Vocabulary Register;
+- Reviews new concept proposals;
+- Approves vocabulary additions, revisions, and deprecations;
+- Proposes amendments to Identifier Specification v1.0 when new identifier families are necessary;
+- Ensures no two concepts with the same identifier exist;
+- Enforces semantic stability across implementations;
+- Preserves complete audit history;
+- Manages vocabulary versioning;
+- Oversees multilingual equivalence and approved localizations;
+- Coordinates with Predicate Governance, Identifier Governance, Ontology Governance, and other constitutional authorities;
+- Respects the ontology–vocabulary boundary, deferring to Documentary Ontology v1.1 when ontology questions arise.
+
+
+### VIII.2 NEW VOCABULARY PROPOSAL PROCESS
+
+A new controlled concept may be proposed when:
+
+1. **Semantic Necessity**: The Repository's constitutional or operational governance requires a term whose meaning must be permanently stable and protected from semantic drift.
+
+2. **Uniqueness**: The proposed concept is not adequately captured by existing controlled vocabularies; it represents a genuinely new semantic domain or distinction.
+
+3. **Family Assignment**: The proposal identifies which existing identifier family (THM, EPC, STS, ROL, LNG, OPM, HCO, QSS, VOC) the concept belongs to. If no existing family is appropriate, the proposal includes formal justification for a new family and requests amendment to Identifier Specification v1.0.
+
+4. **Governance Requirement**: The concept must be used across multiple systems, implementations, or contexts where semantic consistency is constitutionally necessary. Local or implementation-specific terms do not warrant controlled vocabulary status.
+
+5. **Formal Specification**: The proposal includes:
+   - Preferred English label;
+   - Approved localizations in major languages;
+   - Aliases;
+   - Formal definition;
+   - Scope note (what it includes and excludes);
+   - Usage guidance;
+   - Cardinality and co-occurrence rules;
+   - Related concepts;
+   - Permitted values (where applicable);
+   - Integration with ontology entities (per Documentary Ontology v1.1);
+   - Integration with relationships (per Relationship Specification v1.0, if applicable);
+   - Justification for controlled status.
+
+New proposals are formally reviewed by the VGA and approved through governance of the Canonical Vocabulary Register.
+
+No concept becomes controlled vocabulary until this process is complete.
+
+
+### VIII.3 GOVERNANCE WITHOUT SPECIFICATION AMENDMENT
+
+New controlled concepts are approved and registered in the Canonical Vocabulary Register through standard vocabulary governance procedures (VIII.2).
+
+**Amendment to this Specification is required only when:**
+
+- Governing rules, canonical record requirements, or approval procedures change;
+- New identifier families are necessary (which requires amendment to Identifier Specification v1.0);
+- Constitutional principles or boundaries change.
+
+**Amendment to this Specification is NOT required for:**
+
+- Addition of new Themes (THM-xxxxxxx)
+- Addition of new Epistemic Classifications (EPC-xxxxxxx)
+- Addition of new Statuses (STS-xxxxxxx)
+- Addition of new Roles (ROL-xxxxxxx)
+- Addition of new Languages (LNG-xxxxxxx)
+- Addition of new Operation Modes (OPM-xxxxxxx)
+- Addition of new Hermeneutic Completeness values (HCO-xxxxxxx)
+- Addition of new Question Statuses (QSS-xxxxxxx)
+- Addition of new Vocabulary meta-concepts (VOC-xxxxxxx)
+
+These are ordinary Register entries, governed through the Canonical Vocabulary Register, not through amendment to this constitutional Specification.
+
+The Specification establishes the rules. The Register implements them.
+
+
+### VIII.4 VOCABULARY REVISION PROCESS
+
+Revisions to existing controlled vocabularies follow this process:
+
+1. **Classification**: The proposed revision is classified as:
+   - **Editorial clarification**: Refining explanation, scope, or usage guidance without changing semantic intent
+   - **Expanded guidance**: Adding usage examples, case studies, or localization notes
+   - **Substantive semantic revision**: Materially changing the concept's definition, scope, or co-occurrence rules
+
+2. **Impact Assessment**: If substantive, the impact on existing Repository uses is assessed. Are existing relationship assertions, entity classifications, and interpretations still valid?
+
+3. **Backward Compatibility Review**: Can the revision be applied to the existing identifier while maintaining logical consistency with historical uses? Or does substantive revision require a new identifier?
+
+4. **Formal Documentation**: The revision is formally documented with rationale, impact analysis, and migration guidance.
+
+5. **Authority Approval**: The VGA reviews and approves the revision.
+
+6. **Versioning**: The revision is recorded in the Vocabulary Version Record and Canonical Vocabulary Register is updated.
+
+7. **Publication**: Updated Register entries are formally published with clear indication of what changed.
+
+
+### VIII.5 VOCABULARY DEPRECATION
+
+A controlled concept may be deprecated when:
+
+- It is discovered to be erroneous or redundant;
+- It is replaced by improved or more precise concepts;
+- Production experience shows it should not have been controlled;
+- Semantic innovations make it obsolete;
+- A new identifier family or reorganization makes it unnecessary.
+
+Deprecation process:
+
+1. **Formal Decision**: The VGA formally decides to deprecate the concept.
+
+2. **Deprecation Record**: A Vocabulary Deprecation Record is created documenting:
+   - Identifier (e.g., THM-000000042);
+   - Identifier family;
+   - Original definition;
+   - Reason for deprecation;
+   - Successor concept(s), if any;
+   - Migration guidance for existing uses;
+   - Date of deprecation;
+   - Sunset date (if applicable).
+
+3. **Migration Guidance**: Clear guidance is provided for what concept should be used for new classifications. Existing uses of the deprecated concept remain valid and auditable.
+
+4. **Permanent Recording**: The deprecated concept remains in the Canonical Vocabulary Register with deprecation status. Its identifier is never reused.
+
+5. **Transition Period**: A deprecation period (e.g., 12 months) may be announced to allow systems to migrate away from the deprecated concept.
+
+
+### VIII.6 VOCABULARY SYNONYM GOVERNANCE
+
+The Repository maintains one canonical meaning per identifier within each family.
+
+Synonymous or alternative terms are managed as follows:
+
+1. **Preferred English Label**: One primary English textual label for each controlled concept.
+
+2. **Approved Localizations**: Preferred labels in major languages (Italian, German, French, etc.). These are canonical terminology, governed through this Specification.
+
+3. **Aliases**: Alternative English terms documented in the Canonical Vocabulary Record for human reference. Aliases are non-canonical; they do not receive separate identifiers.
+
+4. **Forbidden Synonyms**: Terms that are semantically equivalent to existing controlled concepts shall not become new controlled concepts without explicit VGA decision and formal redefinition.
+
+5. **Implementation Aliases**: Software implementations may use implementation-specific names (database enum values, JSON field names, Neo4j property values). These are NOT controlled vocabulary; they are technical representations. The identifier is canonical; implementations derive from it.
+
+
+---
+
+## IX. VERSIONING AND PERMANENCE
+
+
+### IX.1 CONTROLLED IDENTIFIERS ARE PERMANENT
+
+Every controlled identifier assigned in this Specification is permanent.
+
+An identifier (THM-xxxxxxx, EPC-xxxxxxx, etc.), once assigned, shall never be changed, reassigned, recycled, or reused.
+
+The identifier and the controlled concept are permanently bound.
+
+
+### IX.2 CONTROLLED IDENTIFIERS ARE NEVER REUSED
+
+If a concept is deprecated, removed from canonical use, or discovered to be erroneous, its identifier is marked as deprecated or withdrawn, but the number is never reassigned.
+
+A deprecated concept retains its identifier permanently.
+
+Future concepts in the same family receive new, sequential identifier numbers.
+
+Sequence gaps are permitted and carry no meaning.
+
+
+### IX.3 DEPRECATED CONCEPTS REMAIN RECORDED
+
+Deprecated concepts are not deleted from the Canonical Vocabulary Register.
+
+They remain permanently recorded with:
+
+- Original identifier;
+- Original definition;
+- Reason for deprecation;
+- Date of deprecation;
+- Successor concept (if any);
+- Migration guidance for existing uses.
+
+This preserves complete audit history and enables retroactive understanding of how the Repository's semantic vocabulary evolved.
+
+
+### IX.4 VOCABULARY DEFINITIONS MAY BE REVISED
+
+A vocabulary concept definition may be revised to:
+
+- Clarify meaning without changing semantic intent;
+- Expand explanatory guidance, examples, or localization notes;
+- Correct errors in the original definition;
+- Refine scope, usage guidance, or co-occurrence rules based on production experience.
+
+All revisions are recorded with version history:
+
+- Original definition (preserved);
+- Revision date;
+- Nature of revision (editorial, guidance, substantive);
+- Responsible authority;
+- Impact assessment (whether existing uses require re-evaluation).
+
+
+### IX.5 CONTROLLED IDENTIFIERS THEMSELVES ARE IMMUTABLE
+
+A vocabulary concept definition may be revised, but the identifier never changes.
+
+The identifier serves as the permanent reference point.
+
+Systems refer to concepts by identifier, not by textual label.
+
+If a concept's preferred English label changes (e.g., "documentary" becomes "source-based" for clarity), the identifier remains the same:
+
+```
+THM-000000001 (identifier: permanent)
+  v1.0 preferred English label: "documentary evidence"
+  v1.1 preferred English label: "source-based evidence" (editorial revision for clarity)
+  meaning: unchanged
+```
+
+Both labels are valid; the identifier is canonical.
+
+
+### IX.6 SUBSTANTIVE SEMANTIC CHANGES REQUIRE NEW IDENTIFIERS
+
+If a controlled concept's semantic meaning must change fundamentally, a new identifier is created rather than revising the old one.
+
+Example:
+
+```
+THM-000000001 (original): "Documentary evidence inquiry"
+  [Later determined to be insufficiently precise in scope]
+THM-000000089 (new): "Source-based evidentiary analysis"
+THM-000000090 (new): "Textual-evidence interpretation"
+```
+
+Both old and new concepts are recorded. Uses of the old concept remain valid and auditable. The distinction is documented.
+
+This ensures historical relationships, assertions, and classifications remain valid.
+
+
+---
+
+## X. MULTILINGUAL AND TRANSCULTURAL STABILITY
+
+
+### X.1 CONTROLLED IDENTIFIERS ARE LANGUAGE-INDEPENDENT
+
+Controlled identifiers are language-independent and culture-independent.
+
+A concept identified by THM-xxxxxxx or EPC-xxxxxxx has the same semantic meaning in English, Italian, German, French, and any other language, even if the preferred labels differ.
+
+The identifier guarantees semantic stability across linguistic boundaries.
+
+
+### X.2 APPROVED LOCALIZATIONS
+
+Each controlled concept is assigned preferred labels in major languages.
+
+Example:
+
+```
+THM-000000001
+  English: "natural right"
+  Italian: "diritto naturale"
+  German: "Naturrecht"
+  French: "droit naturel"
+```
+
+All labels express the same semantic concept. Differences in localized terminology do not create new identifiers.
+
+Approved localizations are documented in the Canonical Vocabulary Register and are canonical for their respective languages. They are governed through this Specification.
+
+Additional localizations may be proposed and formally approved without creating new identifiers.
+
+
+### X.3 LINGUISTIC TRANSLATION PRESERVES INTENT
+
+Translation of approved localized labels must preserve semantic intent.
+
+Implementations must preserve the identifier across language boundaries.
+
+If no adequate localization exists in a target language, the original English label is retained until a localized term is formally proposed and approved through the VGA.
+
+Automatic machine translation of vocabulary labels is prohibited. Translations must be reviewed by language experts and approved by the VGA.
+
+
+### X.4 TRANSCULTURAL SEMANTIC STABILITY
+
+Controlled concepts remain stable across cultural contexts.
+
+A concept's semantic meaning is preserved even where cultural contexts might suggest different interpretations.
+
+Example: "Author" (ROL-xxxxxxx) means the same thing in Italian Renaissance studies and 21st-century digital culture, even though cultural understandings of authorship differ. The controlled concept is stable; cultural context and usage guidance are documented separately in scope notes or relationship integration notes.
+
+
+---
+
+## XI. MACHINE READINESS AND IMPLEMENTATION INDEPENDENCE
+
+
+### XI.1 CANONICAL VOCABULARY REGISTER IS MACHINE-READABLE
+
+The Canonical Vocabulary Register is structured to be:
+
+- Machine-readable (JSON, XML, RDF, or other formal serialization);
+- Queryable (systems can retrieve vocabulary definitions programmatically);
+- Versioned (historical versions are preserved);
+- Indexed (concepts can be discovered by family, related concepts, identifier patterns, etc.);
+- Migratable (definitions can be exported and imported across systems without loss of semantic precision).
+
+The Register serves as the authoritative source for vocabulary data used in any implementation.
+
+
+### XI.2 IDENTIFIER MAPPING, NOT REPLACEMENT
+
+Software implementations may use controlled identifiers in multiple internal representations.
+
+Each implementation derives from but does NOT replace the identifier-identified meaning.
+
+The mapping from identifier to implementation must be explicit, documented, and recoverable.
+
+Example:
+
+```
+Identifier: THM-000000001 (natural right)
+  ├─ Database enum: "nat_right"
+  ├─ Neo4j label: "Theme:NatRight"
+  ├─ RDF URI: "http://repository/vocabulary/Theme/naturalRight"
+  ├─ JSON-LD: "@context": { "theme": "http://repository/voc/theme" }
+  └─ API param: "theme=nat_right"
+
+All map to THM-000000001; all preserve its identity and meaning.
+```
+
+Implementation representations are NOT canonical and NOT governed by this constitutional Specification. They are governed by technical specifications and implementation choices.
+
+
+### XI.3 NO IMPLEMENTATION MAY UNILATERALLY REDEFINE VOCABULARY
+
+No software system, database schema, or API may:
+
+- Change a concept's semantic meaning without formal amendment to this Specification;
+- Create a new concept without proposing it through the VGA and securing formal approval;
+- Use an identifier differently than defined in the Canonical Vocabulary Register;
+- Silently alter vocabulary semantics through implementation choices.
+
+Implementations that discover issues or propose improvements shall:
+
+1. Formally report to the Vocabulary Governance Authority;
+2. Wait for governance decision and formal revision;
+3. Update their implementation to match the revised definition.
+
+Unilateral redefinition by individual implementations is prohibited.
+
+
+### XI.4 SYNCHRONIZATION ACROSS SYSTEMS
+
+All implementations must:
+
+- Periodically synchronize vocabulary definitions with the authoritative Canonical Vocabulary Register;
+- Validate that local vocabulary understanding matches canonical definitions;
+- Log and report any discrepancies;
+- Update themselves if canonical definitions are revised or new concepts are added.
+
+This synchronization is mandatory, not optional, to prevent semantic drift across the distributed Repository.
+
+
+---
+
+## XII. INTEGRATION WITH OTHER SPECIFICATIONS
+
+
+### XII.1 DOCUMENTARY ONTOLOGY v1.1
+
+Controlled vocabularies describe and classify ontology entities.
+
+The Ontology defines what entities exist; this Specification defines the terminology used to classify and describe them.
+
+Controlled concepts do not create new entity classes. They provide standardized terminology for existing classes.
+
+Each Canonical Vocabulary Record specifies which ontology classes (per Documentary Ontology v1.1) the concept may classify or describe.
+
+When uncertainty arises about whether something is an entity class or a controlled concept, Documentary Ontology v1.1 governs the decision.
+
+
+### XII.2 IDENTIFIER SPECIFICATION v1.0
+
+Controlled concepts use identifier families established in that Specification.
+
+Each family receives permanent, unique identifiers following the same immutability principles as entity identifiers and predicate identifiers (REL, PRD).
+
+Identifier permanence, non-reuse, and governance are specified in Identifier Specification v1.0.
+
+This Specification coordinates with that Specification: if new identifier families are necessary, amendments to Identifier Specification v1.0 are required.
+
+
+### XII.3 RELATIONSHIP SPECIFICATION v1.0
+
+Controlled concepts are used in Relationship Assertions.
+
+Examples:
+
+- Evidence Type values (from Relationship Specification v1.0, not this Specification) are properties of relationship assertions;
+- Lifecycle/Review Status values (STS family) describe relationship assertion status;
+- Roles (ROL family) identify functions agents play in relationships;
+- Epistemic Classifications (EPC family) mark certainty status of assertions;
+- Themes (THM family) organize inquiry topics.
+
+Relationship Specification v1.0 defines how controlled vocabularies apply to relationships. This Specification governs the semantic definitions of terms themselves.
+
+Each Canonical Vocabulary Record includes a "Relationship Integration" section documenting integration with Relationship Specification v1.0.
+
+
+### XII.4 FUTURE SPECIFICATIONS
+
+Future constitutional specifications (Versioning, Temporal Logic, URI Design, Technical Allocation) may reference existing controlled vocabularies or propose new concepts within established families.
+
+They may request amendments to this Specification only when governing rules, canonical record requirements, or approval procedures change.
+
+They may request amendments to Identifier Specification v1.0 if new identifier families are necessary.
+
+This Specification provides the constitutional framework for governance of all controlled terminology.
+
+
+---
+
+## XIII. SPECIFICATION AND REGISTER: DISTINCT GOVERNED ARTIFACTS
+
+
+### XIII.1 CONTROLLED VOCABULARY SPECIFICATION DEFINES RULES
+
+This document establishes constitutional principles governing how controlled terminology is:
+
+- Identified through permanent identifier families
+- Semantically stabilized and versioned
+- Governed through formal authority
+- Proposed, approved, revised, and deprecated
+- Integrated with ontology, identifiers, and relationships
+- Made available across implementations, languages, and technologies
+- Preserved through audit history
+
+The Specification is a constitutional document. It establishes rules, not instances.
+
+
+### XIII.2 CANONICAL VOCABULARY REGISTER CONTAINS INSTANCES
+
+The Canonical Vocabulary Register is a separate governed artifact that:
+
+- Contains all approved controlled concepts
+- Records each concept with complete Canonical Vocabulary Record
+- Maintains version history for each concept
+- Documents all deprecations and supersessions
+- Supports queries, exports, and integrations
+- Is subject to governance by the Vocabulary Governance Authority
+- Evolves through additions, revisions, and deprecations
+- Remains subordinate to the rules established in this Specification
+
+The Register is governed by the Specification but is not part of it.
+
+### XIII.3 SPECIFICATION PRECEDES REGISTER
+
+This Specification does not attempt to enumerate all controlled concepts in use.
+
+The Specification establishes the governance framework. The Register implements that framework.
+
+The Specification is certified first. The Register is populated afterward, with each entry conforming to this Specification's Canonical Vocabulary Record requirements.
+
+Future vocabulary additions shall:
+
+1. Conform to the Canonical Vocabulary Record structure defined in Section IV;
+2. Use existing identifier families or request amendment to Identifier Specification v1.0;
+3. Follow the proposal, approval, and versioning procedures defined in Section VIII and IX;
+4. Integrate with Documentary Ontology v1.1, Identifier Specification v1.0, and Relationship Specification v1.0;
+5. Be formally registered in the Canonical Vocabulary Register;
+6. Remain subject to revision, deprecation, and audit history requirements.
+
+The Specification governs the Register. The Register does not change the Specification.
+
+
+---
+
+## XIV. GOVERNING MAXIMS
+
+
+One concept. One identity. One meaning.
+
+Meaning before implementation.
+
+Identifier before label.
+
+Permanence before convenience.
+
+Stability before optimization.
+
+Governance before anarchy.
+
+Ontology governs. Vocabulary obeys.
+
+Canonical labels and localizations are governed.
+
+Implementation representations are not governed.
+
+The canonical register is source of truth.
+
+The ledger governs the index.
+
+---
+
+## XV. FINAL DECLARATION
+
+
+The Controlled Vocabulary Specification v1.0 establishes the permanent governance system for controlled terminology used in the Straussian Documentary Memory.
+
+Every controlled concept receives a unique identifier from an established identifier family (THM, EPC, STS, ROL, LNG, OPM, HCO, QSS, or VOC) that never changes, never expires, and is never reused.
+
+The semantic meaning of controlled concepts remains stable across:
+
+- Decades of technological evolution;
+- Migrations between software systems and databases;
+- Changes in implementation platforms;
+- Approved translations into multiple languages;
+- Future specifications and extensions.
+
+Implementations must treat the Canonical Vocabulary Register as the authoritative source of truth.
+
+No implementation may unilaterally redefine controlled meanings.
+
+All vocabulary governance decisions are formal, documented, and permanently auditable.
+
+Deprecated concepts are permanently recorded. Their identifiers are never reused.
+
+Vocabularies are closed until formally expanded through governance of the Canonical Vocabulary Register or amendment to related Specifications when governing rules change.
+
+The Controlled Vocabulary Specification is subordinate to Documentary Ontology v1.1, Identifier Specification v1.0, and Relationship Specification v1.0.
+
+The Specification establishes rules. The Canonical Vocabulary Register implements those rules.
+
+Semantic stability is constitutional law.
+
+
+END OF SPECIFICATION
+
+Document: Controlled Vocabulary Specification
+Version: 1.0
+Document Number: 000004
+Classification: Foundational Repository Specification
+Status: Final Draft for Constitutional Audit
+
+---
+
+## APPENDIX A: CANONICAL VOCABULARY REGISTER REQUIREMENTS
+
+
+The Canonical Vocabulary Register is a governed artifact derived from this Specification.
+
+### A.1 DEFINITION AND PURPOSE
+
+The Register is a structured collection of all approved controlled concepts used in the Straussian Documentary Memory.
+
+Each Register entry conforms to the Canonical Vocabulary Record structure defined in Section IV of this Specification.
+
+The Register is:
+
+- The authoritative source of canonical identifiers;
+- The reference for all implementations, systems, and localizations;
+- Governed by the Vocabulary Governance Authority;
+- Maintained under this Specification's versioning and permanence rules;
+- Subject to formal revision, deprecation, and audit history requirements;
+- Machine-readable and queryable.
+
+### A.2 REGISTER AUTHORITY
+
+The Vocabulary Governance Authority maintains the Canonical Vocabulary Register.
+
+The Register is updated through formal governance processes defined in Section VIII of this Specification.
+
+Every Register entry includes:
+
+- Canonical fields (as defined in Section IV);
+- Version history;
+- Deprecation records (if applicable);
+- Audit trail of governance decisions.
+
+### A.3 ACTIVE IDENTIFIER FAMILIES
+
+The Canonical Vocabulary Register shall be organized by identifier family:
+
+- **THM** — Themes (conceptual domains, inquiry topics)
+- **EPC** — Epistemic Classifications (certainty, acceptance status)
+- **STS** — Status (lifecycle, review, revision, administrative)
+- **ROL** — Roles (functions, positions)
+- **LNG** — Languages (natural language designations)
+- **OPM** — Operation Modes (operational states)
+- **HCO** — Hermeneutic Completeness (interpretation sufficiency)
+- **QSS** — Question Status (question lifecycle)
+- **VOC** — Vocabulary (meta-vocabulary governance)
+
+New identifier families require amendment to Identifier Specification v1.0.
+
+### A.4 RELATIONSHIP BETWEEN SPECIFICATION AND REGISTER
+
+- **This Specification** establishes constitutional rules and principles.
+- **The Canonical Vocabulary Register** implements those rules through concrete concept definitions.
+- The Specification is certified. The Register evolves under the Specification's governance.
+- Future Register entries shall conform to this Specification without requiring Specification amendments.
+- Specification amendments are required only for changes to governing rules, approval procedures, or identifier families.
+
+### A.5 REGISTER POPULATION TIMELINE
+
+The Canonical Vocabulary Register shall be:
+
+1. **Created** after this Specification is certified;
+2. **Populated** with initial controlled concepts conforming to the Canonical Vocabulary Record;
+3. **Governed** under the procedures defined in Section VIII;
+4. **Maintained** with complete version history and audit trails;
+5. **Revised** and **extended** as new concepts are approved through vocabulary governance.
+
+Full population of the Register is not required before this Specification is certified.
+
+The Register is a separate artifact that implements but does not define the Specification.
+
+
+END OF APPENDIX A
+
+END OF SPECIFICATION
