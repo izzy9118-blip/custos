@@ -1,0 +1,29 @@
+id: "CAG-000000004"
+class: "Collective Agent"
+authority_role_label: "Vocabulary Governance Authority"
+version: "1.0"
+lifecycle_status:
+  label: "ACTIVE"
+  controlled_vocabulary_status: "PENDING_REGISTRATION"
+effective_date: "2026-07-14"
+responsibilities:
+  - "Approve controlled concepts within established identifier families."
+  - "Revise concept definitions without changing identity where semantic meaning remains stable."
+  - "Deprecate concepts."
+  - "Approve localizations."
+  - "Maintain the Canonical Vocabulary Register."
+limitations:
+  - "May not create ontology classes."
+  - "May not create identifier families."
+  - "May not define predicates."
+  - "May not redefine Evidence Type constants."
+  - "May not override higher constitutional specifications."
+governing_specifications:
+  - document_number: "000001"
+    section: "VI. GOVERNANCE JURISDICTION"
+  - document_number: "000004"
+    section: "XII. VOCABULARY GOVERNANCE"
+related_authorities:
+  - "CAG-000000001"
+  - "CAG-000000002"
+  - "CAG-000000003"

@@ -1,0 +1,31 @@
+identifier: "LDG-000000001"
+family: "LDG"
+assigned_class: "Ledger"
+assignment_status: "ASSIGNED"
+assignment_status_controlled_vocabulary_status: "PENDING_REGISTRATION"
+assignment_date: "2026-07-14"
+assignment_authority:
+  type: "CONSTITUTIONAL_BOOTSTRAP"
+  authority_id: null
+  constitutional_basis:
+    - document_number: "000001"
+      title: "Documentary Ontology"
+      version: "1.1"
+    - document_number: "000002"
+      title: "Identifier Specification"
+      version: "1.0"
+source_decision_id: null
+bootstrap_note: >
+  Initial allocation performed directly under the certified
+  foundational constitutional specifications before the
+  governance authorities and constitutional registers
+  were populated.
+lifecycle_status:
+  label: "ACTIVE"
+  controlled_vocabulary_status: "PENDING_REGISTRATION"
+predecessor_identifiers: []
+successor_identifiers: []
+audit_history:
+  - event_date: "2026-07-14"
+    event_type: "ASSIGNMENT"
+    event_note: "Initial constitutional allocation for Identifier Assignment Ledger v1.0."

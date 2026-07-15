@@ -1,0 +1,32 @@
+id: "LDG-000000001"
+class: "Ledger"
+ledger_type: "Identifier Assignment Ledger"
+version: "1.0"
+lifecycle_status:
+  label: "ACTIVE"
+  controlled_vocabulary_status: "PENDING_REGISTRATION"
+responsibility:
+  bootstrap_state:
+    type: "CONSTITUTIONAL_BOOTSTRAP"
+    responsible_authority_id: null
+    constitutional_basis:
+      - document_number: "000001"
+        title: "Documentary Ontology"
+        version: "1.1"
+      - document_number: "000002"
+        title: "Identifier Specification"
+        version: "1.0"
+    bootstrap_note: >
+      Founding ledger instantiated during constitutional bootstrap
+      before governance authorities were populated.
+  post_bootstrap_state:
+    responsible_authority_id: "CAG-000000002"
+entries:
+  - "AUR-000000001"
+  - "CAG-000000001"
+  - "CAG-000000002"
+  - "CAG-000000003"
+  - "CAG-000000004"
+  - "LDG-000000001"
+ordering_rule: "assignment_date_then_identifier"
+append_only: true
