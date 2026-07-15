@@ -1,0 +1,19 @@
+identifier: "PRD-000000001"
+family: "PRD"
+assigned_class: "Predicate"
+assignment_status: "ASSIGNED"
+assignment_status_controlled_vocabulary_status: "PENDING_REGISTRATION"
+assignment_date: "2026-07-15"
+assignment_authority:
+  type: "REGISTERED_AUTHORITY"
+  authority_id: "CAG-000000002"
+source_decision_id: null
+lifecycle_status:
+  label: "ACTIVE"
+  controlled_vocabulary_status: "PENDING_REGISTRATION"
+predecessor_identifiers: []
+successor_identifiers: []
+audit_history:
+  - event_date: "2026-07-15"
+    event_type: "ASSIGNMENT"
+    event_note: "Initial allocation for Predicate CITES."
