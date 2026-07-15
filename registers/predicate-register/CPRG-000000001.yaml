@@ -1,0 +1,32 @@
+id: "CPRG-000000001"
+class: "Canonical Predicate Register"
+title: "Canonical Predicate Register"
+version: "1.0"
+lifecycle_status:
+  label: "ACTIVE"
+  controlled_vocabulary_status: "PENDING_REGISTRATION"
+responsible_authority_id: "CAG-000000003"
+governing_specifications:
+  - document_number: "000003"
+    title: "Relationship Specification"
+    version: "1.0"
+    section: "VI. CANONICAL PREDICATE CORE"
+predicate_entry_count:
+  assigned: 0
+  planned: 74
+planned_identifier_range:
+  first: "PRD-000000001"
+  last: "PRD-000000074"
+predicate_families:
+  - "Documentary Reference"
+  - "Structure and Embodiment"
+  - "Provenance and Derivation"
+  - "Evidence and Inquiry"
+  - "Authorship and Responsibility"
+  - "Governance and Lifecycle"
+  - "Artifact Composition"
+entries: []
+status_note: >
+  The planned PRD identifier range records an approved allocation map only.
+  No PRD identifier is assigned until its complete canonical predicate entry
+  has been validated and recorded in the Identifier Assignment Ledger.
