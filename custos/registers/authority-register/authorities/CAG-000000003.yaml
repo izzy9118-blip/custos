@@ -1,0 +1,25 @@
+id: "CAG-000000003"
+class: "Collective Agent"
+authority_role_label: "Predicate Governance Authority"
+version: "1.0"
+lifecycle_status:
+  label: "ACTIVE"
+  controlled_vocabulary_status: "PENDING_REGISTRATION"
+effective_date: "2026-07-14"
+responsibilities:
+  - "Define canonical predicates."
+  - "Define subject/object constraints for predicates."
+  - "Govern Canonical Predicate Register entries."
+limitations:
+  - "May not create ontology classes."
+  - "May not create identifier families."
+  - "May not override closed Evidence Type constants except by formal amendment."
+governing_specifications:
+  - document_number: "000001"
+    section: "VI. GOVERNANCE JURISDICTION"
+  - document_number: "000003"
+    section: "XIII. GOVERNANCE JURISDICTION"
+related_authorities:
+  - "CAG-000000001"
+  - "CAG-000000002"
+  - "CAG-000000004"
