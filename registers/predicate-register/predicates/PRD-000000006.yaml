@@ -49,8 +49,8 @@ cycle_rule:
   policy: "ALLOWED"
   note: >
     Reciprocal documentary reference is constitutionally permissible when each
-    REFERS_TO assertion is independently evidenced. Cycles produce no
-    additional inferred REFERS_TO assertions.
+   IS_REFERRED_TO_BY assertion is independently evidenced. Cycles produce
+    additional inferred IS_REFERRED_TO_BY assertions.
 evidence_requirements:
   - "Exactly one Evidence Type under Relationship Specification v1.0."
   - "At least one supporting Evidence Record."
