@@ -1,18 +1,19 @@
-identifier: "PRD-000000001"
+identifier: "PRD-000000002"
 class: "Predicate"
-canonical_label: "CITES"
+canonical_label: "IS_CITED_BY"
 predicate_family: "Documentary Reference"
 formal_definition: >
-  CITES means that the subject explicitly identifies or references the object
-  as a documentary source, authority, textual antecedent, or object of
-  reference through a recoverable citation act.
+  IS_CITED_BY means that the object is explicitly identified or referenced by
+  the subject as a documentary source, authority, textual antecedent, or
+  object of reference through a recoverable citation act.
 scope_note: >
-  A CITES assertion must represent an explicit citation. Mere thematic
-  similarity, influence, derivation, quotation, or inferred dependence does
-  not constitute CITES unless the citation itself is recoverable.
+  An IS_CITED_BY assertion must represent an explicit citation relation in
+  inverse orientation. Mere thematic similarity, influence, derivation,
+  quotation, or inferred dependence does not constitute IS_CITED_BY unless the
+  underlying citation itself is recoverable.
 inverse_predicate:
-  label: "IS_CITED_BY"
-  identifier: "PRD-000000002"
+  label: "CITES"
+  identifier: "PRD-000000001"
   assignment_status: "ASSIGNED"
 permitted_subject_classes:
   - "Citation"
@@ -45,8 +46,8 @@ cycle_rule:
   policy: "ALLOWED"
   note: >
     Reciprocal or cyclic citation networks are valid when every individual
-    CITES assertion is independently documented. Cycles produce no additional
-    inferred CITES assertions.
+    IS_CITED_BY assertion is independently documented. Cycles produce no
+    additional inferred IS_CITED_BY assertions.
 evidence_requirements:
   - "Exactly one Evidence Type under Relationship Specification v1.0."
   - "At least one supporting Evidence Record."
@@ -58,7 +59,7 @@ lifecycle_status:
 responsible_authority_id: "CAG-000000003"
 version_history:
   - version: "1.0"
-    date: "2026-07-15"
+    date: "2026-07-16"
     authority_id: "CAG-000000003"
     action: "INITIAL_ADMISSION"
 deprecation:

@@ -12,7 +12,7 @@ governing_specifications:
     version: "1.0"
     section: "VI. CANONICAL PREDICATE CORE"
 predicate_entry_count:
-  assigned: 1
+  assigned: 2
   planned: 74
 planned_identifier_range:
   first: "PRD-000000001"
@@ -27,6 +27,7 @@ predicate_families:
   - "Artifact Composition"
 entries:
   - "PRD-000000001"
+  - "PRD-000000002"
 status_note: >
   The planned PRD identifier range records an approved allocation map only.
   No PRD identifier is assigned until its complete canonical predicate entry
