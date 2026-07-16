@@ -33,7 +33,7 @@ cardinality:
   subject_to_object: "ZERO_OR_MORE"
   object_from_subjects: "ZERO_OR_MORE"
 symmetry: false
-asymmetry: true
+asymmetry: false
 transitivity: false
 reflexivity: false
 inferability:
