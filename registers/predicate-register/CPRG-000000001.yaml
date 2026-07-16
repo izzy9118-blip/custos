@@ -12,7 +12,7 @@ governing_specifications:
     version: "1.0"
     section: "VI. CANONICAL PREDICATE CORE"
 predicate_entry_count:
-  assigned: 5
+  assigned: 6
   planned: 74
 planned_identifier_range:
   first: "PRD-000000001"
@@ -31,6 +31,7 @@ entries:
   - "PRD-000000003"
   - "PRD-000000004"
   - "PRD-000000005"
+  - "PRD-000000006"
 status_note: >
   The planned PRD identifier range records an approved allocation map only.
   No PRD identifier is assigned until its complete canonical predicate entry
