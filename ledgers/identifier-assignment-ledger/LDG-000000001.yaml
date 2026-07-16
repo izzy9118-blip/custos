@@ -34,5 +34,6 @@ entries:
   - "PRD-000000003"
   - "PRD-000000004"
   - "PRD-000000005"
+  - "PRD-000000006"
 ordering_rule: "assignment_date_then_identifier"
 append_only: true
