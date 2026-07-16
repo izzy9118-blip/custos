@@ -1,0 +1,89 @@
+id: "WK-000000001"
+class: "Work"
+canonical_label: "Thoughts on Machiavelli"
+
+recognition_basis:
+  - reference_type: "RECOVERABLE_TEXTUAL_WITNESS"
+    reference: "Strauss Thoughts on Machiavelli Part1.txt"
+    repository_location_status: "EXTERNAL_ARCHIVAL_REFERENCE"
+    note: >
+      Recoverable transcriptional witness preserving substantial text of the
+      intellectual creation identified by this Work record.
+  - reference_type: "REPOSITORY_HERMENEUTIC_ARTIFACT"
+    reference: "Hermeneutic_Object_C_Leo_Strauss_Citation_Object_000001_v1.0.txt"
+    repository_location_status: "EXTERNAL_ARCHIVAL_REFERENCE"
+    note: >
+      Final reconstruction identifies Thoughts on Machiavelli as a deliberately
+      composed work whose citations, sequence, structure, placement, examples,
+      and omissions are legitimate objects of hermeneutic investigation.
+  - reference_type: "REPOSITORY_CERTIFICATION_ARTIFACT"
+    reference: "Repository_Certification_Citation_Object_000002_v1.0.txt"
+    repository_location_status: "EXTERNAL_ARCHIVAL_REFERENCE"
+    note: >
+      Certified Citation Object identifies Thoughts on Machiavelli as the
+      primary text under investigation.
+
+identity_review:
+  distinct_intellectual_creation:
+    result: true
+    note: >
+      The candidate is a stable intellectual creation independently capable of
+      sustaining repeated documentary inquiry.
+  independent_of_expression:
+    result: true
+  independent_of_witness:
+    result: true
+  duplicate_review:
+    result: true
+    review_date: "2026-07-16"
+    note: >
+      Repository search found no previously admitted Work record or assigned WK
+      identifier for Thoughts on Machiavelli.
+  boundary_uncertainty: null
+  exclusion_note: >
+    Edition, transcription, file, passage, claim, interpretation, genre,
+    language, and authorship attribution are not included in Work identity.
+
+lifecycle_status:
+  label: "ACTIVE"
+  controlled_vocabulary_status: "PENDING_REGISTRATION"
+
+responsible_authority_id: "CAG-000000001"
+recognition_date: "2026-07-16"
+
+version_history:
+  - version: "1.0"
+    date: "2026-07-16"
+    authority_id: "CAG-000000001"
+    action: "INITIAL_ADMISSION"
+    note: >
+      First Work admitted under Work Entity Specification v1.0.
+
+deprecation:
+  state: "NOT_DEPRECATED"
+  successor_work_id: null
+
+governing_specification_references:
+  - document_number: "000001"
+    title: "Documentary Ontology"
+    version: "1.1"
+    section: "Work"
+  - document_number: "000002"
+    title: "Identifier Specification"
+    version: "1.0"
+    section: "III.B. Intellectual Entities"
+  - document_number: "000002"
+    title: "Identifier Specification"
+    version: "1.0"
+    section: "VI. Version, Revision, and Correction"
+  - document_number: "000005"
+    title: "Constitutional Admission Protocol"
+    version: "1.0"
+    section: "II-VII"
+  - document_number: "000006"
+    title: "Work Entity Specification"
+    version: "1.0"
+    section: "IV-XVIII"
+
+admission_record_reference:
+  path: "operations/admission-records/2026-07-16_Work_Admission_WK-000000001.md"
