@@ -31,5 +31,6 @@ entries:
   - "CPRG-000000001"
   - "PRD-000000001"
   - "PRD-000000002"
+  - "PRD-000000003"
 ordering_rule: "assignment_date_then_identifier"
 append_only: true
