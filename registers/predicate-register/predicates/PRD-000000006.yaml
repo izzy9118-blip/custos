@@ -1,0 +1,127 @@
+identifier: "PRD-000000006"
+class: "Predicate"
+canonical_label: "IS_REFERRED_TO_BY"
+predicate_family: "Documentary Reference"
+
+formal_definition: >
+  IS_REFERRED_TO_BY means that the object is identified, mentioned, designated,
+  discussed, or otherwise made the target of documentary attention by the
+  subject through the underlying REFERS_TO relationship, without thereby
+  asserting either an explicit documentary citation act or recoverable textual
+  quotation.
+
+scope_note: >
+  An IS_REFERRED_TO_BY assertion records inverse reference orientation: the
+  object is the target of documentary reference and the subject contains the
+  referring act. It shall not substitute for IS_CITED_BY or IS_QUOTED_BY.
+  Where documentary evidence independently supports citation or quotation,
+  those predicates may coexist with IS_REFERRED_TO_BY.
+
+inverse_predicate:
+  label: "REFERS_TO"
+  identifier: "PRD-000000005"
+  assignment_status: "ASSIGNED"
+
+permitted_subject_classes:
+  - "Citation"
+  - "Work"
+  - "Work Component"
+  - "Expression"
+  - "Witness"
+  - "Witness Component"
+  - "Passage"
+
+permitted_object_classes:
+  - "Citation"
+  - "Work"
+  - "Work Component"
+  - "Expression"
+  - "Witness"
+  - "Witness Component"
+  - "Passage"
+
+cardinality:
+  subject_to_object: "ZERO_OR_MORE"
+  object_from_subjects: "ZERO_OR_MORE"
+
+symmetry: false
+asymmetry: false
+transitivity: false
+reflexivity: false
+
+inferability:
+  value: "NO"
+  rule: null
+
+inference_conditions: null
+
+cycle_rule:
+  policy: "ALLOWED"
+  note: >
+    Reciprocal documentary reference is constitutionally permissible when each
+    IS_REFERRED_TO_BY assertion is independently evidenced. Cycles produce no
+    additional inferred IS_REFERRED_TO_BY assertions.
+
+evidence_requirements:
+  - "Exactly one Evidence Type under Relationship Specification v1.0."
+  - "At least one supporting Evidence Record."
+  - "A recoverable documentary basis demonstrating intentional reference."
+  - "No inference from indirect reference chains."
+
+lifecycle_status:
+  label: "ACTIVE"
+  controlled_vocabulary_status: "PENDING_REGISTRATION"
+
+responsible_authority_id: "CAG-000000003"
+
+version_history:
+  - version: "1.0"
+    date: "2026-07-16"
+    authority_id: "CAG-000000003"
+    action: "INITIAL_ADMISSION"
+
+deprecation:
+  state: "NOT_DEPRECATED"
+  successor_predicate_id: null
+
+governing_specification_references:
+  - document_number: "000003"
+    title: "Relationship Specification"
+    version: "1.0"
+    section: "V. PREDICATE REGISTER REQUIREMENTS"
+  - document_number: "000003"
+    title: "Relationship Specification"
+    version: "1.0"
+    section: "VI. CANONICAL PREDICATE CORE"
+  - document_number: "000003"
+    title: "Relationship Specification"
+    version: "1.0"
+    section: "VII. SUBJECT/OBJECT VALIDATION"
+  - document_number: "000003"
+    title: "Relationship Specification"
+    version: "1.0"
+    section: "VIII. INFERABILITY"
+  - document_number: "000003"
+    title: "Relationship Specification"
+    version: "1.0"
+    section: "XIII. GOVERNANCE JURISDICTION"
+  - document_number: "000005"
+    title: "Constitutional Admission Protocol"
+    version: "1.0"
+    section: "II. ADMISSION PRECONDITIONS"
+  - document_number: "000005"
+    title: "Constitutional Admission Protocol"
+    version: "1.0"
+    section: "III. CONSTITUTIONAL VALIDATION"
+  - document_number: "000005"
+    title: "Constitutional Admission Protocol"
+    version: "1.0"
+    section: "IV. DOCUMENTARY VALIDATION"
+  - document_number: "000005"
+    title: "Constitutional Admission Protocol"
+    version: "1.0"
+    section: "V. REPOSITORY VALIDATION"
+  - document_number: "000005"
+    title: "Constitutional Admission Protocol"
+    version: "1.0"
+    section: "VII. RECORDING REQUIREMENTS AFTER DECISION"
