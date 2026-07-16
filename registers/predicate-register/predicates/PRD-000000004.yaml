@@ -1,19 +1,19 @@
-identifier: "PRD-000000003"
+identifier: "PRD-000000004"
 class: "Predicate"
-canonical_label: "QUOTES"
+canonical_label: "IS_QUOTED_BY"
 predicate_family: "Documentary Reference"
 formal_definition: >
-  QUOTES means that the subject reproduces, cites verbatim, or near-verbatim
-  transmits a recoverable textual passage from the object as quoted source
-  content.
+  IS_QUOTED_BY means that the object is reproduced, cited verbatim, or
+  near-verbatim transmitted by the subject as quoted source content through a
+  recoverable quotation act.
 scope_note: >
-  A QUOTES assertion requires documentary evidence of textual reproduction from
-  the object in the subject. Citation without quoted textual reproduction does
-  not constitute QUOTES. General reference without citation location also does
-  not constitute QUOTES.
+  An IS_QUOTED_BY assertion records inverse quotation orientation: the object
+  is the quoted source and the subject contains the quoting reproduction.
+  Citation without recoverable quoted textual reproduction does not constitute
+  IS_QUOTED_BY.
 inverse_predicate:
-  label: "IS_QUOTED_BY"
-  identifier: "PRD-000000004"
+  label: "QUOTES"
+  identifier: "PRD-000000003"
   assignment_status: "ASSIGNED"
 permitted_subject_classes:
   - "Work"
@@ -44,12 +44,12 @@ cycle_rule:
   policy: "ALLOWED"
   note: >
     Reciprocal quotation chains are constitutionally permissible when each
-    QUOTES assertion is independently evidenced. No additional QUOTES
-    assertions are inferred from cycles.
+    IS_QUOTED_BY assertion is independently evidenced. No additional
+    IS_QUOTED_BY assertions are inferred from cycles.
 evidence_requirements:
   - "Exactly one Evidence Type under Relationship Specification v1.0."
   - "At least one supporting Evidence Record."
-  - "A recoverable quoted textual segment linking subject content to object content."
+  - "A recoverable quoted textual segment linking quoting content to quoted source content."
   - "A recoverable citation location or equivalent witness linkage identifying quoted source location."
   - "No inference from thematic similarity, paraphrase alone, or indirect quotation chains."
 lifecycle_status:
