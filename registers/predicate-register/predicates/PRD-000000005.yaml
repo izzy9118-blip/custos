@@ -14,8 +14,8 @@ scope_note: >
   may coexist.
 inverse_predicate:
   label: "IS_REFERRED_TO_BY"
-  identifier: null
-  assignment_status: "PLANNED_NOT_ASSIGNED"
+  identifier: "PRD-000000006"
+  assignment_status: "ASSIGNED"
 permitted_subject_classes:
   - "Citation"
   - "Work"
