@@ -1,0 +1,32 @@
+id: "REG-000000001"
+class: "Register"
+register_type: "Work Register"
+title: "Work Register"
+version: "1.0"
+lifecycle_status:
+  label: "ACTIVE"
+  controlled_vocabulary_status: "PENDING_REGISTRATION"
+responsible_authority_id: "CAG-000000001"
+governing_specifications:
+  - document_number: "000001"
+    title: "Documentary Ontology"
+    version: "1.1"
+  - document_number: "000002"
+    title: "Identifier Specification"
+    version: "1.0"
+  - document_number: "000005"
+    title: "Constitutional Admission Protocol"
+    version: "1.0"
+  - document_number: "000006"
+    title: "Work Entity Specification"
+    version: "1.0"
+entries:
+  - "WK-000000001"
+entry_count: 1
+ordering_rule: "admission_date_then_identifier"
+append_only: true
+version_history:
+  - version: "1.0"
+    date: "2026-07-16"
+    authority_id: "CAG-000000001"
+    action: "INITIAL_ADMISSION"
