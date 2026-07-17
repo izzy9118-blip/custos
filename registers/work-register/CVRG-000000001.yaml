@@ -1,0 +1,30 @@
+identifier: CVRG-000000001
+class: Canonical Vocabulary Register
+title: Canonical Vocabulary Register
+version: '1.0'
+lifecycle_status:
+  identifier: STS-000000001
+  label: ACTIVE
+  controlled_vocabulary_status: REGISTERED
+responsible_authority_id: CAG-000000004
+governing_specification_references:
+- document_number: '000004'
+  title: Controlled Vocabulary Specification
+  version: '1.0'
+  section: III. CANONICAL VOCABULARY REGISTER
+entries:
+- STS-000000001
+- STS-000000002
+- STS-000000003
+status_note: The founding lifecycle-status concepts were admitted atomically with
+  this Register. All three entries are assigned, registered, and governed by Controlled
+  Vocabulary Specification v1.0.
+version_history:
+- version: '1.0'
+  date: '2026-07-16'
+  authority_id: CAG-000000004
+  action: INITIAL_ADMISSION
+deprecation:
+  state: NOT_DEPRECATED
+  successor_register_id: null
+entry_count: 3
