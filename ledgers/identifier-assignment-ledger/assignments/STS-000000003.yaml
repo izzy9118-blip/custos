@@ -1,6 +1,6 @@
-identifier: REG-000000001
-family: REG
-assigned_class: Register
+identifier: STS-000000003
+family: STS
+assigned_class: Vocabulary Concept
 assignment_status: ASSIGNED
 assignment_status_controlled_vocabulary_status: PENDING_REGISTRATION
 assignment_date: '2026-07-16'
@@ -17,4 +17,6 @@ successor_identifiers: []
 audit_history:
 - event_date: '2026-07-16'
   event_type: ASSIGNMENT
-  event_note: Initial allocation for the Work Register.
+  event_note: 'Initial allocation for Lifecycle Status concept WITHDRAWN.
+
+    '
