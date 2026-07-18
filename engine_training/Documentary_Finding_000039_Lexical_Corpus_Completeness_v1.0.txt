@@ -1,0 +1,26 @@
+Candidate Documentary Finding 000039
+
+Title: The Principle of Lexical Corpus Completeness
+
+Status: Provisional Documentary Finding
+
+Documentary Observation
+
+Technical terminology should be interpreted only after examining its
+complete documentary distribution throughout the work.
+
+Recovered Inquiry Operation
+
+1.  Identify potentially technical terminology.
+2.  Index every occurrence.
+3.  Compare local and global contexts.
+4.  Reconstruct function from the complete corpus.
+
+Evidentiary Status
+
+Provisional pending corroboration elsewhere in Strauss’s corpus.
+
+Certification
+
+-   Finding Number: DF-000039
+-   Certification Status: Pending

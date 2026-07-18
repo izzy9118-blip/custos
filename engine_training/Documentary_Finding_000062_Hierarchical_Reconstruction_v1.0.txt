@@ -1,0 +1,71 @@
+CANDIDATE DOCUMENTARY FINDING 000062
+
+Title: The Principle of Hierarchical Reconstruction
+
+Repository Classification: Documentary Finding
+Status: Provisional Documentary Finding
+Source Work: Leo Strauss, Persecution and the Art of Writing
+Source Essay: “The Literary Character of the Guide for the Perplexed”
+Source Context: Strauss’s reconstruction of the relative dignity of
+knowledge, demonstration, fiqh, the Guide, and the Mishneh Torah
+
+DOCUMENTARY OBSERVATION
+
+Strauss does not interpret Maimonides’ works or subjects as though
+they occupied a flat field of equal importance. He reconstructs the
+author’s ordering of activities, kinds of knowledge, subjects, and
+writings according to their relative dignity, end, and function.
+
+The hierarchy is recovered from several forms of documentary evidence:
+explicit statements, distinctions among kinds of knowledge, the order
+of presentation, the placement of subjects within the work, and the
+relation between means and ends.
+
+RECOVERED INQUIRY OPERATION
+
+1. Identify the works, subjects, activities, or kinds of knowledge
+   whose relative standing is at issue.
+
+2. Recover the author’s explicit distinctions concerning dignity,
+   priority, purpose, means, and end.
+
+3. Examine whether the architecture and sequence of the work embody
+   or qualify the stated ordering.
+
+4. Distinguish apparent hierarchy from actual hierarchy by testing
+   titles, length, historical influence, popularity, and placement
+   against the author’s own criteria.
+
+5. Reconstruct the ordering from lower to higher, subordinate to
+   governing, or means to end.
+
+6. Interpret each component according to its position and function
+   within the recovered hierarchy.
+
+REPOSITORY SIGNIFICANCE
+
+An author’s corpus must not be reconstructed as a mere collection of
+equivalent statements or works. Interpretation requires determining
+whether the author orders subjects and writings by rank, purpose,
+dependence, or dignity.
+
+Hierarchical reconstruction is therefore prior to comparison between
+components: the Repository must first determine where each component
+stands within the author’s own ordering.
+
+EVIDENTIARY STATUS
+
+Provisional Documentary Finding with elevated evidentiary weight.
+
+The finding arises within Strauss’s sustained methodological study of
+literary concealment and is supported by his explicit reconstruction
+of competing hierarchies in Maimonides. It remains subject to
+refinement or qualification through later corpus-wide comparison.
+
+CERTIFICATION
+
+- Finding Number: DF-000062
+- Certification Status: Pending
+- Promotion Status: Not yet promoted beyond Provisional Documentary Finding
+- Historical Revision Rule: No prior repository artifact is revised or
+  superseded by implication.

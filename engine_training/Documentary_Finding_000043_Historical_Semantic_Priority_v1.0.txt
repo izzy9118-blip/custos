@@ -1,0 +1,26 @@
+Candidate Documentary Finding 000043
+
+Title: The Principle of Historical Semantic Priority
+
+Status: Provisional Documentary Finding
+
+Documentary Observation
+
+Interpretive priority is given to the historically original meaning of a
+technical term when documentary evidence indicates deliberate usage.
+
+Recovered Inquiry Operation
+
+1.  Identify technical terminology.
+2.  Reconstruct historical meanings.
+3.  Determine intended usage.
+4.  Interpret accordingly.
+
+Evidentiary Status
+
+Provisional pending corroboration elsewhere in Strauss’s corpus.
+
+Certification
+
+-   Finding Number: DF-000043
+-   Certification Status: Pending

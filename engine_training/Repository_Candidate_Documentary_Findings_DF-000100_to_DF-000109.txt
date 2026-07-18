@@ -1,0 +1,228 @@
+Candidate Documentary Finding DF-000100
+
+The Principle of Documentary Structural Mediation
+
+Documentary Observation
+
+Strauss reconstructs authorial intention through the mediating role of
+literary structure rather than by relying exclusively upon either
+explicit propositions or inferred intentions.
+
+Recovered Inquiry Operation
+
+1.  Recover the explicit propositions of the work.
+2.  Reconstruct the literary organization connecting those propositions.
+3.  Infer authorial intention from the interaction of propositions and
+    structure.
+4.  Test the reconstruction against the documentary evidence of the work
+    as a whole.
+
+Evidentiary Status
+
+Provisional Documentary Finding.
+
+------------------------------------------------------------------------
+
+Candidate Documentary Finding DF-000101
+
+The Principle of Documentary Architectural Coherence
+
+Documentary Observation
+
+Strauss evaluates proposed interpretations according to their coherence
+with the reconstructed architecture of the work rather than by isolated
+textual plausibility alone.
+
+Recovered Inquiry Operation
+
+1.  Form a provisional reconstruction.
+2.  Compare it with every relevant documentary feature.
+3.  Revise where inconsistencies appear.
+4.  Accept only interpretations compatible with the documentary
+    architecture as a whole.
+
+Evidentiary Status
+
+Provisional Documentary Finding.
+
+------------------------------------------------------------------------
+
+Candidate Documentary Finding DF-000102
+
+The Principle of Documentary Generic Classification
+
+Documentary Observation
+
+Before determining the specific literary character of a work, Strauss
+first determines the broader literary genus to which it belongs.
+
+Recovered Inquiry Operation
+
+1.  Identify the documentary object.
+2.  Determine its broader literary genus.
+3.  Determine its distinguishing specific character.
+4.  Interpret the work within that generic framework.
+
+Evidentiary Status
+
+Provisional Documentary Finding.
+
+------------------------------------------------------------------------
+
+Candidate Documentary Finding DF-000103
+
+The Principle of Perspective-Preserving Reconstruction
+
+Documentary Observation
+
+Strauss preserves the author’s own conceptual perspective when
+classifying documentary objects rather than silently replacing it with
+the investigator’s framework.
+
+Recovered Inquiry Operation
+
+1.  Recover the author’s conceptual categories.
+2.  Classify documentary objects using those categories.
+3.  Distinguish authorial from investigator classifications.
+4.  Preserve that distinction.
+
+Evidentiary Status
+
+Provisional Documentary Finding.
+
+------------------------------------------------------------------------
+
+Candidate Documentary Finding DF-000104
+
+The Principle of Teleological Literary Unity
+
+Documentary Observation
+
+Strauss reconstructs individual literary devices as subordinate to a
+single governing literary purpose.
+
+Recovered Inquiry Operation
+
+1.  Recover the governing literary intention.
+2.  Identify the literary devices.
+3.  Explain each through the governing intention.
+4.  Test for teleological unity.
+
+Evidentiary Status
+
+Provisional Documentary Finding.
+
+------------------------------------------------------------------------
+
+Candidate Documentary Finding DF-000105
+
+The Principle of Pedagogically Ordered Concealment
+
+Documentary Observation
+
+Strauss reconstructs literary concealment as ordered toward the author’s
+pedagogical purpose rather than as an independent objective.
+
+Recovered Inquiry Operation
+
+1.  Recover the literary purpose.
+2.  Determine how concealment contributes.
+3.  Interpret concealment as educational unless evidence indicates
+    otherwise.
+4.  Evaluate techniques by pedagogical contribution.
+
+Evidentiary Status
+
+Provisional Documentary Finding.
+
+------------------------------------------------------------------------
+
+Candidate Documentary Finding DF-000106
+
+The Principle of Graduated Documentary Disclosure
+
+Documentary Observation
+
+Strauss reconstructs an intentionally written work as employing multiple
+levels of disclosure rather than a simple opposition between open and
+hidden teaching.
+
+Recovered Inquiry Operation
+
+1.  Identify explicit teachings.
+2.  Identify literary hints.
+3.  Determine relationships between levels.
+4.  Reconstruct the graduated pattern.
+
+Evidentiary Status
+
+Provisional Documentary Finding.
+
+------------------------------------------------------------------------
+
+Candidate Documentary Finding DF-000107
+
+The Principle of Documentary Species Differentiation
+
+Documentary Observation
+
+After establishing a literary genus, Strauss distinguishes the different
+species within that genus.
+
+Recovered Inquiry Operation
+
+1.  Establish the common genus.
+2.  Identify distinguishing characteristics.
+3.  Recover each literary method.
+4.  Interpret each according to its species.
+
+Evidentiary Status
+
+Provisional Documentary Finding.
+
+------------------------------------------------------------------------
+
+Candidate Documentary Finding DF-000108
+
+The Principle of Documentary Relative Emphasis
+
+Documentary Observation
+
+Strauss treats the degree of documentary emphasis devoted to a subject
+as evidence of its relative importance within the author’s literary
+design.
+
+Recovered Inquiry Operation
+
+1.  Recover discussion of multiple devices.
+2.  Compare extent of treatment.
+3.  Infer relative importance cautiously.
+4.  Test against the remainder of the work.
+
+Evidentiary Status
+
+Provisional Documentary Finding.
+
+------------------------------------------------------------------------
+
+Candidate Documentary Finding DF-000109
+
+The Principle of Hypothesis-Driven Documentary Inquiry
+
+Documentary Observation
+
+Strauss transforms provisional documentary inferences into explicit
+research questions rather than treating them as established conclusions.
+
+Recovered Inquiry Operation
+
+1.  Recover documentary evidence.
+2.  Formulate a provisional inference.
+3.  Express it as a research question.
+4.  Continue inquiry before certification.
+
+Evidentiary Status
+
+Provisional Documentary Finding.
+
+------------------------------------------------------------------------

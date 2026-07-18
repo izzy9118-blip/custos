@@ -1,0 +1,26 @@
+Candidate Documentary Finding 000050
+
+Title: The Principle of Architectural Verification
+
+Status: Provisional Documentary Finding
+
+Documentary Observation
+
+Architectural hypotheses are confirmed by independent documentary
+evidence elsewhere in the work.
+
+Recovered Inquiry Operation
+
+1.  Form an architectural hypothesis.
+2.  Search for corroboration.
+3.  Compare with explicit statements.
+4.  Accept only if confirmed.
+
+Evidentiary Status
+
+Provisional pending corroboration elsewhere in Strauss’s corpus.
+
+Certification
+
+-   Finding Number: DF-000050
+-   Certification Status: Pending
