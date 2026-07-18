@@ -1,0 +1,76 @@
+# Documentary Finding 000001
+## The Principle of Documentary Horizon
+
+Repository: Straussian Documentary Memory
+Status: Documentary Finding (Recovered)
+Source: Persecution and the Art of Writing, Preface and Introduction (Opening)
+
+------------------------------------------------------------
+
+DOCUMENTARY OBSERVATION
+
+Strauss does not begin by attacking the sociology of knowledge.
+
+He first asks what documentary evidence made that discipline possible.
+
+He then discovers that its documentary horizon was historically narrow, being derived primarily from modern Western intellectual experience.
+
+Rather than immediately criticizing its conclusions, Strauss enlarges the documentary field by introducing medieval Jewish and Islamic philosophy.
+
+Only after expanding the evidence does the inadequacy of the earlier framework become visible.
+
+------------------------------------------------------------
+
+RECOVERED INQUIRY OPERATION
+
+1. Identify the documentary evidence upon which the interpretation rests.
+
+2. Determine whether that documentary horizon is historically or intellectually restricted.
+
+3. Expand the documentary field before evaluating the interpretation.
+
+4. Reevaluate the interpretation only after the broader evidence has been incorporated.
+
+------------------------------------------------------------
+
+REPOSITORY SIGNIFICANCE
+
+The Repository should not evaluate an interpretive framework until it has first examined the documentary limits from which that framework emerged.
+
+Errors may originate not only from faulty reasoning, but from an incomplete documentary horizon.
+
+------------------------------------------------------------
+
+EVIDENTIARY STATUS
+
+This finding is recovered directly from Strauss's opening movement.
+
+It is not yet elevated to an Inquiry Principle.
+
+Further occurrences throughout Persecution and the Art of Writing must be documented before certification.
+
+------------------------------------------------------------
+
+CERTIFICATION STATUS
+
+Classification: Documentary Finding
+
+Authority: Provisional
+
+Promotion Requirement:
+
+Independent documentary confirmation elsewhere in Persecution and the Art of Writing and, ideally, corroboration across Strauss's broader corpus before elevation to a certified Inquiry Principle.
+
+------------------------------------------------------------
+
+REPOSITORY PROGRESSION
+
+Stage 1 — Documentary Finding
+
+Stage 2 — Documentary Pattern
+
+Stage 3 — Inquiry Principle
+
+Stage 4 — Inquiry Engine Specification
+
+This progression preserves the Repository's governing objective: recovering Strauss's inquiry rather than constructing it ourselves.
