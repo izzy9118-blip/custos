@@ -1,0 +1,64 @@
+# Documentary Finding 000004
+## The Principle of Relational Inquiry
+
+Repository: Straussian Documentary Memory
+Status: Documentary Finding (Provisional)
+Source: Persecution and the Art of Writing, Introduction
+
+------------------------------------------------------------
+
+DOCUMENTARY OBSERVATION
+
+Strauss investigates neither philosophy nor political society independently.
+
+He reconstructs the relation between them.
+
+Historical phenomena become intelligible only through that reconstructed relation.
+
+Strauss proceeds from the nature of the principal subjects, to the relation between them, and then to the historical consequences that arise from that relation.
+
+------------------------------------------------------------
+
+RECOVERED INQUIRY OPERATION
+
+When studying an intellectual or political phenomenon:
+
+1. Identify the principal agents or subjects.
+
+2. Reconstruct the nature of each independently.
+
+3. Reconstruct the permanent relation between them.
+
+4. Explain historical events through that relation.
+
+------------------------------------------------------------
+
+REPOSITORY SIGNIFICANCE
+
+The Repository should avoid interpreting historical actors or intellectual phenomena in isolation.
+
+Inquiry should prioritize the relationships that generate documentary phenomena rather than treating individual entities as self-explanatory.
+
+Each principal subject must first be reconstructed independently so that the relation between them is not imposed prematurely.
+
+------------------------------------------------------------
+
+EVIDENTIARY STATUS
+
+This finding is recovered from Strauss's treatment of philosophy as existing within political society and from his reconstruction of the permanent tension between philosophical inquiry and authoritative opinion.
+
+It remains provisional.
+
+Further confirmation is required across the remainder of Persecution and the Art of Writing.
+
+------------------------------------------------------------
+
+CERTIFICATION STATUS
+
+Classification: Documentary Finding
+
+Authority: Provisional
+
+Promotion Requirement:
+
+Repeated documentary confirmation that Strauss explains historical phenomena by independently reconstructing the principal subjects and then examining the relation between them.
