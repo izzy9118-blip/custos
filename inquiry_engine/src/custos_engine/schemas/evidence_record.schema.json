@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Evidence Record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "evidence_record_id",
+    "canonical_class",
+    "evidence_bearing_entity",
+    "target_entity",
+    "relevance_statement",
+    "direct_or_derived",
+    "epistemic_classification",
+    "provenance_ids",
+    "verified"
+  ],
+  "properties": {
+    "evidence_record_id": {
+      "type": "string"
+    },
+    "canonical_class": {
+      "const": "Evidence Record"
+    },
+    "evidence_bearing_entity": {
+      "type": "object"
+    },
+    "target_entity": {
+      "type": "object"
+    },
+    "relevance_statement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "direct_or_derived": {
+      "enum": [
+        "DIRECT",
+        "DERIVED"
+      ]
+    },
+    "epistemic_classification": {
+      "enum": [
+        "DOCUMENTED_FINDING",
+        "SUPPORTED_INFERENCE",
+        "WORKING_HYPOTHESIS",
+        "UNRESOLVED_QUESTION",
+        "CONSTITUTIONAL_PRINCIPLE"
+      ]
+    },
+    "provenance_ids": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "verified": {
+      "type": "boolean"
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "manifest_id": "MAN-000000001",
+  "version": "0.1.0",
+  "release_status": "DEVELOPMENT",
+  "repository_full_name": "izzy9118-blip/custos",
+  "repository_commit": "REPLACE_WITH_TEST_COMMIT",
+  "governing_specification_ids": [
+    "SPEC-000000007"
+  ],
+  "taxonomy_source": {
+    "canonical_id": "HO-000000001",
+    "canonical_class": "Hermeneutic Object",
+    "github_path": "engine_training/taxonomy.txt",
+    "git_commit": "REPLACE_WITH_TEST_COMMIT",
+    "version": "1.0"
+  },
+  "procedure_source": {
+    "canonical_id": "IAR-000000001",
+    "canonical_class": "Inquiry Architecture Record",
+    "github_path": "engine_training/procedure.txt",
+    "git_commit": "REPLACE_WITH_TEST_COMMIT",
+    "version": "1.0"
+  },
+  "included_components": [],
+  "excluded_component_ids": [],
+  "known_conflicts": [
+    "Development fixture"
+  ],
+  "permitted_engine_mode": "DEVELOPMENT",
+  "predecessor_manifest_id": null,
+  "fixity_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "released_at": null,
+  "responsible_authority_id": "AUR-000000001"
+}

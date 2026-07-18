@@ -1,0 +1,42 @@
+[
+  {
+    "component_id": "LC-004",
+    "name": "Apparent Repetition with Minute Addition or Omission",
+    "source": {
+      "canonical_id": "HO-000000001",
+      "canonical_class": "Hermeneutic Object",
+      "github_path": "engine_training/taxonomy.txt",
+      "git_commit": "1234567",
+      "version": "1.0"
+    },
+    "strauss_formulation": "Minute variation within apparent repetition.",
+    "mechanism": "A repeated formulation changes by a small addition or omission.",
+    "documentary_function": "Direct attention to a potentially significant variation.",
+    "investigative_requirement": "Compare the passages word by word.",
+    "examples": [],
+    "reconstruction_status": "DEVELOPMENT",
+    "related_technique_ids": [],
+    "distinguished_from": [
+      "ordinary paraphrase"
+    ],
+    "minimum_trigger_features": [
+      "apparent_repetition",
+      "minute_variation"
+    ],
+    "required_corroboration_features": [
+      "repeated_pattern_elsewhere"
+    ],
+    "ordinary_alternatives": [
+      "copying error",
+      "ordinary stylistic variation"
+    ],
+    "disqualifying_conditions": [
+      "witness_corruption"
+    ],
+    "authorized_engine_action": "Perform bounded word-by-word comparison.",
+    "prohibited_inferences": [
+      "Do not infer intentional concealment."
+    ],
+    "uncertainty_note": "Variation alone does not establish significance."
+  }
+]

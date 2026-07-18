@@ -1,0 +1,61 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Hypothesis",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "hypothesis_id",
+    "canonical_class",
+    "proposition",
+    "historical_admissibility_note",
+    "epistemic_classification",
+    "scope"
+  ],
+  "properties": {
+    "hypothesis_id": {
+      "type": "string"
+    },
+    "canonical_class": {
+      "const": "Hypothesis"
+    },
+    "proposition": {
+      "type": "string",
+      "minLength": 1
+    },
+    "supporting_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "contrary_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rival_hypothesis_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "historical_admissibility_note": {
+      "type": "string",
+      "minLength": 1
+    },
+    "epistemic_classification": {
+      "const": "WORKING_HYPOTHESIS"
+    },
+    "scope": {
+      "type": "string",
+      "minLength": 1
+    },
+    "unresolved_requirements": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
