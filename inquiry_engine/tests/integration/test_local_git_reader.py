@@ -37,3 +37,4 @@ def test_reader_is_pinned_to_declared_commit(tmp_path: Path):
 
     reader = LocalGitReader(repo, first_commit)
     assert reader.read_text("artifact.txt") == "first\n"
+    assert reader.list_files() == ["artifact.txt"]

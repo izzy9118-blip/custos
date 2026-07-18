@@ -38,11 +38,18 @@ class LocalGitReader:
         return self._run_git("show", f"{self.resolved_commit}:{repository_path}")
 
     def list_files(self, prefix: str = "") -> list[str]:
+        args = [
+            "ls-tree",
+            "-r",
+            "--name-only",
+            self.resolved_commit,
+        ]
+
         if prefix:
             self._validate_path(prefix)
-        output = self._run_git(
-            "ls-tree", "-r", "--name-only", self.resolved_commit, "--", prefix
-        )
+            args.extend(["--", prefix])
+
+        output = self._run_git(*args)
         return sorted(line for line in output.splitlines() if line)
 
     def file_exists(self, repository_path: str) -> bool:
