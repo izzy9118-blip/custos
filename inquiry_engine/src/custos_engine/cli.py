@@ -24,7 +24,8 @@ def run_command(args: argparse.Namespace) -> int:
         mode=EngineMode(args.mode),
         repo_root=Path(args.repo_root),
         git_commit=args.git_commit,
-        manifest_path=Path(args.manifest),
+        manifest_git_commit=args.manifest_git_commit,
+        manifest_path=args.manifest,
         question_path=Path(args.question),
         output_dir=Path(args.output),
         projection_manifest_path=(
@@ -32,11 +33,13 @@ def run_command(args: argparse.Namespace) -> int:
         ),
     )
 
-    reader = LocalGitReader(settings.repo_root, settings.git_commit)
+    repository_reader = LocalGitReader(settings.repo_root, settings.git_commit)
+    manifest_reader = LocalGitReader(settings.repo_root, settings.manifest_git_commit)
     manifest = load_cognitive_memory_manifest(
+        manifest_reader,
         settings.manifest_path,
         _schema_path("cognitive_memory_manifest.schema.json"),
-        reader.resolved_commit,
+        repository_reader.resolved_commit,
     )
 
     question = json.loads(settings.question_path.read_text(encoding="utf-8"))
@@ -51,7 +54,7 @@ def run_command(args: argparse.Namespace) -> int:
             settings.projection_manifest_path.read_text(encoding="utf-8")
         )
         projection_id = projection["projection_id"]
-        if projection["git_commit"] != reader.resolved_commit:
+        if projection["git_commit"] != repository_reader.resolved_commit:
             raise ValueError("Projection Manifest commit does not match run commit")
 
     run = InquiryRun(
@@ -60,7 +63,7 @@ def run_command(args: argparse.Namespace) -> int:
         initiating_question=question["initiating_question"],
         documentary_boundary=question["documentary_boundary"],
         repository_full_name=manifest.repository_full_name,
-        git_commit=reader.resolved_commit,
+        git_commit=repository_reader.resolved_commit,
         cognitive_memory_manifest_id=manifest.manifest_id,
         projection_manifest_id=projection_id,
         governing_specification_ids=manifest.governing_specification_ids,
@@ -97,6 +100,7 @@ def build_parser() -> argparse.ArgumentParser:
     run_parser.add_argument("--mode", choices=["DEVELOPMENT", "PRODUCTION"], required=True)
     run_parser.add_argument("--repo-root", required=True)
     run_parser.add_argument("--git-commit", required=True)
+    run_parser.add_argument("--manifest-git-commit", required=True)
     run_parser.add_argument("--manifest", required=True)
     run_parser.add_argument("--question", required=True)
     run_parser.add_argument("--output", required=True)
