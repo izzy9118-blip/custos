@@ -7,9 +7,10 @@ A narrow, local, deterministic Python scaffold for the Strauss Inquiry Engine.
 The runtime operates against:
 
 1. a **declared local Git repository**;
-2. a **declared immutable Git commit**;
-3. a **declared Cognitive Memory Manifest**;
-4. an optional **declared Neo4j Projection Manifest**.
+2. a **declared immutable governed repository Git commit**;
+3. a **declared immutable manifest Git commit**;
+4. a **declared repository-relative Cognitive Memory Manifest path**;
+5. an optional **declared Neo4j Projection Manifest**.
 
 It never reads from the moving repository head after a run begins.
 
@@ -58,13 +59,15 @@ python -m pip install -e ".[dev,neo4j]"
 The repository must already be cloned locally.
 
 ```bash
-custos-inquiry run   --mode DEVELOPMENT   --repo-root /path/to/custos   --git-commit <full-commit-sha>   --manifest tests/fixtures/cognitive_memory_manifest.json   --question tests/fixtures/inquiry.json   --output runs/RUN-000000001
+custos-inquiry run   --mode DEVELOPMENT   --repo-root /path/to/custos   --git-commit <governed-commit-sha>   --manifest-git-commit <manifest-commit-sha>   --manifest tests/fixtures/cognitive_memory_manifest.json   --question tests/fixtures/inquiry.json   --output runs/RUN-000000001
 ```
 
 The command:
 
-- verifies the declared commit;
-- verifies that the Manifest points to the same commit;
+- verifies the declared governed repository commit;
+- verifies the declared manifest commit;
+- loads the Manifest through the pinned manifest commit and repository-relative path;
+- verifies that the Manifest `repository_commit` matches the governed repository commit;
 - reads canonical files through `git show <commit>:<path>`;
 - freezes the run configuration;
 - executes the deterministic state-machine scaffold;
