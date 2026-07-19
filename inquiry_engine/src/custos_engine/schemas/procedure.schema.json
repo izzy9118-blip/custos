@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Procedure Source",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "purpose",
+    "triggering_conditions",
+    "required_inputs",
+    "ordered_stages",
+    "permitted_operations",
+    "prohibited_operations",
+    "evidence_requirements",
+    "branch_conditions",
+    "failure_conditions",
+    "termination_conditions",
+    "positive_validation_cases",
+    "negative_validation_cases",
+    "adversarial_validation_cases",
+    "version_history",
+    "validation_record_ids",
+    "certification_record_id",
+    "integration_status"
+  ],
+  "properties": {
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "triggering_conditions": {
+      "type": "array"
+    },
+    "required_inputs": {
+      "type": "array"
+    },
+    "ordered_stages": {
+      "type": "array",
+      "minItems": 1
+    },
+    "permitted_operations": {
+      "type": "array"
+    },
+    "prohibited_operations": {
+      "type": "array"
+    },
+    "evidence_requirements": {
+      "type": "array"
+    },
+    "branch_conditions": {
+      "type": "array"
+    },
+    "failure_conditions": {
+      "type": "array"
+    },
+    "termination_conditions": {
+      "type": "array",
+      "minItems": 1
+    },
+    "positive_validation_cases": {
+      "type": "array"
+    },
+    "negative_validation_cases": {
+      "type": "array"
+    },
+    "adversarial_validation_cases": {
+      "type": "array"
+    },
+    "version_history": {
+      "type": "array"
+    },
+    "validation_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "certification_record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "integration_status": {
+      "type": "string",
+      "minLength": 1
+    }
+  }
+}
