@@ -14,6 +14,7 @@ def load_taxonomy_components(
     schema_path: Path,
 ) -> list[TaxonomyComponent]:
     text = source_path.read_text(encoding="utf-8")
+    schema = json.loads(schema_path.read_text(encoding="utf-8"))
     if source_path.suffix.lower() == ".json":
         raw = json.loads(text)
     elif source_path.suffix.lower() in {".yaml", ".yml"}:
@@ -26,6 +27,6 @@ def load_taxonomy_components(
 
     components: list[TaxonomyComponent] = []
     for item in raw:
-        validate_against_schema(item, schema_path)
+        validate_against_schema(item, schema)
         components.append(TaxonomyComponent.model_validate(item))
     return sorted(components, key=lambda component: component.component_id)

@@ -10,7 +10,8 @@ The runtime operates against:
 2. a **declared immutable governed repository Git commit**;
 3. a **declared immutable manifest Git commit**;
 4. a **declared repository-relative Cognitive Memory Manifest path**;
-5. an optional **declared Neo4j Projection Manifest**.
+5. a **declared repository-relative Cognitive Memory Manifest schema path**;
+6. an optional **declared Neo4j Projection Manifest**.
 
 It never reads from the moving repository head after a run begins.
 
@@ -59,19 +60,29 @@ python -m pip install -e ".[dev,neo4j]"
 The repository must already be cloned locally.
 
 ```bash
-custos-inquiry run   --mode DEVELOPMENT   --repo-root /path/to/custos   --git-commit <governed-commit-sha>   --manifest-git-commit <manifest-commit-sha>   --manifest tests/fixtures/cognitive_memory_manifest.json   --question tests/fixtures/inquiry.json   --output runs/RUN-000000001
+custos-inquiry run \
+  --mode DEVELOPMENT \
+  --repo-root /path/to/custos \
+  --git-commit <governed-commit-sha> \
+  --manifest-git-commit <manifest-commit-sha> \
+  --manifest tests/fixtures/cognitive_memory_manifest.json \
+  --manifest-schema inquiry_engine/src/custos_engine/schemas/cognitive_memory_manifest.schema.json \
+  --question tests/fixtures/inquiry.json \
+  --output runs/RUN-000000001
 ```
 
 The command:
 
 - verifies the declared governed repository commit;
-- verifies the declared manifest commit;
-- loads the Manifest through the pinned manifest commit and repository-relative path;
+- verifies the declared manifest commit used to pin both the Manifest and Manifest schema;
+- loads the Manifest and its validating schema through the pinned manifest commit and repository-relative paths;
 - verifies that the Manifest `repository_commit` matches the governed repository commit;
 - reads canonical files through `git show <commit>:<path>`;
 - freezes the run configuration;
 - executes the deterministic state-machine scaffold;
 - writes an auditable candidate inquiry package.
+
+Working-tree edits to the Manifest or Manifest schema cannot affect an Inquiry Run because both artifacts are read from the declared immutable `manifest_git_commit` snapshot.
 
 ## Run tests
 
