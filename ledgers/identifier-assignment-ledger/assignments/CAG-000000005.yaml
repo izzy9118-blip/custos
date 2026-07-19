@@ -1,0 +1,26 @@
+identifier: "CAG-000000005"
+family: "CAG"
+assigned_class: "Collective Agent"
+assignment_status: "ASSIGNED"
+assignment_status_controlled_vocabulary_status: "PENDING_REGISTRATION"
+assignment_date: "2026-07-19"
+assignment_authority:
+  type: "IDENTIFIER_GOVERNANCE_AUTHORITY"
+  authority_id: "CAG-000000002"
+  authority_scope_note: "Identifier allocation only; does not confer Constitutional Governance Authority jurisdiction."
+source_decision_id: null
+jurisdictional_designation_basis:
+  designation_character: "FOUNDER-RATIFIED FOUNDATIONAL DESIGNATION"
+  founder_ratification_record_path: "governance/foundational-ratifications/2026-07-19_Foundational_Governance_Closure_Ratification.md"
+  ratified_instrument_path: "specifications/000011_Foundational_Governance_Closure_Instrument_v1.0_DRAFT.md"
+  ratified_repository_commit: "edd12e3d1e8ed5d914fc614d0a656a61551b2dfe"
+  effective_date: "2026-07-19"
+lifecycle_status:
+  label: "ACTIVE"
+  controlled_vocabulary_status: "PENDING_REGISTRATION"
+predecessor_identifiers: []
+successor_identifiers: []
+audit_history:
+  - event_date: "2026-07-19"
+    event_type: "ASSIGNMENT"
+    event_note: "Initial identifier assignment for Constitutional Governance Authority; jurisdiction remains founded on separate founder-ratified designation basis."
