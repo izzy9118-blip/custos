@@ -13,6 +13,7 @@ def _build_settings(
     mode: EngineMode = EngineMode.DEVELOPMENT,
     manifest_path: str = "manifest.json",
     manifest_schema_path: str = "schema.json",
+    taxonomy_schema_path: str = "taxonomy_schema.json",
     projection_git_commit: str | None = None,
     projection_manifest_path: str | None = None,
     projection_manifest_schema_path: str | None = None,
@@ -26,6 +27,7 @@ def _build_settings(
         manifest_git_commit="7654321",
         manifest_path=manifest_path,
         manifest_schema_path=manifest_schema_path,
+        taxonomy_schema_path=taxonomy_schema_path,
         projection_git_commit=projection_git_commit,
         projection_manifest_path=projection_manifest_path,
         projection_manifest_schema_path=projection_manifest_schema_path,
@@ -49,6 +51,45 @@ def test_manifest_schema_path_rejects_invalid_values(
 ):
     with pytest.raises(ValidationError, match=expected_error):
         _build_settings(tmp_path, manifest_schema_path=manifest_schema_path)
+
+
+@pytest.mark.parametrize(
+    ("taxonomy_schema_path", "expected_error"),
+    [
+        ("   ", "Taxonomy schema path must be non-empty"),
+        ("/abs/taxonomy_schema.json", "Taxonomy schema path must be repository-relative"),
+        ("../taxonomy_schema.json", "Taxonomy schema path must not contain '..'"),
+    ],
+)
+def test_taxonomy_schema_path_rejects_invalid_values(
+    tmp_path: Path,
+    taxonomy_schema_path: str,
+    expected_error: str,
+):
+    with pytest.raises(ValidationError, match=expected_error):
+        _build_settings(tmp_path, taxonomy_schema_path=taxonomy_schema_path)
+
+
+def test_taxonomy_schema_path_accepts_repository_relative_path(tmp_path: Path):
+    settings = _build_settings(tmp_path, taxonomy_schema_path="schemas/taxonomy.json")
+    assert settings.taxonomy_schema_path == "schemas/taxonomy.json"
+
+
+@pytest.mark.parametrize("mode", [EngineMode.DEVELOPMENT, EngineMode.PRODUCTION])
+def test_taxonomy_schema_path_is_required(tmp_path: Path, mode: EngineMode):
+    (tmp_path / "question.json").write_text("{}", encoding="utf-8")
+    with pytest.raises(ValidationError, match="taxonomy_schema_path"):
+        EngineSettings(
+            mode=mode,
+            repo_root=tmp_path,
+            git_commit="1234567",
+            manifest_git_commit="7654321",
+            manifest_path="manifest.json",
+            manifest_schema_path="schema.json",
+            taxonomy_schema_path=None,
+            question_path=tmp_path / "question.json",
+            output_dir=tmp_path / "out",
+        )
 
 
 @pytest.mark.parametrize(

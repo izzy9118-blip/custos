@@ -7,6 +7,7 @@ from pathlib import Path
 from custos_engine.cognition.cognitive_memory_loader import (
     load_cognitive_memory_manifest,
 )
+from custos_engine.cognition.taxonomy_loader import TaxonomyLoader
 from custos_engine.config.settings import EngineSettings
 from custos_engine.graph.projection_manifest_loader import ProjectionManifestLoader
 from custos_engine.models.base import EngineMode
@@ -24,6 +25,7 @@ def run_command(args: argparse.Namespace) -> int:
         manifest_git_commit=args.manifest_git_commit,
         manifest_path=args.manifest,
         manifest_schema_path=args.manifest_schema,
+        taxonomy_schema_path=args.taxonomy_schema,
         projection_git_commit=args.projection_git_commit,
         projection_manifest_path=args.projection_manifest,
         projection_manifest_schema_path=args.projection_manifest_schema,
@@ -37,6 +39,12 @@ def run_command(args: argparse.Namespace) -> int:
         manifest_reader,
         settings.manifest_path,
         settings.manifest_schema_path,
+        repository_reader.resolved_commit,
+    )
+    taxonomy_loader = TaxonomyLoader(repository_reader)
+    taxonomy_components = taxonomy_loader.load_manifest_source(
+        manifest.taxonomy_source,
+        settings.taxonomy_schema_path,
         repository_reader.resolved_commit,
     )
 
@@ -111,6 +119,7 @@ def build_parser() -> argparse.ArgumentParser:
     run_parser.add_argument("--manifest-git-commit", required=True)
     run_parser.add_argument("--manifest", required=True)
     run_parser.add_argument("--manifest-schema", required=True)
+    run_parser.add_argument("--taxonomy-schema", required=True)
     run_parser.add_argument("--projection-git-commit")
     run_parser.add_argument("--projection-manifest")
     run_parser.add_argument("--projection-manifest-schema")
