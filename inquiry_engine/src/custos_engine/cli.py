@@ -15,10 +15,6 @@ from custos_engine.repository.github_reader import LocalGitReader
 from custos_engine.runtime.state_machine import InquiryStateMachine
 
 
-def _schema_path(name: str) -> Path:
-    return Path(__file__).resolve().parent / "schemas" / name
-
-
 def run_command(args: argparse.Namespace) -> int:
     settings = EngineSettings(
         mode=EngineMode(args.mode),
@@ -26,6 +22,7 @@ def run_command(args: argparse.Namespace) -> int:
         git_commit=args.git_commit,
         manifest_git_commit=args.manifest_git_commit,
         manifest_path=args.manifest,
+        manifest_schema_path=args.manifest_schema,
         question_path=Path(args.question),
         output_dir=Path(args.output),
         projection_manifest_path=(
@@ -38,7 +35,7 @@ def run_command(args: argparse.Namespace) -> int:
     manifest = load_cognitive_memory_manifest(
         manifest_reader,
         settings.manifest_path,
-        _schema_path("cognitive_memory_manifest.schema.json"),
+        settings.manifest_schema_path,
         repository_reader.resolved_commit,
     )
 
@@ -102,6 +99,7 @@ def build_parser() -> argparse.ArgumentParser:
     run_parser.add_argument("--git-commit", required=True)
     run_parser.add_argument("--manifest-git-commit", required=True)
     run_parser.add_argument("--manifest", required=True)
+    run_parser.add_argument("--manifest-schema", required=True)
     run_parser.add_argument("--question", required=True)
     run_parser.add_argument("--output", required=True)
     run_parser.add_argument("--projection-manifest")

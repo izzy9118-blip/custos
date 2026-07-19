@@ -2,7 +2,14 @@ from __future__ import annotations
 
 from pathlib import Path
 
-from pydantic import BaseModel, ConfigDict, Field, field_validator, model_validator
+from pydantic import (
+    BaseModel,
+    ConfigDict,
+    Field,
+    ValidationInfo,
+    field_validator,
+    model_validator,
+)
 
 from custos_engine.models.base import EngineMode
 
@@ -17,6 +24,7 @@ class EngineSettings(BaseModel):
     git_commit: str = Field(min_length=7)
     manifest_git_commit: str = Field(min_length=7)
     manifest_path: str
+    manifest_schema_path: str
     question_path: Path
     output_dir: Path
     projection_manifest_path: Path | None = None
@@ -29,18 +37,24 @@ class EngineSettings(BaseModel):
             raise ValueError(f"Required path does not exist: {resolved}")
         return resolved
 
-    @field_validator("manifest_path")
+    @field_validator("manifest_path", "manifest_schema_path")
     @classmethod
-    def validate_manifest_repository_path(cls, value: str) -> str:
+    def validate_manifest_repository_path(
+        cls,
+        value: str,
+        info: ValidationInfo,
+    ) -> str:
+        field_name = info.field_name or "path"
+        label = field_name.replace("_", " ")
         normalized = value.strip()
         if not normalized:
-            raise ValueError("Manifest path must be non-empty")
+            raise ValueError(f"{label.capitalize()} must be non-empty")
 
         path = Path(normalized)
         if path.is_absolute():
-            raise ValueError("Manifest path must be repository-relative")
+            raise ValueError(f"{label.capitalize()} must be repository-relative")
         if ".." in path.parts:
-            raise ValueError("Manifest path must not contain '..'")
+            raise ValueError(f"{label.capitalize()} must not contain '..'")
         return normalized
 
     @field_validator("output_dir")

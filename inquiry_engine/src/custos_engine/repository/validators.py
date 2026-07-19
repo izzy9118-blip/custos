@@ -1,8 +1,6 @@
 from __future__ import annotations
 
-import json
-from pathlib import Path
-from typing import Any
+from typing import Any, Mapping
 
 from jsonschema import Draft202012Validator
 
@@ -11,8 +9,12 @@ class SchemaValidationError(ValueError):
     pass
 
 
-def validate_against_schema(instance: Any, schema_path: Path) -> None:
-    schema = json.loads(schema_path.read_text(encoding="utf-8"))
+def validate_against_schema(instance: Any, schema: Mapping[str, Any]) -> None:
+    try:
+        Draft202012Validator.check_schema(schema)
+    except Exception as exc:
+        raise SchemaValidationError(f"Invalid JSON schema: {exc}") from exc
+
     validator = Draft202012Validator(schema)
     errors = sorted(validator.iter_errors(instance), key=lambda e: list(e.path))
     if not errors:
