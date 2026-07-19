@@ -7,16 +7,28 @@ from custos_engine.config.settings import EngineSettings
 from custos_engine.models.base import EngineMode
 
 
-def _build_settings(tmp_path: Path, manifest_schema_path: str) -> EngineSettings:
+def _build_settings(
+    tmp_path: Path,
+    *,
+    mode: EngineMode = EngineMode.DEVELOPMENT,
+    manifest_path: str = "manifest.json",
+    manifest_schema_path: str = "schema.json",
+    projection_git_commit: str | None = None,
+    projection_manifest_path: str | None = None,
+    projection_manifest_schema_path: str | None = None,
+) -> EngineSettings:
     question_path = tmp_path / "question.json"
     question_path.write_text("{}", encoding="utf-8")
     return EngineSettings(
-        mode=EngineMode.DEVELOPMENT,
+        mode=mode,
         repo_root=tmp_path,
         git_commit="1234567",
         manifest_git_commit="7654321",
-        manifest_path="manifest.json",
+        manifest_path=manifest_path,
         manifest_schema_path=manifest_schema_path,
+        projection_git_commit=projection_git_commit,
+        projection_manifest_path=projection_manifest_path,
+        projection_manifest_schema_path=projection_manifest_schema_path,
         question_path=question_path,
         output_dir=tmp_path / "out",
     )
@@ -36,4 +48,123 @@ def test_manifest_schema_path_rejects_invalid_values(
     expected_error: str,
 ):
     with pytest.raises(ValidationError, match=expected_error):
-        _build_settings(tmp_path, manifest_schema_path)
+        _build_settings(tmp_path, manifest_schema_path=manifest_schema_path)
+
+
+@pytest.mark.parametrize(
+    ("projection_manifest_path", "expected_error"),
+    [
+        ("   ", "Projection manifest path must be non-empty"),
+        ("/abs/projection.json", "Projection manifest path must be repository-relative"),
+        ("../projection.json", "Projection manifest path must not contain '..'"),
+    ],
+)
+def test_projection_manifest_path_rejects_invalid_values(
+    tmp_path: Path,
+    projection_manifest_path: str,
+    expected_error: str,
+):
+    with pytest.raises(ValidationError, match=expected_error):
+        _build_settings(
+            tmp_path,
+            projection_git_commit="1111111",
+            projection_manifest_path=projection_manifest_path,
+            projection_manifest_schema_path="projection_schema.json",
+        )
+
+
+@pytest.mark.parametrize(
+    ("projection_manifest_schema_path", "expected_error"),
+    [
+        ("   ", "Projection manifest schema path must be non-empty"),
+        (
+            "/abs/projection_schema.json",
+            "Projection manifest schema path must be repository-relative",
+        ),
+        (
+            "../projection_schema.json",
+            "Projection manifest schema path must not contain '..'",
+        ),
+    ],
+)
+def test_projection_manifest_schema_path_rejects_invalid_values(
+    tmp_path: Path,
+    projection_manifest_schema_path: str,
+    expected_error: str,
+):
+    with pytest.raises(ValidationError, match=expected_error):
+        _build_settings(
+            tmp_path,
+            projection_git_commit="1111111",
+            projection_manifest_path="projection.json",
+            projection_manifest_schema_path=projection_manifest_schema_path,
+        )
+
+
+def test_development_accepts_projection_fields_absent(tmp_path: Path):
+    settings = _build_settings(tmp_path, mode=EngineMode.DEVELOPMENT)
+    assert settings.projection_git_commit is None
+    assert settings.projection_manifest_path is None
+    assert settings.projection_manifest_schema_path is None
+
+
+def test_development_accepts_projection_fields_present(tmp_path: Path):
+    settings = _build_settings(
+        tmp_path,
+        mode=EngineMode.DEVELOPMENT,
+        projection_git_commit="1111111",
+        projection_manifest_path="projection.json",
+        projection_manifest_schema_path="projection_schema.json",
+    )
+    assert settings.projection_git_commit == "1111111"
+    assert settings.projection_manifest_path == "projection.json"
+    assert settings.projection_manifest_schema_path == "projection_schema.json"
+
+
+@pytest.mark.parametrize(
+    (
+        "projection_git_commit",
+        "projection_manifest_path",
+        "projection_manifest_schema_path",
+        "missing_field",
+    ),
+    [
+        (None, "projection.json", "projection_schema.json", "projection_git_commit"),
+        ("1111111", None, "projection_schema.json", "projection_manifest_path"),
+        ("1111111", "projection.json", None, "projection_manifest_schema_path"),
+        (None, None, "projection_schema.json", "projection_git_commit"),
+        (None, "projection.json", None, "projection_git_commit"),
+        ("1111111", None, None, "projection_manifest_path"),
+    ],
+)
+def test_development_rejects_partial_projection_configuration(
+    tmp_path: Path,
+    projection_git_commit: str | None,
+    projection_manifest_path: str | None,
+    projection_manifest_schema_path: str | None,
+    missing_field: str,
+):
+    with pytest.raises(ValidationError, match=missing_field):
+        _build_settings(
+            tmp_path,
+            mode=EngineMode.DEVELOPMENT,
+            projection_git_commit=projection_git_commit,
+            projection_manifest_path=projection_manifest_path,
+            projection_manifest_schema_path=projection_manifest_schema_path,
+        )
+
+
+def test_production_rejects_projection_fields_absent(tmp_path: Path):
+    with pytest.raises(ValidationError, match="projection_git_commit"):
+        _build_settings(tmp_path, mode=EngineMode.PRODUCTION)
+
+
+def test_production_accepts_projection_fields_present(tmp_path: Path):
+    settings = _build_settings(
+        tmp_path,
+        mode=EngineMode.PRODUCTION,
+        projection_git_commit="1111111",
+        projection_manifest_path="projection.json",
+        projection_manifest_schema_path="projection_schema.json",
+    )
+    assert settings.mode == EngineMode.PRODUCTION

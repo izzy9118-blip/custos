@@ -25,9 +25,11 @@ class EngineSettings(BaseModel):
     manifest_git_commit: str = Field(min_length=7)
     manifest_path: str
     manifest_schema_path: str
+    projection_git_commit: str | None = Field(default=None, min_length=7)
+    projection_manifest_path: str | None = None
+    projection_manifest_schema_path: str | None = None
     question_path: Path
     output_dir: Path
-    projection_manifest_path: Path | None = None
 
     @field_validator("repo_root", "question_path")
     @classmethod
@@ -37,13 +39,21 @@ class EngineSettings(BaseModel):
             raise ValueError(f"Required path does not exist: {resolved}")
         return resolved
 
-    @field_validator("manifest_path", "manifest_schema_path")
+    @field_validator(
+        "manifest_path",
+        "manifest_schema_path",
+        "projection_manifest_path",
+        "projection_manifest_schema_path",
+    )
     @classmethod
     def validate_manifest_repository_path(
         cls,
-        value: str,
+        value: str | None,
         info: ValidationInfo,
-    ) -> str:
+    ) -> str | None:
+        if value is None:
+            return None
+
         field_name = info.field_name or "path"
         label = field_name.replace("_", " ")
         normalized = value.strip()
@@ -62,18 +72,24 @@ class EngineSettings(BaseModel):
     def normalize_output(cls, value: Path) -> Path:
         return value.expanduser().resolve()
 
-    @field_validator("projection_manifest_path")
-    @classmethod
-    def projection_path_exists(cls, value: Path | None) -> Path | None:
-        if value is None:
-            return None
-        resolved = value.expanduser().resolve()
-        if not resolved.exists():
-            raise ValueError(f"Projection manifest does not exist: {resolved}")
-        return resolved
-
     @model_validator(mode="after")
     def production_requires_projection_manifest(self) -> "EngineSettings":
-        if self.mode == EngineMode.PRODUCTION and self.projection_manifest_path is None:
-            raise ValueError("PRODUCTION mode requires projection_manifest_path")
+        projection_fields = {
+            "projection_git_commit": self.projection_git_commit,
+            "projection_manifest_path": self.projection_manifest_path,
+            "projection_manifest_schema_path": self.projection_manifest_schema_path,
+        }
+        missing = [name for name, value in projection_fields.items() if value is None]
+        present = [name for name, value in projection_fields.items() if value is not None]
+
+        if present and missing:
+            raise ValueError(
+                "Projection configuration is incomplete; missing fields: "
+                + ", ".join(missing)
+            )
+
+        if self.mode == EngineMode.PRODUCTION and missing:
+            raise ValueError(
+                "PRODUCTION mode requires projection fields: " + ", ".join(missing)
+            )
         return self
