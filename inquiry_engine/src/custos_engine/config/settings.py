@@ -26,6 +26,7 @@ class EngineSettings(BaseModel):
     manifest_path: str
     manifest_schema_path: str
     taxonomy_schema_path: str
+    procedure_schema_path: str
     projection_git_commit: str | None = Field(default=None, min_length=7)
     projection_manifest_path: str | None = None
     projection_manifest_schema_path: str | None = None
@@ -44,6 +45,7 @@ class EngineSettings(BaseModel):
         "manifest_path",
         "manifest_schema_path",
         "taxonomy_schema_path",
+        "procedure_schema_path",
         "projection_manifest_path",
         "projection_manifest_schema_path",
     )

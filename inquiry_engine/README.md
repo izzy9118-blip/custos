@@ -14,9 +14,12 @@ The runtime operates against:
 6. a **declared repository-relative Taxonomy schema path**;
 7. the Taxonomy source path declared by `taxonomy_source.github_path`;
 8. the Taxonomy source commit declared by `taxonomy_source.git_commit`;
-9. an optional **declared immutable projection Git commit**;
-10. an optional **declared repository-relative Projection Manifest path**;
-11. an optional **declared repository-relative Projection Manifest schema path**.
+9. a **declared repository-relative Procedure schema path**;
+10. the Procedure source path declared by `procedure_source.github_path`;
+11. the Procedure source commit declared by `procedure_source.git_commit`;
+12. an optional **declared immutable projection Git commit**;
+13. an optional **declared repository-relative Projection Manifest path**;
+14. an optional **declared repository-relative Projection Manifest schema path**.
 
 It never reads from the moving repository head after a run begins.
 
@@ -73,6 +76,7 @@ custos-inquiry run \
   --manifest tests/fixtures/cognitive_memory_manifest.json \
   --manifest-schema inquiry_engine/src/custos_engine/schemas/cognitive_memory_manifest.schema.json \
   --taxonomy-schema inquiry_engine/src/custos_engine/schemas/taxonomy_component.schema.json \
+  --procedure-schema inquiry_engine/src/custos_engine/schemas/procedure.schema.json \
   --question tests/fixtures/inquiry.json \
   --output runs/RUN-000000001
 ```
@@ -84,6 +88,8 @@ The command:
 - loads the Manifest and its validating schema through the pinned manifest commit and repository-relative paths;
 - loads the Taxonomy source and Taxonomy schema through the governed `git_commit` using the Taxonomy source path declared by `taxonomy_source.github_path`;
 - verifies that `taxonomy_source.git_commit` matches the governed repository commit;
+- loads the Procedure source and Procedure schema through the governed `git_commit` using the Procedure source path declared by `procedure_source.github_path`;
+- verifies that `procedure_source.git_commit` matches the governed repository commit;
 - verifies that the Manifest `repository_commit` matches the governed repository commit;
 - reads canonical files through `git show <commit>:<path>`;
 - freezes the run configuration;
@@ -92,6 +98,7 @@ The command:
 
 Working-tree edits to the Manifest or Manifest schema cannot affect an Inquiry Run because both artifacts are read from the declared immutable `manifest_git_commit` snapshot.
 Working-tree edits to either the Taxonomy source or the Taxonomy schema cannot affect an Inquiry Run because both are read through the same `LocalGitReader` pinned to `git_commit`.
+Working-tree edits to either the Procedure source or the Procedure schema cannot affect an Inquiry Run because both are read through the same `LocalGitReader` pinned to `git_commit`.
 
 ## Create a production run with projection
 
@@ -104,6 +111,7 @@ custos-inquiry run \
   --manifest tests/fixtures/cognitive_memory_manifest.json \
   --manifest-schema inquiry_engine/src/custos_engine/schemas/cognitive_memory_manifest.schema.json \
   --taxonomy-schema inquiry_engine/src/custos_engine/schemas/taxonomy_component.schema.json \
+  --procedure-schema inquiry_engine/src/custos_engine/schemas/procedure.schema.json \
   --projection-git-commit <projection-commit-sha> \
   --projection-manifest projections/projection_manifest.json \
   --projection-manifest-schema inquiry_engine/src/custos_engine/schemas/projection_manifest.schema.json \
@@ -138,6 +146,7 @@ Implemented:
 - commit-pinned repository reader;
 - manifest validation;
 - repository-backed, commit-pinned Taxonomy loading;
+- repository-backed, commit-pinned Procedure loading;
 - deterministic Taxonomy evaluator;
 - deterministic state-machine scaffold;
 - candidate package exporter;
