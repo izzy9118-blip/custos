@@ -11,7 +11,9 @@ The runtime operates against:
 3. a **declared immutable manifest Git commit**;
 4. a **declared repository-relative Cognitive Memory Manifest path**;
 5. a **declared repository-relative Cognitive Memory Manifest schema path**;
-6. an optional **declared Neo4j Projection Manifest**.
+6. an optional **declared immutable projection Git commit**;
+7. an optional **declared repository-relative Projection Manifest path**;
+8. an optional **declared repository-relative Projection Manifest schema path**.
 
 It never reads from the moving repository head after a run begins.
 
@@ -83,6 +85,33 @@ The command:
 - writes an auditable candidate inquiry package.
 
 Working-tree edits to the Manifest or Manifest schema cannot affect an Inquiry Run because both artifacts are read from the declared immutable `manifest_git_commit` snapshot.
+
+## Create a production run with projection
+
+```bash
+custos-inquiry run \
+  --mode PRODUCTION \
+  --repo-root /path/to/custos \
+  --git-commit <governed-commit-sha> \
+  --manifest-git-commit <manifest-commit-sha> \
+  --manifest tests/fixtures/cognitive_memory_manifest.json \
+  --manifest-schema inquiry_engine/src/custos_engine/schemas/cognitive_memory_manifest.schema.json \
+  --projection-git-commit <projection-commit-sha> \
+  --projection-manifest projections/projection_manifest.json \
+  --projection-manifest-schema inquiry_engine/src/custos_engine/schemas/projection_manifest.schema.json \
+  --question tests/fixtures/inquiry.json \
+  --output runs/RUN-000000001
+```
+
+When projection inputs are configured, `projection_git_commit` pins both the Projection Manifest and the Projection Manifest schema.
+
+Working-tree edits to either projection artifact cannot affect an Inquiry Run because both are read via `git show <projection_git_commit>:<path>` through one pinned reader.
+
+The Projection Manifest is validated against three bindings before use:
+
+- `projection.git_commit` equals the governed repository commit;
+- `projection.cognitive_memory_manifest_id` equals the loaded Cognitive Memory Manifest ID;
+- `projection.repository_full_name` equals the loaded Cognitive Memory Manifest repository full name.
 
 ## Run tests
 

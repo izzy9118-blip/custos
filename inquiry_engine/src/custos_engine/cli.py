@@ -8,6 +8,7 @@ from custos_engine.cognition.cognitive_memory_loader import (
     load_cognitive_memory_manifest,
 )
 from custos_engine.config.settings import EngineSettings
+from custos_engine.graph.projection_manifest_loader import ProjectionManifestLoader
 from custos_engine.models.base import EngineMode
 from custos_engine.models.inquiry import InquiryRun, TerminationRecord
 from custos_engine.outputs.inquiry_package import InquiryPackageWriter
@@ -23,11 +24,11 @@ def run_command(args: argparse.Namespace) -> int:
         manifest_git_commit=args.manifest_git_commit,
         manifest_path=args.manifest,
         manifest_schema_path=args.manifest_schema,
+        projection_git_commit=args.projection_git_commit,
+        projection_manifest_path=args.projection_manifest,
+        projection_manifest_schema_path=args.projection_manifest_schema,
         question_path=Path(args.question),
         output_dir=Path(args.output),
-        projection_manifest_path=(
-            Path(args.projection_manifest) if args.projection_manifest else None
-        ),
     )
 
     repository_reader = LocalGitReader(settings.repo_root, settings.git_commit)
@@ -47,12 +48,22 @@ def run_command(args: argparse.Namespace) -> int:
 
     projection_id = None
     if settings.projection_manifest_path:
-        projection = json.loads(
-            settings.projection_manifest_path.read_text(encoding="utf-8")
+        projection_reader = LocalGitReader(
+            settings.repo_root,
+            settings.projection_git_commit,
         )
-        projection_id = projection["projection_id"]
-        if projection["git_commit"] != repository_reader.resolved_commit:
-            raise ValueError("Projection Manifest commit does not match run commit")
+        projection_loader = ProjectionManifestLoader(projection_reader)
+        projection = projection_loader.load_repository(
+            settings.projection_manifest_path,
+            settings.projection_manifest_schema_path,
+        )
+        projection_loader.assert_bindings(
+            projection,
+            repository_reader.resolved_commit,
+            manifest.manifest_id,
+            manifest.repository_full_name,
+        )
+        projection_id = projection.projection_id
 
     run = InquiryRun(
         run_id=question["run_id"],
@@ -100,9 +111,11 @@ def build_parser() -> argparse.ArgumentParser:
     run_parser.add_argument("--manifest-git-commit", required=True)
     run_parser.add_argument("--manifest", required=True)
     run_parser.add_argument("--manifest-schema", required=True)
+    run_parser.add_argument("--projection-git-commit")
+    run_parser.add_argument("--projection-manifest")
+    run_parser.add_argument("--projection-manifest-schema")
     run_parser.add_argument("--question", required=True)
     run_parser.add_argument("--output", required=True)
-    run_parser.add_argument("--projection-manifest")
     run_parser.set_defaults(handler=run_command)
 
     return parser
