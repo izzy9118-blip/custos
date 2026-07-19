@@ -1,0 +1,35 @@
+identifier: COR-000000001
+class: Correction Record
+correction_type: LEDGER_INDEX_OMISSION
+affected_entity_ids:
+- LDG-000000001
+original_state:
+  ledger_version: '1.0'
+  omitted_assignment_ids:
+  - CVRG-000000001
+  - STS-000000001
+  - STS-000000002
+  - STS-000000003
+corrected_state:
+  ledger_version: '1.1'
+  restored_assignment_ids:
+    - CVRG-000000001
+    - STS-000000001
+    - STS-000000002
+    - STS-000000003
+  ordering_rule: assignment_date_then_identifier
+reason: Existing valid ASSIGNED records dated 2026-07-16 were absent from the authoritative Identifier Assignment Ledger entries index and are restored without identity change.
+authority_id: CAG-000000002
+evidence:
+- ledgers/identifier-assignment-ledger/assignments/CVRG-000000001.yaml
+- ledgers/identifier-assignment-ledger/assignments/STS-000000001.yaml
+- ledgers/identifier-assignment-ledger/assignments/STS-000000002.yaml
+- ledgers/identifier-assignment-ledger/assignments/STS-000000003.yaml
+effective_date: '2026-07-19'
+identity_effect: NO_IDENTITY_CHANGE
+version_record_id: VER-000000001
+revision_record_id: null
+audit_history:
+- event_date: '2026-07-19'
+  event_type: CORRECTION_RECORDED
+  event_note: Recorded correction for omission of existing assignment identifiers from ledger index while preserving assignment identities and dates.

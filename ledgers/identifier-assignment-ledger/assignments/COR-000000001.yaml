@@ -1,0 +1,22 @@
+identifier: COR-000000001
+family: COR
+assigned_class: Correction Record
+assignment_status: ASSIGNED
+assignment_status_controlled_vocabulary_status: PENDING_REGISTRATION
+assignment_date: '2026-07-19'
+assignment_authority:
+  type: REGISTERED_AUTHORITY
+  authority_id: CAG-000000002
+source_decision_id: null
+lifecycle_status:
+  identifier: STS-000000001
+  label: ACTIVE
+  controlled_vocabulary_status: REGISTERED
+predecessor_identifiers: []
+successor_identifiers: []
+audit_history:
+- event_date: '2026-07-19'
+  event_type: ASSIGNMENT
+  event_note: 'Initial allocation for correction of omitted Identifier Assignment Ledger index entries.
+
+    '

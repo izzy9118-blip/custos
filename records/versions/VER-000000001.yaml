@@ -1,0 +1,10 @@
+identifier: VER-000000001
+class: Version Record
+entity_id: LDG-000000001
+previous_version: '1.0'
+current_version: '1.1'
+effective_date: '2026-07-19'
+change_type: CORRECTION
+correction_record_id: COR-000000001
+authority_id: CAG-000000002
+change_summary: Restores omitted assignment identifiers CVRG-000000001, STS-000000001, STS-000000002, and STS-000000003 in the ledger entries index and applies the declared ordering rule assignment_date_then_identifier without changing assignment identities or dates.
