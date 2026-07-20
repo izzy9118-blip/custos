@@ -21,6 +21,14 @@ The authoritative human-readable source remains:
 
 `engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt`
 
+Its canonical native-class identity and structured governance record are:
+
+`registers/hermeneutic-object-register/objects/HOC-000000001.yaml`
+
+HOC-000000001 is admitted as an open Hermeneutic Object C. Native admission
+does not alter the narrower technical-integration certification or authorize
+cognitive integration, interpretive production use, or graph projection.
+
 ## Active engine
 
 The active certified integration is under:

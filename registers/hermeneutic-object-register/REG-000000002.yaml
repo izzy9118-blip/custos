@@ -2,7 +2,7 @@ id: "REG-000000002"
 class: "Register"
 register_type: "Hermeneutic Object Register"
 title: "Hermeneutic Object Register"
-version: "1.0"
+version: "1.1"
 lifecycle_status:
   identifier: "STS-000000001"
   label: "ACTIVE"
@@ -60,8 +60,27 @@ entry_schema:
     - "current_version"
     - "version_history_location"
     - "admission_record_reference"
-entries: []
-entry_count: 0
+entries:
+  - canonical_identifier: "HOC-000000001"
+    ontology_class: "Hermeneutic Object C"
+    identifier_family: "HOC"
+    title: "Strauss's Taxonomy of Literary Concealment"
+    lifecycle_status:
+      identifier: "STS-000000001"
+      label: "ACTIVE"
+      controlled_vocabulary_status: "REGISTERED"
+    reconstruction_status: "ACTIVE — OPEN DOCUMENTARY RECONSTRUCTION"
+    certification_eligibility: "NOT_YET_ELIGIBLE"
+    engine_use_authorization_state: "NOT_AUTHORIZED"
+    governing_references:
+      - "SPEC-000000001"
+      - "DDR-000000004"
+    current_version: "1.0"
+    version_history_location: "records/versions/VER-000000010.yaml"
+    admission_record_reference: "DDR-000000004"
+    admission_date: "2026-07-20"
+    canonical_record_path: "registers/hermeneutic-object-register/objects/HOC-000000001.yaml"
+entry_count: 1
 ordering_rule: "admission_date_then_identifier"
 append_only: true
 version_history:
@@ -70,6 +89,11 @@ version_history:
     effective_date: "2026-07-20"
     authority_id: "CAG-000000006"
     action: "INITIAL_ADMISSION"
+  - version_record_id: "VER-000000011"
+    version: "1.1"
+    effective_date: "2026-07-20"
+    authority_id: "CAG-000000006"
+    action: "REGISTER_ENTRY_APPEND"
 audit_history:
   - event_date: "2026-07-20"
     event_type: "ADMITTED"
@@ -78,10 +102,16 @@ audit_history:
     event_note: >
       Admitted the empty canonical Hermeneutic Object Register with its entry
       contract, append-only rule, and admission_date_then_identifier ordering.
+  - event_date: "2026-07-20"
+    event_type: "ENTRY_APPENDED"
+    authority_id: "CAG-000000006"
+    decision_id: "DDR-000000004"
+    subject_id: "HOC-000000001"
+    event_note: >
+      Appended the complete native-admission entry for Strauss's Taxonomy of
+      Literary Concealment as an open Hermeneutic Object C.
 non_authorizations:
-  - "Does not admit any HO, HOA, HOB, or HOC entity."
-  - "Does not admit Strauss's Taxonomy of Literary Concealment."
-  - "Does not validate or certify any cognitive component."
-  - "Does not issue a cognitive-integration decision."
-  - "Does not release a Cognitive Memory Manifest."
-  - "Does not authorize production engine use or Neo4j projection."
+  - "Native admission of HOC-000000001 does not certify it as a cognitive component."
+  - "Native admission of HOC-000000001 does not issue a cognitive-integration decision."
+  - "Native admission of HOC-000000001 does not release a Cognitive Memory Manifest."
+  - "Native admission of HOC-000000001 does not authorize production engine use or Neo4j projection."

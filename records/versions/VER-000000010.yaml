@@ -1,0 +1,12 @@
+identifier: "VER-000000010"
+class: "Version Record"
+entity_id: "HOC-000000001"
+previous_version: null
+current_version: "1.0"
+effective_date: "2026-07-20"
+change_type: "INITIAL_NATIVE_ADMISSION"
+source_decision_id: "DDR-000000004"
+authority_id: "CAG-000000006"
+change_summary: >
+  Records the initial admitted state of Strauss's Taxonomy of Literary
+  Concealment as open native Hermeneutic Object C HOC-000000001.
