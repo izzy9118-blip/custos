@@ -1,0 +1,133 @@
+{
+  "projection_version": "0.1",
+  "projection_status": "DEVELOPMENT_ONLY",
+  "technique_key": "LC-015",
+  "canonical_identifier": null,
+  "identifier_status": "NOT_ASSIGNED",
+  "name": "Deliberate Misquotation Through Omission",
+  "strauss_status": "EXPLICITLY RECONSTRUCTED",
+  "source": {
+    "authoritative_object_path": "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt",
+    "authoritative_object_version": "v1.0",
+    "authoritative_object_sha256": "0a155194f72a4517d267256b37fe4b68fe1144e0ef8ec3a1a26c3b3ad5b9f0e5",
+    "repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+    "primary_work": "Persecution and the Art of Writing",
+    "primary_essay": "The Literary Character of the Guide for the Perplexed",
+    "source_pages": [
+      75,
+      76
+    ],
+    "source_mechanism": "A cited statement omits words that would substantially alter its meaning or disclose its status.",
+    "source_documentary_function": "The altered quotation supports an exterior teaching while allowing knowledgeable readers to recover the concealed qualification.",
+    "source_relationship": "A specific subtype of LC-014, retained separately because citation alteration is a distinct documentary operation.",
+    "documentary_limit": "The technique name preserves deliberate misquotation as Strauss's reconstruction. A new case may be evaluated only as a quotation-omission structure unless intentional alteration is established separately."
+  },
+  "mechanism": "A passage presents words as a quotation or identifiable citation of a source, but comparison with the recoverable source shows that one or more words have been omitted. The omitted material changes the quoted proposition, its scope, qualification, attribution, evidentiary status, or doctrinal force. The quotation may therefore appear to support a claim that the fuller source does not support in the same way.",
+  "investigative_requirement": "Establish the quotation and its source before evaluating alteration. Recover the most relevant source witness or source-version family; align source and quotation word by word; record every omission without silently normalizing it; reconstruct the proposition and status of the full source and shortened quotation separately; document the material effect; and test abbreviation, memory quotation, alternate source version, translation, grammar, genre, textual corruption, and indirect citation.",
+  "distinctions": [
+    "LC-015 requires an identifiable quotation or citation relation. A general silence or missing topic belongs to LC-014.",
+    "LC-015 requires source-to-quotation collation. LC-004 compares apparent repetitions within a work and need not involve an external source.",
+    "A shortened quotation is not automatically a misquotation. The omission must materially affect meaning, scope, qualification, attribution, status, or doctrinal force.",
+    "An omission may be exact, paraphrastic, translational, or version-dependent. The evaluator must preserve these possibilities rather than assuming a single source text.",
+    "The evaluator may corroborate a materially altered quotation, but the word deliberate in the technique name does not authorize automated inference of intention.",
+    "The fuller source proposition must not be treated as the author's own teaching, nor may the shortened quotation be rejected solely because it is incomplete."
+  ],
+  "operational": {
+    "trigger_conditions": [
+      "A bounded passage presents itself as a quotation, citation, or identifiable reproduction of a source.",
+      "A recoverable source or source-version family is identified.",
+      "Source and quotation can be aligned at word or phrase level.",
+      "At least one source expression is absent from the quotation.",
+      "The omission materially changes proposition, scope, qualification, attribution, status, or doctrinal force.",
+      "The effect is not merely stylistic abbreviation."
+    ],
+    "minimum_evidence": [
+      "Exact quotation text and stable witness location.",
+      "Evidence that the passage presents itself as quotation or citation.",
+      "Recovered source text and stable source witness or declared source-version family.",
+      "Source attribution and bibliographic location.",
+      "Source-language forms and translation mapping where relevant.",
+      "Complete word-by-word or phrase-by-phrase collation.",
+      "A typed record of every omitted expression.",
+      "Normalized proposition and status record for the full source.",
+      "Normalized proposition and status record for the shortened quotation.",
+      "A documented account of the omission's material effect.",
+      "Local and architectonic context of the quotation.",
+      "Resolved speaker, narrator, objection, hypothetical, and reported-opinion attribution.",
+      "Review of alternate source versions, memory quotation, paraphrase, translation, punctuation, and textual variants.",
+      "An auditable evidence path from source witness through collation to the alteration claim."
+    ],
+    "corroboration_indicators": [
+      "The omitted words explicitly qualify the source as common opinion, report, hypothesis, or limited claim.",
+      "The author elsewhere quotes the same source more fully.",
+      "A second quotation exhibits the same controlled omission.",
+      "The author elsewhere demonstrates knowledge of the omitted wording.",
+      "A source comparison shows that the omission changes attribution, modality, quantification, negation, or scope.",
+      "Another independently reconstructed literary device converges on the same quotation problem.",
+      "The shortened quotation supports a surface claim that the full source materially qualifies."
+    ],
+    "ordinary_alternatives": [
+      "Ordinary abbreviation.",
+      "Memory quotation.",
+      "Paraphrase rather than verbatim quotation.",
+      "A different source edition, recension, translation, or textual tradition.",
+      "Indirect citation through an intermediary source.",
+      "Grammatical adaptation to the new sentence.",
+      "Citation convention permitting ellipsis.",
+      "Translator or editor omission.",
+      "Textual corruption, lacuna, or witness damage.",
+      "The omitted words are materially redundant in context.",
+      "The source identification is mistaken.",
+      "The quotation boundary has been reconstructed incorrectly."
+    ],
+    "disqualifying_conditions": [
+      "No identifiable quotation or citation relation exists.",
+      "The proposed source cannot be recovered or responsibly bounded.",
+      "The quotation matches an attested alternate source version.",
+      "No omission remains after reliable collation.",
+      "The omission has no material semantic or status effect.",
+      "The passage is explicitly presented as summary or paraphrase.",
+      "Grammar or translation requires the shortening without changing the proposition.",
+      "An editor, translator, copyist, or damaged witness fully explains the omission.",
+      "The source attribution is false or unresolved.",
+      "The analysis silently modernizes or harmonizes the source wording."
+    ],
+    "authorized_response": [
+      "Preserve the quotation, source witness, and complete contexts.",
+      "Create separate source, quotation, collation, omission, and semantic-effect records.",
+      "Preserve every source variant and identify the version used for comparison.",
+      "Normalize full-source and shortened-quotation propositions separately.",
+      "Test abbreviation, paraphrase, memory, indirect citation, alternate version, translation, grammar, and witness explanations.",
+      "Search the work for other quotations of the same source and for evidence of source knowledge.",
+      "Evaluate LC-014 separately for the broader omission relation and LC-004 when internal repetition is independently present.",
+      "Preserve intentionality as unresolved unless supported by a separate evidence record.",
+      "Terminate at candidate status when source identity, version, or material effect remains disputed."
+    ],
+    "prohibited_inferences": [
+      "Do not call every shortened quotation a misquotation.",
+      "Do not infer intention from omission alone.",
+      "Do not infer concealment from quotation difference alone.",
+      "Do not choose a preferred source version without documentary justification.",
+      "Do not treat paraphrase as verbatim quotation.",
+      "Do not infer that the fuller source states the author's own teaching.",
+      "Do not infer that the shortened quotation is false.",
+      "Do not identify the intended reader or hidden teaching.",
+      "Do not collapse LC-015 into LC-014 or LC-004."
+    ],
+    "uncertainty_rule": "When a source-to-quotation omission is present but source identity, version, quotation status, material effect, or ordinary alternatives remain disputed, preserve a candidate quotation alteration. Do not declare deliberate misquotation.",
+    "termination_rule": "Terminate as NOT_TRIGGERED when no materially altered quotation by omission is documented; as BLOCKED_MISSING_EVIDENCE when quotation status, source, version, witness, collation, attribution, context, semantic effect, or provenance is incomplete; as candidate when ordinary alternatives or corroboration remain unresolved; and as corroborated only when the source-to-quotation alteration survives full documentary testing. No runtime outcome in v0.1 establishes deliberate intention."
+  },
+  "local_evaluation_outcomes": [
+    "NOT_TRIGGERED",
+    "BLOCKED_MISSING_EVIDENCE",
+    "CANDIDATE_QUOTATION_OMISSION",
+    "CORROBORATED_QUOTATION_OMISSION"
+  ],
+  "version_history": [
+    {
+      "version": "0.1",
+      "status": "DEVELOPMENT_ONLY",
+      "change_note": "Initial executable projection of LC-015 with quotation-status, source-version, collation, omission, proposition-status, material-effect, ordinary-alternative, subtype-separation, and nonintentionality controls."
+    }
+  ]
+}
