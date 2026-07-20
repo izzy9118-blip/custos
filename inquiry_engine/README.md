@@ -147,7 +147,7 @@ Implemented:
 - manifest validation;
 - repository-backed, commit-pinned Taxonomy loading;
 - repository-backed, commit-pinned Procedure loading;
-- repository-integrated, development-only LC-001–LC-022 runtimes;
+- technically certified LC-001–LC-022 combined runtime;
 - isolated component models and evaluators for LC-001–LC-022;
 - bounded Literary Concealment registry and dispatcher;
 - deterministic Taxonomy evaluator;
@@ -160,8 +160,7 @@ Implemented:
 Not yet implemented:
 
 - Taxonomy population beyond LC-022;
-- constitutional admission, certification, or Cognitive Memory integration of
-  LC-001–LC-022;
+- constitutional admission or Cognitive Memory integration of LC-001–LC-022;
 - full DF-000001–DF-000150 procedure;
 - LLM reasoning adapters;
 - production Neo4j projection;
@@ -170,10 +169,14 @@ Not yet implemented:
 
 ## Literary Concealment integration status
 
-LC-001 through LC-022 are repository-integrated as development-only executable
-projections. Each component retains its own schema, Pydantic models, evaluator,
+LC-001 through LC-022 are technically certified as one combined executable
+subsystem. Each component retains its own schema, Pydantic models, evaluator,
 bounded outcome vocabulary, fixtures, and tests under an isolated namespace.
+GitHub Actions runs the complete Inquiry Engine suite for every relevant pull
+request and push to `main`.
 
-This repository integration does not constitute constitutional admission,
-certification, Cognitive Memory integration, or production activation. No next
-LC component is authorized by this integration change.
+The repository maintains one active integrated implementation rather than
+duplicate package trees. Technical certification does not expand an
+evaluator's epistemic authority or itself constitute constitutional admission
+or Cognitive Memory integration. No next LC component is authorized by this
+change.

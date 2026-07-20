@@ -1,11 +1,13 @@
-"""Development-only executable projections of literary-concealment techniques.
+"""Technically certified LC-001 through LC-022 executable integration.
 
-LC-001 through LC-022 are repository-integrated here without granting
-canonical admission, certification, Cognitive Memory integration, or
-production authority.
+The combined runtime is certified for reproducible technical operation. Its
+evaluators retain their bounded epistemic authority and cannot certify an
+interpretive conclusion, hidden teaching, intention, audience, or truth.
 """
 
 from .registry import (
+    CERTIFICATION_RECORD,
+    INTEGRATION_STATUS,
     SUPPORTED_COMPONENT_IDS,
     ComponentRuntime,
     evaluate_component,
@@ -15,6 +17,8 @@ from .registry import (
 )
 
 __all__ = [
+    "CERTIFICATION_RECORD",
+    "INTEGRATION_STATUS",
     "SUPPORTED_COMPONENT_IDS",
     "ComponentRuntime",
     "evaluate_component",

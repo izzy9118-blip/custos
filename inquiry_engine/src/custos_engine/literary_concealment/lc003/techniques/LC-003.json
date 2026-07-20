@@ -1,6 +1,6 @@
 {
   "projection_version": "0.1",
-  "projection_status": "DEVELOPMENT_ONLY",
+  "projection_status": "CERTIFIED_TECHNICAL_INTEGRATION",
   "technique_key": "LC-003",
   "canonical_identifier": null,
   "identifier_status": "NOT_ASSIGNED",
@@ -120,8 +120,8 @@
   "version_history": [
     {
       "version": "0.1",
-      "status": "DEVELOPMENT_ONLY",
-      "change_note": "First executable projection of LC-003. Preserves the distinction between pronounced statements and reconstructed implications and grants no canonical, certification, integration, truth-selection, or production authority."
+      "status": "CERTIFIED_TECHNICAL_INTEGRATION",
+      "change_note": "First executable projection of LC-003. Preserves the distinction between pronounced statements and reconstructed implications and is technically certified for integrated runtime use while granting no canonical identity or truth-selection authority."
     }
   ]
 }

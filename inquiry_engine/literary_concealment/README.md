@@ -1,48 +1,40 @@
 # Literary Concealment Integration
 
-This directory preserves the independently completed development packages for
-`LC-001` through `LC-022` and records their integration into the Custos Inquiry
-Engine.
+This directory governs the single certified LC-001 through LC-022 integration
+used by the Custos Inquiry Engine.
 
-## Authority boundary
+## Certified integration
 
-Repository integration means that the files are versioned, importable, and
-tested together. It does **not** mean that the underlying Hermeneutic Object or
-any LC component has received:
+LC-001 through LC-022 are certified to function together as one executable,
+installable, continuously tested Inquiry Engine subsystem. The certification
+record is `TECHNICAL_CERTIFICATION_RECORD.md`; GitHub Actions reruns the full
+Inquiry Engine test suite on every relevant pull request and push to `main`.
+
+Technical integration certification does **not** itself confer:
 
 - a canonical identifier;
 - constitutional admission;
-- certification;
 - Cognitive Memory integration;
-- production-engine authorization.
+- authority to certify interpretive conclusions.
 
-All components remain `DEVELOPMENT_ONLY`. The authoritative human-readable
-source remains:
+The authoritative human-readable source remains:
 
 `engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt`
 
-## Preserved source packages
+## Active engine
 
-The `packages/` directory preserves the submitted operationalization packages.
-Their original directory structures and source files remain documentary input
-to this integration. The upload commits on `main` preserve the exact submitted
-state.
-
-## Active engine projection
-
-The active development integration is under:
+The active certified integration is under:
 
 `inquiry_engine/src/custos_engine/literary_concealment/`
 
-Each technique has an isolated namespace (`lc001` through `lc022`) so that its
-models, outcome vocabulary, and evaluator cannot overwrite or silently merge
-with those of another technique. `registry.py` supplies bounded discovery,
-loading, schema access, and dispatch across the 22 isolated runtimes.
+Each technique has an isolated namespace (`lc001` through `lc022`) within the
+one active package. `registry.py` supplies discovery, loading, schema access,
+and dispatch across the 22 runtimes.
 
-The integration tests are under:
+The certification tests are under:
 
 `inquiry_engine/tests/literary_concealment/`
 
-`INTEGRATION_MANIFEST.json` records the source and active paths and their
-cryptographic hashes. `INTEGRATION_AUDIT.md` records the cross-package findings
-and the limits of this action.
+`INTEGRATION_MANIFEST.json` records the certified active runtime and its
+continuous-validation contract. `INTEGRATION_AUDIT.md` records the
+pre-consolidation findings.

@@ -1,6 +1,6 @@
 {
   "projection_version": "0.1",
-  "projection_status": "DEVELOPMENT_ONLY",
+  "projection_status": "CERTIFIED_TECHNICAL_INTEGRATION",
   "technique_key": "LC-006",
   "canonical_identifier": null,
   "identifier_status": "NOT_ASSIGNED",
@@ -119,7 +119,7 @@
   "version_history": [
     {
       "version": "0.1",
-      "status": "DEVELOPMENT_ONLY",
+      "status": "CERTIFIED_TECHNICAL_INTEGRATION",
       "change_note": "Initial executable projection of LC-006 with explicit sense records, source-language and syntactic checks, contextual viability, ordinary alternatives, corroboration, and noninterpretive boundaries."
     }
   ]

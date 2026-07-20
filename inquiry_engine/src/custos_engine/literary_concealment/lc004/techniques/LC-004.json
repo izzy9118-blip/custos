@@ -1,6 +1,6 @@
 {
   "projection_version": "0.1",
-  "projection_status": "DEVELOPMENT_ONLY",
+  "projection_status": "CERTIFIED_TECHNICAL_INTEGRATION",
   "technique_key": "LC-004",
   "canonical_identifier": null,
   "identifier_status": "NOT_ASSIGNED",
@@ -116,7 +116,7 @@
   "version_history": [
     {
       "version": "0.1",
-      "status": "DEVELOPMENT_ONLY",
+      "status": "CERTIFIED_TECHNICAL_INTEGRATION",
       "change_note": "Initial executable projection of LC-004 with explicit altered-repetition, alignment, semantic-effect, ordinary-alternative, corroboration, and noninterpretive boundaries."
     }
   ]

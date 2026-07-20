@@ -4,7 +4,7 @@ Date: 2026-07-20
 Repository: `izzy9118-blip/custos`
 Integration branch: `agent/integrate-lc-001-022`
 Submitted staging tip: `9d0cc71`
-Status: Repository integration implemented; constitutional status unchanged
+Status: Superseded for integration status by technical certification record
 
 ## Scope
 
@@ -20,9 +20,11 @@ for Strauss's Taxonomy of Literary Concealment, `LC-001` through `LC-022`.
    `0a155194f72a4517d267256b37fe4b68fe1144e0ef8ec3a1a26c3b3ad5b9f0e5`.
 3. The digest matches the repository file at
    `engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt`.
-4. Every projection identifies source commit
+4. Every submitted projection identifies source commit
    `7100700ef10d68621f4859b5fe94fac6e5e0fcea` and remains
-   `DEVELOPMENT_ONLY`, with no canonical identifier assigned.
+   `DEVELOPMENT_ONLY`, with no canonical identifier assigned. These statuses
+   are preserved as historical source-package provenance; the combined active
+   runtime was subsequently certified for technical integration.
 5. The 22 original evaluator suites pass independently: 253 tests passed.
 
 ## Source-package defects preserved as findings
@@ -77,12 +79,14 @@ The shared registry:
 - Full combined suite after integration-manifest verification was added:
   **381 passed, 1 failed**.
 
-The one full-suite failure is a pre-existing governance defect on submitted
+The one full-suite failure was a pre-existing governance defect on submitted
 `main`, not an LC integration regression. `LDG-000000001.yaml` declares
 `assignment_date_then_identifier` ordering, but `CAG-000000005` was appended
 after `COR-000000001` and `VER-000000001` even though all three assignment
 records use `2026-07-19`. Correcting that canonical ledger is outside this
 development-only LC integration and was deliberately not performed silently.
+The later technical certification update records and corrects that ordering
+defect without changing any identifier, assignment date, or assignment record.
 
 ## Express non-effects
 
@@ -96,4 +100,6 @@ This integration:
 - does not alter the human-readable Taxonomy;
 - does not infer concealed teaching.
 
-Repository integration and constitutional admission remain separate acts.
+This audit records the pre-certification integration state. The subsequent
+`TECHNICAL_CERTIFICATION_RECORD.md` certifies the executable subsystem while
+preserving the epistemic prohibitions above.

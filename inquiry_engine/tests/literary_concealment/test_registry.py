@@ -8,6 +8,8 @@ import pytest
 from jsonschema import Draft202012Validator
 
 from custos_engine.literary_concealment import (
+    CERTIFICATION_RECORD,
+    INTEGRATION_STATUS,
     SUPPORTED_COMPONENT_IDS,
     evaluate_component,
     get_component_runtime,
@@ -53,10 +55,12 @@ def test_each_component_has_an_isolated_runtime(component_id):
     assert runtime.input_model.__name__ == f"LC{digits}EvaluationInput"
     assert runtime.result_model.__name__ == f"LC{digits}EvaluationResult"
     assert runtime.evaluator.__name__ == f"evaluate_lc{digits}"
+    assert runtime.integration_status == "CERTIFIED_TECHNICAL_INTEGRATION"
+    assert runtime.certification_record == CERTIFICATION_RECORD
 
 
 @pytest.mark.parametrize("component_id", SUPPORTED_COMPONENT_IDS)
-def test_each_projection_validates_and_preserves_development_boundary(component_id):
+def test_each_projection_validates_as_certified_integrated_runtime(component_id):
     technique = load_technique(component_id)
     schema = load_component_schema(component_id)
 
@@ -64,7 +68,7 @@ def test_each_projection_validates_and_preserves_development_boundary(component_
     Draft202012Validator(schema).validate(technique.model_dump(mode="json"))
 
     assert technique.technique_key == component_id
-    assert technique.projection_status == "DEVELOPMENT_ONLY"
+    assert technique.projection_status == "CERTIFIED_TECHNICAL_INTEGRATION"
     assert technique.canonical_identifier is None
     assert technique.identifier_status == "NOT_ASSIGNED"
     assert technique.source.authoritative_object_sha256 == AUTHORITATIVE_TAXONOMY_SHA256
@@ -77,40 +81,33 @@ def test_authoritative_taxonomy_fixity_matches_all_component_projections():
     assert _sha256(AUTHORITATIVE_TAXONOMY) == AUTHORITATIVE_TAXONOMY_SHA256
 
 
-def test_integration_manifest_preserves_source_and_active_fixity():
+def test_integration_manifest_defines_one_certified_active_runtime():
     manifest = json.loads(INTEGRATION_MANIFEST.read_text(encoding="utf-8"))
 
-    assert manifest["integration_status"] == (
-        "REPOSITORY_INTEGRATED_DEVELOPMENT_ONLY"
-    )
+    assert manifest["integration_status"] == "CERTIFIED_TECHNICAL_INTEGRATION"
     assert manifest["component_range"] == {
         "first": "LC-001",
         "last": "LC-022",
         "count": 22,
     }
-    assert manifest["authority_boundary"] == {
-        "canonical_admission": False,
-        "certification": False,
-        "cognitive_memory_integration": False,
-        "production_activation": False,
+    assert manifest["component_ids"] == list(SUPPORTED_COMPONENT_IDS)
+    assert manifest["technical_certification"] == {
+        "record_path": CERTIFICATION_RECORD,
+        "certified_scope": "LC-001_THROUGH_LC-022_COMBINED_EXECUTABLE_SUBSYSTEM",
+        "result": INTEGRATION_STATUS,
+        "effective_date": "2026-07-20",
+        "continuous_validation_workflow": ".github/workflows/inquiry-engine-ci.yml",
+        "complete_suite_result": "382_PASSED",
     }
 
-    component_ids = [
-        component["component_id"] for component in manifest["components"]
-    ]
-    assert component_ids == list(SUPPORTED_COMPONENT_IDS)
-
-    for component in manifest["components"]:
-        assert component["projection_status"] == "DEVELOPMENT_ONLY"
-        for record in component["files"].values():
-            source = REPOSITORY_ROOT / record["source_path"]
-            active = REPOSITORY_ROOT / record["active_path"]
-            assert _sha256(source) == record["source_sha256"]
-            assert _sha256(active) == record["active_sha256"]
-            assert record["copy_status"] in {
-                "EXACT_COPY",
-                "ADAPTED_IMPORT_AND_RESOURCE_PATH",
-            }
+    assert manifest["active_runtime"]["source_of_truth"] == (
+        "ACTIVE_INTEGRATED_RUNTIME_ONLY"
+    )
+    assert manifest["consolidation"] == {
+        "duplicate_package_tree_retained": False,
+        "working_tree_policy": "ONE_ACTIVE_COPY",
+        "prior_upload_commit": "9d0cc71de73de2fce1e47968e9cb5b9456754bc3",
+    }
 
 
 def test_dispatcher_preserves_component_specific_result_type():

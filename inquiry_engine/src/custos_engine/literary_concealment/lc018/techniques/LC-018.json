@@ -1,6 +1,6 @@
 {
   "projection_version": "0.1",
-  "projection_status": "DEVELOPMENT_ONLY",
+  "projection_status": "CERTIFIED_TECHNICAL_INTEGRATION",
   "technique_key": "LC-018",
   "canonical_identifier": null,
   "identifier_status": "NOT_ASSIGNED",
@@ -132,7 +132,7 @@
   "version_history": [
     {
       "version": "0.1",
-      "status": "DEVELOPMENT_ONLY",
+      "status": "CERTIFIED_TECHNICAL_INTEGRATION",
       "change_note": "Initial executable projection of LC-018 with contradictory proposition-family records, complete occurrence inventories, independent conventionality controls, frequency comparison, rebuttable Straussian presumption, ordinary-alternative testing, and strict separation between presumption and adjudicated truth."
     }
   ]

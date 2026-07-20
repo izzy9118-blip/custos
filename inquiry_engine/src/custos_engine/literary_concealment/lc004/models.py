@@ -63,7 +63,7 @@ class VersionRecord(StrictModel):
 
 class LiteraryConcealmentTechnique(StrictModel):
     projection_version: str = Field(min_length=1)
-    projection_status: str = Field(pattern=r"^DEVELOPMENT_ONLY$")
+    projection_status: str = Field(pattern=r"^CERTIFIED_TECHNICAL_INTEGRATION$")
     technique_key: str = Field(pattern=r"^LC-[0-9]{3}$")
     canonical_identifier: None = None
     identifier_status: str = Field(pattern=r"^NOT_ASSIGNED$")

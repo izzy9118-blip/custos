@@ -1,6 +1,6 @@
 {
   "projection_version": "0.1",
-  "projection_status": "DEVELOPMENT_ONLY",
+  "projection_status": "CERTIFIED_TECHNICAL_INTEGRATION",
   "technique_key": "LC-022",
   "canonical_identifier": null,
   "identifier_status": "NOT_ASSIGNED",
@@ -132,7 +132,7 @@
   "version_history": [
     {
       "version": "0.1",
-      "status": "DEVELOPMENT_ONLY",
+      "status": "CERTIFIED_TECHNICAL_INTEGRATION",
       "change_note": "Initial executable projection of LC-022 with two-sided subject records, transition-coherence baselines, typed mismatch and structural-effect records, bounded questions, ordinary-repair testing, weak evidentiary force, and explicit preservation of the mere-clumsiness alternative."
     }
   ]

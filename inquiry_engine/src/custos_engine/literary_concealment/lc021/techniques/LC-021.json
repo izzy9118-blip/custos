@@ -1,6 +1,6 @@
 {
   "projection_version": "0.1",
-  "projection_status": "DEVELOPMENT_ONLY",
+  "projection_status": "CERTIFIED_TECHNICAL_INTEGRATION",
   "technique_key": "LC-021",
   "canonical_identifier": null,
   "identifier_status": "NOT_ASSIGNED",
@@ -126,7 +126,7 @@
   "version_history": [
     {
       "version": "0.1",
-      "status": "DEVELOPMENT_ONLY",
+      "status": "CERTIFIED_TECHNICAL_INTEGRATION",
       "change_note": "Initial executable projection of LC-021 with independent fit baselines, typed mismatch records, stumbling-block evidence, bounded questions, ordinary-repair testing, weak evidentiary force, and explicit preservation of the merely-inappropriate alternative."
     }
   ]

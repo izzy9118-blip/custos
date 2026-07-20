@@ -10,11 +10,15 @@ from pydantic import BaseModel
 
 
 SUPPORTED_COMPONENT_IDS = tuple(f"LC-{number:03d}" for number in range(1, 23))
+INTEGRATION_STATUS = "CERTIFIED_TECHNICAL_INTEGRATION"
+CERTIFICATION_RECORD = (
+    "inquiry_engine/literary_concealment/TECHNICAL_CERTIFICATION_RECORD.md"
+)
 
 
 @dataclass(frozen=True)
 class ComponentRuntime:
-    """The isolated runtime contract for one development-only LC component."""
+    """The isolated runtime contract for one technically certified LC component."""
 
     component_id: str
     module_name: str
@@ -22,6 +26,8 @@ class ComponentRuntime:
     input_model: type[BaseModel]
     result_model: type[BaseModel]
     evaluator: Callable[[BaseModel], BaseModel]
+    integration_status: str = INTEGRATION_STATUS
+    certification_record: str = CERTIFICATION_RECORD
 
 
 def _normalize_component_id(component_id: str) -> str:
@@ -81,7 +87,7 @@ def load_technique(component_id: str) -> BaseModel:
 
 
 def load_component_schema(component_id: str) -> dict[str, Any]:
-    """Load the component-specific JSON Schema preserved with one LC package."""
+    """Load the component-specific JSON Schema from the active LC runtime."""
 
     normalized = _normalize_component_id(component_id)
     schema = json.loads(
@@ -102,8 +108,8 @@ def evaluate_component(
 ) -> BaseModel:
     """Validate and evaluate a structured candidate through its own LC runtime.
 
-    This dispatcher performs no semantic extraction from raw prose and grants
-    no authority beyond the development-only result defined by the component.
+    This dispatcher performs no semantic extraction from raw prose. Technical
+    certification does not expand the epistemic claims allowed by a component.
     """
 
     runtime = get_component_runtime(component_id)
