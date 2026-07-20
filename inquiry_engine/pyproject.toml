@@ -25,7 +25,11 @@ custos-inquiry = "custos_engine.cli:main"
 where = ["src"]
 
 [tool.setuptools.package-data]
-custos_engine = ["schemas/*.json"]
+custos_engine = [
+  "schemas/*.json",
+  "literary_concealment/*/schemas/*.json",
+  "literary_concealment/*/techniques/*.json",
+]
 
 [tool.pytest.ini_options]
 pythonpath = ["src"]

@@ -1,0 +1,1279 @@
+{
+  "manifest_version": "1.0",
+  "integration_status": "REPOSITORY_INTEGRATED_DEVELOPMENT_ONLY",
+  "repository": "izzy9118-blip/custos",
+  "staging_tip_commit": "9d0cc71",
+  "integration_branch": "agent/integrate-lc-001-022",
+  "component_range": {
+    "first": "LC-001",
+    "last": "LC-022",
+    "count": 22
+  },
+  "authoritative_taxonomy": {
+    "path": "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt",
+    "sha256": "0a155194f72a4517d267256b37fe4b68fe1144e0ef8ec3a1a26c3b3ad5b9f0e5",
+    "source_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea"
+  },
+  "authority_boundary": {
+    "canonical_admission": false,
+    "certification": false,
+    "cognitive_memory_integration": false,
+    "production_activation": false
+  },
+  "components": [
+    {
+      "component_id": "LC-001",
+      "name": "Separation by Distant Placement",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC001_Operationalization_v0.1",
+      "source_package_manifest_path": null,
+      "source_package_manifest_sha256": null,
+      "source_package_manifest_status": "MISSING_FROM_SUBMITTED_PACKAGE",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC001_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "6f447d870b53f1239c736a79058a711cc3c58133bb5d060c939f42bc5ccb28dc",
+      "active_namespace": "custos_engine.literary_concealment.lc001",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC001_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "a7d8412256aa445981d31581cd53f879f8b81921499d546e529a0b5337cea213",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc001/__init__.py",
+          "active_sha256": "a7d8412256aa445981d31581cd53f879f8b81921499d546e529a0b5337cea213",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC001_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "86dfe63674466dbf372b485f3d53110c6137ed43ac9c88faff33d59b8f89c426",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc001/models.py",
+          "active_sha256": "86dfe63674466dbf372b485f3d53110c6137ed43ac9c88faff33d59b8f89c426",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC001_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "3ad734864ca3efabfc55e957a3ca6332423c5ea4c4377d9600b17c92679aec69",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc001/evaluator.py",
+          "active_sha256": "3ad734864ca3efabfc55e957a3ca6332423c5ea4c4377d9600b17c92679aec69",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC001_Operationalization_v0.1/techniques/LC-001.json",
+          "source_sha256": "3f15e901e1c1c63a06356995f202b866ede50c01a9456c00aa9b31035967d3fc",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc001/techniques/LC-001.json",
+          "active_sha256": "3f15e901e1c1c63a06356995f202b866ede50c01a9456c00aa9b31035967d3fc",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC001_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "ca7575ccd5dc28a6f2b317bea5b04ae1a59726a15f9d21220d15d6a8a7782d84",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc001/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "ca7575ccd5dc28a6f2b317bea5b04ae1a59726a15f9d21220d15d6a8a7782d84",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC001_Operationalization_v0.1/tests/test_lc001.py",
+          "source_sha256": "1726c623c16f5ee2dd96ba20e38e6a35d180a2cd70e5bf4c3b6f27df2708fa2e",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc001.py",
+          "active_sha256": "580b9d42eba982b0b26488b831e94ad6acfa3a1ed0271fa09d4a49bbc4dd9220",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-002",
+      "name": "Incidental Placement of One Contradictory Statement",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC002_Operationalization_v0.1/Hermeneutic_Object_LC002_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC002_Operationalization_v0.1/Hermeneutic_Object_LC002_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "17b1283fdbdde9a67531b120fd91d304423cff6326aa3b7f4fee91621d70566d",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC002_Operationalization_v0.1/Hermeneutic_Object_LC002_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "b53b57c5b74e24c78afe3029653c45b08639b3fa31bf18856cf1640a271b4bcc",
+      "active_namespace": "custos_engine.literary_concealment.lc002",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC002_Operationalization_v0.1/Hermeneutic_Object_LC002_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "858983f927f37b32702617bd90bddbaec868bbd0ca9e2ea9c4b803aeaf2409cc",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc002/__init__.py",
+          "active_sha256": "858983f927f37b32702617bd90bddbaec868bbd0ca9e2ea9c4b803aeaf2409cc",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC002_Operationalization_v0.1/Hermeneutic_Object_LC002_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "ef31c79243b31c4f02998a763b31850d6db7badf0afc0cf38eecbc70d8222240",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc002/models.py",
+          "active_sha256": "ef31c79243b31c4f02998a763b31850d6db7badf0afc0cf38eecbc70d8222240",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC002_Operationalization_v0.1/Hermeneutic_Object_LC002_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "06b88009f01a29745876ea951c4fb7631cc430e557ca12680f1a7a711e8699cc",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc002/evaluator.py",
+          "active_sha256": "06b88009f01a29745876ea951c4fb7631cc430e557ca12680f1a7a711e8699cc",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC002_Operationalization_v0.1/Hermeneutic_Object_LC002_Operationalization_v0.1/techniques/LC-002.json",
+          "source_sha256": "d961a8fc3087e023d8d181e93ca9c309bb583c67c113ddd9ea281a92b13f1c1e",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc002/techniques/LC-002.json",
+          "active_sha256": "d961a8fc3087e023d8d181e93ca9c309bb583c67c113ddd9ea281a92b13f1c1e",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC002_Operationalization_v0.1/Hermeneutic_Object_LC002_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "d222cdc4073261aaa732a1d9ee4b135b8546c2156249941ed300e6f8a9ac52ad",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc002/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "d222cdc4073261aaa732a1d9ee4b135b8546c2156249941ed300e6f8a9ac52ad",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC002_Operationalization_v0.1/Hermeneutic_Object_LC002_Operationalization_v0.1/tests/test_lc002.py",
+          "source_sha256": "4617dca9e41ad6380b7cb1697a8f35c312432019c52140c6a7ca09f5b04b4752",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc002.py",
+          "active_sha256": "2a760a47478cf68e1dcddb7d8fef1c9c5b65ae351ac357ae5fa060763569967b",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-003",
+      "name": "Contradiction of Implications Rather Than Direct Statement",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC003_Operationalization_v0.1/Hermeneutic_Object_LC003_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC003_Operationalization_v0.1/Hermeneutic_Object_LC003_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "723bf3a89b2e7f81e11c234a92b20235266da5f4425d73aeb405695cb465abd1",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC003_Operationalization_v0.1/Hermeneutic_Object_LC003_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "577e1789e6f91bed2833a2502339391e0c57f91ecf4ab993bb0c63eaa8d9b368",
+      "active_namespace": "custos_engine.literary_concealment.lc003",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC003_Operationalization_v0.1/Hermeneutic_Object_LC003_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "5f7a20016e303501b79e477f4887c34dd1a1c5e605253c6f743ed2b2ca513eda",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc003/__init__.py",
+          "active_sha256": "5f7a20016e303501b79e477f4887c34dd1a1c5e605253c6f743ed2b2ca513eda",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC003_Operationalization_v0.1/Hermeneutic_Object_LC003_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "a9af0189b76f018f355ed5b52a322c822e559e388c6416ea58ccd4bd3116c48f",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc003/models.py",
+          "active_sha256": "a9af0189b76f018f355ed5b52a322c822e559e388c6416ea58ccd4bd3116c48f",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC003_Operationalization_v0.1/Hermeneutic_Object_LC003_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "391e7dab5c9bbf6177dbef3ea5f09254ae90d42dcf158a9478bceeaf5a7ab900",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc003/evaluator.py",
+          "active_sha256": "391e7dab5c9bbf6177dbef3ea5f09254ae90d42dcf158a9478bceeaf5a7ab900",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC003_Operationalization_v0.1/Hermeneutic_Object_LC003_Operationalization_v0.1/techniques/LC-003.json",
+          "source_sha256": "467527e9a1c7aad360ede84f1039ef3fe7d112b7612bfa93d3deda134bb80fc5",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc003/techniques/LC-003.json",
+          "active_sha256": "467527e9a1c7aad360ede84f1039ef3fe7d112b7612bfa93d3deda134bb80fc5",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC003_Operationalization_v0.1/Hermeneutic_Object_LC003_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "67de7b56c1defa7ec721d76a7b5f3b3e1c739c16ddc31ef72369ca8b931d825f",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc003/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "67de7b56c1defa7ec721d76a7b5f3b3e1c739c16ddc31ef72369ca8b931d825f",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC003_Operationalization_v0.1/Hermeneutic_Object_LC003_Operationalization_v0.1/tests/test_lc003.py",
+          "source_sha256": "e65dd600f223e4d7f47ef041d122bc6170c2f6ff09616ad9cd249ec4c9a45d06",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc003.py",
+          "active_sha256": "d0fa5a08124a149bf985743a4a07cf377752b11a9c4b98a92a332aba76216f9c",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-004",
+      "name": "Apparent Repetition with Minute Addition or Omission",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC004_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC004_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "2352bb9901da038a05746f4507dd0b25a5fab6254181bd7a88e7bb2032cc5c25",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC004_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "1aab8a57f450da5965bc53fec38f512aa7880f6ea8ef1b8b71c81c7792a2c6e0",
+      "active_namespace": "custos_engine.literary_concealment.lc004",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC004_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "54529d3a8d089d2bdc9220eee727a5f4f1579e77538248b932e8fd47401a6e55",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc004/__init__.py",
+          "active_sha256": "54529d3a8d089d2bdc9220eee727a5f4f1579e77538248b932e8fd47401a6e55",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC004_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "cc0c9dc931251c79d736f4e467f54b86fd49b6ab2dcde8cd6dba853fe8f9f0ff",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc004/models.py",
+          "active_sha256": "cc0c9dc931251c79d736f4e467f54b86fd49b6ab2dcde8cd6dba853fe8f9f0ff",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC004_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "cf64a241ce54cd5784f8db0516bf090259b0a92f11075d5e7760c4e40e46b652",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc004/evaluator.py",
+          "active_sha256": "cf64a241ce54cd5784f8db0516bf090259b0a92f11075d5e7760c4e40e46b652",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC004_Operationalization_v0.1/techniques/LC-004.json",
+          "source_sha256": "f69efc802b1d9cca008bab31abd2a5199d1ffc7e8e630d8c1cc67ee01539383b",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc004/techniques/LC-004.json",
+          "active_sha256": "f69efc802b1d9cca008bab31abd2a5199d1ffc7e8e630d8c1cc67ee01539383b",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC004_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "d6fc979aa183efb3467ba728d50ab88c978d03c25223da6dc1985e5244ab54b8",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc004/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "d6fc979aa183efb3467ba728d50ab88c978d03c25223da6dc1985e5244ab54b8",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC004_Operationalization_v0.1/tests/test_lc004.py",
+          "source_sha256": "031fc7fa18f7c6dad9c77a845bf12f4e5b4370dd2f6abbae1f701f5def871743",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc004.py",
+          "active_sha256": "6f62bfb40c95afbe10285d85eff094e5358027b0ff0ad4926df902cf5a710062",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-005",
+      "name": "Intermediary Assertion and Creeping Contradiction",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC005_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC005_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "9d32b7678b26992f94fff60d818007b81d98a0cecddffe53631681bb9f9d0c04",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC005_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "309f5fbc286f7d43e4c6793ced8433a49f1d191f1321d0356b947b121412cc03",
+      "active_namespace": "custos_engine.literary_concealment.lc005",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC005_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "f79f8cc92a62f61e5881c6f7d53adcb5d45dd995dc412a7e619413c7698ab2d5",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc005/__init__.py",
+          "active_sha256": "f79f8cc92a62f61e5881c6f7d53adcb5d45dd995dc412a7e619413c7698ab2d5",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC005_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "caaaff6685480b77d316f2309874370152d412409e939363e2ecd1a1e603d3bb",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc005/models.py",
+          "active_sha256": "caaaff6685480b77d316f2309874370152d412409e939363e2ecd1a1e603d3bb",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC005_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "3205dc580c835e41931d7e932baecd03dd87822475247bf66aab2ae8bec206cd",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc005/evaluator.py",
+          "active_sha256": "3205dc580c835e41931d7e932baecd03dd87822475247bf66aab2ae8bec206cd",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC005_Operationalization_v0.1/techniques/LC-005.json",
+          "source_sha256": "0e3266918a83a21f6dcdcc308022b8fd221a63647c7ee3e995712e671fc534d5",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc005/techniques/LC-005.json",
+          "active_sha256": "0e3266918a83a21f6dcdcc308022b8fd221a63647c7ee3e995712e671fc534d5",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC005_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "22a9940e6f197cab6a4ab728add07238d1be78e7e3c447d0313bff31be194555",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc005/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "22a9940e6f197cab6a4ab728add07238d1be78e7e3c447d0313bff31be194555",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC005_Operationalization_v0.1/tests/test_lc005.py",
+          "source_sha256": "4e3d4ff0f65cc747b5718181c7dc38a79e240b4bfd0772097ddc7f6471a52da3",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc005.py",
+          "active_sha256": "bb2efdef45f7d2a9cd63e4dba615435caf7e448e510e021ba046c880f51e46aa",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-006",
+      "name": "Use of Ambiguous Words",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC006_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC006_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "e9a484b166b36c9151e3d92e06023412bd96791b5b0c90e252a6212734e3cd18",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC006_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "5dad9f92c39bdebb91e6aa56adad8c72aeda9f80ccc79416493217302332a77d",
+      "active_namespace": "custos_engine.literary_concealment.lc006",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC006_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "16e71abc2cb0cbf264529b59214d05cf280ecedb5da9927a6d21605df9b57304",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc006/__init__.py",
+          "active_sha256": "16e71abc2cb0cbf264529b59214d05cf280ecedb5da9927a6d21605df9b57304",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC006_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "7b3d112239a209dacf1364cfe381b2e0a40e17128fcab9ad91fe974e6ead085a",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc006/models.py",
+          "active_sha256": "7b3d112239a209dacf1364cfe381b2e0a40e17128fcab9ad91fe974e6ead085a",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC006_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "41cef53b47d265fd28db4547f9dbdb8747c9774ae5ea5d4c777b92398acd5152",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc006/evaluator.py",
+          "active_sha256": "41cef53b47d265fd28db4547f9dbdb8747c9774ae5ea5d4c777b92398acd5152",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC006_Operationalization_v0.1/techniques/LC-006.json",
+          "source_sha256": "c6dd2327beb42e6f3b968be7ee681b1647c92354296e35417299bca0d55a26f2",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc006/techniques/LC-006.json",
+          "active_sha256": "c6dd2327beb42e6f3b968be7ee681b1647c92354296e35417299bca0d55a26f2",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC006_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "cfe40504e60f26d0a94aad97d8bceb85c7738162f0003af941e24ce2757f9863",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc006/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "cfe40504e60f26d0a94aad97d8bceb85c7738162f0003af941e24ce2757f9863",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC006_Operationalization_v0.1/tests/test_lc006.py",
+          "source_sha256": "965fd184858269fad381fad3433bdeee849c9d04ef84c97fe7a78706522b3521",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc006.py",
+          "active_sha256": "9667f43175523ac893ae8daf90766ce1c9d8c320aac94eec433b29acbfa7b961",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-007",
+      "name": "Two-Faced Speech",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC007_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC007_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "16843caf0165956aa8765e42fd53ecf53d111b9484d55ace4a0e604c35e13e1e",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC007_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "35d815e0b7a6b0903154c022c73d3bd48715efb71d46f9559457ca23ca5532a0",
+      "active_namespace": "custos_engine.literary_concealment.lc007",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC007_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "7eb9fb340ed5074c7f511ccd4fcda753cd1cb15c56c5e61e9e78bfb0e26c1294",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc007/__init__.py",
+          "active_sha256": "7eb9fb340ed5074c7f511ccd4fcda753cd1cb15c56c5e61e9e78bfb0e26c1294",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC007_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "299cfd835b86729a359250f1e8181b107b9a2b7b2e54784fb2d53ef241a7e95b",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc007/models.py",
+          "active_sha256": "299cfd835b86729a359250f1e8181b107b9a2b7b2e54784fb2d53ef241a7e95b",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC007_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "950853a2508c08ef8e0b463b4b20d58fa44422c42c3615f48accdc18e4f487bf",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc007/evaluator.py",
+          "active_sha256": "950853a2508c08ef8e0b463b4b20d58fa44422c42c3615f48accdc18e4f487bf",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC007_Operationalization_v0.1/techniques/LC-007.json",
+          "source_sha256": "4c32b0ff9646ae999740dd1ecf96d4e8fe2536380a4b1e5f426e1107b3d5e1f5",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc007/techniques/LC-007.json",
+          "active_sha256": "4c32b0ff9646ae999740dd1ecf96d4e8fe2536380a4b1e5f426e1107b3d5e1f5",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC007_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "482ad6c027bb0996aee22201088ab3f4a7a5a6f2303d131603d7ebcd35b13e33",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc007/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "482ad6c027bb0996aee22201088ab3f4a7a5a6f2303d131603d7ebcd35b13e33",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC007_Operationalization_v0.1/tests/test_lc007.py",
+          "source_sha256": "b38f3c61f26a09eacbeca19aa6a67b9955b4321dc66b1c924df9aee76cc78ef6",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc007.py",
+          "active_sha256": "869f57c6b91b68ab7d8c3932da1d1d6d186e208c47b8f4bf8f5aeba3a2a35e98",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-008",
+      "name": "Concealment in a Single Common Word",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC008_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC008_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "f38550450efb8b517bc8c61170381352d2f7bc16fb9ed168d1958055deb7771e",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC008_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "35a8d47ef73b8cbe0230585fb8812b25849160abe7901b86374743a55fe47ead",
+      "active_namespace": "custos_engine.literary_concealment.lc008",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC008_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "4c3e58025cf16f400f7c1e3214c7ba480f77a34de60a232076d68e9e872c6f77",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc008/__init__.py",
+          "active_sha256": "4c3e58025cf16f400f7c1e3214c7ba480f77a34de60a232076d68e9e872c6f77",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC008_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "63be534e039d2e9a4d638d01e9612f21171bdf2b39ce962f4297ba6484906288",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc008/models.py",
+          "active_sha256": "63be534e039d2e9a4d638d01e9612f21171bdf2b39ce962f4297ba6484906288",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC008_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "a4f98d5074c9cbd338a42b0b313fb5f8fff3b1e9bc0e0aeb7ca586a68521892c",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc008/evaluator.py",
+          "active_sha256": "a4f98d5074c9cbd338a42b0b313fb5f8fff3b1e9bc0e0aeb7ca586a68521892c",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC008_Operationalization_v0.1/techniques/LC-008.json",
+          "source_sha256": "97212fbc16b1300c1c3dc7b5752d3065c6fca1fda1c37652a405a2c6773f5aea",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc008/techniques/LC-008.json",
+          "active_sha256": "97212fbc16b1300c1c3dc7b5752d3065c6fca1fda1c37652a405a2c6773f5aea",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC008_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "cefc367bd959f6783deacd59221ac4c623e99f8eab33caed83d3050d10536829",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc008/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "cefc367bd959f6783deacd59221ac4c623e99f8eab33caed83d3050d10536829",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC008_Operationalization_v0.1/tests/test_lc008.py",
+          "source_sha256": "88c45065a38d002ed11e53ffbf5b59d5302664eb46af50a8803d010a9d5cd89e",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc008.py",
+          "active_sha256": "667b4d29443f23c00c0a846874cbde4e74bcbf2074a75f169d1f6f71d33fb95a",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-009",
+      "name": "Secret Terminology",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC009_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC009_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "10596d6be94bab68e62a7c1aa882cd1769624556b84d5d1ce2f438d0a7579443",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC009_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "1b4012b53ae7ff3eab19b922a3d15c86a1f770c3966ed3ab5e9b030b05d83389",
+      "active_namespace": "custos_engine.literary_concealment.lc009",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC009_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "0632e0ddea3887bd119cec1fa3ba5607bd0e1f579a78a674680558dcdca3f544",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc009/__init__.py",
+          "active_sha256": "0632e0ddea3887bd119cec1fa3ba5607bd0e1f579a78a674680558dcdca3f544",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC009_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "ddf96e56984d1db5fde1f4129b8be1f0ccc7fd97e876e53a0870209975da0823",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc009/models.py",
+          "active_sha256": "ddf96e56984d1db5fde1f4129b8be1f0ccc7fd97e876e53a0870209975da0823",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC009_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "0865c9f194a9b97b7eb1f2692282f6abd62da791a2f45ba4acc96dc1889b5847",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc009/evaluator.py",
+          "active_sha256": "0865c9f194a9b97b7eb1f2692282f6abd62da791a2f45ba4acc96dc1889b5847",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC009_Operationalization_v0.1/techniques/LC-009.json",
+          "source_sha256": "19c362a65842a34ffbc38eddbfc24afc5367a43e0deb67b5adec1838ff3e9122",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc009/techniques/LC-009.json",
+          "active_sha256": "19c362a65842a34ffbc38eddbfc24afc5367a43e0deb67b5adec1838ff3e9122",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC009_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "73652bc45fca32172a2ab360de86085b8e493cb18b4ad30c45f894326f0853b8",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc009/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "73652bc45fca32172a2ab360de86085b8e493cb18b4ad30c45f894326f0853b8",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC009_Operationalization_v0.1/tests/test_lc009.py",
+          "source_sha256": "bf24a5a17bc04c2a08624e23a31426b5bfbf64d68326f6c22ffd431953e5ecd9",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc009.py",
+          "active_sha256": "2a5171a00e8d079aa533ebcfd24ab7d537be6e13393cc148bd4cc6a89ffe0211",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-010",
+      "name": "Intentional Sophism",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC010_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC010_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "29b0c71f16a57783e1d1ae6602e85bd37a149e995f9365abe6b86d695d919378",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC010_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "c53025f93421493c060c281c26bae1bd6f55d0721451a5bf6fb896e3ae102c71",
+      "active_namespace": "custos_engine.literary_concealment.lc010",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC010_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "67a1656df836d229673324266501890c08c5dafc89a8ea54b04f83c20104f1ab",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc010/__init__.py",
+          "active_sha256": "67a1656df836d229673324266501890c08c5dafc89a8ea54b04f83c20104f1ab",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC010_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "f039273d86107c6f3919795a510d7597e8832d9ee5532901c69c7673e6d33521",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc010/models.py",
+          "active_sha256": "f039273d86107c6f3919795a510d7597e8832d9ee5532901c69c7673e6d33521",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC010_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "e67c6b4bcb2ab067640047f2bb8d90465ce4a8007e37c6bdd0aaf27bf76474f9",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc010/evaluator.py",
+          "active_sha256": "e67c6b4bcb2ab067640047f2bb8d90465ce4a8007e37c6bdd0aaf27bf76474f9",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC010_Operationalization_v0.1/techniques/LC-010.json",
+          "source_sha256": "b02ee1921848841e16ae0ca1bb3b6eb3a804d90786c00d19f832554db506f0eb",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc010/techniques/LC-010.json",
+          "active_sha256": "b02ee1921848841e16ae0ca1bb3b6eb3a804d90786c00d19f832554db506f0eb",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC010_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "e8c5757dec2c11866761ea0db3e8c59dbf9185ce85b4daa15699b8fccfb0a9a6",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc010/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "e8c5757dec2c11866761ea0db3e8c59dbf9185ce85b4daa15699b8fccfb0a9a6",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC010_Operationalization_v0.1/tests/test_lc010.py",
+          "source_sha256": "75463d5f015b6a297a31153b314289825ded7089c15cff572cdb24b060e97ad0",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc010.py",
+          "active_sha256": "55d2cd884768cde814b9cbd6b581681e4a9a569501bb5454d79a29e973eaa48e",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-011",
+      "name": "Ironical Remark",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC011_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC011_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "4de02c6a1754baee32ca959acae21a2d0eceeec851fedb8864662f437e80193c",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC011_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "065a6ce4331b36bc441495905adb9502615a730bbc74a8b9811eb2f59603263a",
+      "active_namespace": "custos_engine.literary_concealment.lc011",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC011_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "45a2a04af375614b6ea377486e3cab653e195e01284e74f385434bd79f1138ae",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc011/__init__.py",
+          "active_sha256": "45a2a04af375614b6ea377486e3cab653e195e01284e74f385434bd79f1138ae",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC011_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "cf985d4d0e048ccb7cb06a86d4d06eab2e351011da2f90727cc9f955b13fc4ae",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc011/models.py",
+          "active_sha256": "cf985d4d0e048ccb7cb06a86d4d06eab2e351011da2f90727cc9f955b13fc4ae",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC011_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "7387c3a7a60ec0bab124a4294de89d1f2cb74749bbfabd2590d931dd17a0a4fe",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc011/evaluator.py",
+          "active_sha256": "7387c3a7a60ec0bab124a4294de89d1f2cb74749bbfabd2590d931dd17a0a4fe",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC011_Operationalization_v0.1/techniques/LC-011.json",
+          "source_sha256": "6ef3ebbbd992d703091e326c1b5eeccd8e2185d5e560bdd3e361062d32cd0d8a",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc011/techniques/LC-011.json",
+          "active_sha256": "6ef3ebbbd992d703091e326c1b5eeccd8e2185d5e560bdd3e361062d32cd0d8a",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC011_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "df76eb1735f790646ef2d170e8188575c96831d499f8fa8667db07f3183eb9f5",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc011/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "df76eb1735f790646ef2d170e8188575c96831d499f8fa8667db07f3183eb9f5",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC011_Operationalization_v0.1/tests/test_lc011.py",
+          "source_sha256": "b3cb80f916258090e22de953421831dfd924bf9c60cb21e6bb12e3936149d9ad",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc011.py",
+          "active_sha256": "09f52f505b018c6f3c0200a95d1c00712c0d676cb30c3611bd29fece4f2ceb65",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-012",
+      "name": "Apostrophe to the Reader",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC012_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC012_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "b4ebaa0075d775c05a94086a9232f52c5ee886c48ce55add204368c41268d3b1",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC012_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "bc97df0bcb737fe97fbf55ea2454ea73a1167a0609c157c5c4494e91f55ea4b8",
+      "active_namespace": "custos_engine.literary_concealment.lc012",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC012_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "08691e317684008a422b0e327b201436681e56ad3cc95eec70115aca719a87e2",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc012/__init__.py",
+          "active_sha256": "08691e317684008a422b0e327b201436681e56ad3cc95eec70115aca719a87e2",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC012_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "dda389523bb6aaef8e0756dcfd194bfc825362995cf730dee0433e02d73641d2",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc012/models.py",
+          "active_sha256": "dda389523bb6aaef8e0756dcfd194bfc825362995cf730dee0433e02d73641d2",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC012_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "e457d50f7e4c1a32510f2ab5b0372a507571d7a5e121897ac961564fc5b0162f",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc012/evaluator.py",
+          "active_sha256": "e457d50f7e4c1a32510f2ab5b0372a507571d7a5e121897ac961564fc5b0162f",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC012_Operationalization_v0.1/techniques/LC-012.json",
+          "source_sha256": "37b4beff43f1b5a21b02de2e19a813ed09774e1a910e7b57dfc42669f545d140",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc012/techniques/LC-012.json",
+          "active_sha256": "37b4beff43f1b5a21b02de2e19a813ed09774e1a910e7b57dfc42669f545d140",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC012_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "b60cfdb8cb1109489aa8c94efa50cb77fca4aef660c57fa178733eb991382403",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc012/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "b60cfdb8cb1109489aa8c94efa50cb77fca4aef660c57fa178733eb991382403",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC012_Operationalization_v0.1/tests/test_lc012.py",
+          "source_sha256": "6d2764cf82d493ef29ebcf57e044d5cba78f5eed2777c4d8e4b80dc1b515fcec",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc012.py",
+          "active_sha256": "6284cf18bf4620de3ccc9400bc63832b5be8cab1dc119e77d572d3b2cd5e1f21",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-013",
+      "name": "Mottoes",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC013_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC013_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "195b1c2b2bddc2ea6f422a02d6451c57e0c1c2f1dc3596c850bd935dfcde4eae",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC013_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "4a0261ae5c5666f492cc3aa18191c99a94cc0a05687a6310d1be6ed6fea7ee64",
+      "active_namespace": "custos_engine.literary_concealment.lc013",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC013_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "d032bcdbd8bf5aaab13e980c58ba05bc168b7fb7f305bc759567f895604612c4",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc013/__init__.py",
+          "active_sha256": "d032bcdbd8bf5aaab13e980c58ba05bc168b7fb7f305bc759567f895604612c4",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC013_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "b655dbc330f4ba81761a8bdd5a88a01d411e692d1afef4e5e53f4c1597e8f900",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc013/models.py",
+          "active_sha256": "b655dbc330f4ba81761a8bdd5a88a01d411e692d1afef4e5e53f4c1597e8f900",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC013_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "b0a488bc5933382f2f1b345840b77ad05833d072f5245c6254b64200fe025848",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc013/evaluator.py",
+          "active_sha256": "b0a488bc5933382f2f1b345840b77ad05833d072f5245c6254b64200fe025848",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC013_Operationalization_v0.1/techniques/LC-013.json",
+          "source_sha256": "c29abcc1cf275975c7d7c75a3ff99f8319cf1726526f1ee039766d42df1dcb00",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc013/techniques/LC-013.json",
+          "active_sha256": "c29abcc1cf275975c7d7c75a3ff99f8319cf1726526f1ee039766d42df1dcb00",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC013_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "e718946b0f0be35c0378bd3f3078bcfd587e99739eac653ce850a60c473a9a26",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc013/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "e718946b0f0be35c0378bd3f3078bcfd587e99739eac653ce850a60c473a9a26",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC013_Operationalization_v0.1/tests/test_lc013.py",
+          "source_sha256": "2abe9dfa2da3b0a525573659cc03d7f19addaea40440959eb9ca187c80e79d45",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc013.py",
+          "active_sha256": "a9e5e234c3756c8954a68a56707de9878fbfba8122392f2f48bb19255cc2ec3e",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-014",
+      "name": "Silence or Significant Omission",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC014_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC014_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "5a05d25153425e824fb03208e18d1e5e20e956888b89cde4247ae05711689c35",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC014_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "2f5bd99abd1a781f78cec72a7fc6ed91152abc69eef886d2106a9c932735e667",
+      "active_namespace": "custos_engine.literary_concealment.lc014",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC014_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "3027705f7f26946a7cdcf9a791a67d54fcc36518c51b532183bcdb5e346fa881",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc014/__init__.py",
+          "active_sha256": "3027705f7f26946a7cdcf9a791a67d54fcc36518c51b532183bcdb5e346fa881",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC014_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "ee11665cbdc34c42120df81825ddbf92bce15c05f23b062a4aba60760c405c91",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc014/models.py",
+          "active_sha256": "ee11665cbdc34c42120df81825ddbf92bce15c05f23b062a4aba60760c405c91",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC014_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "e39f71f7bc79e5b488663e9dabc0d647308e2d52530c878e157076bf8d1af7ab",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc014/evaluator.py",
+          "active_sha256": "e39f71f7bc79e5b488663e9dabc0d647308e2d52530c878e157076bf8d1af7ab",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC014_Operationalization_v0.1/techniques/LC-014.json",
+          "source_sha256": "f5b03657005c01e3654731517953ffc85f21a435572ab43c55aef88b588a879f",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc014/techniques/LC-014.json",
+          "active_sha256": "f5b03657005c01e3654731517953ffc85f21a435572ab43c55aef88b588a879f",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC014_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "b97c868321a3e67ec1ddaca4bfdad0a640c86c1fa62b350a3104fa163d1ac1f2",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc014/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "b97c868321a3e67ec1ddaca4bfdad0a640c86c1fa62b350a3104fa163d1ac1f2",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC014_Operationalization_v0.1/tests/test_lc014.py",
+          "source_sha256": "bba91b10cab67f3b7282f4a3c789f47fb954e5d69aa86e393e619d6bf87b0078",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc014.py",
+          "active_sha256": "17923d333d8f5782039b84b2a1ead053fcab8752704f25fc2785c52888223703",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-015",
+      "name": "Deliberate Misquotation Through Omission",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC015_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC015_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "712670228117c361c4459eccee09cb8d4dbef12b710b6b55ef457c8e502409e5",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC015_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "971926f246254324da6c705d4a3e18afe8c567b3b43f728b7dbf53e9562f1cf4",
+      "active_namespace": "custos_engine.literary_concealment.lc015",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC015_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "8a82dcde2845420f16760e0d2cd5b29ceec6fcfe98aa8f256e4133110476a7a9",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc015/__init__.py",
+          "active_sha256": "8a82dcde2845420f16760e0d2cd5b29ceec6fcfe98aa8f256e4133110476a7a9",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC015_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "4644e284edab280bd3e2543356344aa8fb235f226a8c28b4e4f1eb9615ef6e30",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc015/models.py",
+          "active_sha256": "4644e284edab280bd3e2543356344aa8fb235f226a8c28b4e4f1eb9615ef6e30",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC015_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "c40e61fdd8955983a363c4bcf3f848a5db7e54bd87f5a187beaa548a79e74738",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc015/evaluator.py",
+          "active_sha256": "c40e61fdd8955983a363c4bcf3f848a5db7e54bd87f5a187beaa548a79e74738",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC015_Operationalization_v0.1/techniques/LC-015.json",
+          "source_sha256": "27cde781f7050a9b04229c738a6ae888c2b99136c04787c7c932b2535b128a77",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc015/techniques/LC-015.json",
+          "active_sha256": "27cde781f7050a9b04229c738a6ae888c2b99136c04787c7c932b2535b128a77",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC015_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "abe0243d7663b03eccba44de72e21f2fa0444a660d3006191833ca94ebaec3ac",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc015/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "abe0243d7663b03eccba44de72e21f2fa0444a660d3006191833ca94ebaec3ac",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC015_Operationalization_v0.1/tests/test_lc015.py",
+          "source_sha256": "09b0071b75adc0166d3b59eb9d32791b434c71fd5d224fdad7e058ad1c36ee0a",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc015.py",
+          "active_sha256": "97cc07ab00fed5c5ce3cf328d6c507b9acc08b34a97a83b5a2039c84b2c375b8",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-016",
+      "name": "Repetition as Leitmotif",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC016_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC016_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "273f2422c990a35fa8ee77b8466e2726e2adcc4f5d09b0f2dc15c85bc9a33655",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC016_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "f6f0aa77238ed826c944e2abd08c31e11eb584c28f4c6b40ecf137cc95a564f8",
+      "active_namespace": "custos_engine.literary_concealment.lc016",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC016_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "c97d209e2e05600df1f503323d3923c5b6fe57443bd82e4ffd790ab70a264081",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc016/__init__.py",
+          "active_sha256": "c97d209e2e05600df1f503323d3923c5b6fe57443bd82e4ffd790ab70a264081",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC016_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "8011eb89aa56dbd6b919afbe0acc531834b99a4c50afab7bd2d1e6eaee69d968",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc016/models.py",
+          "active_sha256": "8011eb89aa56dbd6b919afbe0acc531834b99a4c50afab7bd2d1e6eaee69d968",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC016_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "2221d26cfb9ff7566360a1e3928209bbc3e5b71415a63301febbeeede6857677",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc016/evaluator.py",
+          "active_sha256": "2221d26cfb9ff7566360a1e3928209bbc3e5b71415a63301febbeeede6857677",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC016_Operationalization_v0.1/techniques/LC-016.json",
+          "source_sha256": "58b9cccd85c49ec9d454b330c55bde1919e60642a2deb34edf32691327bdf2c4",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc016/techniques/LC-016.json",
+          "active_sha256": "58b9cccd85c49ec9d454b330c55bde1919e60642a2deb34edf32691327bdf2c4",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC016_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "b016d8ea8cb8e593e0bd9e1542eafa8ceaecb319d0f8aaa63eadd82c39a89a54",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc016/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "b016d8ea8cb8e593e0bd9e1542eafa8ceaecb319d0f8aaa63eadd82c39a89a54",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC016_Operationalization_v0.1/tests/test_lc016.py",
+          "source_sha256": "ac788a1585dd651dc0833335d35136b66b167b6a761bd464239a9e58416d9067",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc016.py",
+          "active_sha256": "fdf1de612518544bd187bbcc8f43f460bcb0a7eaea38344c18191ee45b43734b",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-017",
+      "name": "Rashei Perakim — Beginnings of Chapters",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC017_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC017_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "5f7f1e502767de22630ae6880ac2d66cf2ff022a84a9731a7e27ec57b5f29e25",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC017_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "7c64f7a5caa0f4433f049581a7be3c2d54e13ac6f137f787e4c202865f4b0770",
+      "active_namespace": "custos_engine.literary_concealment.lc017",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC017_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "4d54c9ade6a080eef50b3c5e236881efe0ccf7647bbbd2fb4795788be30b4905",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc017/__init__.py",
+          "active_sha256": "4d54c9ade6a080eef50b3c5e236881efe0ccf7647bbbd2fb4795788be30b4905",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC017_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "1b9103f7223e486bd2141bc343cf50f6ea72cb1e7d6fb4badf8bf5d28f5249a7",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc017/models.py",
+          "active_sha256": "1b9103f7223e486bd2141bc343cf50f6ea72cb1e7d6fb4badf8bf5d28f5249a7",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC017_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "0a5cdff8957206e71d50e9df0e067d276fcd0fea05b1e1bbfde9f2d370a64bfe",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc017/evaluator.py",
+          "active_sha256": "0a5cdff8957206e71d50e9df0e067d276fcd0fea05b1e1bbfde9f2d370a64bfe",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC017_Operationalization_v0.1/techniques/LC-017.json",
+          "source_sha256": "76de098723a23259bb1708a7d04b50f2c73e3eeedb863376f2312fad2b7a9ce6",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc017/techniques/LC-017.json",
+          "active_sha256": "76de098723a23259bb1708a7d04b50f2c73e3eeedb863376f2312fad2b7a9ce6",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC017_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "8fed9cb4af2951ae5d8166ec1a657dcbb8d7e5fab56a0402a04b66651c8d2b0f",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc017/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "8fed9cb4af2951ae5d8166ec1a657dcbb8d7e5fab56a0402a04b66651c8d2b0f",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC017_Operationalization_v0.1/tests/test_lc017.py",
+          "source_sha256": "a5f4da36d812638f66b39f63e80a4c23181108f864236d8385e056e19b8b21b5",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc017.py",
+          "active_sha256": "8bcc3ed2702bd012744fd5c72bf0f5559160b2bf5a31cce54c995f8850212fcf",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-018",
+      "name": "Rare Statement of the Unconventional Teaching",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC018_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC018_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "345cda7eb4e4e7a3980fe0473bf5e0cb8ecc553909f4b896cd7edf27258c249f",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC018_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "da69ccc7b00737cf4f980b764feb380aca728628b636ee919473d0eb497bc6d7",
+      "active_namespace": "custos_engine.literary_concealment.lc018",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC018_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "9a6ede2ea26029079632cfdd7e5bc631a2b22a5181622c984a8029c564179126",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc018/__init__.py",
+          "active_sha256": "9a6ede2ea26029079632cfdd7e5bc631a2b22a5181622c984a8029c564179126",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC018_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "983f6c9c07983d3921ee05d69938befbe6c35056377a2467017d36bede32b04f",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc018/models.py",
+          "active_sha256": "983f6c9c07983d3921ee05d69938befbe6c35056377a2467017d36bede32b04f",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC018_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "3f4293114a7e0e2f9369d1ece1797006a2d325d3be6dc6b52560074238a1eee4",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc018/evaluator.py",
+          "active_sha256": "3f4293114a7e0e2f9369d1ece1797006a2d325d3be6dc6b52560074238a1eee4",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC018_Operationalization_v0.1/techniques/LC-018.json",
+          "source_sha256": "cfbff1e1e0c581466f193d3fe9446f829c827e89e379dd184ee82bb142de9d6c",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc018/techniques/LC-018.json",
+          "active_sha256": "cfbff1e1e0c581466f193d3fe9446f829c827e89e379dd184ee82bb142de9d6c",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC018_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "a133b81801926faaf778cf45fd137902c890986e653032b475ee313f8014c9b2",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc018/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "a133b81801926faaf778cf45fd137902c890986e653032b475ee313f8014c9b2",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC018_Operationalization_v0.1/tests/test_lc018.py",
+          "source_sha256": "d4829f97183130a4befbc3e201c9bdcae07435f695dc824939a2666844409a88",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc018.py",
+          "active_sha256": "a19f0e6d505a1a275dccbec97fb7222b9041be1cc7df988b9fe6e7f788692756",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-019",
+      "name": "Frequent Repetition of the Conventional View",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC019_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC019_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "225ab0ee8dae44d59a5152bdf49296030d2f4699f6e68285cf36abdce16030d0",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC019_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "5127dc7385f2740db50b34545aad1e02ed165b22800af82cbd1b7fe74e27aeaa",
+      "active_namespace": "custos_engine.literary_concealment.lc019",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC019_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "03e25dafe131fe54fbb54b2734b52ba103639098b3d23e773d284fef5aba32b5",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc019/__init__.py",
+          "active_sha256": "03e25dafe131fe54fbb54b2734b52ba103639098b3d23e773d284fef5aba32b5",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC019_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "f045d38a39d5fe39c7140ddfc806d43d8854f34a2078f6198a0cdb6a34111710",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc019/models.py",
+          "active_sha256": "f045d38a39d5fe39c7140ddfc806d43d8854f34a2078f6198a0cdb6a34111710",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC019_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "478b39291ea437332a731d48538a55fcd17a0c069051c992743d6c7dfd325335",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc019/evaluator.py",
+          "active_sha256": "478b39291ea437332a731d48538a55fcd17a0c069051c992743d6c7dfd325335",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC019_Operationalization_v0.1/techniques/LC-019.json",
+          "source_sha256": "c8031819c1dc0b248e05fe50d08a68217eb43d2f57cf8d8431d0ac7a0608a3ee",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc019/techniques/LC-019.json",
+          "active_sha256": "c8031819c1dc0b248e05fe50d08a68217eb43d2f57cf8d8431d0ac7a0608a3ee",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC019_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "30fc2806a1cb31308ee7ff6a4c0f6e7652a474f49cd51c00a040536f9013b377",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc019/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "30fc2806a1cb31308ee7ff6a4c0f6e7652a474f49cd51c00a040536f9013b377",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC019_Operationalization_v0.1/tests/test_lc019.py",
+          "source_sha256": "9c98bd4096198622d16cffdf371bf92971c51bee9036d3cd1473a93360a97e7a",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc019.py",
+          "active_sha256": "774d99526c9c10220c08c3b2de627eae4b30fbd95bf632890cb0a5868461ae26",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-020",
+      "name": "Hint",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC020_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC020_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "8c8618364e85437dbb96931ec399189f935f9a62d7bdf23f0acdb367020787ba",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC020_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "e0c6f99edfd679db50f328323f45d745bf85b21b0e6f0b6a4783870f3a29f399",
+      "active_namespace": "custos_engine.literary_concealment.lc020",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC020_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "0961605d1b91ca82057f0b0c198e4430870bf7934ff03333d4980d042440185e",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc020/__init__.py",
+          "active_sha256": "0961605d1b91ca82057f0b0c198e4430870bf7934ff03333d4980d042440185e",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC020_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "5b62f5fd3d9285c8e9e5a3e9524142a45715097c2d68c19cf2e8f75592442dcb",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc020/models.py",
+          "active_sha256": "5b62f5fd3d9285c8e9e5a3e9524142a45715097c2d68c19cf2e8f75592442dcb",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC020_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "5cce1639a5d9ce83d86d515dc46554412316b63451dacd384c5642faea0db76e",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc020/evaluator.py",
+          "active_sha256": "5cce1639a5d9ce83d86d515dc46554412316b63451dacd384c5642faea0db76e",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC020_Operationalization_v0.1/techniques/LC-020.json",
+          "source_sha256": "9df54c19478d40aa68f93865c788b6f8754a8d4fc56acad41585031e57ac7013",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc020/techniques/LC-020.json",
+          "active_sha256": "9df54c19478d40aa68f93865c788b6f8754a8d4fc56acad41585031e57ac7013",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC020_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "7a5651258a8b7f1e396897359f23451e9754d0b1d67c9b8a493be49feb39cd26",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc020/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "7a5651258a8b7f1e396897359f23451e9754d0b1d67c9b8a493be49feb39cd26",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC020_Operationalization_v0.1/tests/test_lc020.py",
+          "source_sha256": "b7d9be47dadab04e0d08288400b63d014f9d6deddd87090a7107ce4a858ac6b3",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc020.py",
+          "active_sha256": "681106fa4fc9c92bb6f37cff1141b02fed76971355007f2a932cb72bf91c19d0",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-021",
+      "name": "Inappropriate Expression",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC021_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC021_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "bc35ea369e57710e4ff05df43811b044f1d52421591314ed4c9a5c222b8d1d9b",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC021_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "0316d6276e2a0b77628dbf4c18327edb62fa4dcd474c5de9b44ce444eb58fa58",
+      "active_namespace": "custos_engine.literary_concealment.lc021",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC021_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "0408febed439d4fd4e7fdbfa182009dba941facaa18d4d6bda8a2cf70fa1a1fe",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc021/__init__.py",
+          "active_sha256": "0408febed439d4fd4e7fdbfa182009dba941facaa18d4d6bda8a2cf70fa1a1fe",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC021_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "efed3bfd0c4c2a2324c66e2bffbee9ebe3238bd1325cfd8121004c8caea54815",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc021/models.py",
+          "active_sha256": "efed3bfd0c4c2a2324c66e2bffbee9ebe3238bd1325cfd8121004c8caea54815",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC021_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "9c3363767ee3ebc4039bc1b58183adb0b86439b225a9777782ee5af1e0ba4e19",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc021/evaluator.py",
+          "active_sha256": "9c3363767ee3ebc4039bc1b58183adb0b86439b225a9777782ee5af1e0ba4e19",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC021_Operationalization_v0.1/techniques/LC-021.json",
+          "source_sha256": "4d021a60d96ddf926ba9186c39e02b2a77c2eb30172a85d26d297f633830f426",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc021/techniques/LC-021.json",
+          "active_sha256": "4d021a60d96ddf926ba9186c39e02b2a77c2eb30172a85d26d297f633830f426",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC021_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "1a0c4ccb2b8250f28535a5d67211527f8cbab549b08a5caab4809ca495cf24d5",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc021/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "1a0c4ccb2b8250f28535a5d67211527f8cbab549b08a5caab4809ca495cf24d5",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC021_Operationalization_v0.1/tests/test_lc021.py",
+          "source_sha256": "c3dfb3045d93b1bf71bc7ce12791b924710b42a08242bf4143edfcde862ff4a2",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc021.py",
+          "active_sha256": "9b4752f3e6e5c7b43ffcb82e431990b5e5fa2a0dbe6f6ceaf3aab01b175dc598",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    },
+    {
+      "component_id": "LC-022",
+      "name": "Clumsy Transition",
+      "projection_status": "DEVELOPMENT_ONLY",
+      "authoritative_repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+      "source_package_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC022_Operationalization_v0.1",
+      "source_package_manifest_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC022_Operationalization_v0.1/PACKAGE_MANIFEST.json",
+      "source_package_manifest_sha256": "7bd126e4427e5e932e7d4e4a5b03524231367c537d08347ab3d8cc59233533e0",
+      "source_package_manifest_status": "VERIFIED",
+      "source_fixity_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC022_Operationalization_v0.1/SOURCE_FIXITY.json",
+      "source_fixity_sha256": "94f9ae06d1d0dbc09ebbaf2f904fc9d1be43149fb99b3c09ed1485014428c0d2",
+      "active_namespace": "custos_engine.literary_concealment.lc022",
+      "files": {
+        "public_api": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC022_Operationalization_v0.1/src/custos_engine/taxonomy/__init__.py",
+          "source_sha256": "d4983142f0453f6a14bf64dfc0edff7592cea474170cc5cf1acf7831fc37ef1c",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc022/__init__.py",
+          "active_sha256": "d4983142f0453f6a14bf64dfc0edff7592cea474170cc5cf1acf7831fc37ef1c",
+          "copy_status": "EXACT_COPY"
+        },
+        "models": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC022_Operationalization_v0.1/src/custos_engine/taxonomy/models.py",
+          "source_sha256": "2fbc8b0edf62cce58a670e4e3ba01db98d2eee735875bb9d78e20eeb10016b8c",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc022/models.py",
+          "active_sha256": "2fbc8b0edf62cce58a670e4e3ba01db98d2eee735875bb9d78e20eeb10016b8c",
+          "copy_status": "EXACT_COPY"
+        },
+        "evaluator": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC022_Operationalization_v0.1/src/custos_engine/taxonomy/evaluator.py",
+          "source_sha256": "b4f77347d4dabf2aa2b9bb08bbeb7e0b5009081c8037f89b9d0dc5bf100e2b9a",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc022/evaluator.py",
+          "active_sha256": "b4f77347d4dabf2aa2b9bb08bbeb7e0b5009081c8037f89b9d0dc5bf100e2b9a",
+          "copy_status": "EXACT_COPY"
+        },
+        "technique": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC022_Operationalization_v0.1/techniques/LC-022.json",
+          "source_sha256": "d0e6414a963f820dda103a39cff51f89e06bc185b9d0d17aa822ae736cba9ed7",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc022/techniques/LC-022.json",
+          "active_sha256": "d0e6414a963f820dda103a39cff51f89e06bc185b9d0d17aa822ae736cba9ed7",
+          "copy_status": "EXACT_COPY"
+        },
+        "schema": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC022_Operationalization_v0.1/schemas/literary_concealment_technique.schema.json",
+          "source_sha256": "cd1dad4ad773226e1b850c86a73d6aa7d30eadc1dbd56d75aab7aa999b327f49",
+          "active_path": "inquiry_engine/src/custos_engine/literary_concealment/lc022/schemas/literary_concealment_technique.schema.json",
+          "active_sha256": "cd1dad4ad773226e1b850c86a73d6aa7d30eadc1dbd56d75aab7aa999b327f49",
+          "copy_status": "EXACT_COPY"
+        },
+        "test": {
+          "source_path": "inquiry_engine/literary_concealment/packages/Hermeneutic_Object_LC022_Operationalization_v0.1/tests/test_lc022.py",
+          "source_sha256": "be3d6f733f8b55cd952f932259aed180f27c09453f56636cd90c84d732b913d4",
+          "active_path": "inquiry_engine/tests/literary_concealment/test_lc022.py",
+          "active_sha256": "56ee17ef9b84009097722ee4ee5301f9b4afb9e6ab866fd3aacb091eecb53436",
+          "copy_status": "ADAPTED_IMPORT_AND_RESOURCE_PATH"
+        }
+      }
+    }
+  ]
+}

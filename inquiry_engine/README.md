@@ -147,6 +147,9 @@ Implemented:
 - manifest validation;
 - repository-backed, commit-pinned Taxonomy loading;
 - repository-backed, commit-pinned Procedure loading;
+- repository-integrated, development-only LC-001–LC-022 runtimes;
+- isolated component models and evaluators for LC-001–LC-022;
+- bounded Literary Concealment registry and dispatcher;
 - deterministic Taxonomy evaluator;
 - deterministic state-machine scaffold;
 - candidate package exporter;
@@ -156,13 +159,21 @@ Implemented:
 
 Not yet implemented:
 
-- full Taxonomy population;
+- Taxonomy population beyond LC-022;
+- constitutional admission, certification, or Cognitive Memory integration of
+  LC-001–LC-022;
 - full DF-000001–DF-000150 procedure;
 - LLM reasoning adapters;
 - production Neo4j projection;
 - Repository admission or certification;
 - GitHub writes.
 
-## Immediate next production unit
+## Literary Concealment integration status
 
-Populate `taxonomy_component.schema.json` with the complete machine-readable projection of the Hermeneutic Object Taxonomy and add positive, negative, ambiguous, near-miss, and adversarial fixtures.
+LC-001 through LC-022 are repository-integrated as development-only executable
+projections. Each component retains its own schema, Pydantic models, evaluator,
+bounded outcome vocabulary, fixtures, and tests under an isolated namespace.
+
+This repository integration does not constitute constitutional admission,
+certification, Cognitive Memory integration, or production activation. No next
+LC component is authorized by this integration change.

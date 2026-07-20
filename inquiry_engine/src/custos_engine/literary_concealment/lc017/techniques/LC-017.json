@@ -1,0 +1,133 @@
+{
+  "projection_version": "0.1",
+  "projection_status": "DEVELOPMENT_ONLY",
+  "technique_key": "LC-017",
+  "canonical_identifier": null,
+  "identifier_status": "NOT_ASSIGNED",
+  "name": "Rashei Perakim — Beginnings of Chapters",
+  "strauss_status": "EXPLICITLY NAMED AND EXEMPLIFIED",
+  "source": {
+    "authoritative_object_path": "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt",
+    "authoritative_object_version": "v1.0",
+    "authoritative_object_sha256": "0a155194f72a4517d267256b37fe4b68fe1144e0ef8ec3a1a26c3b3ad5b9f0e5",
+    "repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+    "primary_work": "Persecution and the Art of Writing",
+    "primary_essay": "The Literary Character of the Guide for the Perplexed",
+    "source_pages": [
+      77
+    ],
+    "source_formulation": "The expression may mean not only \"chapter headings\" but also \"beginnings of chapters.\" Maimonides sometimes gives important hints through the initial word or words of a chapter.",
+    "source_mechanism": "A chapter's opening word or phrase indirectly signals the subject, division, or doctrinal relation of the section.",
+    "source_documentary_function": "Initial placement gives a small lexical item architectonic force.",
+    "source_investigative_requirement": "Record the first word or words of every chapter and test them against the structure of the work."
+  },
+  "mechanism": "The first authorial word or words of a securely bounded chapter occupy a privileged architectonic position. Their lexical content, grammatical form, or relation to other chapter openings may signal the chapter's subject, a division within the work, or a doctrinal relation not stated directly in a heading. The effect must be tested against a complete index of chapter beginnings.",
+  "investigative_requirement": "Establish the authorial chapter boundaries and exclude editorial headings, running heads, numerals, and supplied titles. Record the exact first word or words of every chapter in the declared scope; preserve source-language forms and translations; identify the candidate opening's relation to its chapter and the work's architecture; compare all openings for recurrence, contrast, sequence, and exceptional form; and test grammar, transition, genre, translation, and editorial division as ordinary explanations.",
+  "distinctions": [
+    "LC-017 concerns the actual opening word or words of a chapter, not merely a chapter title, heading, number, running head, or table-of-contents entry.",
+    "A chapter beginning must be authorially or textually grounded. Modern editorial division cannot create an LC-017 signal.",
+    "One striking opening may justify a candidate inquiry, but the source requires recording the beginnings of every chapter and testing them against the work's structure.",
+    "LC-008 concerns an unobtrusive common word anywhere in a passage. LC-017 concerns the architectonic force of initial chapter placement.",
+    "LC-013 concerns mottoes prefixed to a work or part. A motto stands outside ordinary exposition; an LC-017 opening is the first word or phrase of the chapter's exposition.",
+    "LC-020 concerns hints generally. LC-017 requires the specific chapter-opening operation.",
+    "The evaluator may corroborate a chapter-opening signal but may not infer hidden teaching, intended meaning, authorial intention, audience, or doctrinal truth."
+  ],
+  "operational": {
+    "trigger_conditions": [
+      "A chapter boundary is recoverable in a stable witness.",
+      "The candidate expression is the actual first authorial word or words of the chapter's exposition.",
+      "Editorial headings, numbers, running heads, and supplied titles are excluded.",
+      "The opening has a documented lexical, grammatical, thematic, divisional, or doctrinal relation to the chapter or work.",
+      "Initial placement materially contributes to the proposed relation.",
+      "The claim exceeds the fact that every chapter necessarily has a first word."
+    ],
+    "minimum_evidence": [
+      "Declared work or chapter scope.",
+      "Stable witness and chapter boundary for every indexed chapter.",
+      "Exact opening word or phrase for every chapter in the declared scope.",
+      "Source-language form, morphology, and syntax where available.",
+      "Translation and edition mapping for every opening.",
+      "Evidence distinguishing chapter exposition from editorial headings and supplied titles.",
+      "A complete chapter-opening index for the declared scope.",
+      "Local context following each opening.",
+      "Architectonic position of each chapter in the work.",
+      "A candidate relation record linking the target opening to subject, division, sequence, contrast, or doctrinal relation.",
+      "Comparison against all other openings in the index.",
+      "Resolved speaker, quotation, objection, hypothetical, and reported-opinion attribution.",
+      "An auditable evidence path from witness boundaries through opening index to the architectonic-signal claim."
+    ],
+    "corroboration_indicators": [
+      "Multiple chapter openings form a recoverable lexical or conceptual sequence.",
+      "The target opening contrasts systematically with neighboring chapter openings.",
+      "The same opening word recurs at architectonically corresponding chapters.",
+      "The opening anticipates a division or doctrinal relation developed later in the chapter.",
+      "The author elsewhere comments on the opening word or its semantic field.",
+      "A source comparison shows controlled preservation, alteration, or repositioning of the opening.",
+      "Another independently reconstructed literary device converges on the same chapter boundary.",
+      "The opening pattern predicts a structural distinction verified elsewhere in the work."
+    ],
+    "ordinary_alternatives": [
+      "Grammatical necessity.",
+      "Ordinary connective or transitional wording.",
+      "Formulaic chapter opening.",
+      "Genre convention.",
+      "Editorial chapter division.",
+      "Translator-supplied wording.",
+      "Running head, chapter number, title, or table-of-contents language.",
+      "Scribal paragraphing or later textual segmentation.",
+      "Coincidental lexical recurrence.",
+      "The opening merely summarizes the chapter's obvious topic.",
+      "The investigator selected an arbitrary number of opening words.",
+      "The chapter-opening index is incomplete or selectively sampled."
+    ],
+    "disqualifying_conditions": [
+      "The chapter boundary is not securely recoverable.",
+      "The expression is an editorial heading, numeral, running head, or supplied title.",
+      "The alleged opening is not the first authorial word or words of the exposition.",
+      "The relation to chapter or work structure is undocumented.",
+      "Initial placement adds no material force to the proposed relation.",
+      "The pattern disappears in the source language or an authoritative witness.",
+      "Editorial division, translation, or later segmentation fully explains the opening.",
+      "The chapter-opening index is materially incomplete for the claimed scope.",
+      "The analysis depends only on thematic resemblance or the universal fact of initial position.",
+      "The selected opening phrase is expanded or contracted until a preferred pattern appears."
+    ],
+    "authorized_response": [
+      "Verify chapter boundaries and exclude editorial paratext.",
+      "Create a complete chapter-opening index for the declared scope.",
+      "Preserve exact source-language and translated openings separately.",
+      "Record a fixed extraction rule for the first word or words.",
+      "Map recurrence, contrast, sequence, exceptional form, and architectonic correspondence.",
+      "Create a bounded candidate relation for the target opening.",
+      "Test grammatical, transitional, formulaic, generic, editorial, translational, and segmentation alternatives.",
+      "Search for counterexamples and openings that do not fit the proposed pattern.",
+      "Evaluate LC-008, LC-013, LC-016, LC-020, or LC-021 separately when independently triggered.",
+      "Preserve the opening's intended meaning as unresolved."
+    ],
+    "prohibited_inferences": [
+      "Do not treat editorial headings as authorial chapter beginnings.",
+      "Do not infer significance from initial position alone.",
+      "Do not choose an arbitrary opening-phrase length to manufacture a pattern.",
+      "Do not infer a work-wide pattern from a selective sample.",
+      "Do not infer hidden teaching, authorial intention, intended audience, or doctrinal truth.",
+      "Do not assume the opening simply names the chapter's subject.",
+      "Do not silently normalize source-language and translated openings.",
+      "Do not collapse LC-017 into LC-008, LC-013, LC-016, or LC-020."
+    ],
+    "uncertainty_rule": "When a chapter opening appears architectonically significant but chapter boundaries, editorial status, extraction rule, index completeness, or structural relation remains contested, preserve a candidate opening signal with all rival segmentations and explanations. Do not assign an intended meaning.",
+    "termination_rule": "Terminate as NOT_TRIGGERED when no authentic first-word or first-phrase signal with a material structural relation is documented; as BLOCKED_MISSING_EVIDENCE when boundaries, witness, opening index, editorial status, source language, contexts, extraction rule, comparison, or provenance is incomplete; as candidate when ordinary alternatives or corroboration remain unresolved; and as corroborated only when the chapter-opening relation survives complete work-wide and documentary testing without establishing hidden meaning, intention, audience, or doctrine."
+  },
+  "local_evaluation_outcomes": [
+    "NOT_TRIGGERED",
+    "BLOCKED_MISSING_EVIDENCE",
+    "CANDIDATE_CHAPTER_OPENING_SIGNAL",
+    "CORROBORATED_CHAPTER_OPENING_SIGNAL"
+  ],
+  "version_history": [
+    {
+      "version": "0.1",
+      "status": "DEVELOPMENT_ONLY",
+      "change_note": "Initial executable projection of LC-017 with authorial-boundary, editorial-paratext exclusion, fixed opening extraction, complete chapter-opening index, architectonic comparison, ordinary-alternative, and anti-pattern-manufacture controls."
+    }
+  ]
+}
