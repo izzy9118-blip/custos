@@ -1,0 +1,133 @@
+identifier: "AMD-000000003"
+class: "Amendment"
+title: "Operational Authorization Simplification Amendment"
+version: "1.0"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+decision_outcome: "ADOPTED"
+decision_outcome_controlled_vocabulary_status: "PENDING_REGISTRATION"
+effective_date: "2026-07-20"
+effective_event: "AUTHENTICATED_REPOSITORY_OWNER_MERGE_TO_MAIN"
+adopting_authority:
+  authority_id: "CAG-000000005"
+  authority_role: "Constitutional Governance Authority"
+higher_authority_basis:
+  authority_type: "FOUNDER_RATIFICATION"
+  founder: "Ismail Ibrahim"
+  path: "governance/foundational-ratifications/2026-07-20_Operational_Authorization_Simplification_Ratification.md"
+  effect: >
+    Authorizes the bounded replacement of founder-ratified serial operational
+    separation with routine and protected governance lanes.
+governing_procedure:
+  document_number: "000012"
+  version: "1.0"
+  path: "specifications/000012_Constitutional_Amendment_Procedure_v1.0.md"
+affected_specifications:
+  - identifier: null
+    document_number: "000005"
+    title: "Constitutional Admission Protocol"
+    base_version: "1.0"
+    base_path: "specifications/000005_Constitutional_Admission_Protocol_v1.0.md"
+  - identifier: "SPEC-000000002"
+    document_number: "000008"
+    title: "Inquiry Engine Authority Specification"
+    base_version: "1.0"
+    base_path: "specifications/000008_Inquiry_Engine_Authority_Specification_v1.0.md"
+  - identifier: "SPEC-000000003"
+    document_number: "000009"
+    title: "Cognitive Memory Register and Manifest Specification"
+    base_version: "1.0"
+    base_path: "specifications/000009_Cognitive_Memory_Register_and_Manifest_Specification_v1.0.md"
+  - identifier: null
+    document_number: "000012"
+    title: "Constitutional Amendment Procedure"
+    base_version: "1.0"
+    base_path: "specifications/000012_Constitutional_Amendment_Procedure_v1.0.md"
+affected_prior_amendments:
+  - identifier: "AMD-000000002"
+    effect: "Routine final-admission and serial specialized-determination mandates are prospectively superseded."
+content_path: "amendments/AMD-000000003_Operational_Authorization_Simplification_Amendment_v1.0.md"
+amendment_character: "FOUNDER_AUTHORIZED_OPERATIONAL_GOVERNANCE_SIMPLIFICATION"
+necessity: >
+  Replace the burdensome serial authorization chain with one owner-authorized,
+  CI-supported routine merge while retaining explicit protected review for
+  constitutional and materially high-risk changes.
+current_resolution:
+  rule: "READ_AFFECTED_BASE_SPECIFICATIONS_WITH_ADOPTED_AMENDMENT"
+  active_sources:
+    - "specifications/000005_Constitutional_Admission_Protocol_v1.0.md"
+    - "specifications/000008_Inquiry_Engine_Authority_Specification_v1.0.md"
+    - "specifications/000009_Cognitive_Memory_Register_and_Manifest_Specification_v1.0.md"
+    - "specifications/000012_Constitutional_Amendment_Procedure_v1.0.md"
+    - "amendments/AMD-000000003_Operational_Authorization_Simplification_Amendment_v1.0.md"
+  precedence: "AMD-000000003_CONTROLS_WHERE_OPERATIONAL_RULES_CONFLICT"
+  retroactive_effect: "NONE"
+routine_lane:
+  final_authorization_event: "AUTHENTICATED_REPOSITORY_OWNER_MERGE"
+  required_evidence:
+    - "Declared actions and scope"
+    - "Recoverable documentary basis and provenance"
+    - "Limitations, uncertainty, and exclusions"
+    - "Coherent canonical records and implementation"
+    - "Passing required CI"
+  combinable_actions:
+    - "ADMISSION"
+    - "VALIDATION"
+    - "CERTIFICATION_WHERE_REQUIRED"
+    - "INTEGRATION"
+    - "MANIFEST_RELEASE"
+    - "ACTIVATION_FOR_LATER_RUNS"
+  mandatory_candidate_stage: false
+  mandatory_separate_authority_records: false
+protected_lane_triggers:
+  - "FOUNDATIONAL_OR_CONSTITUTIONAL_CHANGE"
+  - "ONTOLOGY_IDENTIFIER_PREDICATE_OR_VOCABULARY_DEFINITION_CHANGE"
+  - "EVIDENCE_EPISTEMIC_OR_SAFEGUARD_CHANGE"
+  - "DESTRUCTIVE_HISTORY_OR_IDENTIFIER_REUSE"
+  - "SECURITY_PERMISSION_OR_EXTERNAL_PRODUCTION_EFFECT"
+  - "INTERPRETATION_AS_DOCUMENTARY_FACT"
+  - "OWNER_DESIGNATION"
+domain_review:
+  ontology_governance: "NO_CLASS_CHANGE"
+  identifier_governance: "NO_FAMILY_OR_ALLOCATION_RULE_CHANGE"
+  predicate_governance: "NO_PREDICATE_CHANGE"
+  vocabulary_governance: "NO_CONTROLLED_CONCEPT_CHANGE"
+  constitutional_governance: "PASS_WITH_FOUNDER_RATIFICATION"
+validation:
+  demonstrated_operational_burden: "PASS"
+  founder_authority_basis: "PASS"
+  amendment_procedure_conformity: "PASS"
+  historical_state_preserved: "PASS"
+  epistemic_safeguards_preserved: "PASS"
+  engine_self_authorization_prohibited: "PASS"
+  routine_and_protected_lanes_defined: "PASS"
+  unauthorized_retroactivity_review: "PASS"
+  repository_test_path: "inquiry_engine/tests/integration/test_operational_authorization_simplification.py"
+fixity:
+  algorithm: "SHA-256"
+  target_path: "amendments/AMD-000000003_Operational_Authorization_Simplification_Amendment_v1.0.md"
+  digest: "298c00623b44a15b6f4e8491a9827af2f9cf56d21a106c0e531e240dbd74de06"
+non_authorizations:
+  - "Does not erase or rewrite earlier authority, admission, validation, certification, integration, or Manifest records."
+  - "Does not reuse canonical identifiers."
+  - "Does not permit interpretation or inference to be represented as documentary fact."
+  - "Does not permit engine or LLM self-authorization."
+  - "Does not treat CI success as historical or philosophical proof."
+  - "Does not mutate an active version-pinned run."
+  - "Does not make Neo4j canonical."
+supersedes: []
+superseded_by: null
+withdrawal_conditions:
+  - "A later founder act or adopted amendment supersedes or withdraws this operational rule."
+  - "The repository owner places all operational changes into protected governance through an explicit later action."
+next_governed_action: "DIRECT_ROUTINE_INTEGRATION_OF_HOC-000000001"
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "ADOPTED_UPON_FOUNDER_MERGE"
+    authority_id: "CAG-000000005"
+    event_note: >
+      Replaced mandatory serial authorization with one owner-merge routine lane
+      and a risk-proportionate protected lane while preserving documentary and
+      epistemic safeguards.
