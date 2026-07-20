@@ -1,0 +1,12 @@
+identifier: "VER-000000013"
+class: "Version Record"
+entity_id: "SPEC-000000002"
+previous_version: null
+current_version: "1.0"
+effective_date: "2026-07-20"
+change_type: "INITIAL_ADMISSION"
+source_decision_id: "DDR-000000005"
+authority_id: "CAG-000000006"
+change_summary: >
+  Records the initial admitted state of Document 000008 as active canonical
+  Specification SPEC-000000002.
