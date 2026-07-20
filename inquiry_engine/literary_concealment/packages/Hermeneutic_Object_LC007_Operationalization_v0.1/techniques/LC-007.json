@@ -1,0 +1,125 @@
+{
+  "projection_version": "0.1",
+  "projection_status": "DEVELOPMENT_ONLY",
+  "technique_key": "LC-007",
+  "canonical_identifier": null,
+  "identifier_status": "NOT_ASSIGNED",
+  "name": "Two-Faced Speech",
+  "strauss_status": "EXPLICITLY DISTINGUISHED",
+  "source": {
+    "authoritative_object_path": "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt",
+    "authoritative_object_version": "v1.0",
+    "authoritative_object_sha256": "0a155194f72a4517d267256b37fe4b68fe1144e0ef8ec3a1a26c3b3ad5b9f0e5",
+    "repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+    "primary_work": "Persecution and the Art of Writing",
+    "primary_essay": "The Literary Character of the Guide for the Perplexed",
+    "source_pages": [
+      72
+    ],
+    "source_description": "A speech may have \"two faces,\" an exterior face useful for social or political purposes and an inner face useful for knowledge of the truth.",
+    "source_relationship": "The authoritative Taxonomy records LC-007 as the broader communicative structure within which LC-006 may operate."
+  },
+  "mechanism": "The same verbal surface supports two documentarily distinguishable readings with different communicative functions. One reading is accessible and useful within an ordinary social or political horizon. Another reading is available to a more independently prepared reader and bears a distinct knowledge-oriented function. The technique concerns differentiated communication, not merely lexical ambiguity.",
+  "investigative_requirement": "Reconstruct the same textual unit under two independently supported readings; document the audience horizon and function of each reading; establish that both readings arise from the same verbal surface without rewriting it; test whether ordinary genre, pedagogy, irony, ambiguity, or contextual variation sufficiently explains the difference; and preserve the possibility that the apparent duality is only a repository hypothesis.",
+  "distinctions": [
+    "LC-007 concerns a whole communicative structure with differentiated readings, functions, and audience horizons. LC-006 concerns multiple senses of a word or compact expression.",
+    "LC-007 may employ LC-006, but lexical ambiguity is neither necessary nor sufficient for two-faced speech.",
+    "LC-008 concerns concealment concentrated in a small common word. LC-007 concerns the relation between an exterior and an interior face of a speech.",
+    "LC-009 concerns recurrent secret terminology. A two-faced speech may use ordinary vocabulary and need not establish a technical lexicon.",
+    "A difference between novice and expert comprehension does not by itself establish two-faced speech; the two readings must have distinct documentary support and communicative functions.",
+    "The evaluator may identify a bounded dual-reading structure but may not declare the interior reading true, infer persecution, infer deliberate concealment, or assign actual readers to audience classes without evidence."
+  ],
+  "operational": {
+    "trigger_conditions": [
+      "A bounded speech, passage, chapter, or textual unit is recoverable in a stable witness.",
+      "The same verbal surface supports at least two materially distinct readings.",
+      "One reading has a documented ordinary, public, social, pedagogical, or political function.",
+      "A second reading has a documented knowledge-oriented, philosophical, or independently reconstructive function.",
+      "The readings can be associated with distinct audience horizons on documentary grounds.",
+      "Neither reading requires silently altering the text.",
+      "The local context does not conclusively collapse the two readings into one."
+    ],
+    "minimum_evidence": [
+      "Exact text and stable witness location of the bounded unit.",
+      "A complete exterior-reading record with textual support.",
+      "A complete interior-reading record with textual support.",
+      "A proposition record for each reading.",
+      "A documented communicative function for each reading.",
+      "A documented audience horizon for each reading.",
+      "Evidence that both readings arise from the same verbal surface.",
+      "Local and architectonic context of the unit.",
+      "Resolved speaker, narrator, quotation, objection, hypothetical, and dramatic attribution.",
+      "Review of genre, pedagogy, rhetoric, translation, edition, and textual variants.",
+      "Testing of whether ordinary differences in expertise or background knowledge explain the duality.",
+      "An auditable evidence path from witness text through reading reconstruction to the dual-face claim."
+    ],
+    "corroboration_indicators": [
+      "The author explicitly distinguishes audiences or levels of readers.",
+      "The work elsewhere repeats the same public/private or ordinary/independent distinction.",
+      "A preface, address to the reader, or structural marker differentiates communicative levels.",
+      "The exterior reading coheres with a documented social or political function.",
+      "The interior reading is independently supported by contradictions, source recovery, architecture, or another bounded literary device.",
+      "Different passages explicitly preserve both readings without resolving them into one.",
+      "A documented reception history shows distinct readings among differently prepared readers."
+    ],
+    "ordinary_alternatives": [
+      "Ordinary pedagogical simplification.",
+      "Difference between introductory and advanced exposition.",
+      "Genre convention or rhetorical amplification.",
+      "Lexical ambiguity adequately handled under LC-006.",
+      "Irony, metaphor, or analogy without differentiated audience structure.",
+      "Change in speaker, narrator, quotation source, or dramatic role.",
+      "Different historical contexts or stages of composition.",
+      "Translation or textual-variant effects.",
+      "Reader disagreement not intended or structured by the text.",
+      "Ordinary inconsistency, vagueness, or imprecision."
+    ],
+    "disqualifying_conditions": [
+      "Only one materially supported reading remains.",
+      "The proposed readings require changing the verbal surface.",
+      "One reading lacks textual or documentary support.",
+      "The audience horizons are invented rather than documented.",
+      "The functions of the two readings are materially the same.",
+      "The duality is fully explained by ordinary pedagogy, genre, speaker change, or translation.",
+      "The result depends solely on a single ambiguous word without broader communicative evidence.",
+      "The interior reading is asserted only because it appears more philosophical or unconventional.",
+      "The witness, attribution, or textual boundary is unstable.",
+      "The text itself decisively resolves the apparent duality."
+    ],
+    "authorized_response": [
+      "Preserve the bounded textual unit and its full context.",
+      "Create separate exterior and interior reading records.",
+      "Link each reading to exact textual support, proposition, function, and audience horizon.",
+      "Document the shared verbal surface and the evidence distinguishing the two readings.",
+      "Test ordinary pedagogical, generic, rhetorical, lexical, dramatic, and textual alternatives.",
+      "Search the work for explicit audience distinctions and parallel dual-reading structures.",
+      "Evaluate LC-006, LC-008, LC-009, LC-011, or LC-012 separately when independently triggered.",
+      "Preserve rival explanations and terminate at candidate status when audience or function evidence remains incomplete."
+    ],
+    "prohibited_inferences": [
+      "Do not infer two-faced speech from difficulty alone.",
+      "Do not infer audience differentiation from lexical ambiguity alone.",
+      "Do not declare the interior reading true or the exterior reading false.",
+      "Do not infer persecution or danger unless separately documented.",
+      "Do not infer deliberate concealment from the existence of two readings.",
+      "Do not assume that sophisticated readers necessarily receive the interior reading.",
+      "Do not treat ordinary pedagogy as esotericism without further evidence.",
+      "Do not collapse LC-007 into LC-006, LC-008, LC-009, LC-011, or LC-012."
+    ],
+    "uncertainty_rule": "When two readings remain plausible but audience differentiation, communicative function, or the relation between the readings is incomplete, preserve a candidate two-faced structure with rival explanations. Do not label either reading the true or concealed teaching.",
+    "termination_rule": "Terminate as NOT_TRIGGERED when fewer than two materially distinct and documentarily supported readings remain; as BLOCKED_MISSING_EVIDENCE when text, context, function, audience horizon, attribution, or provenance is incomplete; as candidate when ordinary alternatives or corroboration remain unresolved; and as corroborated only when a dual-reading, dual-function, dual-horizon structure survives full documentary testing without proving concealment or selecting a true reading."
+  },
+  "local_evaluation_outcomes": [
+    "NOT_TRIGGERED",
+    "BLOCKED_MISSING_EVIDENCE",
+    "CANDIDATE_TWO_FACED_SPEECH",
+    "CORROBORATED_TWO_FACED_SPEECH"
+  ],
+  "version_history": [
+    {
+      "version": "0.1",
+      "status": "DEVELOPMENT_ONLY",
+      "change_note": "Initial executable projection of LC-007 with separate reading, communicative-function, and audience-horizon records; ordinary alternatives; corroboration; and explicit noninterpretive limits."
+    }
+  ]
+}
