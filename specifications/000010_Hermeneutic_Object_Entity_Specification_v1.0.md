@@ -3,22 +3,25 @@ HERMENEUTIC OBJECT ENTITY SPECIFICATION
 
 Version: 1.0
 Document Number: 000010
+Canonical Identifier: SPEC-000000001
 Classification: Entity-Family Specification
-Status: DRAFT — NOT ADMITTED
-Identifier: Not assigned
-Authority: No canonical authority claimed; draft for governance review only
+Status: ADMITTED — ACTIVE
+Admission Decision: DDR-000000002
+Responsible Admission Authority: CAG-000000006 — Repository Admission Authority
+Effective Date: 2026-07-20
 
 PURPOSE
 
-This draft defines proposed native admission requirements for Hermeneutic Object entities while preserving existing constitutional distinctions and jurisdictional boundaries.
+This Specification defines native admission requirements for Hermeneutic Object entities while preserving existing constitutional distinctions and jurisdictional boundaries.
 
-This draft does not allocate any canonical identifier, does not establish a canonical register entry, and does not amend admitted constitutional specifications.
+Admission of this Specification does not admit any Hermeneutic Object, create the Hermeneutic Object Register, or amend Documents 000001 through 000005.
 
-I. CONSTITUTIONAL BASIS AND DRAFT LIMIT
+I. CONSTITUTIONAL BASIS AND SCOPE
 
-1. This draft is subordinate to admitted governing specifications, including Documentary Ontology, Identifier Specification, Relationship Specification, Controlled Vocabulary Specification, and Constitutional Admission Protocol.
-2. Where this draft conflicts with an admitted constitutional specification, the admitted specification prevails.
-3. This draft is a governance scaffold only and has no admission force until formally admitted.
+1. This Specification is subordinate to Documentary Ontology, Identifier Specification, Relationship Specification, Controlled Vocabulary Specification, and the Constitutional Admission Protocol read with AMD-000000002.
+2. Where this Specification conflicts with an admitted constitutional specification, the admitted constitutional specification prevails.
+3. CAG-000000006 admitted this Specification through DDR-000000002 after distinct determinations by CAG-000000001 through CAG-000000004.
+4. This Specification governs future native-class Hermeneutic Object admission packages only after the required Hermeneutic Object Register has been separately constructed and admitted.
 
 II. NATIVE CLASS DISTINCTIONS (PRESERVED)
 
@@ -31,7 +34,7 @@ The following distinctions remain mandatory:
 
 A class designation shall not be collapsed for convenience, and subtype distinctions shall not be replaced by generic labeling when subtype determination is documentarily supportable.
 
-III. PROPOSED DEFINITION
+III. DEFINITION
 
 A Hermeneutic Object is a bounded interpretive documentary artifact preserving an explicit inquiry package, its documentary basis, and its uncertainty state without conflating documentary evidence with interpretive conclusion.
 
@@ -62,7 +65,7 @@ A candidate HO/HOA/HOB/HOC may be admitted in its native class only when all req
 11. Certification boundary clarity
    Certification eligibility and engine-use authorization state are explicit.
 
-V. MINIMUM CANONICAL OBJECT FIELDS (PROPOSED)
+V. MINIMUM CANONICAL OBJECT FIELDS
 
 Every admitted native-class Hermeneutic Object record shall contain at minimum:
 
@@ -108,28 +111,28 @@ A. Ontology conformity
 B. Identifier allocation
 1. Identifier Governance Authority (CAG-000000002) governs family use and identifier allocation.
 
-C. Admission decision authority (draft assessment)
-1. Existing admitted authority records explicitly define ontology, identifier, predicate, and vocabulary governance responsibilities.
-2. A dedicated admitted authority role for native admission decisions of Hermeneutic Objects is not explicitly instantiated in current admitted authority records.
-3. Therefore, this draft identifies a governance gap: the responsible authority for final native admission decision must be explicitly designated by admitted governance action before production admission.
-4. Until that designation exists, no new authority is invented by this draft.
-5. Until an admitted governance action designates a Responsible Authority with jurisdiction over native Hermeneutic Object admission, production admission is constitutionally blocked.
-6. This draft may continue through governance review but cannot authorize admission.
+C. Final admission decision authority
+1. Repository Admission Authority (CAG-000000006) has exclusive jurisdiction to issue the final ordinary native-admission outcome under Document 000005 as amended by AMD-000000002.
+2. CAG-000000006 shall verify that every required specialized-authority determination is complete and recoverable but may not replace or silently repair such a determination.
+3. CAG-000000003 retains predicate jurisdiction where a candidate package creates or changes canonical predicates or Relationship Assertions.
+4. CAG-000000004 retains controlled-vocabulary jurisdiction where a candidate package proposes or uses governed concepts requiring determination.
+5. Identifier allocation by CAG-000000002, technical validation, or register insertion does not constitute final admission.
+6. An LLM or Inquiry Engine execution may prepare a candidate or validation package but may not exercise CAG-000000006 jurisdiction.
 
-VIII. PROPOSED REQUIRED CANONICAL REGISTER
+VIII. REQUIRED CANONICAL REGISTER
 
-A. Proposed name
+A. Canonical name
 1. Hermeneutic Object Register.
 
-B. Proposed repository path
+B. Required repository path
 1. registers/hermeneutic-object-register/register.yaml
 2. registers/hermeneutic-object-register/objects/<canonical-identifier>.yaml
-3. These are proposed structural paths only.
-4. No canonical register has been created.
-5. The final register filename and REG identifier remain unassigned.
+3. The separately governed register-construction action shall replace register.yaml with its assigned canonical REG filename if required by the admitted register pattern.
+4. No canonical Hermeneutic Object Register is created by admission of this Specification.
+5. The REG identifier remains unassigned until the separate register-construction action.
 
-C. Proposed register entry requirements
-Each entry should include at minimum:
+C. Register entry requirements
+Each entry shall include at minimum:
 1. canonical identifier
 2. ontology_class: Hermeneutic Object, Hermeneutic Object A, Hermeneutic Object B, or Hermeneutic Object C
 3. identifier_family: HO, HOA, HOB, or HOC
@@ -148,9 +151,10 @@ D. Append-only and ordering rules
 2. Historical entries are never removed or reordered.
 3. Ordering rule: admission_date_then_identifier.
 
-E. Responsible authority (draft)
-1. Responsible authority is governance-gap pending as stated in Section VII.C.
-2. This draft does not assign that authority.
+E. Responsible authorities
+1. CAG-000000006 governs final admission outcomes and the admission state recorded by the register.
+2. CAG-000000002 retains exclusive identifier-allocation jurisdiction and ledger responsibility.
+3. Register construction, identifier allocation, and initial registration shall occur through the next separate governed action.
 
 F. Relationship to Identifier Assignment Ledger
 1. The register records admitted Hermeneutic Object entities and their native-class state.
@@ -204,10 +208,12 @@ This application statement is documentarily explicit and does not assert canonic
 
 XII. IMPLEMENTATION SAFETY DECLARATION
 
-1. This draft does not allocate any canonical identifier.
-2. This draft does not modify the Identifier Assignment Ledger.
-3. This draft does not create a canonical register.
-4. This draft does not claim canonical admission authority.
-5. This draft does not alter unrelated admissions or references.
+1. Admission of this Specification assigns SPEC-000000001 only to this Specification and records the associated governance identifiers.
+2. This Specification does not allocate HO, HOA, HOB, HOC, or REG identifiers.
+3. This Specification does not create the Hermeneutic Object Register.
+4. This Specification does not admit Strauss's Taxonomy of Literary Concealment.
+5. This Specification does not certify, cognitively integrate, activate, or authorize production engine or Neo4j use for any component.
+6. This Specification does not alter unrelated admissions or cure prior procedural defects.
+7. The next governed action is construction and admission of the Hermeneutic Object Register.
 
-END OF DRAFT
+END OF DOCUMENT
