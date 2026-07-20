@@ -1,0 +1,80 @@
+id: "CAG-000000006"
+class: "Collective Agent"
+authority_role_label: "Repository Admission Authority"
+version: "1.0"
+lifecycle_status:
+  label: "ACTIVE"
+  controlled_vocabulary_status: "PENDING_REGISTRATION"
+effective_date: "2026-07-20"
+establishment_decision_id: "DDR-000000001"
+establishing_authority:
+  authority_id: "CAG-000000005"
+  authority_role: "Constitutional Governance Authority"
+identifier_allocation_authority:
+  authority_id: "CAG-000000002"
+  authority_role: "Identifier Governance Authority"
+  scope_note: "Identifier allocation only; does not confer or exercise admission jurisdiction."
+responsibilities:
+  - "Conduct final admission review under Document 000005 as amended."
+  - "Verify the completeness and resolution of required specialized-authority determinations."
+  - "Issue one authorized admission outcome."
+  - "Require coherent object, register, ledger, lifecycle, version, and audit recording."
+  - "Preserve reasons for rejection or return for correction."
+  - "Preserve historical objects and decisions during supersession."
+  - "Refuse admission when authority, evidence, identity, or referential integrity is unresolved."
+limitations:
+  - "May not create or redefine ontology classes."
+  - "May not create identifier families or allocate identifiers."
+  - "May not define predicates."
+  - "May not approve controlled vocabulary."
+  - "May not amend constitutional specifications."
+  - "May not perform substantive documentary validation for another authorized role."
+  - "May not certify cognitive components."
+  - "May not issue cognitive-integration decisions."
+  - "May not release Cognitive Memory Manifests."
+  - "May not activate production engine components."
+  - "May not silently correct candidate objects or historical records."
+  - "May not retroactively cure earlier procedural defects."
+governing_references:
+  - document_number: "000005"
+    title: "Constitutional Admission Protocol"
+    version: "1.0"
+    application_rule: "READ_WITH_AMD-000000002"
+  - identifier: "AMD-000000002"
+    title: "Constitutional Admission Protocol — Admission-Decision Jurisdiction Amendment"
+    version: "1.0"
+  - document_number: "000012"
+    title: "Constitutional Amendment Procedure"
+    version: "1.0"
+  - identifier: "AMD-000000001"
+    title: "Constitutional Amendment Procedure Adoption"
+    version: "1.0"
+jurisdiction:
+  type: "FINAL_ORDINARY_NATIVE_ADMISSION_DECISION"
+  permitted_outcomes:
+    - "ADMITTED"
+    - "REJECTED"
+    - "RETURNED FOR CORRECTION"
+    - "SUPERSEDED"
+  exclusive_after_establishment: true
+  specialized_authority_determinations_remain_separate: true
+non_authorizations:
+  - "Does not admit Document 000010 through this establishment package."
+  - "Does not create the Hermeneutic Object Register through this establishment package."
+  - "Does not admit Strauss's Taxonomy of Literary Concealment through this establishment package."
+  - "Does not authorize validation, certification, cognitive integration, Manifest release, engine activation, or production Neo4j projection."
+related_authorities:
+  - "CAG-000000001"
+  - "CAG-000000002"
+  - "CAG-000000003"
+  - "CAG-000000004"
+  - "CAG-000000005"
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "AUTHORITY_ESTABLISHED"
+    authority_id: "CAG-000000005"
+    decision_id: "DDR-000000001"
+    event_note: >
+      Established the Repository Admission Authority within the jurisdiction
+      defined by AMD-000000002 while preserving all specialized-authority and
+      downstream cognitive limitations.

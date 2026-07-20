@@ -1,12 +1,12 @@
 id: "AUR-000000001"
 class: "Authority Register"
 title: "Authority Register"
-version: "1.1"
+version: "1.2"
 lifecycle_status:
   label: "ACTIVE"
   controlled_vocabulary_status: "PENDING_REGISTRATION"
 created_date: "2026-07-14"
-last_revised_date: "2026-07-19"
+last_revised_date: "2026-07-20"
 responsibility:
   bootstrap_state:
     type: "CONSTITUTIONAL_BOOTSTRAP"
@@ -42,3 +42,4 @@ authority_entries:
   - "CAG-000000003"
   - "CAG-000000004"
   - "CAG-000000005"
+  - "CAG-000000006"
