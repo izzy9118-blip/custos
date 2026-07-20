@@ -1,0 +1,68 @@
+identifier: "DDR-000000001"
+class: "Documentary Decision Record"
+title: "Repository Admission Authority Establishment Decision"
+version: "1.0"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+decision_type: "AUTHORITY_ESTABLISHMENT"
+decision_outcome: "ESTABLISHED"
+effective_date: "2026-07-20"
+responsible_authority:
+  authority_id: "CAG-000000005"
+  authority_role: "Constitutional Governance Authority"
+subject_authority:
+  authority_id: "CAG-000000006"
+  authority_role: "Repository Admission Authority"
+identifier_allocation_authority:
+  authority_id: "CAG-000000002"
+  authority_role: "Identifier Governance Authority"
+  scope_note: "Identifier allocation only; does not confer or exercise admission jurisdiction."
+governing_basis:
+  - identifier: "AMD-000000002"
+    effect: "Defines the exact admission jurisdiction established by this decision."
+  - document_number: "000005"
+    version: "1.0"
+    application_rule: "READ_WITH_AMD-000000002"
+  - document_number: "000012"
+    version: "1.0"
+  - identifier: "AMD-000000001"
+    effect: "Adopts Document 000012 and supplies the governed constitutional procedure."
+decision_instrument_path: "governance/authority-establishments/DDR-000000001_Repository_Admission_Authority_Establishment_v1.0.md"
+recorded_effects:
+  - "Establishes CAG-000000006 as an active Collective Agent authority."
+  - "Activates only the final ordinary native-admission decision jurisdiction defined by AMD-000000002."
+  - "Adds CAG-000000006 to the Authority Register."
+  - "Records all new identifier assignments in the Identifier Assignment Ledger."
+validation:
+  governing_authority: "PASS"
+  identifier_authority_separation: "PASS"
+  exact_jurisdiction_conformity: "PASS"
+  authority_register_integrity: "PASS"
+  identifier_ledger_integrity: "PASS"
+  referential_integrity: "PASS"
+  cognitive_authority_withheld: "PASS"
+  repository_test_path: "inquiry_engine/tests/integration/test_repository_admission_authority.py"
+fixity:
+  algorithm: "SHA-256"
+  target_path: "governance/authority-establishments/DDR-000000001_Repository_Admission_Authority_Establishment_v1.0.md"
+  digest: "ee993655590d7979a1250072509f4e2c7520f980ae30720cf6d0aac8177c9676"
+non_authorizations:
+  - "Does not admit Document 000010."
+  - "Does not create the Hermeneutic Object Register."
+  - "Does not admit Strauss's Taxonomy of Literary Concealment."
+  - "Does not allocate HOC or other downstream identifiers."
+  - "Does not validate or certify any cognitive component."
+  - "Does not issue a cognitive-integration decision."
+  - "Does not release a Cognitive Memory Manifest."
+  - "Does not authorize production engine use or Neo4j projection."
+  - "Does not retroactively cure WK-000000001 or any earlier procedural defect."
+next_governed_action: "CONSTITUTIONAL_ADMISSION_REVIEW_OF_DOCUMENT_000010"
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "AUTHORITY_ESTABLISHMENT_DECIDED"
+    authority_id: "CAG-000000005"
+    event_note: >
+      Established CAG-000000006 under AMD-000000002 as a separate governed
+      action without performing any downstream admission or cognitive action.

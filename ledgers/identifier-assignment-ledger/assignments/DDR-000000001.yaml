@@ -1,0 +1,21 @@
+identifier: "DDR-000000001"
+family: "DDR"
+assigned_class: "Documentary Decision Record"
+assignment_status: "ASSIGNED"
+assignment_status_controlled_vocabulary_status: "PENDING_REGISTRATION"
+assignment_date: "2026-07-20T16:13:01-05:00"
+assignment_authority:
+  type: "IDENTIFIER_GOVERNANCE_AUTHORITY"
+  authority_id: "CAG-000000002"
+  authority_scope_note: "Identifier allocation only; CAG-000000005 retains establishment-decision jurisdiction."
+source_decision_id: "DDR-000000001"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+predecessor_identifiers: []
+successor_identifiers: []
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "ASSIGNMENT"
+    event_note: "Identifier allocation for the Repository Admission Authority establishment decision."
