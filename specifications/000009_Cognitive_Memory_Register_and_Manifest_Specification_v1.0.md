@@ -1,10 +1,13 @@
 # STRAUSSIAN DOCUMENTARY MEMORY
 # COGNITIVE MEMORY REGISTER AND MANIFEST SPECIFICATION
 
-**Version:** 1.0  
-**Classification:** Repository Specification  
-**Status:** Finalized for Repository Admission  
-**Identifier:** Not assigned  
+**Version:** 1.0
+**Canonical Identifier:** SPEC-000000003
+**Classification:** Repository Specification
+**Status:** ADMITTED — ACTIVE
+**Admission Decision:** DDR-000000006
+**Responsible Admission Authority:** CAG-000000006 — Repository Admission Authority
+**Effective Date:** 2026-07-20
 **Purpose:** Define how canonical artifacts become authorized reusable cognition without creating a new ontology class or identifier family
 
 ## I. CONSTITUTIONAL BASIS
@@ -17,7 +20,7 @@ This specification is subordinate to:
 - Controlled Vocabulary Specification;
 - Constitutional Admission Protocol;
 - Repository Cognitive Architecture;
-- Inquiry Engine Authority Specification, upon admission;
+- Inquiry Engine Authority Specification;
 - Repository Safeguards;
 - Repository Epistemic Hierarchy.
 
