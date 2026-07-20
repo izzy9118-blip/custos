@@ -1,0 +1,23 @@
+identifier: "AMD-000000002"
+family: "AMD"
+assigned_class: "Amendment"
+assignment_status: "ASSIGNED"
+assignment_status_controlled_vocabulary_status: "PENDING_REGISTRATION"
+assignment_date: "2026-07-20T16:05:00-05:00"
+assignment_authority:
+  type: "IDENTIFIER_GOVERNANCE_AUTHORITY"
+  authority_id: "CAG-000000002"
+  authority_scope_note: >
+    Identifier allocation only; constitutional amendment authority remains with
+    CAG-000000005.
+source_decision_id: "AMD-000000002"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+predecessor_identifiers: []
+successor_identifiers: []
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "ASSIGNMENT"
+    event_note: "Assignment for the Document 000005 admission-decision jurisdiction amendment."
