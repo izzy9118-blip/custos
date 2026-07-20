@@ -1,0 +1,35 @@
+identifier: "VAL-000000002"
+class: "Validation Record"
+title: "Document 000010 Identifier Conformity Determination"
+version: "1.0"
+validation_type: "IDENTIFIER_CONFORMITY_AND_ALLOCATION"
+validation_outcome: "PASS"
+subject_id: "SPEC-000000001"
+subject_path: "specifications/000010_Hermeneutic_Object_Entity_Specification_v1.0.md"
+subject_fixity:
+  algorithm: "SHA-256"
+  digest: "5f3e90a0ec1260d3badc375df05850b5a39fe64013d44f31c1a5b91eadefc53b"
+responsible_authority:
+  authority_id: "CAG-000000002"
+  authority_role: "Identifier Governance Authority"
+governing_source:
+  document_number: "000002"
+  version: "1.0"
+findings:
+  - "SPEC is the established family for Specification and SPEC-000000001 is unique."
+  - "DDR, VAL, and VER are established families for the governance records in this unit."
+  - "HO, HOA, HOB, and HOC families already exist and are not allocated by this admission."
+  - "All assignments are recorded append-only in assignment_date_then_identifier order."
+limitations:
+  - "Identifier allocation does not constitute or share final admission jurisdiction."
+related_admission_decision_id: "DDR-000000002"
+effective_date: "2026-07-20"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "VALIDATION_COMPLETED"
+    authority_id: "CAG-000000002"
+    event_note: "Identifier conformity and allocation determination completed with PASS outcome."
