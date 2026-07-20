@@ -1,0 +1,13 @@
+identifier: "VER-000000011"
+class: "Version Record"
+entity_id: "REG-000000002"
+previous_version: "1.0"
+current_version: "1.1"
+effective_date: "2026-07-20"
+change_type: "REGISTER_ENTRY_APPEND"
+source_decision_id: "DDR-000000004"
+authority_id: "CAG-000000006"
+change_summary: >
+  Appends the complete HOC-000000001 native-admission entry to the Hermeneutic
+  Object Register while preserving append-only admission_date_then_identifier
+  order.

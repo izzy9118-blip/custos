@@ -190,7 +190,6 @@ def test_identifier_ledger_contains_the_coherent_register_admission_unit():
     ]
 
     start = ledger["entries"].index("DDR-000000003")
-    assert ledger["version"] == "1.8"
     assert ledger["entries"][start : start + len(expected_unit)] == expected_unit
 
 

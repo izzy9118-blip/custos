@@ -1,0 +1,35 @@
+identifier: "VAL-000000012"
+class: "Validation Record"
+title: "Strauss Taxonomy Controlled-Vocabulary Conformity Determination"
+version: "1.0"
+validation_type: "CONTROLLED_VOCABULARY_CONFORMITY"
+validation_outcome: "PASS"
+subject_id: "HOC-000000001"
+subject_path: "registers/hermeneutic-object-register/objects/HOC-000000001.yaml"
+subject_fixity:
+  algorithm: "SHA-256"
+  digest: "b23efad08fd394e7d989e0b7e495c717b2afcb259179fe439ded691b7dcce060"
+responsible_authority:
+  authority_id: "CAG-000000004"
+  authority_role: "Vocabulary Governance Authority"
+governing_source:
+  document_number: "000004"
+  version: "1.0"
+findings:
+  - "Lifecycle status resolves to the registered ACTIVE concept STS-000000001."
+  - "Open reconstruction, certification ineligibility, and engine non-authorization remain explicit and distinct."
+  - "Technique documentary-status labels preserve the source reconstruction and do not create new canonical controlled concepts."
+  - "The candidate creates, redefines, or deprecates no controlled concept."
+limitations:
+  - "This determination does not register the technique labels as controlled concepts, certify the object, or make the final admission decision."
+related_admission_decision_id: "DDR-000000004"
+effective_date: "2026-07-20"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "VALIDATION_COMPLETED"
+    authority_id: "CAG-000000004"
+    event_note: "Controlled-vocabulary conformity determination completed with PASS outcome."
