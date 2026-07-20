@@ -3,8 +3,11 @@
 
 **Version:** 1.0  
 **Classification:** Normative Engine Specification  
-**Status:** Finalized for Repository Admission  
-**Identifier:** Not assigned  
+**Canonical Identifier:** SPEC-000000002
+**Status:** ADMITTED — ACTIVE
+**Admission Decision:** DDR-000000005
+**Responsible Admission Authority:** CAG-000000006 — Repository Admission Authority
+**Effective Date:** 2026-07-20
 **Purpose:** Define the authority, limits, memory relation, and separation of functions governing the Strauss Inquiry Engine
 
 ## I. MISSION
