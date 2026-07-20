@@ -1,0 +1,34 @@
+identifier: "VAL-000000020"
+class: "Validation Record"
+title: "Document 000009 Controlled-Vocabulary Conformity Determination"
+version: "1.0"
+validation_type: "CONTROLLED_VOCABULARY_CONFORMITY"
+validation_outcome: "PASS"
+subject_id: "SPEC-000000003"
+subject_path: "specifications/000009_Cognitive_Memory_Register_and_Manifest_Specification_v1.0.md"
+subject_fixity:
+  algorithm: "SHA-256"
+  digest: "e99fe2c7c29de532f285daa337fbcb3fe61a0b088e5c153c425fbca91fdfa661"
+responsible_authority:
+  authority_id: "CAG-000000004"
+  authority_role: "Vocabulary Governance Authority"
+governing_source:
+  document_number: "000004"
+  version: "1.0"
+findings:
+  - "Document 000009 creates, redefines, or deprecates no controlled concept through this admission."
+  - "Lifecycle status resolves to the registered ACTIVE concept STS-000000001."
+  - "Future register and Manifest values remain subject to controlled-vocabulary review where required."
+limitations:
+  - "This determination does not approve future controlled concepts or make the final admission decision."
+related_admission_decision_id: "DDR-000000006"
+effective_date: "2026-07-20"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "VALIDATION_COMPLETED"
+    authority_id: "CAG-000000004"
+    event_note: "Controlled-vocabulary conformity determination completed with PASS outcome."

@@ -1,0 +1,13 @@
+identifier: "VER-000000016"
+class: "Version Record"
+entity_id: "LDG-000000001"
+previous_version: "1.10"
+current_version: "1.11"
+effective_date: "2026-07-20"
+change_type: "NATIVE_OBJECT_ADMISSION"
+source_decision_id: "DDR-000000006"
+authority_id: "CAG-000000002"
+change_summary: >
+  Adds identifier assignments for DDR-000000006, SPEC-000000003,
+  VAL-000000017 through VAL-000000020, VER-000000015, and VER-000000016 while
+  preserving append-only assignment_date_then_identifier order.
