@@ -1,0 +1,67 @@
+identifier: "AMD-000000001"
+class: "Amendment"
+title: "Constitutional Amendment Procedure Adoption"
+version: "1.0"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+decision_outcome: "ADOPTED"
+decision_outcome_controlled_vocabulary_status: "PENDING_REGISTRATION"
+effective_date: "2026-07-20"
+adopting_authority:
+  authority_id: "CAG-000000005"
+  authority_role: "Constitutional Governance Authority"
+authority_basis:
+  founder_ratification_record_path: "governance/foundational-ratifications/2026-07-19_Foundational_Governance_Closure_Ratification.md"
+  ratified_instrument_path: "specifications/000011_Foundational_Governance_Closure_Instrument_v1.0_DRAFT.md"
+  ratified_repository_commit: "edd12e3d1e8ed5d914fc614d0a656a61551b2dfe"
+adopted_specification:
+  document_number: "000012"
+  title: "Constitutional Amendment Procedure"
+  version: "1.0"
+  path: "specifications/000012_Constitutional_Amendment_Procedure_v1.0.md"
+  status: "ADOPTED — ACTIVE"
+amendment_character: "FOUNDATIONAL_PROCEDURE_ESTABLISHMENT"
+necessity: >
+  Establish the governed amendment procedure required by the founder-ratified
+  post-ratification sequence before Document 000005 may be amended or the
+  Repository Admission Authority may be established.
+scope:
+  establishes:
+    - "The exclusive procedure for constitutional amendments."
+    - "Required amendment review, decision, recording, versioning, and historical-preservation rules."
+  does_not_establish:
+    - "Repository Admission Authority"
+    - "Hermeneutic Object Register"
+    - "Cognitive Memory Register"
+    - "Production engine activation"
+validation:
+  constitutional_authority: "PASS"
+  identifier_authority_separation: "PASS"
+  jurisdictional_limits_preserved: "PASS"
+  historical_state_preserved: "PASS"
+  retroactive_effect: "NONE"
+  repository_test_path: "inquiry_engine/tests/integration/test_constitutional_amendment_governance.py"
+fixity:
+  algorithm: "SHA-256"
+  target_path: "specifications/000012_Constitutional_Amendment_Procedure_v1.0.md"
+  digest: "7615e41c32ee4c292b77456282c51c026942001f9474b4902442bd3589ae7f0b"
+non_authorizations:
+  - "Does not amend Document 000005."
+  - "Does not establish the Repository Admission Authority."
+  - "Does not admit Document 000010."
+  - "Does not admit Strauss's Taxonomy of Literary Concealment."
+  - "Does not validate, certify, integrate, or activate any cognitive component."
+supersedes: []
+superseded_by: null
+withdrawal_conditions:
+  - "Supersession by a later adopted constitutional amendment procedure."
+  - "A distinct higher-authority founding act altering the founder-ratified governance structure."
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "ADOPTED"
+    authority_id: "CAG-000000005"
+    event_note: >
+      Adopted the first constitutional amendment procedure under the bounded
+      jurisdiction granted by the July 19, 2026 founder ratification.
