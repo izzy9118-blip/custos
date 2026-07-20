@@ -1,0 +1,136 @@
+{
+  "projection_version": "0.1",
+  "projection_status": "CERTIFIED_TECHNICAL_INTEGRATION",
+  "technique_key": "LC-020",
+  "canonical_identifier": null,
+  "identifier_status": "NOT_ASSIGNED",
+  "name": "Hint",
+  "strauss_status": "EXPLICITLY NAMED — SUBTYPES PARTLY IDENTIFIED THROUGH OTHER DEVICES",
+  "source": {
+    "authoritative_object_path": "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt",
+    "authoritative_object_version": "v1.0",
+    "authoritative_object_sha256": "0a155194f72a4517d267256b37fe4b68fe1144e0ef8ec3a1a26c3b3ad5b9f0e5",
+    "repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+    "primary_work": "Persecution and the Art of Writing",
+    "primary_essay": "The Literary Character of the Guide for the Perplexed",
+    "source_pages": [
+      74
+    ],
+    "source_mechanism": "A small textual indication assists the attentive reader in discovering a contradiction or determining which contradictory statement is true.",
+    "source_documentary_function": "Hints guide readers capable of understanding by themselves without directly disclosing the teaching.",
+    "strauss_distinction": "Recognizing hints requires a higher degree of independent understanding than recognizing an obvious contradiction.",
+    "documentary_limit": "The source partly identifies hint forms through other devices but does not authorize a closed canonical subtype taxonomy."
+  },
+  "mechanism": "A small, bounded textual feature directs an attentive reader toward an independently documentable contradiction or toward evidence bearing on how two contradictory statements should be weighed. The feature does not state the result directly. Its operation is reconstructed through an explicit, finite discovery path from cue to target.",
+  "investigative_requirement": "Preserve the exact cue before interpreting it; define the contradiction or discernment problem independently of the cue; record every inferential step connecting cue to target; show how the cue materially narrows or redirects the inquiry; test whether ordinary syntax, reference, rhetoric, topic, translation, textual corruption, editorial intervention, or another already defined technique explains the feature; and reject paths that depend on unbounded association or hindsight.",
+  "distinctions": [
+    "LC-020 requires a bounded discovery path. A small textual feature is not a hint merely because it appears unusual or suggestive.",
+    "The contradiction or competing-statement problem must be independently documented. The hint may assist discovery or discernment but may not create the target problem by itself.",
+    "A hint need not disclose a proposition directly. It must nevertheless materially narrow, redirect, or structure a recoverable inquiry.",
+    "Local function labels such as contradiction-discovery or statement-discernment are evaluator aids, not canonical Straussian subtypes.",
+    "LC-021 and LC-022 may supply hint-like cues, but inappropriate expression and clumsy transition remain separately evaluated possible devices.",
+    "LC-008, LC-013, LC-017, and LC-016 may converge with LC-020. Their own documentary operations must be established independently.",
+    "A hint path may support application of LC-018, but LC-020 does not itself select which contradictory statement is true.",
+    "The evaluator may corroborate a cue-to-inquiry path but may not infer hidden teaching, intended audience, authorial intention, or doctrinal truth."
+  ],
+  "operational": {
+    "trigger_conditions": [
+      "A bounded textual cue is recoverable in a stable witness.",
+      "An independently documented contradiction or contradictory-statement discernment problem exists.",
+      "A finite sequence of evidence-bearing inferential steps connects the cue to that target.",
+      "The cue materially narrows, redirects, or structures the inquiry.",
+      "The path does not depend solely on free association, perceived suggestiveness, or hindsight.",
+      "The cue does not state the proposed result directly."
+    ],
+    "minimum_evidence": [
+      "Exact cue text and stable witness location.",
+      "Declared textual boundary of the cue.",
+      "Source-language form, grammar, and semantic range where available.",
+      "Local and architectonic context.",
+      "Resolved speaker, narrator, quotation, objection, hypothetical, and reported-opinion attribution.",
+      "Independent contradiction or contradictory-statement target record.",
+      "Ordered discovery-path steps from cue to target.",
+      "Documentary support for every path step.",
+      "A material-guidance record showing how the cue narrows or redirects inquiry.",
+      "Counterpath and alternative-target testing.",
+      "Source-language, translation, edition, punctuation, and textual-variant review.",
+      "Review of adjacent techniques that may independently explain the cue.",
+      "An auditable evidence path from witness cue through inference steps to the bounded target."
+    ],
+    "corroboration_indicators": [
+      "The cue points to a contradiction independently established elsewhere in the work.",
+      "The cue aligns with a separately documented LC-018 or LC-019 frequency pattern.",
+      "A parallel cue produces the same kind of bounded discovery path elsewhere.",
+      "The author later confirms a distinction reached through the cue.",
+      "The cue occurs at an architectonically marked location.",
+      "A source comparison shows controlled retention, alteration, omission, or placement of the cue.",
+      "Another independently reconstructed literary device converges on the same target.",
+      "Removing the cue materially weakens or obscures the documented discovery path."
+    ],
+    "ordinary_alternatives": [
+      "Ordinary syntax or connective function.",
+      "Simple cross-reference.",
+      "Topical transition.",
+      "Rhetorical emphasis.",
+      "Pedagogical reminder.",
+      "Lexical ambiguity without a bounded target.",
+      "Common-word usage without independent trigger.",
+      "Editorial heading, punctuation, or annotation.",
+      "Translation artifact.",
+      "Textual corruption or witness variation.",
+      "Coincidental resemblance.",
+      "A fully explicit statement rather than a hint.",
+      "Investigator hindsight or confirmation bias.",
+      "An unbounded chain of associations."
+    ],
+    "disqualifying_conditions": [
+      "No exact cue can be isolated.",
+      "No independent contradiction or discernment problem is documented.",
+      "The proposed path contains unsupported inferential steps.",
+      "The cue does not materially narrow or redirect inquiry.",
+      "The path can point equally well to many unrelated targets.",
+      "The cue states the proposed result directly.",
+      "Ordinary syntax, cross-reference, rhetoric, pedagogy, translation, or textual variation fully explains the feature.",
+      "The path appears only after the investigator has already selected the desired conclusion.",
+      "The cue-target relation disappears in the source language or an authoritative witness.",
+      "Another technique fully accounts for the feature and no distinct hint operation remains."
+    ],
+    "authorized_response": [
+      "Preserve the cue and full local context.",
+      "Create the target contradiction or discernment record independently.",
+      "Create an ordered discovery-path record with evidence for every step.",
+      "Document how the cue narrows, redirects, or structures inquiry.",
+      "Generate and test alternative paths and targets.",
+      "Review source language, translation, variants, speaker, and architecture.",
+      "Evaluate LC-008, LC-013, LC-017, LC-018, LC-019, LC-021, or LC-022 separately when independently triggered.",
+      "Open only a bounded inquiry supported by the documented path.",
+      "Preserve the teaching, intention, audience, and truth question as unresolved."
+    ],
+    "prohibited_inferences": [
+      "Do not treat every small textual feature as a hint.",
+      "Do not infer a hint from suggestiveness alone.",
+      "Do not create the target contradiction from the cue itself.",
+      "Do not use an unlimited associative chain.",
+      "Do not omit unsupported path steps.",
+      "Do not infer intended audience from the difficulty of recognizing the hint.",
+      "Do not infer authorial intention, concealment, hidden teaching, or doctrinal truth.",
+      "Do not use LC-020 to bypass the evidentiary requirements of LC-018.",
+      "Do not collapse LC-020 into the device that supplies the cue."
+    ],
+    "uncertainty_rule": "When a bounded cue and target problem exist but one or more discovery steps, alternative targets, material guidance, or ordinary explanations remain disputed, preserve a candidate hint path with every supported and unsupported step marked. Do not select a teaching or truth.",
+    "termination_rule": "Terminate as NOT_TRIGGERED when no bounded cue, independent target, finite supported path, or material guidance exists; as BLOCKED_MISSING_EVIDENCE when source, context, target, path steps, language, alternatives, adjacent-device review, or provenance is incomplete; as candidate when ordinary alternatives or corroboration remain unresolved; and as corroborated only when the cue-to-target discovery path survives full documentary and adversarial testing without establishing hidden teaching, intention, audience, concealment, or doctrinal truth."
+  },
+  "local_evaluation_outcomes": [
+    "NOT_TRIGGERED",
+    "BLOCKED_MISSING_EVIDENCE",
+    "CANDIDATE_HINT_PATH",
+    "CORROBORATED_HINT_PATH"
+  ],
+  "version_history": [
+    {
+      "version": "0.1",
+      "status": "CERTIFIED_TECHNICAL_INTEGRATION",
+      "change_note": "Initial executable projection of LC-020 with independent target records, ordered discovery paths, step-level evidence, material-guidance testing, alternative paths, adjacent-technique review, and strict barriers against free association and truth selection."
+    }
+  ]
+}

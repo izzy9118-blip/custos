@@ -1,0 +1,254 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://custos.local/schemas/literary_concealment_technique.schema.json",
+  "title": "LC-015 Literary Concealment Technique Certified Integrated Runtime",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "projection_version",
+    "projection_status",
+    "technique_key",
+    "canonical_identifier",
+    "identifier_status",
+    "name",
+    "strauss_status",
+    "source",
+    "mechanism",
+    "investigative_requirement",
+    "distinctions",
+    "operational",
+    "local_evaluation_outcomes",
+    "version_history"
+  ],
+  "properties": {
+    "projection_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "projection_status": {
+      "const": "CERTIFIED_TECHNICAL_INTEGRATION"
+    },
+    "technique_key": {
+      "const": "LC-015"
+    },
+    "canonical_identifier": {
+      "type": "null"
+    },
+    "identifier_status": {
+      "const": "NOT_ASSIGNED"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "strauss_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "authoritative_object_path",
+        "authoritative_object_version",
+        "authoritative_object_sha256",
+        "repository_commit",
+        "primary_work",
+        "primary_essay",
+        "source_pages",
+        "source_mechanism",
+        "source_documentary_function",
+        "source_relationship",
+        "documentary_limit"
+      ],
+      "properties": {
+        "authoritative_object_path": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authoritative_object_version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authoritative_object_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "repository_commit": {
+          "type": "string",
+          "minLength": 7
+        },
+        "primary_work": {
+          "type": "string",
+          "minLength": 1
+        },
+        "primary_essay": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_pages": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "source_mechanism": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_documentary_function": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_relationship": {
+          "type": "string",
+          "minLength": 1
+        },
+        "documentary_limit": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "mechanism": {
+      "type": "string",
+      "minLength": 1
+    },
+    "investigative_requirement": {
+      "type": "string",
+      "minLength": 1
+    },
+    "distinctions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "operational": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "trigger_conditions",
+        "minimum_evidence",
+        "corroboration_indicators",
+        "ordinary_alternatives",
+        "disqualifying_conditions",
+        "authorized_response",
+        "prohibited_inferences",
+        "uncertainty_rule",
+        "termination_rule"
+      ],
+      "properties": {
+        "trigger_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "minimum_evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "corroboration_indicators": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "ordinary_alternatives": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "disqualifying_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "authorized_response": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "prohibited_inferences": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "uncertainty_rule": {
+          "type": "string",
+          "minLength": 1
+        },
+        "termination_rule": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "local_evaluation_outcomes": {
+      "type": "array",
+      "minItems": 4,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "NOT_TRIGGERED",
+          "BLOCKED_MISSING_EVIDENCE",
+          "CANDIDATE_QUOTATION_OMISSION",
+          "CORROBORATED_QUOTATION_OMISSION"
+        ]
+      }
+    },
+    "version_history": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "version",
+          "status",
+          "change_note"
+        ],
+        "properties": {
+          "version": {
+            "type": "string",
+            "minLength": 1
+          },
+          "status": {
+            "type": "string",
+            "minLength": 1
+          },
+          "change_note": {
+            "type": "string",
+            "minLength": 1
+          }
+        }
+      }
+    }
+  }
+}

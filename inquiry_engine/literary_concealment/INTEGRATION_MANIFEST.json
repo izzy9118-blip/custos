@@ -1,0 +1,67 @@
+{
+  "manifest_version": "2.0",
+  "integration_status": "CERTIFIED_TECHNICAL_INTEGRATION",
+  "repository": "izzy9118-blip/custos",
+  "integration_branch": "agent/integrate-lc-001-022",
+  "component_range": {
+    "first": "LC-001",
+    "last": "LC-022",
+    "count": 22
+  },
+  "component_ids": [
+    "LC-001",
+    "LC-002",
+    "LC-003",
+    "LC-004",
+    "LC-005",
+    "LC-006",
+    "LC-007",
+    "LC-008",
+    "LC-009",
+    "LC-010",
+    "LC-011",
+    "LC-012",
+    "LC-013",
+    "LC-014",
+    "LC-015",
+    "LC-016",
+    "LC-017",
+    "LC-018",
+    "LC-019",
+    "LC-020",
+    "LC-021",
+    "LC-022"
+  ],
+  "authoritative_taxonomy": {
+    "path": "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt",
+    "sha256": "0a155194f72a4517d267256b37fe4b68fe1144e0ef8ec3a1a26c3b3ad5b9f0e5",
+    "source_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea"
+  },
+  "active_runtime": {
+    "package": "custos_engine.literary_concealment",
+    "registry": "inquiry_engine/src/custos_engine/literary_concealment/registry.py",
+    "component_namespaces": "custos_engine.literary_concealment.lc001 through lc022",
+    "tests": "inquiry_engine/tests/literary_concealment",
+    "source_of_truth": "ACTIVE_INTEGRATED_RUNTIME_ONLY"
+  },
+  "technical_certification": {
+    "record_path": "inquiry_engine/literary_concealment/TECHNICAL_CERTIFICATION_RECORD.md",
+    "certified_scope": "LC-001_THROUGH_LC-022_COMBINED_EXECUTABLE_SUBSYSTEM",
+    "result": "CERTIFIED_TECHNICAL_INTEGRATION",
+    "effective_date": "2026-07-20",
+    "continuous_validation_workflow": ".github/workflows/inquiry-engine-ci.yml",
+    "complete_suite_result": "382_PASSED"
+  },
+  "consolidation": {
+    "duplicate_package_tree_retained": false,
+    "working_tree_policy": "ONE_ACTIVE_COPY",
+    "prior_upload_commit": "9d0cc71de73de2fce1e47968e9cb5b9456754bc3"
+  },
+  "epistemic_boundary": {
+    "hidden_teaching_inference": false,
+    "authorial_intention_inference": false,
+    "intended_audience_inference": false,
+    "doctrinal_truth_selection": false,
+    "concealment_proof": false
+  }
+}

@@ -1,0 +1,123 @@
+{
+  "projection_version": "0.1",
+  "projection_status": "CERTIFIED_TECHNICAL_INTEGRATION",
+  "technique_key": "LC-008",
+  "canonical_identifier": null,
+  "identifier_status": "NOT_ASSIGNED",
+  "name": "Concealment in a Single Common Word",
+  "strauss_status": "EXPLICITLY RECONSTRUCTED",
+  "source": {
+    "authoritative_object_path": "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt",
+    "authoritative_object_version": "v1.0",
+    "authoritative_object_sha256": "0a155194f72a4517d267256b37fe4b68fe1144e0ef8ec3a1a26c3b3ad5b9f0e5",
+    "repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+    "primary_work": "Persecution and the Art of Writing",
+    "primary_essay": "The Literary Character of the Guide for the Perplexed",
+    "source_pages": [
+      72
+    ],
+    "source_description": "A secret is more perfectly concealed in a word than in a sentence because the word is smaller and therefore a better hiding place. Common words placed unobtrusively within unobtrusive sentences are especially effective."
+  },
+  "mechanism": "A word that appears ordinary and unremarkable occupies a small, low-prominence position within an equally unobtrusive sentence. Independent documentary analysis shows that the word has a materially significant role in the proposition, argument, or doctrinal relation. Its common appearance prevents it from attracting the attention that a conspicuous technical expression would receive.",
+  "investigative_requirement": "Do not scan every common word for secrets. Begin only when an independently documented textual difficulty, source relation, repetition, contradiction, architectural feature, or explicit authorial indication draws attention to the word. Establish its ordinary surface character, its low-prominence placement, its exact semantic and propositional effect, and the documentary basis for treating it as significant.",
+  "distinctions": [
+    "LC-008 concerns the smallness, commonness, and unobtrusive placement of a word. The word need not be semantically ambiguous.",
+    "LC-006 requires two or more viable senses of a word or expression. LC-008 may be triggered by one ordinary word whose significance lies in placement or doctrinal effect.",
+    "LC-009 requires recurrent secret terminology and corpus-level indexing. One common word in one passage does not establish a secret vocabulary.",
+    "LC-002 concerns an incidental contradictory statement. LC-008 concerns a word-level carrier within an unobtrusive sentence.",
+    "LC-020 concerns hints generally. A common word may function as a hint, but LC-008 requires the specific word-level and low-prominence structure.",
+    "The evaluator may identify a corroborated common-word signal but may not infer a secret, hidden teaching, authorial intention, or doctrinal truth."
+  ],
+  "operational": {
+    "trigger_conditions": [
+      "A precise word is recoverable in a stable passage.",
+      "The word is ordinary or common within the relevant linguistic and historical horizon.",
+      "The word is placed in a low-prominence position within an unobtrusive sentence.",
+      "An independent documentary trigger directs attention to the word.",
+      "The word has a documented semantic, propositional, structural, or doctrinal effect.",
+      "Removing, replacing, or differently construing the word materially changes the relevant relation."
+    ],
+    "minimum_evidence": [
+      "Exact passage text and stable witness location.",
+      "Exact source-language word, morphology, and syntax where available.",
+      "Evidence that the word is common or ordinary in the relevant horizon.",
+      "A documented account of the sentence's low prominence.",
+      "A documented account of the word's placement within the sentence.",
+      "The independent documentary trigger that justified examining the word.",
+      "A counterfactual rendering showing the effect of removing or replacing the word.",
+      "A normalized proposition with and without the word.",
+      "Local and architectonic context.",
+      "Resolved speaker, quotation, objection, hypothetical, and reported-opinion attribution.",
+      "Review of translation, edition, punctuation, and textual variants.",
+      "An auditable evidence path from witness text through prominence and semantic analysis."
+    ],
+    "corroboration_indicators": [
+      "The same word has a stable significant function elsewhere in the work.",
+      "The word recurs at architectonically important locations.",
+      "A source comparison shows that the word was deliberately retained, added, or altered at the documentary level.",
+      "A contradiction, implication chain, omission, repetition, or structural pattern independently converges on the word.",
+      "The author elsewhere explicitly comments on the word or its semantic field.",
+      "The sentence's apparent incidentalness contrasts with the word's measurable effect on the proposition."
+    ],
+    "ordinary_alternatives": [
+      "The word is ordinary and insignificant.",
+      "The effect is a translation artifact.",
+      "The word is required only by grammar or idiom.",
+      "The sentence is concise for stylistic reasons.",
+      "The apparent significance is produced by punctuation or editorial intervention.",
+      "The word's effect disappears in the source language.",
+      "The word belongs to a quotation or another speaker.",
+      "The word is merely emphatic, connective, or formulaic.",
+      "The interpretation depends on anachronistic semantics.",
+      "The word was introduced by copying, printing, or witness variation."
+    ],
+    "disqualifying_conditions": [
+      "No independent documentary trigger justifies attention to the word.",
+      "The word is not securely recoverable in the witness.",
+      "The word is conspicuous or explicitly technical rather than common and unobtrusive.",
+      "The sentence is already a prominent doctrinal declaration.",
+      "Removing or replacing the word produces no material change.",
+      "The word's significance exists only in translation.",
+      "Grammar, idiom, quotation, punctuation, or witness variation fully explains the effect.",
+      "The claimed significance requires inventing an unattested meaning.",
+      "The local or architectonic context decisively excludes the proposed role.",
+      "The result rests solely on the general instruction to scrutinize every word."
+    ],
+    "authorized_response": [
+      "Preserve the exact word, sentence, witness, and locations.",
+      "Record the independent documentary trigger that directed attention to the word.",
+      "Document commonness, sentence prominence, and word placement separately.",
+      "Generate source-language, translation, and counterfactual renderings.",
+      "Record the word's exact effect on proposition, scope, relation, or architecture.",
+      "Search the work for every occurrence and positional pattern of the word.",
+      "Test grammatical, stylistic, translational, editorial, and witness alternatives.",
+      "Evaluate LC-006, LC-009, LC-002, or LC-020 separately when independently triggered.",
+      "Terminate at candidate status when significance or corroboration remains incomplete."
+    ],
+    "prohibited_inferences": [
+      "Do not search every common word indiscriminately for hidden meaning.",
+      "Do not infer significance from commonness or smallness alone.",
+      "Do not infer concealment from low prominence alone.",
+      "Do not invent a technical or esoteric meaning.",
+      "Do not treat translation artifacts as authorial devices.",
+      "Do not infer that the word states the author's true teaching.",
+      "Do not infer authorial intention or a secret audience.",
+      "Do not collapse LC-008 into LC-006, LC-009, LC-002, or LC-020."
+    ],
+    "uncertainty_rule": "When the word is common and unobtrusive but its material effect or independent documentary warrant remains contestable, preserve a candidate common-word signal with rival explanations. Do not infer a hidden meaning.",
+    "termination_rule": "Terminate as NOT_TRIGGERED when no independently warranted, materially significant common word in a low-prominence setting is present; as BLOCKED_MISSING_EVIDENCE when witness, source language, commonness, placement, context, effect, or provenance is incomplete; as candidate when ordinary alternatives or corroboration remain unresolved; and as corroborated only when the bounded word-level signal survives full documentary testing without proving concealment or selecting a doctrine."
+  },
+  "local_evaluation_outcomes": [
+    "NOT_TRIGGERED",
+    "BLOCKED_MISSING_EVIDENCE",
+    "CANDIDATE_COMMON_WORD_SIGNAL",
+    "CORROBORATED_COMMON_WORD_SIGNAL"
+  ],
+  "version_history": [
+    {
+      "version": "0.1",
+      "status": "CERTIFIED_TECHNICAL_INTEGRATION",
+      "change_note": "Initial executable projection of LC-008 with independent-trigger, commonness, prominence, placement, counterfactual-effect, ordinary-alternative, corroboration, and anti-overreading controls."
+    }
+  ]
+}

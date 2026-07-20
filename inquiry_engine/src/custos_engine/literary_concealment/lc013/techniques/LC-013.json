@@ -1,0 +1,129 @@
+{
+  "projection_version": "0.1",
+  "projection_status": "CERTIFIED_TECHNICAL_INTEGRATION",
+  "technique_key": "LC-013",
+  "canonical_identifier": null,
+  "identifier_status": "NOT_ASSIGNED",
+  "name": "Mottoes",
+  "strauss_status": "EXPLICITLY NAMED — EXAMPLES REQUIRE CONTINUED COLLECTION",
+  "source": {
+    "authoritative_object_path": "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt",
+    "authoritative_object_version": "v1.0",
+    "authoritative_object_sha256": "0a155194f72a4517d267256b37fe4b68fe1144e0ef8ec3a1a26c3b3ad5b9f0e5",
+    "repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+    "primary_work": "Persecution and the Art of Writing",
+    "primary_essay": "The Literary Character of the Guide for the Perplexed",
+    "source_pages": [
+      75
+    ],
+    "source_formulation": "\"mottoes prefixed to the whole work or to individual parts\"",
+    "source_mechanism": "A prefatory saying or scriptural phrase supplies an indirect interpretive key to the work or section it precedes.",
+    "source_documentary_function": "The motto communicates through allusion rather than direct exposition.",
+    "documentary_limit": "The present source names the device, but examples and internal varieties require continued documentary collection."
+  },
+  "mechanism": "A brief text placed before an entire work or a bounded internal division stands outside the ordinary exposition yet bears a recoverable relation to what follows. Through quotation, allusion, compression, contrast, or source association, it may orient the reader toward a problem, distinction, sequence, or interpretive horizon that the following unit does not state directly.",
+  "investigative_requirement": "Establish that the prefixed text belongs to the authorially relevant witness and is not an editorial addition; recover its source and original context where possible; define exactly which work or part it governs; reconstruct the ordinary surface function before proposing an allusive relation; map the motto's words, source context, and placement to specific features of the governed unit; and test decorative, thematic, devotional, generic, publisher-supplied, and conventional alternatives.",
+  "documentary_constraints": [
+    "LC-013 requires prefatory placement before a whole work or individual part. A quotation embedded within ordinary exposition is not a motto merely because it is brief.",
+    "The motto's source text and original context must be preserved separately from the author's use of it.",
+    "A motto may offer an interpretive key, but thematic resemblance or decoration alone does not establish a concealment-related function.",
+    "The governed scope must be explicit: whole work, book, part, chapter, or other recoverable division.",
+    "The allusive relation may involve correspondence, contrast, qualification, sequence, or source association; it must not be reduced automatically to simple thematic summary.",
+    "The evaluator may corroborate a motto-to-scope relation but may not infer hidden teaching, authorial intention, intended audience, or the true interpretation of the governed unit."
+  ],
+  "operational": {
+    "trigger_conditions": [
+      "A brief prefixed text is recoverable in a stable witness.",
+      "The text precedes and is documentarily attached to a whole work or a bounded internal part.",
+      "Its governed scope is identified.",
+      "Its quotation, allusion, or source relation is recoverable or explicitly preserved as unresolved.",
+      "At least one specific documentary relation connects the motto to the governed unit.",
+      "The proposed relation exceeds mere decoration, attribution, or generic thematic resemblance."
+    ],
+    "minimum_evidence": [
+      "Exact motto text and stable witness location.",
+      "Evidence that the motto is present in the authorially relevant witness.",
+      "Evidence excluding or identifying publisher, editor, translator, or later-hand addition.",
+      "Exact governed scope and its textual boundary.",
+      "Source attribution for the motto where recoverable.",
+      "Original source passage and source context where recoverable.",
+      "Translation and source-language form where relevant.",
+      "A surface-function record.",
+      "A candidate allusive-relation record tied to exact words or source features.",
+      "Local and architectonic relation between motto and governed unit.",
+      "Comparison with other mottoes in the work or authorized corpus when a pattern is proposed.",
+      "An auditable evidence path from witness placement and source recovery to the allusive-relation claim."
+    ],
+    "corroboration_indicators": [
+      "The governed unit repeats distinctive words or images from the motto.",
+      "The unit's structure follows a sequence implied by the motto or its source context.",
+      "A contradiction or difficulty in the unit is clarified by the motto's source context.",
+      "The author elsewhere cites or explains the same source in a compatible way.",
+      "Multiple mottoes in the work display a systematic relation to their governed parts.",
+      "The motto appears at an architectonically marked boundary.",
+      "A source comparison shows deliberate selection, truncation, alteration, or repositioning of the quoted text.",
+      "Another independently reconstructed literary device converges on the same bounded interpretive problem."
+    ],
+    "ordinary_alternatives": [
+      "Decorative epigraph.",
+      "General thematic summary.",
+      "Devotional or ceremonial formula.",
+      "Conventional scriptural invocation.",
+      "Dedication or honorific attribution.",
+      "Genre convention.",
+      "Publisher, editor, translator, or later-hand addition.",
+      "A source acknowledgment without interpretive force.",
+      "A memorable phrase chosen for style.",
+      "A broad thematic resemblance produced by common vocabulary.",
+      "The investigator has overextended the motto's governed scope."
+    ],
+    "disqualifying_conditions": [
+      "The prefixed text is absent from the authorially relevant witness.",
+      "The text was supplied only by an editor, publisher, translator, or later hand and is not authorially adopted.",
+      "The governed scope cannot be established.",
+      "The text is embedded within ordinary exposition rather than prefixed to a work or part.",
+      "No specific relation to the governed unit is documented.",
+      "The relation depends only on broad thematic similarity.",
+      "The proposed source attribution is false or unsupported.",
+      "The source context contradicts the proposed relation without a principled account.",
+      "Decoration, dedication, invocation, or genre convention fully explains the placement.",
+      "The analysis assumes an interpretive key before reconstructing the motto's ordinary function."
+    ],
+    "authorized_response": [
+      "Preserve the motto, witness, placement, and governed scope.",
+      "Create separate source-text, source-context, surface-function, and allusive-relation records.",
+      "Record editorial or authorial status explicitly.",
+      "Map exact lexical, imagistic, structural, and source-context correspondences.",
+      "Search the governed unit for repetitions, contrasts, sequences, and counterexamples.",
+      "Compare all other mottoes within the declared scope.",
+      "Test decorative, thematic, devotional, generic, editorial, translational, and attribution alternatives.",
+      "Evaluate LC-015, LC-016, LC-017, LC-020, or LC-021 separately when independently triggered.",
+      "Preserve intended meaning and concealed instruction as unresolved."
+    ],
+    "prohibited_inferences": [
+      "Do not infer an interpretive key from prefatory placement alone.",
+      "Do not treat every epigraph or prefatory quotation as concealment.",
+      "Do not ignore editorial or publisher provenance.",
+      "Do not detach the motto from its original source context.",
+      "Do not extend the motto's scope beyond the documented division.",
+      "Do not infer hidden teaching, authorial intention, intended audience, or doctrinal truth.",
+      "Do not assume that the motto simply summarizes what follows.",
+      "Do not collapse LC-013 into citation, repetition, chapter heading, or hint without separate evaluation."
+    ],
+    "uncertainty_rule": "When a prefixed text is authentic and its governed scope is known but its source, ordinary function, or allusive relation remains contestable, preserve a candidate motto relation with competing source and scope explanations. Do not designate a hidden interpretive key.",
+    "termination_rule": "Terminate as NOT_TRIGGERED when no authentic prefixed text with a specific documented relation to a governed unit is present; as BLOCKED_MISSING_EVIDENCE when witness provenance, governed scope, source, context, function, comparison, or evidence path is incomplete; as candidate when ordinary alternatives or corroboration remain unresolved; and as corroborated only when the bounded motto-to-scope relation survives full documentary testing without establishing hidden teaching, intention, audience, or doctrinal truth."
+  },
+  "local_evaluation_outcomes": [
+    "NOT_TRIGGERED",
+    "BLOCKED_MISSING_EVIDENCE",
+    "CANDIDATE_MOTTO_ALLUSION",
+    "CORROBORATED_MOTTO_ALLUSION"
+  ],
+  "version_history": [
+    {
+      "version": "0.1",
+      "status": "CERTIFIED_TECHNICAL_INTEGRATION",
+      "change_note": "Initial executable projection of LC-013 with witness-provenance, governed-scope, source-context, surface-function, allusive-relation, comparison, ordinary-alternative, and anti-overreading controls."
+    }
+  ]
+}

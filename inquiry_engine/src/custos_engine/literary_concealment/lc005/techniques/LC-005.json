@@ -1,0 +1,132 @@
+{
+  "projection_version": "0.1",
+  "projection_status": "CERTIFIED_TECHNICAL_INTEGRATION",
+  "technique_key": "LC-005",
+  "canonical_identifier": null,
+  "identifier_status": "NOT_ASSIGNED",
+  "name": "Intermediary Assertion and Creeping Contradiction",
+  "strauss_status": "EXPLICITLY NAMED AND ENUMERATED",
+  "source": {
+    "authoritative_object_path": "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt",
+    "authoritative_object_version": "v1.0",
+    "authoritative_object_sha256": "0a155194f72a4517d267256b37fe4b68fe1144e0ef8ec3a1a26c3b3ad5b9f0e5",
+    "repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+    "primary_work": "Persecution and the Art of Writing",
+    "primary_essay": "The Literary Character of the Guide for the Perplexed",
+    "source_pages": [
+      71
+    ],
+    "source_formulation": "to introduce between the two contradictory statements an intermediary assertion",
+    "source_explanation": "The intermediary assertion does not by itself contradict the first statement. It is later repeated with an apparently negligible addition or omission, so that the contradictory statement creeps in as a repetition of the intermediary assertion.",
+    "source_example_status": "No discrete worked example is preserved in the authoritative Taxonomy entry for LC-005. Operational examples remain test fixtures and must not be attributed to Strauss."
+  },
+  "mechanism": "A first statement is followed by an intermediary assertion compatible with it. A later statement appears to repeat the intermediary assertion but changes it through a minute addition or omission. The altered repetition now contradicts the first statement. The contradiction is concealed by the apparent continuity between the intermediary and final formulations.",
+  "investigative_requirement": "Reconstruct the complete three-stage sequence: first statement, intermediary assertion, and final altered repetition. Establish that the intermediary does not contradict the first statement, align the intermediary and final statements word by word, record the minute addition or omission, document its semantic effect, and establish that the final proposition—not the intermediary—contradicts the first proposition.",
+  "distinctions": [
+    "LC-005 requires three ordered stages. A two-passage altered repetition belongs to LC-004 unless a distinct intermediary assertion is documented.",
+    "The intermediary assertion must remain compatible with the first statement. If it already contradicts the first, the creeping mechanism is not established.",
+    "The final statement must present itself as a repetition or near-repetition of the intermediary, not merely as another statement on the same subject.",
+    "The minute addition or omission must have a documented semantic effect that changes the final proposition enough to contradict the first proposition.",
+    "LC-005 does not authorize the inference that the final statement is true, that the author intended concealment, or that the sequence expresses a hidden teaching.",
+    "Additions and omissions must be recorded separately, and the intermediary must not be silently reconstructed from the first or final statement."
+  ],
+  "operational": {
+    "trigger_conditions": [
+      "Three recoverable passages occur in the same work and in documented sequence.",
+      "All three passages concern the same subject or proposition family.",
+      "The intermediary assertion is propositionally compatible with the first statement.",
+      "The final statement presents itself as a repetition or near-repetition of the intermediary.",
+      "Alignment reveals at least one minute addition or omission between intermediary and final statements.",
+      "The minute difference has a documented semantic effect.",
+      "The final statement contradicts the first statement.",
+      "The intermediary statement itself does not contradict the first statement."
+    ],
+    "minimum_evidence": [
+      "Exact recoverable text of the first, intermediary, and final passages.",
+      "Stable witness and location for all three passages.",
+      "Documented textual order among the three passages.",
+      "Complete local context and argumentative function for each passage.",
+      "Resolved speaker, quotation, objection, hypothetical, and reported-opinion attribution.",
+      "A documented reason for treating the intermediary and final passages as parallels.",
+      "Word-by-word or phrase-by-phrase alignment of intermediary and final passages.",
+      "A typed record of every relevant addition and omission.",
+      "Normalized propositions for all three passages.",
+      "A documented compatibility relation between first and intermediary propositions.",
+      "A documented incompatibility relation between first and final propositions.",
+      "Review of source-language terms, translations, editions, and textual variants where relevant.",
+      "An auditable evidence path preserving the entire three-stage sequence."
+    ],
+    "corroboration_indicators": [
+      "The same minute expression has a stable technical function elsewhere in the work.",
+      "Another three-stage sequence reproduces the same creeping pattern.",
+      "The author elsewhere explicitly distinguishes the intermediary and final formulations.",
+      "The altered wording affects negation, modality, quantification, condition, attribution, or scope.",
+      "A recoverable source confirms that the intermediary-final difference is documentarily significant.",
+      "A separately reconstructed literary device converges on the same bounded sequence."
+    ],
+    "ordinary_alternatives": [
+      "Ordinary development or revision of thought.",
+      "A change in speaker, audience, genre, or argumentative role.",
+      "A shift in temporal, conditional, modal, or subject scope.",
+      "Abbreviation or expansion for readability.",
+      "Grammatical adjustment required by local syntax.",
+      "Translation or source-language variation.",
+      "Copyist, editor, printer, or witness variation.",
+      "Quotation from different sources or versions.",
+      "The intermediary and final passages are not genuine parallels.",
+      "The intermediary already contradicts the first statement.",
+      "The final statement does not contradict the first statement.",
+      "Ordinary imprecision, memory lapse, or compositional inconsistency."
+    ],
+    "disqualifying_conditions": [
+      "Fewer than three distinct passages are recoverable.",
+      "The passage order is not established.",
+      "The passages are not in the same work.",
+      "The intermediary assertion contradicts the first statement.",
+      "The intermediary and final passages are not genuine parallels.",
+      "The final passage does not present itself as a repetition or near-repetition of the intermediary.",
+      "No addition or omission remains after reliable alignment.",
+      "The difference has no documented propositional effect.",
+      "The final proposition is compatible with the first proposition.",
+      "The contradiction depends on silently changing the meaning of a shared term.",
+      "The pattern is fully explained by context, voice, scope, translation, witness, or ordinary revision.",
+      "Source integrity or passage attribution remains unresolved."
+    ],
+    "authorized_response": [
+      "Preserve the three passages in sequence with complete local contexts.",
+      "Generate a sequence record distinguishing first, intermediary, and final stages.",
+      "Align intermediary and final passages and mark additions and omissions separately.",
+      "Record the semantic effect of each difference without assigning hidden meaning.",
+      "Normalize all three propositions and document compatibility and incompatibility relations.",
+      "Test every ordinary alternative and preserve unresolved explanations.",
+      "Search the work for additional intermediary sequences and counterexamples.",
+      "Evaluate LC-004 separately for the intermediary-final pair when warranted.",
+      "Terminate at candidate status when the intermediary role, semantic effect, or corroboration remains insufficient."
+    ],
+    "prohibited_inferences": [
+      "Do not infer a creeping contradiction from any three passages merely because they occur in sequence.",
+      "Do not treat the intermediary as contradictory when it is only preparatory or ambiguous.",
+      "Do not infer contradiction from wording difference alone.",
+      "Do not infer concealment or intention from the sequence alone.",
+      "Do not infer that the final statement is truer, deeper, or authorially preferred.",
+      "Do not collapse LC-005 into LC-004.",
+      "Do not ignore changes of speaker, scope, condition, time, genre, translation, or witness.",
+      "Do not represent test fixtures as examples supplied by Strauss."
+    ],
+    "uncertainty_rule": "When the intermediary role, semantic effect, or proposition relations remain contestable, preserve the sequence as a candidate and record competing explanations. Do not promote the sequence to a corroborated creeping contradiction.",
+    "termination_rule": "Terminate as NOT_TRIGGERED when the required three-stage structure is absent; as BLOCKED_MISSING_EVIDENCE when source, order, context, voice, alignment, semantic effect, proposition relations, or provenance are incomplete; as candidate when ordinary alternatives or corroboration remain unresolved; and as corroborated only when the intermediary remains compatible with the first, the final is an altered repetition of the intermediary, and the final contradicts the first through a documentarily established minute difference."
+  },
+  "local_evaluation_outcomes": [
+    "NOT_TRIGGERED",
+    "BLOCKED_MISSING_EVIDENCE",
+    "CANDIDATE_CREEPING_CONTRADICTION_SEQUENCE",
+    "CORROBORATED_CREEPING_CONTRADICTION_SEQUENCE"
+  ],
+  "version_history": [
+    {
+      "version": "0.1",
+      "status": "CERTIFIED_TECHNICAL_INTEGRATION",
+      "change_note": "Initial executable projection of LC-005 with explicit three-stage sequence, intermediary compatibility, altered repetition, proposition relations, ordinary alternatives, corroboration, and noninterpretive boundaries."
+    }
+  ]
+}
