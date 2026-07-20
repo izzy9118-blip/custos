@@ -1,0 +1,35 @@
+identifier: "VAL-000000008"
+class: "Validation Record"
+title: "Hermeneutic Object Register Controlled-Vocabulary Conformity Determination"
+version: "1.0"
+validation_type: "CONTROLLED_VOCABULARY_CONFORMITY"
+validation_outcome: "PASS"
+subject_id: "REG-000000002"
+subject_path: "registers/hermeneutic-object-register/REG-000000002.yaml"
+subject_fixity:
+  algorithm: "SHA-256"
+  digest: "cd21bb2f0b2d2206439f24101a361de53823748c45cfa28366a3e2f45327d481"
+responsible_authority:
+  authority_id: "CAG-000000004"
+  authority_role: "Vocabulary Governance Authority"
+governing_source:
+  document_number: "000004"
+  version: "1.0"
+findings:
+  - "The candidate creates, redefines, or deprecates no controlled concept."
+  - "Lifecycle status resolves to the registered ACTIVE concept STS-000000001."
+  - "Reconstruction, certification-eligibility, and engine-use states remain distinct required entry fields and are not resolved by register admission."
+  - "Future HO-family controlled terms remain subject to Document 000004 and the Canonical Vocabulary Register."
+limitations:
+  - "This determination does not approve future controlled concepts, admit an HO-family object, or make the final admission decision."
+related_admission_decision_id: "DDR-000000003"
+effective_date: "2026-07-20"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "VALIDATION_COMPLETED"
+    authority_id: "CAG-000000004"
+    event_note: "Controlled-vocabulary conformity determination completed with PASS outcome."
