@@ -1,7 +1,7 @@
 id: "LDG-000000001"
 class: "Ledger"
 ledger_type: "Identifier Assignment Ledger"
-version: "1.7"
+version: "1.8"
 lifecycle_status:
   label: "ACTIVE"
   controlled_vocabulary_status: "PENDING_REGISTRATION"
@@ -60,5 +60,13 @@ entries:
   - "VAL-000000004"
   - "VER-000000006"
   - "VER-000000007"
+  - "DDR-000000003"
+  - "REG-000000002"
+  - "VAL-000000005"
+  - "VAL-000000006"
+  - "VAL-000000007"
+  - "VAL-000000008"
+  - "VER-000000008"
+  - "VER-000000009"
 ordering_rule: "assignment_date_then_identifier"
 append_only: true
