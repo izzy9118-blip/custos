@@ -1,0 +1,111 @@
+id: "REG-000000004"
+class: "Register"
+register_type: "Cognitive Memory Register"
+title: "Cognitive Memory Register"
+version: "1.0"
+lifecycle_status: "ACTIVE"
+admission_status: "ADMITTED"
+effective_date: "2026-07-20"
+authority_basis:
+  amendment_id: "AMD-000000003"
+  authorization_event: "AUTHENTICATED_REPOSITORY_OWNER_MERGE"
+  integration_decision_id: "DDR-000000008"
+governing_specification_ids:
+  - "SPEC-000000002"
+  - "SPEC-000000003"
+append_only: true
+ordering_rule: "integration_date_then_component_identifier"
+entries:
+  - entry_key: "CMR-HOC-000000001-v1.1"
+    component_canonical_identifier: "HOC-000000001"
+    native_class: "Hermeneutic Object C"
+    component_label: "Strauss Taxonomy of Literary Concealment"
+    component_version: "1.1"
+    component_type: "literary distinction"
+    source_inquiry_identifiers:
+      - "HOC-000000001"
+    validation_record_identifiers:
+      - "VAL-000000025"
+    certification_record_identifier: "CER-000000001"
+    integration_decision_identifier: "DDR-000000008"
+    lifecycle_status: "ACTIVE_WHEN_MANIFEST_PINNED"
+    certified_scope: >
+      Bounded investigation of LC-001 through LC-022 after IAR-000000001 opens
+      the Inner Sanctum gate; classification and investigative orientation only.
+    permitted_use:
+      - "Distinguish and test one named literary mechanism after the Outer Process gate opens."
+      - "Return bounded, noncanonical investigative outcomes with explicit uncertainty."
+    prohibited_use:
+      - "Automatic secret-hunting or generalized suspicion"
+      - "Proof of concealment, hidden teaching, authorial intention, intended audience, or doctrinal truth"
+      - "Cross-work or cross-author transfer without independent reconstruction"
+    dependencies:
+      - "IAR-000000001"
+      - "SPEC-000000002"
+      - "SPEC-000000003"
+      - "AMD-000000003"
+    effective_date: "2026-07-20"
+    version_history:
+      - version_record_id: "VER-000000020"
+        version: "1.1"
+        action: "BOUNDED_COGNITIVE_INTEGRATION"
+    audit_history:
+      - event_date: "2026-07-20"
+        event_type: "PAIRED_INTEGRATION_PROPOSED"
+        note: "Effective only upon owner merge and inclusion in MAN-000000001."
+  - entry_key: "CMR-IAR-000000001-v1.0"
+    component_canonical_identifier: "IAR-000000001"
+    native_class: "Inquiry Architecture Record"
+    component_label: "Recovered Straussian Inquiry Sequence"
+    component_version: "1.0"
+    component_type: "inquiry procedure"
+    source_inquiry_identifiers:
+      - "DF-000001_THROUGH_DF-000150"
+    validation_record_identifiers:
+      - "VAL-000000025"
+    certification_record_identifier: "CER-000000001"
+    integration_decision_identifier: "DDR-000000008"
+    lifecycle_status: "ACTIVE_WHEN_MANIFEST_PINNED"
+    certified_scope: >
+      Ten-phase, thirty-seven-step ordering of bounded documentary inquiry,
+      including the mandatory gate controlling Inner Sanctum invocation.
+    permitted_use:
+      - "Govern production inquiry order and termination."
+      - "Open the Inner Sanctum only after the declared documentary threshold is met."
+    prohibited_use:
+      - "Automatic interpretation or forced resolution"
+      - "Silent reconstruction of missing Documentary Findings"
+      - "Replacement of primary evidence, constitutional safeguards, or the authoritative DF synthesis"
+    dependencies:
+      - "SPEC-000000002"
+      - "SPEC-000000003"
+      - "AMD-000000003"
+    effective_date: "2026-07-20"
+    version_history:
+      - version_record_id: "VER-000000021"
+        version: "1.0"
+        action: "INITIAL_ADMISSION_CERTIFICATION_AND_INTEGRATION"
+    audit_history:
+      - event_date: "2026-07-20"
+        event_type: "PAIRED_INTEGRATION_PROPOSED"
+        note: "Effective only upon owner merge and inclusion in MAN-000000001."
+entry_count: 2
+version_history:
+  - version_record_id: "VER-000000022"
+    version: "1.0"
+    effective_date: "2026-07-20"
+    action: "INITIAL_ADMISSION_WITH_PAIRED_ENTRIES"
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "ROUTINE_ADMISSION_AND_INTEGRATION_PROPOSED"
+    authority_basis: "AMD-000000003"
+    decision_id: "DDR-000000008"
+    note: >
+      The register and both entries take effect together only upon authenticated
+      owner merge. Neither an unmerged branch nor CI success supplies authority.
+governance_boundaries:
+  - "Primary documentary evidence and constitutional safeguards govern both entries."
+  - "IAR-000000001 governs whether HOC-000000001 may be invoked."
+  - "HOC-000000001 governs classification only after the gate opens."
+  - "The authoritative human-readable sources govern their machine-readable projections."
+  - "No entry authorizes Neo4j projection or direct graph mutation."

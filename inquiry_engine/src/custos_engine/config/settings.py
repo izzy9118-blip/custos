@@ -77,7 +77,7 @@ class EngineSettings(BaseModel):
         return value.expanduser().resolve()
 
     @model_validator(mode="after")
-    def production_requires_projection_manifest(self) -> "EngineSettings":
+    def projection_configuration_is_all_or_none(self) -> "EngineSettings":
         projection_fields = {
             "projection_git_commit": self.projection_git_commit,
             "projection_manifest_path": self.projection_manifest_path,
@@ -92,8 +92,4 @@ class EngineSettings(BaseModel):
                 + ", ".join(missing)
             )
 
-        if self.mode == EngineMode.PRODUCTION and missing:
-            raise ValueError(
-                "PRODUCTION mode requires projection fields: " + ", ".join(missing)
-            )
         return self

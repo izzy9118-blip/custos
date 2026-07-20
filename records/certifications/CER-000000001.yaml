@@ -1,0 +1,41 @@
+identifier: "CER-000000001"
+class: "Certification Record"
+certification_type: "PAIRED_HERMENEUTIC_COGNITIVE_INTEGRATION"
+certified_components:
+  - identifier: "HOC-000000001"
+    version: "1.1"
+    native_class: "Hermeneutic Object C"
+  - identifier: "IAR-000000001"
+    version: "1.0"
+    native_class: "Inquiry Architecture Record"
+validation_record_ids:
+  - "VAL-000000025"
+certification_status: "CERTIFIED_UPON_OWNER_MERGE"
+effective_date: "2026-07-20"
+authority_basis:
+  amendment_id: "AMD-000000003"
+  authorization_event: "AUTHENTICATED_REPOSITORY_OWNER_MERGE"
+certified_scope:
+  - "IAR-000000001 may govern the ten-phase, thirty-seven-step production inquiry sequence."
+  - "HOC-000000001 may support bounded LC-001 through LC-022 investigation only after the IAR gate opens."
+  - "Both components may be integrated in REG-000000004 and activated by MAN-000000001 for later version-pinned runs."
+excluded_scope:
+  - "Proof of concealment, hidden teaching, authorial intention, intended audience, or doctrinal truth"
+  - "Automatic Straussian readings or generalized suspicion"
+  - "Silent reconstruction of missing Documentary Findings"
+  - "Autonomous learning or mutation of an active run"
+  - "Neo4j projection, direct graph mutation, or external production effects"
+dependencies:
+  - "Primary documentary evidence"
+  - "Constitutional safeguards"
+  - "SPEC-000000002"
+  - "SPEC-000000003"
+  - "AMD-000000003"
+unresolved_limitations:
+  - "HOC-000000001 remains corpus-wide incomplete beyond its bounded LC-001 through LC-022 reconstruction."
+  - "DF-000130 through DF-000143, DF-000145, and DF-000148 through DF-000149 remain unavailable."
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "ROUTINE_CERTIFICATION_PROPOSED"
+    validation_record_id: "VAL-000000025"
+    note: "No certification effect exists before owner merge."

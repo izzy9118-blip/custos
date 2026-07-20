@@ -100,7 +100,26 @@ Working-tree edits to the Manifest or Manifest schema cannot affect an Inquiry R
 Working-tree edits to either the Taxonomy source or the Taxonomy schema cannot affect an Inquiry Run because both are read through the same `LocalGitReader` pinned to `git_commit`.
 Working-tree edits to either the Procedure source or the Procedure schema cannot affect an Inquiry Run because both are read through the same `LocalGitReader` pinned to `git_commit`.
 
-## Create a production run with projection
+## Create a production run
+
+A released Cognitive Memory Manifest can govern production without a graph
+projection. Neo4j remains an optional, separately pinned retrieval aid.
+
+```bash
+custos-inquiry run \
+  --mode PRODUCTION \
+  --repo-root /path/to/custos \
+  --git-commit <governed-commit-sha> \
+  --manifest-git-commit <manifest-commit-sha> \
+  --manifest manifests/cognitive-memory/MAN-000000001.json \
+  --manifest-schema inquiry_engine/src/custos_engine/schemas/cognitive_memory_manifest.schema.json \
+  --taxonomy-schema inquiry_engine/src/custos_engine/schemas/taxonomy_component.schema.json \
+  --procedure-schema inquiry_engine/src/custos_engine/schemas/procedure.schema.json \
+  --question tests/fixtures/inquiry.json \
+  --output runs/RUN-000000001
+```
+
+### Add an optional projection
 
 ```bash
 custos-inquiry run \
@@ -160,12 +179,19 @@ Implemented:
 Not yet implemented:
 
 - Taxonomy population beyond LC-022;
-- constitutional admission or Cognitive Memory integration of LC-001–LC-022;
-- full DF-000001–DF-000150 procedure;
 - LLM reasoning adapters;
 - production Neo4j projection;
-- Repository admission or certification;
 - GitHub writes.
+
+The paired cognitive layer now includes:
+
+- HOC-000000001 as the bounded Inner Sanctum;
+- IAR-000000001 as the ten-phase, thirty-seven-step Outer Process;
+- an enforced gate that denies Taxonomy invocation until documentary
+  difficulty, historical admissibility, authorial authorization, ordinary
+  alternatives, and an evidence path have been recorded;
+- REG-000000004 as the Cognitive Memory Register; and
+- MAN-000000001 as the released, commit-pinned production Manifest.
 
 ## Literary Concealment integration status
 

@@ -186,5 +186,9 @@ def test_amendment_assignment_and_ledger_version_are_coherent():
     assert version["previous_version"] == "1.12"
     assert version["current_version"] == "1.13"
     assert version["source_decision_id"] == "AMD-000000003"
-    assert ledger["version"] == "1.13"
-    assert ledger["entries"][-2:] == ["AMD-000000003", "VER-000000019"]
+    assert tuple(map(int, ledger["version"].split("."))) >= (1, 13)
+    amendment_index = ledger["entries"].index("AMD-000000003")
+    assert ledger["entries"][amendment_index : amendment_index + 2] == [
+        "AMD-000000003",
+        "VER-000000019",
+    ]

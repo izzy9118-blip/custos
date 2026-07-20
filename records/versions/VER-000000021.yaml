@@ -1,0 +1,10 @@
+identifier: "VER-000000021"
+class: "Version Record"
+entity_id: "IAR-000000001"
+previous_version: null
+current_version: "1.0"
+effective_date: "2026-07-20"
+change_type: "INITIAL_ADMISSION_CERTIFICATION_AND_INTEGRATION"
+source_decision_id: "DDR-000000008"
+authority_id: "REPOSITORY_OWNER_UNDER_AMD-000000003"
+change_summary: "Admits the ten-phase, thirty-seven-step DF-derived Outer Process with the Inner Sanctum gate."

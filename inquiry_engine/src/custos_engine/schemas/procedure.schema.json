@@ -23,6 +23,53 @@
     "integration_status"
   ],
   "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^IAR-[0-9]{9}$"
+    },
+    "class": {
+      "const": "Inquiry Architecture Record"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lifecycle_status": {
+      "type": "string",
+      "minLength": 1
+    },
+    "documentary_basis": {
+      "type": "object"
+    },
+    "source_fixity": {
+      "type": "object"
+    },
+    "inner_sanctum_gate": {
+      "type": "object"
+    },
+    "permitted_engine_use": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prohibited_engine_use": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "uncertainty": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "audit_history": {
+      "type": "array"
+    },
     "purpose": {
       "type": "string",
       "minLength": 1

@@ -60,6 +60,15 @@
         "type": "object"
       }
     },
+    "dependency_graph": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "array",
+        "items": {
+          "type": "string"
+        }
+      }
+    },
     "excluded_component_ids": {
       "type": "array",
       "items": {
@@ -87,6 +96,32 @@
     "fixity_sha256": {
       "type": "string",
       "pattern": "^[a-f0-9]{64}$"
+    },
+    "fixity_scope_paths": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "fixity_construction": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "build_date": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date"
+    },
+    "changelog": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
     },
     "released_at": {
       "type": [

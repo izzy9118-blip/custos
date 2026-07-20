@@ -2,12 +2,18 @@ from __future__ import annotations
 
 from custos_engine.models.taxonomy import TaxonomyComponent, TaxonomyEvaluation
 
+from .hermeneutic_gate import HermeneuticGateContext, require_inner_sanctum_access
+
 
 def evaluate_taxonomy_component(
     component: TaxonomyComponent,
     observed_features: set[str],
+    *,
+    gate_context: HermeneuticGateContext,
 ) -> TaxonomyEvaluation:
     """Deterministic threshold evaluator; it does not infer hidden teaching."""
+
+    require_inner_sanctum_access(gate_context)
 
     triggers = set(component.minimum_trigger_features)
     corroboration = set(component.required_corroboration_features)

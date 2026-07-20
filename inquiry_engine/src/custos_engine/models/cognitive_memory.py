@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from datetime import datetime
+from datetime import date, datetime
 
 from pydantic import Field, model_validator
 
@@ -26,11 +26,16 @@ class CognitiveMemoryManifest(StrictModel):
     taxonomy_source: CanonicalReference
     procedure_source: CanonicalReference
     included_components: list[ManifestComponent] = Field(default_factory=list)
+    dependency_graph: dict[str, list[str]] = Field(default_factory=dict)
     excluded_component_ids: list[str] = Field(default_factory=list)
     known_conflicts: list[str] = Field(default_factory=list)
     permitted_engine_mode: EngineMode
     predecessor_manifest_id: str | None = None
     fixity_sha256: str = Field(pattern=r"^[a-f0-9]{64}$")
+    fixity_scope_paths: list[str] = Field(default_factory=list)
+    fixity_construction: str | None = None
+    build_date: date | None = None
+    changelog: list[str] = Field(default_factory=list)
     released_at: datetime | None = None
     responsible_authority_id: str
 
@@ -54,4 +59,17 @@ class CognitiveMemoryManifest(StrictModel):
             raise ValueError(
                 f"Components cannot be both included and excluded: {sorted(overlap)}"
             )
+        if self.release_status == "RELEASED":
+            if not self.fixity_scope_paths or not self.fixity_construction:
+                raise ValueError(
+                    "RELEASED manifest requires an explicit fixity scope and construction"
+                )
+            if self.build_date is None or not self.changelog:
+                raise ValueError(
+                    "RELEASED manifest requires build_date and changelog"
+                )
+            if set(self.dependency_graph) != included:
+                raise ValueError(
+                    "RELEASED manifest dependency_graph must contain every included component"
+                )
         return self

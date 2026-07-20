@@ -1,7 +1,7 @@
 identifier: "HOC-000000001"
 class: "Hermeneutic Object C"
 title: "Strauss's Taxonomy of Literary Concealment"
-version: "1.0"
+version: "1.1"
 admission_status: "ADMITTED"
 admission_date: "2026-07-20"
 effective_date: "2026-07-20"
@@ -110,12 +110,26 @@ governing_references:
     version: "1.0"
   - identifier: "REG-000000002"
     version_at_admission: "1.1"
+  - identifier: "AMD-000000003"
+    version: "1.0"
+    effect: "Authorizes one owner-merged routine unit to certify, integrate, release, and activate the declared bounded scope."
+  - identifier: "IAR-000000001"
+    version: "1.0"
+    relationship: "MANDATORY_OUTER_PROCESS_GATE"
+  - identifier: "REG-000000004"
+    version: "1.0"
+    relationship: "COGNITIVE_MEMORY_INTEGRATION"
 version_history:
   - version_record_id: "VER-000000010"
     version: "1.0"
     effective_date: "2026-07-20"
     authority_id: "CAG-000000006"
     action: "INITIAL_NATIVE_ADMISSION"
+  - version_record_id: "VER-000000020"
+    version: "1.1"
+    effective_date: "2026-07-20"
+    authority_id: "REPOSITORY_OWNER_UNDER_AMD-000000003"
+    action: "BOUNDED_COGNITIVE_INTEGRATION"
 audit_history:
   - event_date: "2026-07-20"
     event_type: "NATIVE_CLASS_ADMISSION"
@@ -124,6 +138,14 @@ audit_history:
     event_note: >
       Admitted the open documentary reconstruction as Hermeneutic Object C
       HOC-000000001 without certifying or cognitively integrating it.
+  - event_date: "2026-07-20"
+    event_type: "BOUNDED_COGNITIVE_INTEGRATION_PROPOSED"
+    authority_basis: "AMD-000000003"
+    decision_id: "DDR-000000008"
+    event_note: >
+      Certifies LC-001 through LC-022 only for bounded investigation after
+      IAR-000000001 opens the Inner Sanctum gate. Effective only upon owner
+      merge and activation by MAN-000000001.
 admission_record_reference: "DDR-000000004"
 specialized_determination_ids:
   - "VAL-000000009"
@@ -131,14 +153,24 @@ specialized_determination_ids:
   - "VAL-000000011"
   - "VAL-000000012"
 certification_eligibility:
-  status: "NOT_YET_ELIGIBLE"
-  reason: "Corpus-wide verification is incomplete and the reconstruction remains open."
+  status: "CERTIFIED_FOR_BOUNDED_INVESTIGATIVE_SCOPE_UPON_OWNER_MERGE"
+  certification_record_id: "CER-000000001"
+  reason: >
+    Corpus-wide completeness remains uncertified, while the documented
+    LC-001 through LC-022 operations are certified for a narrower gated use.
 engine_use_authorization_state:
-  status: "NOT_AUTHORIZED"
-  scope: "PRODUCTION_INTERPRETIVE_USE"
+  status: "AUTHORIZED_ONLY_WHEN_PINNED_BY_MAN-000000001_AFTER_OWNER_MERGE"
+  scope: "GATED_BOUNDED_PRODUCTION_INVESTIGATION"
   note: >
-    Technical integration certification of LC-001 through LC-022 does not
-    authorize interpretive production use of this native Hermeneutic Object.
+    IAR-000000001 must complete phases 1 through 7 and open the explicit gate.
+    Authorization never extends to proof of concealment, hidden teaching,
+    authorial intention, intended audience, or doctrinal truth.
+cognitive_memory_integration:
+  register_id: "REG-000000004"
+  certification_record_id: "CER-000000001"
+  integration_decision_id: "DDR-000000008"
+  activating_manifest_id: "MAN-000000001"
+  dependency: "IAR-000000001"
 technical_projection_boundary:
   integration_status: "CERTIFIED_TECHNICAL_INTEGRATION"
   projected_components: "LC-001_THROUGH_LC-022"

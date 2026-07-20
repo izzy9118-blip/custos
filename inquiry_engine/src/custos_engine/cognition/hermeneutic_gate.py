@@ -1,0 +1,97 @@
+from __future__ import annotations
+
+from pydantic import Field
+
+from custos_engine.models.base import InquiryState, StrictModel
+
+
+AUTHORIZED_INNER_SANCTUM_STATES = frozenset(
+    {
+        InquiryState.ADVERSARIAL_TESTING,
+        InquiryState.PROGRESSIVE_DISCLOSURE,
+        InquiryState.SYNTHESIS_LIMITATION,
+        InquiryState.CERTIFICATION_PREPARATION,
+    }
+)
+
+
+class HermeneuticGateContext(StrictModel):
+    """Auditable Outer-Process evidence required before Taxonomy invocation."""
+
+    procedure_id: str = Field(pattern=r"^IAR-[0-9]{9}$")
+    taxonomy_id: str = Field(pattern=r"^HOC-[0-9]{9}$")
+    cognitive_memory_manifest_id: str = Field(pattern=r"^MAN-[0-9]{9}$")
+    current_state: InquiryState
+    completed_phase_numbers: list[int] = Field(default_factory=list)
+    documentary_difficulty_identified: bool
+    historical_admissibility_established: bool
+    authorial_authorization_established: bool
+    ordinary_explanations_considered: bool
+    evidence_record_ids: list[str] = Field(default_factory=list)
+
+
+class HermeneuticGateDecision(StrictModel):
+    authorized: bool
+    reasons: list[str] = Field(min_length=1)
+    epistemic_limit: str = Field(min_length=1)
+
+
+EPISTEMIC_LIMIT = (
+    "Inner-Sanctum access authorizes only a bounded investigation of a named "
+    "literary mechanism. It does not establish concealment, hidden teaching, "
+    "authorial intention, intended audience, or doctrinal truth."
+)
+
+
+def evaluate_inner_sanctum_gate(
+    context: HermeneuticGateContext,
+) -> HermeneuticGateDecision:
+    failures: list[str] = []
+
+    if context.procedure_id != "IAR-000000001":
+        failures.append("The canonical Outer Process IAR-000000001 is not selected.")
+    if context.taxonomy_id != "HOC-000000001":
+        failures.append("The canonical Inner Sanctum HOC-000000001 is not selected.")
+    if context.current_state not in AUTHORIZED_INNER_SANCTUM_STATES:
+        failures.append(
+            "The inquiry has not reached an Outer-Process state eligible for "
+            "Inner-Sanctum invocation."
+        )
+    if not set(range(1, 8)).issubset(context.completed_phase_numbers):
+        failures.append("Outer-Process phases 1 through 7 are not complete.")
+    if not context.documentary_difficulty_identified:
+        failures.append("No genuine documentary difficulty has been identified.")
+    if not context.historical_admissibility_established:
+        failures.append("Historical admissibility has not been established.")
+    if not context.authorial_authorization_established:
+        failures.append("Authorial authorization has not been established.")
+    if not context.ordinary_explanations_considered:
+        failures.append("Ordinary explanations have not been considered.")
+    if not context.evidence_record_ids:
+        failures.append("No auditable evidence record supports the gate request.")
+
+    if failures:
+        return HermeneuticGateDecision(
+            authorized=False,
+            reasons=failures,
+            epistemic_limit=EPISTEMIC_LIMIT,
+        )
+
+    return HermeneuticGateDecision(
+        authorized=True,
+        reasons=[
+            "The canonical Outer Process has reached adversarial testing or later.",
+            "Documentary necessity, historical admissibility, authorial authorization, "
+            "ordinary alternatives, and an evidence path are recorded.",
+        ],
+        epistemic_limit=EPISTEMIC_LIMIT,
+    )
+
+
+def require_inner_sanctum_access(context: HermeneuticGateContext) -> None:
+    decision = evaluate_inner_sanctum_gate(context)
+    if not decision.authorized:
+        raise PermissionError(
+            "Inner Sanctum access denied by IAR-000000001: "
+            + " ".join(decision.reasons)
+        )
