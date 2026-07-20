@@ -1,0 +1,35 @@
+identifier: "VAL-000000021"
+class: "Validation Record"
+title: "Candidate Cognitive Component Register Ontology Conformity Determination"
+version: "1.0"
+validation_type: "ONTOLOGY_CONFORMITY"
+validation_outcome: "PASS"
+subject_id: "REG-000000003"
+subject_path: "registers/candidate-cognitive-component-register/REG-000000003.yaml"
+subject_fixity:
+  algorithm: "SHA-256"
+  digest: "fa85f93cad0cd76387fa362e0220f0671d85df75d7f29acca382a352493c89e7"
+responsible_authority:
+  authority_id: "CAG-000000001"
+  authority_role: "Ontology Governance Authority"
+governing_source:
+  document_number: "000001"
+  version: "1.1"
+findings:
+  - "Register is canonical ontology class 54."
+  - "Candidate Cognitive Component remains a governance designation and not a new ontology class."
+  - "Every future candidate entry must preserve the component's previously admitted native class."
+  - "The candidate creates or redefines no ontology class."
+limitations:
+  - "This determination does not designate a component, allocate its identifier, or make the final admission decision."
+related_admission_decision_id: "DDR-000000007"
+effective_date: "2026-07-20"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "VALIDATION_COMPLETED"
+    authority_id: "CAG-000000001"
+    event_note: "Ontology conformity determination completed with PASS outcome."
