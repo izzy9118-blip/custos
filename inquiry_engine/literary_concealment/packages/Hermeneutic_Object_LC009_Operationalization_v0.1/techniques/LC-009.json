@@ -1,0 +1,145 @@
+{
+  "projection_version": "0.1",
+  "projection_status": "DEVELOPMENT_ONLY",
+  "technique_key": "LC-009",
+  "canonical_identifier": null,
+  "identifier_status": "NOT_ASSIGNED",
+  "name": "Secret Terminology",
+  "strauss_status": "EXPLICITLY NAMED",
+  "source": {
+    "authoritative_object_path": "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt",
+    "authoritative_object_version": "v1.0",
+    "authoritative_object_sha256": "0a155194f72a4517d267256b37fe4b68fe1144e0ef8ec3a1a26c3b3ad5b9f0e5",
+    "repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+    "primary_work": "Persecution and the Art of Writing",
+    "primary_essay": "The Literary Character of the Guide for the Perplexed",
+    "source_pages": [
+      74,
+      75
+    ],
+    "source_formulation": "We may call those words secret words. His secret terminology requires a special study.",
+    "source_examples": [
+      "the wise",
+      "the learned",
+      "the men of speculation",
+      "the virtuous",
+      "the community of the believers in [God's] unity",
+      "government",
+      "providence",
+      "addition",
+      "secret",
+      "belief",
+      "action",
+      "possible",
+      "adamiyyun",
+      "fiqh",
+      "dunya"
+    ],
+    "source_example_note": "The authoritative Taxonomy records that some listed terms are ambiguous, while others are unambiguous but technically or contextually coded."
+  },
+  "mechanism": "A recurring vocabulary carries stable or patterned meanings that are not exhausted by ordinary surface usage. Some terms may be ambiguous; others may be unambiguous yet function as coded or technical markers. The terminology operates across multiple passages, so no single occurrence is sufficient to establish the system.",
+  "investigative_requirement": "Construct a corpus-level occurrence index for each candidate term; preserve exact forms, variants, translations, speakers, locations, and contexts; classify ordinary, technical, ambiguous, and contextually coded uses; test whether a stable semantic or functional pattern survives ordinary lexical, generic, translational, and contextual explanations; and refuse to designate a secret term from frequency alone.",
+  "distinctions": [
+    "LC-009 is corpus-level. A single occurrence cannot establish secret terminology.",
+    "LC-006 concerns lexical ambiguity in a bounded passage. LC-009 may include ambiguous terms but also permits unambiguous terms whose coded function appears only across uses.",
+    "LC-008 concerns an unobtrusive common word in a bounded passage. LC-009 requires recurrent patterning across a work or authorized corpus.",
+    "Repetition alone is insufficient. The occurrences must exhibit a stable semantic, functional, audience, positional, or doctrinal pattern.",
+    "A technical term is not automatically a secret term. Ordinary disciplinary vocabulary must be tested as an alternative.",
+    "The evaluator may identify a corroborated terminology pattern but may not declare a hidden teaching, identify the true doctrine, or infer concealment or intention."
+  ],
+  "operational": {
+    "trigger_conditions": [
+      "A candidate lexical item or phrase occurs in multiple recoverable passages.",
+      "The occurrence set is sufficiently complete for the declared scope.",
+      "Occurrences are normalized across inflectional, orthographic, and translational variants.",
+      "At least two context classes or usage functions are represented.",
+      "A stable semantic, functional, positional, audience, or doctrinal pattern is documented.",
+      "The pattern is not explained by frequency alone."
+    ],
+    "minimum_evidence": [
+      "Declared corpus or work boundary.",
+      "Complete or explicitly bounded occurrence index.",
+      "Exact witness location for every included occurrence.",
+      "Source-language form and morphological variants where available.",
+      "Translation and edition mapping for every occurrence.",
+      "Speaker, quotation, objection, hypothetical, and reported-opinion attribution.",
+      "Local and architectonic context for every occurrence.",
+      "Usage classification for every occurrence.",
+      "Documented ordinary meaning or meanings.",
+      "Documented candidate technical or coded function.",
+      "Distribution analysis across sections, audiences, speakers, and doctrinal contexts.",
+      "Negative cases and counterexamples.",
+      "An auditable evidence path from occurrences to the terminology-pattern claim."
+    ],
+    "corroboration_indicators": [
+      "The term repeatedly changes function at consistent architectonic locations.",
+      "The author explicitly distinguishes the term or its users.",
+      "The term clusters with other documented literary devices.",
+      "A source comparison shows patterned alteration, retention, or substitution.",
+      "The term has a stable restricted meaning in otherwise diverse contexts.",
+      "A related term exhibits a complementary distribution.",
+      "The terminology pattern predicts independently verified passage distinctions."
+    ],
+    "ordinary_alternatives": [
+      "Ordinary technical vocabulary.",
+      "Genre-specific or disciplinary usage.",
+      "Translation convention.",
+      "Terminological inconsistency.",
+      "Semantic drift across contexts.",
+      "Different speakers or quoted authorities.",
+      "Editorial normalization.",
+      "High frequency caused by subject matter.",
+      "Stylistic preference.",
+      "Reader overclassification of loosely related uses.",
+      "The occurrence index is incomplete or biased."
+    ],
+    "disqualifying_conditions": [
+      "The candidate appears only once within the declared scope.",
+      "The occurrence index is materially incomplete without explicit limitation.",
+      "Occurrences are not normalized across textual variants and translations.",
+      "No stable pattern survives contextual reconstruction.",
+      "The pattern is explained fully by ordinary technical usage or subject matter.",
+      "The proposed coded function depends on inventing unattested meanings.",
+      "Different speakers or sources account for the variation.",
+      "Counterexamples equal or exceed supporting cases without a principled distinction.",
+      "The pattern disappears in the source language.",
+      "The designation rests only on frequency, rarity, or thematic importance."
+    ],
+    "authorized_response": [
+      "Create a complete occurrence index within the declared scope.",
+      "Preserve each occurrence as an independent record.",
+      "Normalize variants without deleting the original forms.",
+      "Classify ordinary, technical, ambiguous, and candidate-coded uses separately.",
+      "Map distributions by speaker, section, audience, source, and doctrinal context.",
+      "Test ordinary technical, generic, translational, editorial, and thematic alternatives.",
+      "Search for negative cases and disconfirming distributions.",
+      "Evaluate LC-006 and LC-008 separately for individual occurrences when warranted.",
+      "Terminate at candidate status when corpus coverage, pattern stability, or corroboration is incomplete."
+    ],
+    "prohibited_inferences": [
+      "Do not designate a secret term from one occurrence.",
+      "Do not infer secret terminology from repetition alone.",
+      "Do not treat every technical term as a secret word.",
+      "Do not ignore negative cases.",
+      "Do not collapse distinct lexical items into one family without documentary basis.",
+      "Do not infer a hidden meaning merely because a term has multiple senses.",
+      "Do not infer concealment, authorial intention, audience, or doctrinal truth.",
+      "Do not collapse LC-009 into LC-006 or LC-008."
+    ],
+    "uncertainty_rule": "When a recurring term exhibits a suggestive distribution but corpus coverage, usage classification, or ordinary alternatives remain incomplete, preserve a candidate terminology pattern with explicit negative cases and unresolved uses.",
+    "termination_rule": "Terminate as NOT_TRIGGERED when no recurrent, stable, nontrivial terminology pattern is present; as BLOCKED_MISSING_EVIDENCE when occurrence coverage, witnesses, variants, contexts, or classifications are incomplete; as candidate when ordinary alternatives or corroboration remain unresolved; and as corroborated only when a corpus-level pattern survives full documentary and adversarial testing without proving concealment or selecting doctrine."
+  },
+  "local_evaluation_outcomes": [
+    "NOT_TRIGGERED",
+    "BLOCKED_MISSING_EVIDENCE",
+    "CANDIDATE_SECRET_TERMINOLOGY_PATTERN",
+    "CORROBORATED_SECRET_TERMINOLOGY_PATTERN"
+  ],
+  "version_history": [
+    {
+      "version": "0.1",
+      "status": "DEVELOPMENT_ONLY",
+      "change_note": "Initial executable projection of LC-009 with occurrence indexing, variant normalization, usage classification, distribution analysis, negative cases, ordinary alternatives, corroboration, and anti-overreading controls."
+    }
+  ]
+}
