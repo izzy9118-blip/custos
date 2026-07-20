@@ -66,9 +66,10 @@ def test_amendment_adoption_and_ledger_version_records_resolve():
     )
     assert version["entity_id"] == ledger["id"]
     assert version["previous_version"] == "1.3"
-    assert version["current_version"] == ledger["version"] == "1.4"
+    assert version["current_version"] == "1.4"
     assert version["source_decision_id"] == "AMD-000000001"
-    assert ledger["entries"][-2:] == ["AMD-000000001", "VER-000000002"]
+    assert "AMD-000000001" in ledger["entries"]
+    assert "VER-000000002" in ledger["entries"]
 
 
 def test_adoption_expressly_withholds_downstream_authority():
@@ -87,3 +88,73 @@ def test_adoption_expressly_withholds_downstream_authority():
         "Does not validate, certify, integrate, or activate any cognitive component."
         in non_authorizations
     )
+
+
+def test_admission_jurisdiction_amendment_follows_adopted_procedure():
+    repo_root = _repo_root()
+    amendment = _load_yaml(repo_root / "amendments/AMD-000000002.yaml")
+
+    assert amendment["decision_outcome"] == "ADOPTED"
+    assert amendment["adopting_authority"]["authority_id"] == "CAG-000000005"
+    assert amendment["governing_procedure"]["document_number"] == "000012"
+    assert amendment["affected_specification"]["document_number"] == "000005"
+    assert amendment["current_resolution"]["retroactive_effect"] == "NONE"
+
+
+def test_admission_jurisdiction_amendment_content_and_fixity_resolve():
+    repo_root = _repo_root()
+    amendment = _load_yaml(repo_root / "amendments/AMD-000000002.yaml")
+    content_path = repo_root / amendment["content_path"]
+    content = content_path.read_text(encoding="utf-8")
+
+    assert content_path.is_file()
+    assert "GENERAL NATIVE-ADMISSION DECISION JURISDICTION" in content
+    assert "Repository Admission Authority" in content
+    assert amendment["fixity"]["target_path"] == amendment["content_path"]
+    assert (
+        hashlib.sha256(content_path.read_bytes()).hexdigest()
+        == amendment["fixity"]["digest"]
+    )
+
+
+def test_admission_jurisdiction_amendment_preserves_separate_establishment():
+    repo_root = _repo_root()
+    amendment = _load_yaml(repo_root / "amendments/AMD-000000002.yaml")
+    non_authorizations = set(amendment["non_authorizations"])
+
+    assert amendment["next_governed_action"] == (
+        "SEPARATE_ESTABLISHMENT_OF_REPOSITORY_ADMISSION_AUTHORITY"
+    )
+    assert (
+        "Does not establish or assign the Repository Admission Authority."
+        in non_authorizations
+    )
+    assert "Does not admit Document 000010." in non_authorizations
+    assert (
+        "Does not admit Strauss's Taxonomy of Literary Concealment."
+        in non_authorizations
+    )
+    assert (
+        "Does not certify, integrate, or activate any cognitive component."
+        in non_authorizations
+    )
+
+
+def test_admission_jurisdiction_amendment_ledger_version_resolves():
+    repo_root = _repo_root()
+    assignment = _load_yaml(
+        repo_root
+        / "ledgers/identifier-assignment-ledger/assignments/AMD-000000002.yaml"
+    )
+    version = _load_yaml(repo_root / "records/versions/VER-000000003.yaml")
+    ledger = _load_yaml(
+        repo_root / "ledgers/identifier-assignment-ledger/LDG-000000001.yaml"
+    )
+
+    assert assignment["assignment_authority"]["authority_id"] == "CAG-000000002"
+    assert assignment["source_decision_id"] == "AMD-000000002"
+    assert version["previous_version"] == "1.4"
+    assert version["current_version"] == "1.5"
+    assert version["source_decision_id"] == "AMD-000000002"
+    amendment_index = ledger["entries"].index("AMD-000000002")
+    assert ledger["entries"][amendment_index + 1] == "VER-000000003"

@@ -1,0 +1,92 @@
+identifier: "AMD-000000002"
+class: "Amendment"
+title: "Constitutional Admission Protocol — Admission-Decision Jurisdiction Amendment"
+version: "1.0"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+decision_outcome: "ADOPTED"
+decision_outcome_controlled_vocabulary_status: "PENDING_REGISTRATION"
+effective_date: "2026-07-20"
+adopting_authority:
+  authority_id: "CAG-000000005"
+  authority_role: "Constitutional Governance Authority"
+governing_procedure:
+  document_number: "000012"
+  version: "1.0"
+  path: "specifications/000012_Constitutional_Amendment_Procedure_v1.0.md"
+affected_specification:
+  document_number: "000005"
+  title: "Constitutional Admission Protocol"
+  base_version: "1.0"
+  base_path: "specifications/000005_Constitutional_Admission_Protocol_v1.0.md"
+content_path: "amendments/AMD-000000002_Constitutional_Admission_Protocol_Jurisdiction_Amendment_v1.0.md"
+amendment_character: "JURISDICTION_DEFINITION"
+necessity: >
+  Define the general final native-admission decision jurisdiction required by
+  Document 000005 before the Repository Admission Authority can be separately
+  established and before blocked native admissions can proceed.
+current_resolution:
+  rule: "READ_BASE_SPECIFICATION_WITH_ADOPTED_AMENDMENT"
+  active_sources:
+    - "specifications/000005_Constitutional_Admission_Protocol_v1.0.md"
+    - "amendments/AMD-000000002_Constitutional_Admission_Protocol_Jurisdiction_Amendment_v1.0.md"
+  retroactive_effect: "NONE"
+scope:
+  defines:
+    - "Repository Admission Authority as the final ordinary native-admission decision jurisdiction."
+    - "Required responsibilities, limitations, decision records, and separation from specialized authorities."
+    - "Separate establishment requirements for the future authority record."
+  does_not_establish:
+    - "Repository Admission Authority"
+    - "Hermeneutic Object Register"
+    - "Cognitive Memory integration or activation authority"
+compatibility:
+  - "Document 000001 — no ontology change."
+  - "Document 000002 — existing AMD and VER families used without rule change."
+  - "Document 000003 — no relationship or predicate change."
+  - "Document 000004 — no controlled vocabulary change."
+  - "Document 000005 — jurisdictional gap amended without rewriting the historical base."
+  - "Document 000012 — amendment procedure satisfied."
+domain_review:
+  ontology_governance: "NO_CLASS_CHANGE"
+  identifier_governance: "NO_FAMILY_OR_ALLOCATION_RULE_CHANGE"
+  predicate_governance: "NO_PREDICATE_CHANGE"
+  vocabulary_governance: "NO_CONTROLLED_CONCEPT_CHANGE"
+  constitutional_governance: "PASS"
+validation:
+  authority_basis: "PASS"
+  amendment_procedure_conformity: "PASS"
+  jurisdictional_separation: "PASS"
+  historical_state_preserved: "PASS"
+  jurisdictional_overreach_review: "PASS"
+  hidden_retroactivity_review: "PASS"
+  silent_identity_change_review: "PASS"
+  unauthorized_activation_review: "PASS"
+  repository_test_path: "inquiry_engine/tests/integration/test_constitutional_amendment_governance.py"
+fixity:
+  algorithm: "SHA-256"
+  target_path: "amendments/AMD-000000002_Constitutional_Admission_Protocol_Jurisdiction_Amendment_v1.0.md"
+  digest: "27ef4872fa99a3f920337783e6b29c00f669b961ede30e217e29cc6537975b1c"
+non_authorizations:
+  - "Does not establish or assign the Repository Admission Authority."
+  - "Does not admit Document 000010."
+  - "Does not create the Hermeneutic Object Register."
+  - "Does not admit Strauss's Taxonomy of Literary Concealment."
+  - "Does not certify, integrate, or activate any cognitive component."
+  - "Does not authorize production Neo4j projection."
+supersedes: []
+superseded_by: null
+withdrawal_conditions:
+  - "A later adopted amendment supersedes or withdraws this jurisdictional rule under Document 000012."
+  - "A distinct higher-authority founding act alters the founder-ratified governance structure."
+next_governed_action: "SEPARATE_ESTABLISHMENT_OF_REPOSITORY_ADMISSION_AUTHORITY"
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "ADOPTED"
+    authority_id: "CAG-000000005"
+    event_note: >
+      Amended Document 000005 to define final native-admission decision
+      jurisdiction while withholding establishment of the authority that will
+      exercise it.

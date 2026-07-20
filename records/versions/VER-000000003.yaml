@@ -1,0 +1,13 @@
+identifier: "VER-000000003"
+class: "Version Record"
+entity_id: "LDG-000000001"
+previous_version: "1.4"
+current_version: "1.5"
+effective_date: "2026-07-20"
+change_type: "CONSTITUTIONAL_AMENDMENT"
+source_decision_id: "AMD-000000002"
+authority_id: "CAG-000000002"
+change_summary: >
+  Adds the identifier assignments AMD-000000002 and VER-000000003 for the
+  Document 000005 admission-decision jurisdiction amendment while preserving
+  the append-only assignment_date_then_identifier ledger order.
