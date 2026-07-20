@@ -1,0 +1,10 @@
+{
+  "authoritative_object_path": "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt",
+  "authoritative_object_sha256": "0a155194f72a4517d267256b37fe4b68fe1144e0ef8ec3a1a26c3b3ad5b9f0e5",
+  "repository_commit": "7100700ef10d68621f4859b5fe94fac6e5e0fcea",
+  "source_pages": [
+    74
+  ],
+  "technique_key": "LC-019",
+  "projection_status": "DEVELOPMENT_ONLY"
+}

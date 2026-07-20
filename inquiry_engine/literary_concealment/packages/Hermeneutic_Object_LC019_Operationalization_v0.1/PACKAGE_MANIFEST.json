@@ -1,0 +1,17 @@
+{
+  "package": "Hermeneutic_Object_LC019_Operationalization_v0.1",
+  "status": "DEVELOPMENT_ONLY",
+  "validation": "13 tests passed",
+  "files": {
+    "README.md": "be2b230403512ed67effcd641413143104c956b2cadae84bc0c51f6962f293f7",
+    "SOURCE_FIXITY.json": "5127dc7385f2740db50b34545aad1e02ed165b22800af82cbd1b7fe74e27aeaa",
+    "pyproject.toml": "0737a5cbdd12e01b557ade9dae00329dd3315273930432a56fab9e18e4e9e859",
+    "schemas/literary_concealment_technique.schema.json": "30fc2806a1cb31308ee7ff6a4c0f6e7652a474f49cd51c00a040536f9013b377",
+    "src/custos_engine/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/custos_engine/taxonomy/__init__.py": "03e25dafe131fe54fbb54b2734b52ba103639098b3d23e773d284fef5aba32b5",
+    "src/custos_engine/taxonomy/evaluator.py": "478b39291ea437332a731d48538a55fcd17a0c069051c992743d6c7dfd325335",
+    "src/custos_engine/taxonomy/models.py": "f045d38a39d5fe39c7140ddfc806d43d8854f34a2078f6198a0cdb6a34111710",
+    "techniques/LC-019.json": "c8031819c1dc0b248e05fe50d08a68217eb43d2f57cf8d8431d0ac7a0608a3ee",
+    "tests/test_lc019.py": "9c98bd4096198622d16cffdf371bf92971c51bee9036d3cd1473a93360a97e7a"
+  }
+}
