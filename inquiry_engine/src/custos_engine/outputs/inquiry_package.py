@@ -34,6 +34,7 @@ class InquiryPackageWriter:
         termination: TerminationRecord,
         gate_decision: dict[str, Any] | None = None,
         phase_reasoning_records: list[dict[str, Any]] | None = None,
+        graph_retrieval_receipt: dict[str, Any] | None = None,
     ) -> Path:
         run_data = run.model_dump(mode="json")
         termination_data = termination.model_dump(mode="json")
@@ -62,6 +63,14 @@ class InquiryPackageWriter:
             )
             package_files["phase_reasoning_records.json"] = sha256_hex(
                 phase_reasoning_records
+            )
+        if graph_retrieval_receipt is not None:
+            self._write_json(
+                self.output_dir / "graph_retrieval_receipt.json",
+                graph_retrieval_receipt,
+            )
+            package_files["graph_retrieval_receipt.json"] = sha256_hex(
+                graph_retrieval_receipt
             )
 
         package_manifest = {

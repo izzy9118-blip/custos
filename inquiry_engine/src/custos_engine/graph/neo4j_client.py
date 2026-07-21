@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from collections.abc import Sequence
 from typing import Any
 
 
@@ -25,6 +26,22 @@ class Neo4jClient:
     def execute_write(self, query: str, parameters: dict[str, Any]) -> None:
         with self._driver.session() as session:
             session.execute_write(lambda tx: tx.run(query, parameters).consume())
+
+    def execute_write_transaction(
+        self,
+        statements: Sequence[tuple[str, dict[str, Any]]],
+    ) -> None:
+        """Execute an ordered projection replacement in one Neo4j transaction."""
+
+        def write_all(tx: Any) -> None:
+            for query, parameters in statements:
+                tx.run(query, parameters).consume()
+
+        with self._driver.session() as session:
+            session.execute_write(write_all)
+
+    def verify_connectivity(self) -> None:
+        self._driver.verify_connectivity()
 
     def execute_read(
         self, query: str, parameters: dict[str, Any]

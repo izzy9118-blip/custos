@@ -25,6 +25,7 @@ class ProjectionEdge(StrictModel):
 class ProjectionPlan(StrictModel):
     git_commit: str
     cognitive_memory_manifest_id: str
+    source_file_count: int = Field(default=0, ge=0)
     nodes: list[ProjectionNode] = Field(default_factory=list)
     edges: list[ProjectionEdge] = Field(default_factory=list)
 
@@ -32,6 +33,7 @@ class ProjectionPlan(StrictModel):
         return ProjectionPlan(
             git_commit=self.git_commit,
             cognitive_memory_manifest_id=self.cognitive_memory_manifest_id,
+            source_file_count=self.source_file_count,
             nodes=sorted(self.nodes, key=lambda node: node.canonical_id),
             edges=sorted(self.edges, key=lambda edge: edge.edge_key),
         )
