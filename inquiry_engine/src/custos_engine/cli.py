@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
 import shlex
 from pathlib import Path
 
@@ -16,6 +17,14 @@ from custos_engine.cognition.procedure_loader import ProcedureLoader
 from custos_engine.cognition.taxonomy_loader import TaxonomyLoader
 from custos_engine.config.settings import EngineSettings
 from custos_engine.graph.projection_manifest_loader import ProjectionManifestLoader
+from custos_engine.graph.documentary_retrieval import VerifiedGraphDocumentaryRetriever
+from custos_engine.graph.neo4j_client import Neo4jClient
+from custos_engine.graph.neo4j_projection import Neo4jProjectionStore
+from custos_engine.graph.projection_manifest import build_projection_manifest
+from custos_engine.graph.repository_projector import (
+    DEFAULT_PROJECTION_PREFIXES,
+    RepositoryProjectionBuilder,
+)
 from custos_engine.models.base import EngineMode, TerminationReason
 from custos_engine.models.inquiry import InquiryRun, TerminationRecord
 from custos_engine.models.reasoning import (
@@ -39,6 +48,77 @@ def reasoning_schema_command(args: argparse.Namespace) -> int:
     }
     value = schemas if args.kind == "both" else schemas[args.kind]
     print(json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True))
+    return 0
+
+
+def _neo4j_client(args: argparse.Namespace) -> Neo4jClient:
+    required = {
+        "neo4j_uri": args.neo4j_uri,
+        "neo4j_username": args.neo4j_username,
+        "neo4j_password_env": args.neo4j_password_env,
+    }
+    missing = [name for name, value in required.items() if not value]
+    if missing:
+        raise ValueError(
+            "Neo4j configuration is incomplete; missing fields: "
+            + ", ".join(missing)
+        )
+    password = os.environ.get(args.neo4j_password_env)
+    if not password:
+        raise ValueError(
+            f"Neo4j password environment variable is unset: {args.neo4j_password_env}"
+        )
+    client = Neo4jClient(args.neo4j_uri, args.neo4j_username, password)
+    client.verify_connectivity()
+    return client
+
+
+def project_neo4j_command(args: argparse.Namespace) -> int:
+    repo_root = Path(args.repo_root).expanduser().resolve()
+    repository_reader = LocalGitReader(repo_root, args.git_commit)
+    manifest_reader = LocalGitReader(repo_root, args.manifest_git_commit)
+    cognitive_manifest = load_cognitive_memory_manifest(
+        manifest_reader,
+        args.manifest,
+        args.manifest_schema,
+        repository_reader.resolved_commit,
+    )
+    prefixes = tuple(args.prefix or DEFAULT_PROJECTION_PREFIXES)
+    plan = RepositoryProjectionBuilder(repository_reader, prefixes).build(
+        cognitive_manifest.manifest_id
+    )
+    projection = build_projection_manifest(
+        projection_id=args.projection_id,
+        repository_full_name=cognitive_manifest.repository_full_name,
+        plan=plan,
+        projector_version="1.0.0",
+        schema_versions={
+            "projection_manifest": "1.0.0",
+            "repository_projection": "1.0.0",
+        },
+    )
+
+    output = Path(args.manifest_output).expanduser().resolve()
+    if output.exists():
+        raise FileExistsError(f"Projection Manifest output already exists: {output}")
+
+    client = _neo4j_client(args)
+    try:
+        Neo4jProjectionStore(client).replace(plan, projection)
+    finally:
+        client.close()
+
+    output.parent.mkdir(parents=True, exist_ok=True)
+    with output.open("x", encoding="utf-8") as handle:
+        json.dump(
+            projection.model_dump(mode="json"),
+            handle,
+            ensure_ascii=False,
+            indent=2,
+            sort_keys=True,
+        )
+        handle.write("\n")
+    print(output)
     return 0
 
 
@@ -87,6 +167,7 @@ def run_command(args: argparse.Namespace) -> int:
         raise ValueError(f"Question file is missing fields: {missing}")
 
     projection_id = None
+    projection = None
     if settings.projection_manifest_path:
         projection_reader = LocalGitReader(
             settings.repo_root,
@@ -153,15 +234,53 @@ def run_command(args: argparse.Namespace) -> int:
         )
 
     phase_reasoning_records = None
+    graph_retrieval_receipt = None
     if args.reasoner_command:
-        raw_inputs = question.get("documentary_inputs")
-        if not isinstance(raw_inputs, list) or not raw_inputs:
-            raise ValueError(
-                "A field reasoning run requires at least one documentary_inputs record"
-            )
+        raw_inputs = question.get("documentary_inputs", [])
+        if not isinstance(raw_inputs, list):
+            raise ValueError("documentary_inputs must be an array")
         documentary_inputs = [
             DocumentaryInput.model_validate(item) for item in raw_inputs
         ]
+
+        if run.source_entity_ids:
+            if projection is None:
+                raise ValueError(
+                    "Graph-selected source_entity_ids require a pinned Projection Manifest"
+                )
+            relationship_types = question.get("graph_relationship_types", [])
+            if not isinstance(relationship_types, list) or not all(
+                isinstance(value, str) for value in relationship_types
+            ):
+                raise ValueError("graph_relationship_types must be an array of strings")
+            max_related = question.get("graph_max_related", 50)
+            if not isinstance(max_related, int):
+                raise ValueError("graph_max_related must be an integer")
+            client = _neo4j_client(args)
+            try:
+                graph_inputs, receipt = VerifiedGraphDocumentaryRetriever(
+                    Neo4jProjectionStore(client),
+                    repository_reader,
+                    projection,
+                ).retrieve(
+                    run.source_entity_ids,
+                    relationship_types,
+                    max_related,
+                )
+            finally:
+                client.close()
+            documentary_inputs.extend(graph_inputs)
+            graph_retrieval_receipt = receipt.model_dump(mode="json")
+
+        evidence_ids = [item.evidence_id for item in documentary_inputs]
+        if len(evidence_ids) != len(set(evidence_ids)):
+            raise ValueError(
+                "Explicit and graph-retrieved documentary evidence identifiers must be unique"
+            )
+        if not documentary_inputs:
+            raise ValueError(
+                "A field reasoning run requires explicit documentary_inputs or graph-selected source_entity_ids"
+            )
         command = shlex.split(args.reasoner_command)
         reasoner = SubprocessPhaseReasoner(
             command,
@@ -214,6 +333,7 @@ def run_command(args: argparse.Namespace) -> int:
             if phase_reasoning_records is not None
             else None
         ),
+        graph_retrieval_receipt=graph_retrieval_receipt,
     )
     print(settings.output_dir)
     return 0
@@ -235,6 +355,9 @@ def build_parser() -> argparse.ArgumentParser:
     run_parser.add_argument("--projection-git-commit")
     run_parser.add_argument("--projection-manifest")
     run_parser.add_argument("--projection-manifest-schema")
+    run_parser.add_argument("--neo4j-uri")
+    run_parser.add_argument("--neo4j-username")
+    run_parser.add_argument("--neo4j-password-env", default="NEO4J_PASSWORD")
     run_parser.add_argument("--question", required=True)
     run_parser.add_argument("--output", required=True)
     run_parser.add_argument(
@@ -262,6 +385,27 @@ def build_parser() -> argparse.ArgumentParser:
         default="both",
     )
     schema_parser.set_defaults(handler=reasoning_schema_command)
+
+    project_parser = subcommands.add_parser(
+        "project-neo4j",
+        help="Build and persist a commit-pinned, rebuildable Neo4j projection.",
+    )
+    project_parser.add_argument("--repo-root", required=True)
+    project_parser.add_argument("--git-commit", required=True)
+    project_parser.add_argument("--manifest-git-commit", required=True)
+    project_parser.add_argument("--manifest", required=True)
+    project_parser.add_argument("--manifest-schema", required=True)
+    project_parser.add_argument("--projection-id", required=True)
+    project_parser.add_argument("--manifest-output", required=True)
+    project_parser.add_argument("--neo4j-uri", required=True)
+    project_parser.add_argument("--neo4j-username", required=True)
+    project_parser.add_argument("--neo4j-password-env", default="NEO4J_PASSWORD")
+    project_parser.add_argument(
+        "--prefix",
+        action="append",
+        help="Repository-relative projection prefix; repeat to select multiple roots.",
+    )
+    project_parser.set_defaults(handler=project_neo4j_command)
 
     return parser
 

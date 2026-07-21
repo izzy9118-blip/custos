@@ -204,7 +204,62 @@ An incomplete phase may terminate only with a bounded documentary reason such
 as missing evidence, exhausted evidence, underdetermination, scope excess, or
 an authority stop.
 
-### Add an optional projection
+### Build the derived Neo4j projection
+
+Install the optional driver and place the database password in an environment
+variable. The CLI never accepts a password value as a command-line argument.
+
+```bash
+python -m pip install -e ".[dev,neo4j]"
+export NEO4J_PASSWORD='<set-outside-shell-history>'
+
+custos-inquiry project-neo4j \
+  --repo-root /path/to/custos \
+  --git-commit <governed-commit-sha> \
+  --manifest-git-commit <manifest-commit-sha> \
+  --manifest manifests/cognitive-memory/MAN-000000001.json \
+  --manifest-schema inquiry_engine/src/custos_engine/schemas/cognitive_memory_manifest.schema.json \
+  --projection-id PRJ-000000001 \
+  --manifest-output projections/PRJ-000000001.json \
+  --neo4j-uri neo4j://localhost:7687 \
+  --neo4j-username neo4j
+```
+
+The projector reads only the declared Git commit. It discovers identifiers from
+the Identifier Assignment Ledger, selects the preferred canonical structured
+record for each assigned identifier, records the record path and raw UTF-8
+SHA-256, and derives conservative reference edges from explicit identifier
+values. Individual LC technique projections are not promoted to canonical graph
+entities merely because they occur inside HOC-000000001.
+
+Projection replacement is scoped to the exact `projection_id`. Nodes and edges
+for that projection are replaced in one Neo4j transaction, while other
+projection identifiers remain untouched. The command writes a new Projection
+Manifest using exclusive creation; it will not overwrite an existing file.
+Commit that Manifest and use its containing commit as the later
+`--projection-git-commit`.
+
+The projection is a rebuildable index. Creating it does not admit, certify, or
+change any repository object and does not authorize an Inquiry Run.
+
+### Use graph-selected evidence in a field run
+
+The question contract uses `source_entity_ids` as bounded graph seeds. Optional
+`graph_relationship_types` expand only the named, derived one-hop relationships,
+with a hard limit. Documentary source roles come from canonical records; the
+question cannot promote a graph record from repository context to primary or
+secondary evidence.
+
+```json
+{
+  "run_id": "RUN-000000002",
+  "initiating_question": "What does the fixed documentary record support?",
+  "documentary_boundary": "Only the declared graph seeds and bounded relations.",
+  "source_entity_ids": ["HOC-000000001"],
+  "graph_relationship_types": ["GOVERNED_BY"],
+  "graph_max_related": 25
+}
+```
 
 ```bash
 custos-inquiry run \
@@ -212,15 +267,18 @@ custos-inquiry run \
   --repo-root /path/to/custos \
   --git-commit <governed-commit-sha> \
   --manifest-git-commit <manifest-commit-sha> \
-  --manifest tests/fixtures/cognitive_memory_manifest.json \
+  --manifest manifests/cognitive-memory/MAN-000000001.json \
   --manifest-schema inquiry_engine/src/custos_engine/schemas/cognitive_memory_manifest.schema.json \
   --taxonomy-schema inquiry_engine/src/custos_engine/schemas/taxonomy_component.schema.json \
   --procedure-schema inquiry_engine/src/custos_engine/schemas/procedure.schema.json \
   --projection-git-commit <projection-commit-sha> \
   --projection-manifest projections/projection_manifest.json \
   --projection-manifest-schema inquiry_engine/src/custos_engine/schemas/projection_manifest.schema.json \
+  --neo4j-uri neo4j://localhost:7687 \
+  --neo4j-username neo4j \
   --question tests/fixtures/inquiry.json \
-  --output runs/RUN-000000001
+  --output runs/RUN-000000002 \
+  --reasoner-command "python /path/to/reasoner_adapter.py"
 ```
 
 When projection inputs are configured, `projection_git_commit` pins both the Projection Manifest and the Projection Manifest schema.
@@ -232,6 +290,20 @@ The Projection Manifest is validated against three bindings before use:
 - `projection.git_commit` equals the governed repository commit;
 - `projection.cognitive_memory_manifest_id` equals the loaded Cognitive Memory Manifest ID;
 - `projection.repository_full_name` equals the loaded Cognitive Memory Manifest repository full name.
+
+Before graph-selected material reaches a reasoner, the runtime also requires:
+
+- exactly one Neo4j snapshot for the pinned Projection Manifest;
+- matching projection integrity, projector version, repository, Git commit, and
+  Cognitive Memory Manifest identifiers;
+- every requested and relationship-expanded entity to exist in that snapshot;
+- every graph path to resolve at the governed Git commit; and
+- every raw source SHA-256 to match the canonical Git bytes.
+
+The accepted selection is preserved in `graph_retrieval_receipt.json` and hashed
+into the candidate package. The phase reasoning records preserve the exact
+documentary text sent downstream. Neo4j selects relationships; Git supplies and
+verifies the evidence.
 
 ## Run tests
 
@@ -258,6 +330,11 @@ Implemented:
 - deterministic state-machine scaffold;
 - provider-neutral, source-grounded phase reasoning adapter;
 - strict field-reasoning request and response contracts;
+- deterministic assigned-entity repository projector;
+- transaction-scoped Neo4j projection persistence;
+- bounded relationship expansion and graph-selected documentary retrieval;
+- canonical Git commit and SHA-256 revalidation of every retrieved record;
+- hashed graph retrieval receipts;
 - candidate package exporter;
 - projection-plan and integrity utilities;
 - CLI;
@@ -268,7 +345,6 @@ Not yet implemented:
 - Taxonomy population beyond LC-022;
 - embedded vendor-specific network clients (reasoners connect through the
   provider-neutral subprocess contract);
-- production Neo4j projection;
 - GitHub writes.
 
 The paired cognitive layer now includes:

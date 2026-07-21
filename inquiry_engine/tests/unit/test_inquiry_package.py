@@ -102,3 +102,46 @@ def test_package_records_and_hashes_phase_reasoning_records(tmp_path):
     assert package_manifest["files"]["phase_reasoning_records.json"] == sha256_hex(
         reasoning_records
     )
+
+
+def test_package_records_and_hashes_graph_retrieval_receipt(tmp_path):
+    run = InquiryRun(
+        run_id="RUN-GRAPH-1",
+        mode=EngineMode.PRODUCTION,
+        initiating_question="What does the graph-selected evidence support?",
+        documentary_boundary="One graph-selected canonical record.",
+        repository_full_name="izzy9118-blip/custos",
+        git_commit="1234567",
+        cognitive_memory_manifest_id="MAN-000000001",
+        projection_manifest_id="PRJ-000000001",
+        governing_specification_ids=["SPEC-000000002"],
+        current_state=InquiryState.TERMINATED,
+        termination_reason=TerminationReason.COMPLETED_AUTHORIZED_UNIT,
+    )
+    termination = TerminationRecord(
+        run_id=run.run_id,
+        reason=TerminationReason.COMPLETED_AUTHORIZED_UNIT,
+        explanation="The graph retrieval record is fixed.",
+        evidence_exhausted=False,
+        authorized_unit_completed=True,
+    )
+    receipt = {
+        "projection_id": "PRJ-000000001",
+        "projection_integrity_sha256": "a" * 64,
+        "requested_canonical_ids": ["SPEC-000000001"],
+    }
+    output_dir = tmp_path / run.run_id
+
+    InquiryPackageWriter(output_dir).write(
+        run,
+        {"run_id": run.run_id},
+        termination,
+        graph_retrieval_receipt=receipt,
+    )
+
+    package_manifest = json.loads(
+        (output_dir / "package_manifest.json").read_text(encoding="utf-8")
+    )
+    assert package_manifest["files"]["graph_retrieval_receipt.json"] == sha256_hex(
+        receipt
+    )

@@ -31,7 +31,7 @@ def build_projection_manifest(
         cognitive_memory_manifest_id=plan.cognitive_memory_manifest_id,
         projector_version=projector_version,
         schema_versions=schema_versions,
-        source_file_count=0,
+        source_file_count=deterministic.source_file_count,
         node_counts=node_counts,
         relationship_counts=relationship_counts,
         validation_status="PASS",
