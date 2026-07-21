@@ -1,0 +1,61 @@
+identifier: "DDR-000000008"
+class: "Documentary Decision Record"
+decision_type: "ROUTINE_PAIRED_COGNITIVE_INTEGRATION"
+title: "Paired Outer Process and Inner Sanctum Integration Decision"
+decision_status: "PROPOSED_UNTIL_OWNER_MERGE"
+decision_outcome: "ADMIT_CERTIFY_INTEGRATE_RELEASE_AND_ACTIVATE"
+decision_date: "2026-07-20"
+authority_basis:
+  amendment_id: "AMD-000000003"
+  lane: "ROUTINE_OPERATIONAL_LANE"
+  final_authorization_event: "AUTHENTICATED_REPOSITORY_OWNER_MERGE"
+decision_instrument_path: "governance/integration-decisions/DDR-000000008_Paired_Hermeneutic_Cognitive_Integration_v1.0.md"
+declared_actions:
+  - action: "ADMIT"
+    subject_id: "IAR-000000001"
+  - action: "ADMIT"
+    subject_id: "REG-000000004"
+  - action: "CERTIFY_BOUNDED_SCOPE"
+    subject_ids: ["HOC-000000001", "IAR-000000001"]
+    certification_record_id: "CER-000000001"
+  - action: "INTEGRATE"
+    subject_ids: ["HOC-000000001", "IAR-000000001"]
+    register_id: "REG-000000004"
+  - action: "RELEASE"
+    subject_id: "MAN-000000001"
+  - action: "ACTIVATE_FOR_LATER_VERSION_PINNED_RUNS"
+    subject_ids: ["HOC-000000001", "IAR-000000001"]
+    manifest_id: "MAN-000000001"
+documentary_basis:
+  taxonomy_source_path: "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt"
+  inquiry_sequence_source_path: "engine_training/Documentary_Findings_DF-000001_to_DF-000150_Coherent_Synthesis_v1.0.txt"
+  validation_record_id: "VAL-000000025"
+  governing_specification_ids: ["SPEC-000000002", "SPEC-000000003"]
+dependency_order:
+  - "Primary evidence and constitutional safeguards govern both cognitive components."
+  - "IAR-000000001 governs the order and threshold of inquiry."
+  - "HOC-000000001 may classify a named literary mechanism only after the IAR gate opens."
+  - "MAN-000000001 activates only the pinned versions for later runs."
+findings:
+  - "The DF synthesis preserves ten phases, thirty-seven steps, and every declared source lacuna."
+  - "The Taxonomy projection preserves twenty-two distinct techniques and their prohibited inferences."
+  - "The Outer Process gate prevents the Inner Sanctum from becoming generalized suspicion."
+  - "One routine merge can authorize the declared lifecycle changes without candidacy or serial authority actions."
+limitations:
+  - "HOC-000000001 remains an open documentary reconstruction outside the bounded certified scope."
+  - "The IAR remains subordinate to primary evidence, safeguards, and the authoritative DF findings."
+  - "CI supplies conformity evidence but does not establish historical or philosophical truth."
+non_authorizations:
+  - "Does not authorize automatic secret-hunting or generalized suspicion."
+  - "Does not authorize proof of concealment, hidden teaching, authorial intention, intended audience, or doctrinal truth."
+  - "Does not fill or infer missing Documentary Findings."
+  - "Does not authorize autonomous learning or mutation of an active run."
+  - "Does not authorize Neo4j projection, direct graph mutation, or external production action."
+  - "Does not treat owner instruction in chat, an unmerged branch, or passing CI as the final authorization event."
+effective_condition: >
+  All declared actions take effect together only upon authenticated owner merge
+  of the containing pull request using history-preserving merge semantics.
+audit_history:
+  - event_date: "2026-07-20"
+    event_type: "ROUTINE_INTEGRATION_UNIT_PREPARED"
+    note: "Decision remains proposed and non-effective until owner merge."

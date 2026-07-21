@@ -33,8 +33,15 @@ def test_taxonomy_is_an_admitted_open_native_hoc_record():
     assert hoc["reconstruction_status"]["corpus_wide_verification"] == (
         "NOT_YET_COMPLETE"
     )
-    assert hoc["certification_eligibility"]["status"] == "NOT_YET_ELIGIBLE"
-    assert hoc["engine_use_authorization_state"]["status"] == "NOT_AUTHORIZED"
+    assert hoc["certification_eligibility"]["status"] == (
+        "CERTIFIED_FOR_BOUNDED_INVESTIGATIVE_SCOPE_UPON_OWNER_MERGE"
+    )
+    assert hoc["engine_use_authorization_state"]["status"] == (
+        "AUTHORIZED_ONLY_WHEN_PINNED_BY_MAN-000000001_AFTER_OWNER_MERGE"
+    )
+    assert hoc["reconstruction_status"]["corpus_wide_verification"] == (
+        "NOT_YET_COMPLETE"
+    )
     assert hoc["admission_record_reference"] == "DDR-000000004"
 
 

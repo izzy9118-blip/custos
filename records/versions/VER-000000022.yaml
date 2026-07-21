@@ -1,0 +1,10 @@
+identifier: "VER-000000022"
+class: "Version Record"
+entity_id: "REG-000000004"
+previous_version: null
+current_version: "1.0"
+effective_date: "2026-07-20"
+change_type: "INITIAL_ADMISSION_WITH_PAIRED_ENTRIES"
+source_decision_id: "DDR-000000008"
+authority_id: "REPOSITORY_OWNER_UNDER_AMD-000000003"
+change_summary: "Creates the Cognitive Memory Register with HOC-000000001 and IAR-000000001 as an ordered pair."

@@ -5,19 +5,20 @@
   "repository_full_name": "izzy9118-blip/custos",
   "repository_commit": "REPLACE_WITH_TEST_COMMIT",
   "governing_specification_ids": [
-    "SPEC-000000007"
+    "SPEC-000000002",
+    "SPEC-000000003"
   ],
   "taxonomy_source": {
-    "canonical_id": "HO-000000001",
-    "canonical_class": "Hermeneutic Object",
-    "github_path": "engine_training/taxonomy.txt",
+    "canonical_id": "HOC-000000001",
+    "canonical_class": "Hermeneutic Object C",
+    "github_path": "inquiry_engine/cognitive_memory/HOC-000000001.taxonomy.json",
     "git_commit": "REPLACE_WITH_TEST_COMMIT",
     "version": "1.0"
   },
   "procedure_source": {
     "canonical_id": "IAR-000000001",
     "canonical_class": "Inquiry Architecture Record",
-    "github_path": "engine_training/procedure.txt",
+    "github_path": "records/inquiry-architecture/IAR-000000001.yaml",
     "git_commit": "REPLACE_WITH_TEST_COMMIT",
     "version": "1.0"
   },

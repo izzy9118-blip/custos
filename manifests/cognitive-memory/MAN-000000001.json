@@ -1,0 +1,112 @@
+{
+  "manifest_id": "MAN-000000001",
+  "version": "1.0",
+  "release_status": "RELEASED",
+  "repository_full_name": "izzy9118-blip/custos",
+  "repository_commit": "55a9a75a7857a91f6db19a323668d20da3c83af3",
+  "governing_specification_ids": [
+    "SPEC-000000002",
+    "SPEC-000000003",
+    "AMD-000000003"
+  ],
+  "taxonomy_source": {
+    "canonical_id": "HOC-000000001",
+    "canonical_class": "Hermeneutic Object C",
+    "github_path": "inquiry_engine/cognitive_memory/HOC-000000001.taxonomy.json",
+    "git_commit": "55a9a75a7857a91f6db19a323668d20da3c83af3",
+    "version": "1.1"
+  },
+  "procedure_source": {
+    "canonical_id": "IAR-000000001",
+    "canonical_class": "Inquiry Architecture Record",
+    "github_path": "records/inquiry-architecture/IAR-000000001.yaml",
+    "git_commit": "55a9a75a7857a91f6db19a323668d20da3c83af3",
+    "version": "1.0"
+  },
+  "included_components": [
+    {
+      "component": {
+        "canonical_id": "HOC-000000001",
+        "canonical_class": "Hermeneutic Object C",
+        "github_path": "inquiry_engine/cognitive_memory/HOC-000000001.taxonomy.json",
+        "git_commit": "55a9a75a7857a91f6db19a323668d20da3c83af3",
+        "version": "1.1"
+      },
+      "certification_record_id": "CER-000000001",
+      "integration_decision_id": "DDR-000000008",
+      "permitted_use": "Bounded LC-001 through LC-022 investigation only after IAR-000000001 opens the Inner Sanctum gate.",
+      "prohibited_use": [
+        "Automatic secret-hunting or generalized suspicion",
+        "Proof of concealment, hidden teaching, authorial intention, intended audience, or doctrinal truth",
+        "Invocation before phases 1 through 7 and all gate evidence are complete"
+      ],
+      "dependencies": [
+        "IAR-000000001",
+        "SPEC-000000002",
+        "SPEC-000000003",
+        "AMD-000000003"
+      ]
+    },
+    {
+      "component": {
+        "canonical_id": "IAR-000000001",
+        "canonical_class": "Inquiry Architecture Record",
+        "github_path": "records/inquiry-architecture/IAR-000000001.yaml",
+        "git_commit": "55a9a75a7857a91f6db19a323668d20da3c83af3",
+        "version": "1.0"
+      },
+      "certification_record_id": "CER-000000001",
+      "integration_decision_id": "DDR-000000008",
+      "permitted_use": "Govern the ten-phase, thirty-seven-step Outer Process and determine whether a bounded Inner Sanctum inquiry is eligible.",
+      "prohibited_use": [
+        "Replacement of primary evidence or constitutional safeguards",
+        "Silent reconstruction of missing Documentary Findings",
+        "Conversion of an unresolved question into a concealment conclusion"
+      ],
+      "dependencies": [
+        "SPEC-000000002",
+        "SPEC-000000003",
+        "AMD-000000003"
+      ]
+    }
+  ],
+  "dependency_graph": {
+    "HOC-000000001": [
+      "IAR-000000001",
+      "SPEC-000000002",
+      "SPEC-000000003",
+      "AMD-000000003"
+    ],
+    "IAR-000000001": [
+      "SPEC-000000002",
+      "SPEC-000000003",
+      "AMD-000000003"
+    ]
+  },
+  "excluded_component_ids": [],
+  "known_conflicts": [
+    "HOC-000000001 remains corpus-wide incomplete outside the bounded certified LC-001 through LC-022 scope.",
+    "DF-000130 through DF-000143, DF-000145, and DF-000148 through DF-000149 remain unavailable.",
+    "Neo4j projection is neither included nor authorized by this Manifest."
+  ],
+  "permitted_engine_mode": "PRODUCTION",
+  "predecessor_manifest_id": null,
+  "fixity_sha256": "474d970f390ba89ce9d6969016f026b7e992501e73d9eb7b46c94404b2b1a750",
+  "fixity_scope_paths": [
+    "engine_training/Documentary_Findings_DF-000001_to_DF-000150_Coherent_Synthesis_v1.0.txt",
+    "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt",
+    "inquiry_engine/cognitive_memory/HOC-000000001.taxonomy.json",
+    "records/certifications/CER-000000001.yaml",
+    "records/decisions/DDR-000000008.yaml",
+    "records/inquiry-architecture/IAR-000000001.yaml",
+    "records/validations/VAL-000000025.yaml",
+    "registers/cognitive-memory-register/REG-000000004.yaml"
+  ],
+  "fixity_construction": "SHA-256 over each lexicographically sorted UTF-8 repository path, NUL, raw file bytes, NUL.",
+  "build_date": "2026-07-20",
+  "changelog": [
+    "Initial paired Outer Process and Inner Sanctum release."
+  ],
+  "released_at": "2026-07-20T18:30:00-05:00",
+  "responsible_authority_id": "REPOSITORY_OWNER_UNDER_AMD-000000003"
+}

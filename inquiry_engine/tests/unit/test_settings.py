@@ -245,9 +245,12 @@ def test_development_rejects_partial_projection_configuration(
         )
 
 
-def test_production_rejects_projection_fields_absent(tmp_path: Path):
-    with pytest.raises(ValidationError, match="projection_git_commit"):
-        _build_settings(tmp_path, mode=EngineMode.PRODUCTION)
+def test_production_accepts_projection_fields_absent(tmp_path: Path):
+    settings = _build_settings(tmp_path, mode=EngineMode.PRODUCTION)
+    assert settings.mode == EngineMode.PRODUCTION
+    assert settings.projection_git_commit is None
+    assert settings.projection_manifest_path is None
+    assert settings.projection_manifest_schema_path is None
 
 
 def test_production_accepts_projection_fields_present(tmp_path: Path):
