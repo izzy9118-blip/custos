@@ -94,7 +94,14 @@ The command:
 - reads canonical files through `git show <commit>:<path>`;
 - freezes the run configuration;
 - executes the deterministic state-machine scaffold;
+- evaluates and records an Inner Sanctum gate decision when the question
+  snapshot supplies `inner_sanctum_gate_context`;
 - writes an auditable candidate inquiry package.
+
+When supplied, the gate context is validated as a strict
+`HermeneuticGateContext`. Its decision is written to
+`inner_sanctum_gate_decision.json` and included in the package fixity manifest.
+An unauthorized decision does not invoke or evaluate a Taxonomy technique.
 
 Working-tree edits to the Manifest or Manifest schema cannot affect an Inquiry Run because both artifacts are read from the declared immutable `manifest_git_commit` snapshot.
 Working-tree edits to either the Taxonomy source or the Taxonomy schema cannot affect an Inquiry Run because both are read through the same `LocalGitReader` pinned to `git_commit`.

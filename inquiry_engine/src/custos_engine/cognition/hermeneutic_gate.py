@@ -52,6 +52,10 @@ def evaluate_inner_sanctum_gate(
         failures.append("The canonical Outer Process IAR-000000001 is not selected.")
     if context.taxonomy_id != "HOC-000000001":
         failures.append("The canonical Inner Sanctum HOC-000000001 is not selected.")
+    if context.cognitive_memory_manifest_id != "MAN-000000001":
+        failures.append(
+            "The released paired Cognitive Memory Manifest MAN-000000001 is not selected."
+        )
     if context.current_state not in AUTHORIZED_INNER_SANCTUM_STATES:
         failures.append(
             "The inquiry has not reached an Outer-Process state eligible for "
