@@ -33,6 +33,7 @@ class InquiryPackageWriter:
         question: dict[str, Any],
         termination: TerminationRecord,
         gate_decision: dict[str, Any] | None = None,
+        phase_reasoning_records: list[dict[str, Any]] | None = None,
     ) -> Path:
         run_data = run.model_dump(mode="json")
         termination_data = termination.model_dump(mode="json")
@@ -53,6 +54,14 @@ class InquiryPackageWriter:
             )
             package_files["inner_sanctum_gate_decision.json"] = sha256_hex(
                 gate_decision
+            )
+        if phase_reasoning_records is not None:
+            self._write_json(
+                self.output_dir / "phase_reasoning_records.json",
+                phase_reasoning_records,
+            )
+            package_files["phase_reasoning_records.json"] = sha256_hex(
+                phase_reasoning_records
             )
 
         package_manifest = {

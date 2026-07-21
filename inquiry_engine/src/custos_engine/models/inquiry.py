@@ -48,6 +48,8 @@ class InquiryRun(StrictModel):
     observation_ids: list[str] = Field(default_factory=list)
     hypothesis_ids: list[str] = Field(default_factory=list)
     evidence_chain_ids: list[str] = Field(default_factory=list)
+    candidate_statement_ids: list[str] = Field(default_factory=list)
+    reasoning_record_ids: list[str] = Field(default_factory=list)
     unresolved_questions: list[str] = Field(default_factory=list)
     termination_reason: TerminationReason | None = None
     created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))

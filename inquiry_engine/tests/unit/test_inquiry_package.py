@@ -52,3 +52,53 @@ def test_package_records_and_hashes_inner_sanctum_gate_decision(tmp_path):
     assert package_manifest["files"]["inner_sanctum_gate_decision.json"] == (
         sha256_hex(gate_decision)
     )
+
+
+def test_package_records_and_hashes_phase_reasoning_records(tmp_path):
+    run = InquiryRun(
+        run_id="RUN-FIELD-1",
+        mode=EngineMode.PRODUCTION,
+        initiating_question="What does the fixed evidence support?",
+        documentary_boundary="One declared source excerpt.",
+        repository_full_name="izzy9118-blip/custos",
+        git_commit="1234567",
+        cognitive_memory_manifest_id="MAN-000000001",
+        governing_specification_ids=["SPEC-000000002"],
+        current_state=InquiryState.TERMINATED,
+        termination_reason=TerminationReason.COMPLETED_AUTHORIZED_UNIT,
+        reasoning_record_ids=["RUN-FIELD-1-PHASE-01"],
+    )
+    termination = TerminationRecord(
+        run_id=run.run_id,
+        reason=TerminationReason.COMPLETED_AUTHORIZED_UNIT,
+        explanation="The candidate inquiry unit is complete.",
+        evidence_exhausted=False,
+        authorized_unit_completed=True,
+    )
+    reasoning_records = [
+        {
+            "record_id": "RUN-FIELD-1-PHASE-01",
+            "adapter_id": "SUBPROCESS_JSON_V1",
+            "request": {"phase_number": 1},
+            "response": {"completed": True},
+        }
+    ]
+    output_dir = tmp_path / run.run_id
+
+    InquiryPackageWriter(output_dir).write(
+        run,
+        {"run_id": run.run_id},
+        termination,
+        phase_reasoning_records=reasoning_records,
+    )
+
+    persisted = json.loads(
+        (output_dir / "phase_reasoning_records.json").read_text(encoding="utf-8")
+    )
+    package_manifest = json.loads(
+        (output_dir / "package_manifest.json").read_text(encoding="utf-8")
+    )
+    assert persisted == reasoning_records
+    assert package_manifest["files"]["phase_reasoning_records.json"] == sha256_hex(
+        reasoning_records
+    )

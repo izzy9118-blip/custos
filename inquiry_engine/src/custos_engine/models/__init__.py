@@ -13,6 +13,14 @@ from .evidence import DocumentaryObservation, EvidenceChain, EvidenceRecord
 from .hypothesis import Hypothesis
 from .inquiry import InquiryRun, StateResult, StateTransition, TerminationRecord
 from .relationships import EvidenceType, RelationshipAssertion
+from .reasoning import (
+    CandidateStatement,
+    DocumentaryInput,
+    PhaseInstruction,
+    PhaseReasoningRecord,
+    PhaseReasoningRequest,
+    PhaseReasoningResponse,
+)
 from .taxonomy import TaxonomyComponent, TaxonomyEvaluation
 
 __all__ = [
@@ -20,6 +28,8 @@ __all__ = [
     "CanonicalReference",
     "CandidateArtifact",
     "CognitiveMemoryManifest",
+    "CandidateStatement",
+    "DocumentaryInput",
     "DocumentaryObservation",
     "EngineMode",
     "EpistemicClassification",
@@ -30,6 +40,10 @@ __all__ = [
     "InquiryRun",
     "InquiryState",
     "ManifestComponent",
+    "PhaseInstruction",
+    "PhaseReasoningRecord",
+    "PhaseReasoningRequest",
+    "PhaseReasoningResponse",
     "ProjectionManifest",
     "RelationshipAssertion",
     "StateResult",
