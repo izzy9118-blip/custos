@@ -126,6 +126,84 @@ custos-inquiry run \
   --output runs/RUN-000000001
 ```
 
+## Execute a source-grounded field inquiry
+
+The engine can delegate each of the ten IAR-000000001 phases to an explicitly
+selected external reasoning process. The process's outputs receive no
+repository, certification, Manifest, gate, or projection authority. The
+adapter is provider-neutral: it receives one strict JSON request on standard
+input and must return one strict JSON response on standard output. The command
+is executed directly without a shell. Operators remain responsible for the
+behavior and operating-system permissions of the selected executable.
+
+The question snapshot supplies at least one fixed documentary excerpt:
+
+```json
+{
+  "run_id": "RUN-000000002",
+  "initiating_question": "A real bounded documentary question.",
+  "documentary_boundary": "The named work, witness, passage, and source chain.",
+  "source_entity_ids": [],
+  "documentary_inputs": [
+    {
+      "evidence_id": "EVR-FIELD-001",
+      "source_role": "PRIMARY",
+      "citation": "Stable witness and passage locator",
+      "text": "The fixed documentary excerpt supplied to the reasoner.",
+      "source_fixity_sha256": "<64 lowercase hexadecimal characters>",
+      "source_entity_id": null,
+      "note": null
+    }
+  ]
+}
+```
+
+Run the inquiry with an explicitly selected reasoner command:
+
+```bash
+custos-inquiry run \
+  --mode PRODUCTION \
+  --repo-root /path/to/custos \
+  --git-commit <governed-commit-sha> \
+  --manifest-git-commit <manifest-commit-sha> \
+  --manifest manifests/cognitive-memory/MAN-000000001.json \
+  --manifest-schema inquiry_engine/src/custos_engine/schemas/cognitive_memory_manifest.schema.json \
+  --taxonomy-schema inquiry_engine/src/custos_engine/schemas/taxonomy_component.schema.json \
+  --procedure-schema inquiry_engine/src/custos_engine/schemas/procedure.schema.json \
+  --question /path/to/RUN-000000002-question.json \
+  --output /path/to/runs/RUN-000000002 \
+  --reasoner-command "python /path/to/reasoner_adapter.py"
+```
+
+Inspect the exact adapter contract at runtime:
+
+```bash
+custos-inquiry reasoning-schema --kind both
+```
+
+For every phase, the request contains the repository commit, released Manifest,
+governing specifications, phase instructions, fixed documentary excerpts,
+prior phase summaries, and the standing epistemic limit. Before phase 8 the
+request contains no Taxonomy component. After phase 7, complete component
+definitions are supplied only when the engine-recorded Inner Sanctum gate is
+open and the question names the permitted `LC-###` techniques.
+
+The engine rejects:
+
+- a response for another run or phase;
+- evidence identifiers absent from the fixed documentary inputs;
+- an unpermitted Taxonomy technique;
+- model-created Documented Findings or Constitutional Principles;
+- model claims of certification, infrastructure validity, or completed
+  authority; and
+- repeated candidate identifiers across phases.
+
+Every accepted phase request and response is preserved in
+`phase_reasoning_records.json` and hashed into the candidate package manifest.
+An incomplete phase may terminate only with a bounded documentary reason such
+as missing evidence, exhausted evidence, underdetermination, scope excess, or
+an authority stop.
+
 ### Add an optional projection
 
 ```bash
@@ -178,6 +256,8 @@ Implemented:
 - bounded Literary Concealment registry and dispatcher;
 - deterministic Taxonomy evaluator;
 - deterministic state-machine scaffold;
+- provider-neutral, source-grounded phase reasoning adapter;
+- strict field-reasoning request and response contracts;
 - candidate package exporter;
 - projection-plan and integrity utilities;
 - CLI;
@@ -186,7 +266,8 @@ Implemented:
 Not yet implemented:
 
 - Taxonomy population beyond LC-022;
-- LLM reasoning adapters;
+- embedded vendor-specific network clients (reasoners connect through the
+  provider-neutral subprocess contract);
 - production Neo4j projection;
 - GitHub writes.
 

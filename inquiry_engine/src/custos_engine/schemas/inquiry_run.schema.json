@@ -91,6 +91,18 @@
         "type": "string"
       }
     },
+    "candidate_statement_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "reasoning_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
     "unresolved_questions": {
       "type": "array",
       "items": {
