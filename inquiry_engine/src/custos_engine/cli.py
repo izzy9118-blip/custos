@@ -7,6 +7,10 @@ from pathlib import Path
 from custos_engine.cognition.cognitive_memory_loader import (
     load_cognitive_memory_manifest,
 )
+from custos_engine.cognition.hermeneutic_gate import (
+    HermeneuticGateContext,
+    evaluate_inner_sanctum_gate,
+)
 from custos_engine.cognition.procedure_loader import ProcedureLoader
 from custos_engine.cognition.taxonomy_loader import TaxonomyLoader
 from custos_engine.config.settings import EngineSettings
@@ -97,6 +101,14 @@ def run_command(args: argparse.Namespace) -> int:
     machine = InquiryStateMachine()
     machine.run_to_termination(run)
 
+    gate_decision = None
+    gate_context_data = question.get("inner_sanctum_gate_context")
+    if gate_context_data is not None:
+        gate_context = HermeneuticGateContext.model_validate(gate_context_data)
+        gate_decision = evaluate_inner_sanctum_gate(gate_context).model_dump(
+            mode="json"
+        )
+
     termination = TerminationRecord(
         run_id=run.run_id,
         reason=run.termination_reason,
@@ -111,7 +123,7 @@ def run_command(args: argparse.Namespace) -> int:
     )
 
     writer = InquiryPackageWriter(settings.output_dir)
-    writer.write(run, question, termination)
+    writer.write(run, question, termination, gate_decision=gate_decision)
     print(settings.output_dir)
     return 0
 

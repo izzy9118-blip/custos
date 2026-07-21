@@ -121,27 +121,5 @@
         "type": "object"
       }
     }
-  },
-  "allOf": [
-    {
-      "if": {
-        "properties": {
-          "mode": {
-            "const": "PRODUCTION"
-          }
-        }
-      },
-      "then": {
-        "required": [
-          "projection_manifest_id"
-        ],
-        "properties": {
-          "projection_manifest_id": {
-            "type": "string",
-            "minLength": 1
-          }
-        }
-      }
-    }
-  ]
+  }
 }

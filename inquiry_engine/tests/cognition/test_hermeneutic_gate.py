@@ -36,6 +36,10 @@ def test_outer_process_opens_inner_sanctum_only_after_phase_seven():
     ("changes", "expected_reason"),
     [
         (
+            {"cognitive_memory_manifest_id": "MAN-999999999"},
+            "MAN-000000001 is not selected",
+        ),
+        (
             {"current_state": InquiryState.DOCUMENTARY_INTAKE},
             "not reached an Outer-Process state",
         ),

@@ -32,6 +32,7 @@ class InquiryPackageWriter:
         run: InquiryRun,
         question: dict[str, Any],
         termination: TerminationRecord,
+        gate_decision: dict[str, Any] | None = None,
     ) -> Path:
         run_data = run.model_dump(mode="json")
         termination_data = termination.model_dump(mode="json")
@@ -40,15 +41,25 @@ class InquiryPackageWriter:
         self._write_json(self.output_dir / "question_snapshot.json", question)
         self._write_json(self.output_dir / "termination_record.json", termination_data)
 
+        package_files = {
+            "inquiry_run.json": sha256_hex(run_data),
+            "question_snapshot.json": sha256_hex(question),
+            "termination_record.json": sha256_hex(termination_data),
+        }
+        if gate_decision is not None:
+            self._write_json(
+                self.output_dir / "inner_sanctum_gate_decision.json",
+                gate_decision,
+            )
+            package_files["inner_sanctum_gate_decision.json"] = sha256_hex(
+                gate_decision
+            )
+
         package_manifest = {
             "run_id": run.run_id,
             "git_commit": run.git_commit,
             "cognitive_memory_manifest_id": run.cognitive_memory_manifest_id,
-            "files": {
-                "inquiry_run.json": sha256_hex(run_data),
-                "question_snapshot.json": sha256_hex(question),
-                "termination_record.json": sha256_hex(termination_data),
-            },
+            "files": package_files,
         }
         self._write_json(self.output_dir / "package_manifest.json", package_manifest)
         return self.output_dir

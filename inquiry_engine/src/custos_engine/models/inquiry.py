@@ -55,9 +55,7 @@ class InquiryRun(StrictModel):
     audit_history: list[AuditEvent] = Field(default_factory=list)
 
     @model_validator(mode="after")
-    def production_and_termination_rules(self) -> "InquiryRun":
-        if self.mode == EngineMode.PRODUCTION and not self.projection_manifest_id:
-            raise ValueError("PRODUCTION InquiryRun requires projection_manifest_id")
+    def termination_rules(self) -> "InquiryRun":
         if self.current_state == InquiryState.TERMINATED and not self.termination_reason:
             raise ValueError("TERMINATED InquiryRun requires termination_reason")
         return self
