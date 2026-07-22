@@ -81,29 +81,130 @@ Evidence: supplied Strauss main-text transcription, pp. 15–16.
 
 ## Recovery state
 
-The Strauss anchor and complete note boundary are recovered from the supplied witness.
+The Strauss anchor and complete note boundary are recovered from the supplied Strauss witness.
 
-The three Machiavelli target passages are not yet recovered or verified in a fixed Machiavelli witness. The supplied materials do not identify the exact Machiavelli edition or translation Strauss used for this note beyond the general editorial statement that parenthetical page references elsewhere refer to the Flora and Cordié edition of Machiavelli’s *Opere*; note 1 itself contains no such parenthetical pages.
+The beginnings of *The Prince* chapters 1, 2, and 8 are now recovered in the fixed Ricci/Vincent OCR-derived English witness described below. Because that file is a visibly corrupted OCR transcription and an English translation, recovery is complete only at the derived-witness level. Primary-language verification remains open.
+
+## Recovered Machiavelli witness
+
+Working file:
+
+- File: `the prince ricci clean.txt`
+- SHA-256: `472c4ad8e0025747af4f4a783823080679a5fead7d6f47882dd012a59ddb89c6`
+- Role: user-supplied OCR-derived English transcription; fixed as a recovery witness, not admitted as a canonical or primary-language witness.
+
+Bibliographic evidence visible in the supplied file:
+
+- Author: Niccolò Machiavelli.
+- Title: *The Prince*.
+- Translation: Luigi Ricci.
+- Revision: E. R. P. Vincent.
+- Series: The World’s Classics, no. 43.
+- Publisher: Oxford University Press / Humphrey Milford.
+- Revision publication statement: the revised translation was first published in 1935.
+- Prefatory textual statement: Vincent reports that the revision is based on the Italian text in *Tutte le Opere*, edited by Guido Mazzoni and Mario Casella (Florence: Barbera, 1929), derived from collation of the Gotha manuscript with nine others.
+
+Witness limitation: the supplied file is an OCR transcription with visible dropped initials, intrusive characters, spacing errors, and other corruptions. It can establish recoverable wording and sequence when corruption is transparent, but it cannot by itself establish exact typography, punctuation, pagination, or primary-language wording.
+
+## Recovered citation targets
+
+### Target 1 — *Prince* chapter 1, beginning
+
+Diplomatic OCR opening:
+
+> “,L states and dominions which hold or have held sway over mankind are either republics or monarchies.”
+
+Normalized recovery:
+
+> “All states and dominions which hold or have held sway over mankind are either republics or monarchies.”
+
+Sufficient local context:
+
+> “Monarchies are either hereditary in which the rulers have been for many years of the same family, or else they are of recent foundation. The newly founded ones are either entirely new, as was Milan to Francesco Sforza, or else they are, as it were, new members grafted on to the hereditary possessions of the prince that annexes them, as is the kingdom of Naples to the King of Spain.”
+
+Independent reconstruction: chapter 1 begins with the exhaustive division of all states and dominions into republics or monarchies, then subdivides monarchies by inheritance, novelty, composition, prior political condition, and mode of acquisition.
+
+### Target 2 — *Prince* chapter 2, beginning
+
+Diplomatic OCR opening:
+
+> “will not here speak of republics, having I already treated of them fully in another place.”
+
+Normalized recovery:
+
+> “I will not here speak of republics, having already treated of them fully in another place.”
+
+Following sentence, normalized from visibly corrupted OCR:
+
+> “I will deal only with monarchies, and will discuss how the various kinds described above can be governed and maintained.”
+
+Independent reconstruction: chapter 2 expressly excludes republics from the present work, gives prior full treatment elsewhere as the reason, and declares monarchies to be the sole subject of the ensuing discussion.
+
+### Target 3 — *Prince* chapter 8, beginning
+
+Diplomatic OCR opening:
+
+> “B utwhich as there are still two ways of becoming prince cannot be attributed entirely either to fortune or to ability, they must not be passed over, although one of them could be more fully discussed if we were treating of republics.”
+
+Normalized recovery:
+
+> “But as there are still two ways of becoming prince which cannot be attributed entirely either to fortune or to ability, they must not be passed over, although one of them could be more fully discussed if we were treating of republics.”
+
+Following sentence, normalized from visibly corrupted OCR:
+
+> “These are when one becomes prince by some nefarious or villainous means, or when a private citizen becomes the prince of his country through the favour of his fellow-citizens.”
+
+Independent reconstruction: chapter 8 introduces two remaining modes of becoming prince. Its opening again marks republics as a topic that could receive fuller treatment in a different inquiry, while keeping the present discussion within the acquisition of princely rule.
+
+## Comparative return to Strauss
+
+### Documented Finding DF-D
+
+Chapter 1 supplies the general classificatory premise Strauss paraphrases: all states are divided into republics and monarchies.
+
+Evidence: Ricci/Vincent witness, chapter 1 beginning.
+
+### Documented Finding DF-E
+
+Chapter 2 contains the explicit exclusion and cross-reference on which Strauss’s words “says explicitly” most directly rest: Machiavelli will not discuss republics here because he has treated them fully elsewhere, and will deal only with monarchies.
+
+Evidence: Ricci/Vincent witness, chapter 2 beginning.
+
+### Documented Finding DF-F
+
+Chapter 8 repeats a boundary between the present inquiry and a fuller possible treatment of republics. It does not repeat chapter 2’s statement that republics have already been treated elsewhere, but it confirms that the distinction continues to govern the organization of the work.
+
+Evidence: Ricci/Vincent witness, chapter 8 beginning.
+
+### Supported Inference SI-A
+
+Strauss’s three-part citation is ordered architecturally rather than redundantly: chapter 1 establishes the republic/monarchy division; chapter 2 explicitly excludes republics and names prior treatment elsewhere; chapter 8 later recalls the republic boundary at a point where another acquisition mode could be treated more fully under that heading.
+
+This inference is supported by the recovered English witness but remains provisional until checked against a fixed Italian text.
+
+### Comparative Question CQ-A
+
+Why does Strauss cite chapter 8 as well as chapters 1 and 2? The recovered sequence suggests that chapter 8 documents the persistence of the republic/principality boundary within *The Prince*, not merely the initial announcement of that boundary. Verification against the Italian wording and wider chapter-8 context is still required before promotion.
 
 ## Unresolved uncertainties
 
-1. Which exact Machiavelli-language witness or edition will govern verification of the three cited beginnings.
-2. Whether Strauss’s wording “says explicitly” depends only on chapter 2’s exclusion statement, while chapters 1 and 8 establish the classificatory and structural frame.
-3. Whether chapter 8 is cited because its opening repeats the chapter 1 division or because it marks a distinct acquisition class relevant to Strauss’s surface account.
-4. Whether the supplied transcription preserves punctuation, italics, lineation, and note-marker placement with sufficient fidelity for canonical witness status.
+1. Which fixed Italian witness will govern primary-language verification of the three cited beginnings.
+2. Whether the Ricci/Vincent English wording materially obscures distinctions in Machiavelli’s terms for states, principalities, and republics.
+3. Whether chapter 8’s phrase about fuller treatment “if we were treating of republics” has a specific counterpart or variant in the 1929 Mazzoni–Casella text.
+4. Whether the supplied Strauss transcription preserves punctuation, italics, lineation, and note-marker placement with sufficient fidelity for canonical witness status.
 
 ## Epistemic classification
 
 - The anchor wording, note wording, note placement, and three target designations are **Documented Findings** relative to the supplied transcription.
-- Any account of why Strauss selected all three targets remains a **Comparative Question** until the Machiavelli passages are independently recovered and reconstructed.
+- The architectural account of why Strauss selected all three targets is a **Supported Inference** from the recovered English witness; its dependence on exact Italian wording remains a **Comparative Question**.
 - Any claim about Strauss’s intention beyond the explicit surrounding argument remains a **Working Hypothesis** unless later evidence warrants promotion.
 
 ## Inner Sanctum gate
 
 CLOSED.
 
-Reason: the Outer Sanctum has only begun. The Machiavelli witnesses and contexts have not yet been recovered, independently reconstructed, or compared. No concrete residual difficulty has survived ordinary documentary reconstruction, and no concealment mechanism is authorized for investigation.
+Reason: the Outer Sanctum remains sufficient. The three targets have been recovered and compared in a fixed derived English witness, but primary-language verification remains open. No concrete residual difficulty requires an Inner Sanctum mechanism, and no concealment inquiry is authorized.
 
 ## Next required unit
 
-Recover and fix a primary-language or governed scholarly witness for *The Prince* chapter 1 beginning, then chapters 2 and 8 beginnings, preserving each passage’s sufficient local context and edition metadata before comparative return to Strauss.
+Recover and fix an Italian witness for the beginnings of *The Prince* chapters 1, 2, and 8—preferably the Mazzoni–Casella 1929 text or another governed scholarly edition—then compare its exact wording and variants against the Ricci/Vincent recovery before deciding whether SI-A may be retained or revised.
