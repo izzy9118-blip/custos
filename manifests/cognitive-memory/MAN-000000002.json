@@ -1,0 +1,113 @@
+{
+  "manifest_id": "MAN-000000002",
+  "version": "1.0",
+  "release_status": "RELEASED",
+  "repository_full_name": "izzy9118-blip/custos",
+  "repository_commit": "6283feb8d7a4f266441f7a662a187e5c69b0f9fa",
+  "governing_specification_ids": [
+    "SPEC-000000002",
+    "SPEC-000000003",
+    "AMD-000000003",
+    "COR-000000004"
+  ],
+  "taxonomy_source": {
+    "canonical_id": "HOC-000000001",
+    "canonical_class": "Hermeneutic Object C",
+    "github_path": "inquiry_engine/cognitive_memory/HOC-000000001.taxonomy.json",
+    "git_commit": "6283feb8d7a4f266441f7a662a187e5c69b0f9fa",
+    "version": "1.2"
+  },
+  "procedure_source": {
+    "canonical_id": "IAR-000000001",
+    "canonical_class": "Inquiry Architecture Record",
+    "github_path": "records/inquiry-architecture/IAR-000000001.yaml",
+    "git_commit": "6283feb8d7a4f266441f7a662a187e5c69b0f9fa",
+    "version": "1.1"
+  },
+  "included_components": [
+    {
+      "component": {
+        "canonical_id": "HOC-000000001",
+        "canonical_class": "Hermeneutic Object C",
+        "github_path": "inquiry_engine/cognitive_memory/HOC-000000001.taxonomy.json",
+        "git_commit": "6283feb8d7a4f266441f7a662a187e5c69b0f9fa",
+        "version": "1.2"
+      },
+      "certification_record_id": "CER-000000004",
+      "integration_decision_id": "DDR-000000011",
+      "permitted_use": "Supply LC-001 through LC-022 as a standing analytical vocabulary in every text-analysis phase; evidence alone activates a named technique.",
+      "prohibited_use": [
+        "Automatic secret-hunting or generalized suspicion",
+        "Proof of concealment, hidden teaching, authorial intention, intended audience, or doctrinal truth",
+        "Treating Taxonomy availability as evidence that a component is present"
+      ],
+      "dependencies": [
+        "IAR-000000001",
+        "SPEC-000000002",
+        "SPEC-000000003",
+        "AMD-000000003",
+        "COR-000000004"
+      ]
+    },
+    {
+      "component": {
+        "canonical_id": "IAR-000000001",
+        "canonical_class": "Inquiry Architecture Record",
+        "github_path": "records/inquiry-architecture/IAR-000000001.yaml",
+        "git_commit": "6283feb8d7a4f266441f7a662a187e5c69b0f9fa",
+        "version": "1.1"
+      },
+      "certification_record_id": "CER-000000004",
+      "integration_decision_id": "DDR-000000011",
+      "permitted_use": "Govern the ten-phase, thirty-seven-step inquiry while keeping the Inner Sanctum open in every phase and component activation evidence-governed.",
+      "prohibited_use": [
+        "Replacement of primary evidence or constitutional safeguards",
+        "Silent reconstruction of missing Documentary Findings",
+        "Phase-based withholding of the Taxonomy"
+      ],
+      "dependencies": [
+        "SPEC-000000002",
+        "SPEC-000000003",
+        "AMD-000000003",
+        "COR-000000004"
+      ]
+    }
+  ],
+  "dependency_graph": {
+    "HOC-000000001": [
+      "IAR-000000001",
+      "SPEC-000000002",
+      "SPEC-000000003",
+      "AMD-000000003",
+      "COR-000000004"
+    ],
+    "IAR-000000001": [
+      "SPEC-000000002",
+      "SPEC-000000003",
+      "AMD-000000003",
+      "COR-000000004"
+    ]
+  },
+  "excluded_component_ids": [],
+  "known_conflicts": [
+    "HOC-000000001 remains corpus-wide incomplete outside the bounded LC-001 through LC-022 scope.",
+    "DF-000130 through DF-000143, DF-000145, and DF-000148 through DF-000149 remain unavailable.",
+    "Availability of the Taxonomy does not establish component presence or a concealment conclusion.",
+    "Neo4j projection is neither included nor authorized by this Manifest."
+  ],
+  "permitted_engine_mode": "PRODUCTION",
+  "predecessor_manifest_id": "MAN-000000001",
+  "fixity_sha256": "b22318172e7adcb2767cc6178925af28a3af7d18e6e87f23ab297fbe5a10bac4",
+  "fixity_scope_paths": [
+    "records/inquiry-architecture/IAR-000000001.yaml"
+  ],
+  "fixity_construction": "SHA-256 over each lexicographically sorted UTF-8 repository path, NUL, raw file bytes, NUL.",
+  "build_date": "2026-07-23",
+  "changelog": [
+    "Successor release making the Inner Sanctum always open during text analysis.",
+    "Supplies the complete Taxonomy to every inquiry phase while preserving component-specific evidentiary activation.",
+    "Preserves MAN-000000001 as the historical closed-by-default release."
+  ],
+  "released_at": "2026-07-23T16:30:00-05:00",
+  "responsible_authority_id": "REPOSITORY_OWNER_UNDER_AMD-000000003"
+}

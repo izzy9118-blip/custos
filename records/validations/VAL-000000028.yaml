@@ -1,0 +1,31 @@
+identifier: "VAL-000000028"
+class: "Validation Record"
+title: "Always-Open Inner Sanctum Correction Validation"
+version: "1.0"
+validation_date: "2026-07-23"
+validation_status: "PASS_SUBJECT_TO_OWNER_MERGE"
+validation_scope:
+  - "Continuous Taxonomy availability across all ten IAR phases"
+  - "Component-specific evidentiary activation and epistemic limits"
+  - "Runtime, CLI, documentation, and regression-test coherence"
+validated_objects:
+  - "COR-000000004"
+  - "IAR-000000001"
+  - "HOC-000000001"
+  - "MAN-000000002"
+validation_findings:
+  inner_sanctum_available_from_phase_one: "PASS"
+  complete_taxonomy_supplied_to_every_reasoning_phase: "PASS"
+  component_activation_remains_evidence_governed: "PASS"
+  automatic_secret_hunting_remains_prohibited: "PASS"
+  source_taxonomy_content_preserved: "PASS"
+  predecessor_history_preserved: "PASS"
+test_evidence:
+  status: "PENDING_CI_AT_COMMIT_TIME"
+limitations:
+  - "Validation establishes internal conformity, not historical or philosophical truth."
+  - "No LC component is activated for the active Citation Object by this record."
+  - "Final authority depends on authenticated repository-owner merge."
+authority_basis:
+  decision_id: "DDR-000000011"
+  lane: "PROTECTED_GOVERNANCE_LANE"
