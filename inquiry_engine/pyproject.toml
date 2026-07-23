@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "custos-inquiry-engine"
-version = "0.1.0"
+version = "0.2.0"
 description = "Local, deterministic scaffold for the Strauss Inquiry Engine"
 readme = "README.md"
 requires-python = ">=3.11"
@@ -27,6 +27,8 @@ where = ["src"]
 [tool.setuptools.package-data]
 custos_engine = [
   "schemas/*.json",
+  "federation/*.json",
+  "federation/schemas/*.json",
   "literary_concealment/*/schemas/*.json",
   "literary_concealment/*/techniques/*.json",
 ]

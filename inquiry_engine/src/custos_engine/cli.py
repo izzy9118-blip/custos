@@ -16,6 +16,10 @@ from custos_engine.cognition.hermeneutic_gate import (
 from custos_engine.cognition.procedure_loader import ProcedureLoader
 from custos_engine.cognition.taxonomy_loader import TaxonomyLoader
 from custos_engine.config.settings import EngineSettings
+from custos_engine.federation.adapter import (
+    FederationRunConfig,
+    execute_federation_run,
+)
 from custos_engine.graph.projection_manifest_loader import ProjectionManifestLoader
 from custos_engine.graph.documentary_retrieval import VerifiedGraphDocumentaryRetriever
 from custos_engine.graph.neo4j_client import Neo4jClient
@@ -48,6 +52,27 @@ def reasoning_schema_command(args: argparse.Namespace) -> int:
     }
     value = schemas if args.kind == "both" else schemas[args.kind]
     print(json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True))
+    return 0
+
+
+def federation_run_command(args: argparse.Namespace) -> int:
+    output = execute_federation_run(
+        FederationRunConfig(
+            repo_root=Path(args.repo_root),
+            release_commit=args.release_commit,
+            envelope_path=Path(args.envelope),
+            evidence_bundle_path=Path(args.evidence_bundle),
+            output_dir=Path(args.output),
+            reasoner_command=args.reasoner_command,
+            reasoner_timeout_seconds=args.reasoner_timeout_seconds,
+            reasoner_provider=args.reasoner_provider,
+            reasoner_model=args.reasoner_model,
+            reasoner_model_revision=args.reasoner_model_revision,
+            prompt_id=args.prompt_id,
+            prompt_version=args.prompt_version,
+        )
+    )
+    print(output)
     return 0
 
 
@@ -385,6 +410,45 @@ def build_parser() -> argparse.ArgumentParser:
         default="both",
     )
     schema_parser.set_defaults(handler=reasoning_schema_command)
+
+    federation_parser = subcommands.add_parser(
+        "federation-run",
+        help=(
+            "Validate a Sanctum Inquiry Envelope, execute an isolated Custos "
+            "inquiry, and emit a candidate Ministerial Report."
+        ),
+    )
+    federation_parser.add_argument("--repo-root", required=True)
+    federation_parser.add_argument(
+        "--release-commit",
+        required=True,
+        help=(
+            "Exact Custos release commit selected by the Inquiry Envelope; "
+            "the checkout must be clean and at this commit."
+        ),
+    )
+    federation_parser.add_argument("--envelope", required=True)
+    federation_parser.add_argument("--evidence-bundle", required=True)
+    federation_parser.add_argument("--output", required=True)
+    federation_parser.add_argument(
+        "--reasoner-command",
+        required=True,
+        help=(
+            "Provider-neutral phase reasoner command. It is executed directly "
+            "without a shell."
+        ),
+    )
+    federation_parser.add_argument(
+        "--reasoner-timeout-seconds",
+        type=float,
+        default=120.0,
+    )
+    federation_parser.add_argument("--reasoner-provider", required=True)
+    federation_parser.add_argument("--reasoner-model", required=True)
+    federation_parser.add_argument("--reasoner-model-revision")
+    federation_parser.add_argument("--prompt-id", required=True)
+    federation_parser.add_argument("--prompt-version", required=True)
+    federation_parser.set_defaults(handler=federation_run_command)
 
     project_parser = subcommands.add_parser(
         "project-neo4j",
