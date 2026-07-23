@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:custos:federation:adapter-manifest:1.0.0",
+  "title": "Custos Sanctum Federation Adapter Manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "interface_id",
+    "interface_version",
+    "status",
+    "minister",
+    "repository",
+    "contract_source",
+    "contracts",
+    "engine",
+    "evidence_bundle",
+    "output",
+    "limitations"
+  ],
+  "properties": {
+    "interface_id": {
+      "const": "CUSTOS-SANCTUM-FEDERATION"
+    },
+    "interface_version": {
+      "const": "1.0.0"
+    },
+    "status": {
+      "const": "AVAILABLE"
+    },
+    "minister": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "minister_id",
+        "manifest_id",
+        "manifest_version",
+        "name",
+        "office"
+      ],
+      "properties": {
+        "minister_id": {
+          "const": "MIN-000000001"
+        },
+        "manifest_id": {
+          "const": "MNF-000000001"
+        },
+        "manifest_version": {
+          "const": "1.1.0"
+        },
+        "name": {
+          "const": "Leo Strauss"
+        },
+        "office": {
+          "const": "Minister of Political Philosophy"
+        }
+      }
+    },
+    "repository": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "full_name",
+        "canonical_authority"
+      ],
+      "properties": {
+        "full_name": {
+          "const": "izzy9118-blip/custos"
+        },
+        "canonical_authority": {
+          "const": "GIT"
+        }
+      }
+    },
+    "contract_source": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "repository_full_name",
+        "git_commit"
+      ],
+      "properties": {
+        "repository_full_name": {
+          "const": "izzy9118-blip/Sanctum"
+        },
+        "git_commit": {
+          "$ref": "#/$defs/gitCommit"
+        }
+      }
+    },
+    "contracts": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "inquiry_envelope",
+        "ministerial_report"
+      ],
+      "properties": {
+        "inquiry_envelope": {
+          "$ref": "#/$defs/contract"
+        },
+        "ministerial_report": {
+          "$ref": "#/$defs/contract"
+        }
+      }
+    },
+    "engine": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "version",
+        "governed_commit",
+        "manifest_git_commit",
+        "manifest_path",
+        "manifest_schema_path",
+        "taxonomy_schema_path",
+        "procedure_schema_path"
+      ],
+      "properties": {
+        "name": {
+          "const": "Custos Inquiry Engine"
+        },
+        "version": {
+          "$ref": "#/$defs/versionLabel"
+        },
+        "governed_commit": {
+          "$ref": "#/$defs/gitCommit"
+        },
+        "manifest_git_commit": {
+          "$ref": "#/$defs/gitCommit"
+        },
+        "manifest_path": {
+          "$ref": "#/$defs/repositoryPath"
+        },
+        "manifest_schema_path": {
+          "$ref": "#/$defs/repositoryPath"
+        },
+        "taxonomy_schema_path": {
+          "$ref": "#/$defs/repositoryPath"
+        },
+        "procedure_schema_path": {
+          "$ref": "#/$defs/repositoryPath"
+        }
+      }
+    },
+    "evidence_bundle": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_id",
+        "vendored_path",
+        "sha256"
+      ],
+      "properties": {
+        "schema_id": {
+          "const": "urn:custos:federation:evidence-bundle:1.0.0"
+        },
+        "vendored_path": {
+          "$ref": "#/$defs/repositoryPath"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        }
+      }
+    },
+    "output": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "report_path",
+        "candidate_only",
+        "secretary_validation_status"
+      ],
+      "properties": {
+        "report_path": {
+          "const": "ministerial-report.json"
+        },
+        "candidate_only": {
+          "const": true
+        },
+        "secretary_validation_status": {
+          "const": "NOT_YET_VALIDATED"
+        }
+      }
+    },
+    "limitations": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 5000
+      }
+    }
+  },
+  "$defs": {
+    "gitCommit": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{40}$"
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "versionLabel": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)(?:\\.(0|[1-9][0-9]*)){1,2}$"
+    },
+    "repositoryPath": {
+      "type": "string",
+      "pattern": "^(?!/)(?!.*//)(?!.*(?:^|/)(?:\\.|\\.\\.)(?:/|$))[A-Za-z0-9._-]+(?:/[A-Za-z0-9._-]+)*$"
+    },
+    "contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "schema_id",
+        "source_path",
+        "vendored_path",
+        "sha256",
+        "source_git_blob_sha"
+      ],
+      "properties": {
+        "schema_id": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500
+        },
+        "source_path": {
+          "$ref": "#/$defs/repositoryPath"
+        },
+        "vendored_path": {
+          "$ref": "#/$defs/repositoryPath"
+        },
+        "sha256": {
+          "$ref": "#/$defs/sha256"
+        },
+        "source_git_blob_sha": {
+          "type": "string",
+          "pattern": "^(?:[0-9a-f]{40}|[0-9a-f]{64})$"
+        }
+      }
+    }
+  }
+}

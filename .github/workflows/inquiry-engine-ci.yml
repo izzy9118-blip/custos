@@ -3,15 +3,31 @@ name: Inquiry Engine CI
 on:
   pull_request:
     paths:
+      - "amendments/**"
+      - "candidates/**"
+      - "engine_training/**"
+      - "governance/**"
       - "inquiry_engine/**"
       - "ledgers/**"
+      - "manifests/**"
+      - "records/**"
+      - "registers/**"
+      - "specifications/**"
       - ".github/workflows/inquiry-engine-ci.yml"
   push:
     branches:
       - main
     paths:
+      - "amendments/**"
+      - "candidates/**"
+      - "engine_training/**"
+      - "governance/**"
       - "inquiry_engine/**"
       - "ledgers/**"
+      - "manifests/**"
+      - "records/**"
+      - "registers/**"
+      - "specifications/**"
       - ".github/workflows/inquiry-engine-ci.yml"
   workflow_dispatch:
 

@@ -230,6 +230,14 @@ candidate packages. It cannot admit or certify its own output.
 Neo4j, when used, is a derived and rebuildable retrieval projection. Git
 remains the source of documentary evidence.
 
+Custos also operates independently as the repository of Leo Strauss, Minister
+of Political Philosophy, within
+[Sanctum](https://github.com/izzy9118-blip/Sanctum). Federation does not merge
+the repositories or transfer Custos's corpus, method, memory, or authority to
+Sanctum. A commit-pinned adapter accepts an immutable Assembly Inquiry Envelope
+and returns only a bounded, provenance-bearing candidate Ministerial Report for
+independent Secretary validation.
+
 Installation, commands, implementation boundaries, and tests are documented in
 the [Inquiry Engine README](inquiry_engine/README.md).
 

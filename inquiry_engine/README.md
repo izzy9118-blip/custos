@@ -222,6 +222,67 @@ An incomplete phase may terminate only with a bounded documentary reason such
 as missing evidence, exhausted evidence, underdetermination, scope excess, or
 an authority stop.
 
+## Run as a Sanctum minister
+
+The federation adapter is a thin boundary around the same Inquiry Engine. It
+accepts the exact Sanctum Inquiry Envelope, verifies that the envelope selects
+Leo Strauss and the checked-out Custos release commit, re-reads every declared
+evidence excerpt from reachable Git history, runs the ordinary ten-phase
+procedure in an isolated context, and emits a schema-valid candidate
+`ministerial-report.json`.
+
+The adapter vendors byte-identical copies of Sanctum's version 1.0 Inquiry
+Envelope and Ministerial Report schemas from commit
+`9998d1473cf6ac10ed00991c40afd3d5e4e3644a`. Their paths, hashes, source blob
+identifiers, engine pins, limitations, and minister identity are declared in
+`src/custos_engine/federation/adapter-manifest.json`.
+
+Custos selects evidence independently of Sanctum. Version 1.0 uses one
+content-addressed Evidence Bundle whose entries declare a Git commit, repository
+path, inclusive line range, and expected excerpt SHA-256. The adapter never
+trusts embedded corpus text: it reconstructs each excerpt with
+`git show <commit>:<path>`, verifies the line range and hash, and bounds both
+per-excerpt and total input size. Neo4j is not required for this lane.
+
+Run from a clean checkout whose `HEAD` is the exact release selected in the
+envelope. Keep runtime inputs and output outside that checkout so they do not
+invalidate the clean-state check:
+
+```bash
+custos-inquiry federation-run \
+  --repo-root /path/to/custos \
+  --release-commit <custos-release-commit> \
+  --envelope /path/to/inquiry-envelope.json \
+  --evidence-bundle /path/to/evidence-bundle.json \
+  --output /path/to/runs/INQ-000000001/MIN-000000001 \
+  --reasoner-command "python /path/to/reasoner_adapter.py" \
+  --reasoner-provider <provider> \
+  --reasoner-model <model> \
+  --reasoner-model-revision <revision> \
+  --prompt-id <prompt-id> \
+  --prompt-version <version>
+```
+
+The output directory is created exclusively and is never overwritten. It
+contains the ordinary Custos inquiry package, the validated envelope and
+Evidence Bundle snapshots, and the Ministerial Report. The package manifest
+binds all three federation artifacts by hash. If a validly addressed run fails
+after envelope acceptance, the adapter still returns a schema-valid report with
+`termination.status: FAILED`; an invalid or tampered envelope is rejected
+before any report identity is trusted.
+
+Federation changes no Custos authority:
+
+- model statements remain candidate Supported Inferences, Working Hypotheses,
+  or Unresolved Questions;
+- the adapter cannot create a Documented Finding, admit an object, certify a
+  result, or update Cognitive Memory;
+- the report always enters Sanctum with
+  `secretary_validation_status: NOT_YET_VALIDATED`; and
+- Sanctum's Secretary must independently verify the envelope, registry,
+  repository and manifest pins, evidence locators and bytes, hashes,
+  references, timestamps, termination, and report integrity.
+
 ### Build the derived Neo4j projection
 
 Install the optional driver and place the database password in an environment
