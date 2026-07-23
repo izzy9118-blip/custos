@@ -49,18 +49,18 @@ def test_project_governance_package_preserves_active_and_superseded_versions():
     artifacts = {item["path"]: item for item in spec["constituent_artifacts"]}
 
     assert spec["authority_basis"]["lane"] == "PROTECTED_GOVERNANCE_LANE"
-    assert set(artifacts) == {
+    assert {
         path for path in EXPECTED_SOURCE_HASHES if "chatgpt-project" in path
-    }
+    }.issubset(artifacts)
     assert artifacts[
         "candidates/chatgpt-project/v1.0/Custos_ChatGPT_Project_Instructions_v1.0.txt"
     ]["disposition"] == "SUPERSEDED_HISTORY"
     assert artifacts[
         "candidates/chatgpt-project/v1.1/Custos_ChatGPT_Project_Instructions_v1.1.txt"
-    ]["disposition"] == "ACTIVE"
+    ]["disposition"] == "SUPERSEDED_HISTORY"
     assert artifacts[
         "candidates/chatgpt-project/v1.1/Custos_Project_Startup_Procedure_v1.1.txt"
-    ]["disposition"] == "ACTIVE"
+    ]["disposition"] == "SUPERSEDED_HISTORY"
     assert any(
         "does not amend admitted Repository Documents" in boundary
         for boundary in spec["governance_boundaries"]
@@ -145,8 +145,9 @@ def test_identifier_ledger_records_the_complete_protected_unit():
         "VER-000000028",
     ]
 
-    assert ledger["version"] == "1.15"
-    assert ledger["entries"][-len(expected):] == expected
+    assert tuple(map(int, ledger["version"].split("."))) >= (1, 15)
+    start = ledger["entries"].index(expected[0])
+    assert ledger["entries"][start:start + len(expected)] == expected
     for identifier in expected:
         assignment = _yaml(
             root

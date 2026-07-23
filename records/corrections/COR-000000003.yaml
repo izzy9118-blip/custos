@@ -1,0 +1,58 @@
+identifier: "COR-000000003"
+class: "Correction Record"
+title: "Chapter I, Citation 1 Interpretive-Initiative Correction"
+version: "1.0"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+admission_status: "ADMITTED_UPON_OWNER_MERGE"
+certification_status: "CERTIFIED_UPON_OWNER_MERGE"
+effective_date: "2026-07-23"
+source_record:
+  path: "candidates/citation-objects/chapter-01-citation-01-interpretive-initiative-correction-v1.1.md"
+  sha256: "a97f7fb4c6a5341bd6f7a47f4cf389778460a2412350cd64562e882f1082a0a0"
+qualified_records:
+  - path: "candidates/citation-objects/chapter-01-citation-01-shared-examination-correction-v1.0.md"
+    canonical_record_id: "COR-000000002"
+  - path: "candidates/chatgpt-project/v1.1/Custos_Codex_Amendment_001_Shared_Textual_Examination_v1.0.txt"
+    canonical_package_id: "SPEC-000000004"
+  - path: "candidates/chatgpt-project/v1.1/Custos_ChatGPT_Project_Instructions_v1.1.txt"
+    canonical_package_id: "SPEC-000000004"
+  - path: "candidates/chatgpt-project/v1.1/Custos_Project_Startup_Procedure_v1.1.txt"
+    canonical_package_id: "SPEC-000000004"
+triggering_event:
+  date: "2026-07-23"
+  ai_question: >
+    Before returning to Strauss: do you think Chapter 8 breaks the
+    republic–principality division, or shows that the division remains real
+    but is more complicated than it first appeared?
+  owner_correction: >
+    This is wrong, an ai running our program should never ask the user these
+    sorts of questions. If the user disagrees they will say.
+correction_scope:
+  - "Reclassifies the Shared Examination Packet's Open Questions as research problems Custos must investigate rather than questions assigned to the user."
+  - "Removes the required opening question, user-response pause, and turn-ending question from active operation."
+  - "Requires Custos to state and test the strongest warranted reading and continue unless a true dependency exists."
+  - "Preserves user intervention without treating silence as agreement or a blocker."
+  - "Advances the Chapter I state to DOCUMENTARY_PREPARATION_READY_FOR_AI_LED_SHARED_EXAMINATION."
+certified_limitations:
+  - "The correction adopts no answer to the Chapter 8 or republic–principality question."
+  - "The correction certifies no substantive interpretation or user agreement."
+  - "The correction does not certify Chapter I, Citation 1 as a completed Citation Object."
+  - "Primary-language verification remains unresolved."
+authority_basis:
+  amendment_id: "AMD-000000003"
+  lane: "PROTECTED_GOVERNANCE_LANE"
+  decision_id: "DDR-000000010"
+  certification_record_id: "CER-000000003"
+  validation_record_id: "VAL-000000027"
+version_history:
+  - version_record_id: "VER-000000030"
+    version: "1.0"
+    event: "PROTECTED_ADMISSION_AND_CERTIFICATION"
+    effective_date: "2026-07-23"
+audit_history:
+  - event_date: "2026-07-23"
+    event_type: "INTERPRETIVE_INITIATIVE_CORRECTION_PROPOSED"
+    note: "Takes effect only upon authenticated repository-owner merge."

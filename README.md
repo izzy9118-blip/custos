@@ -9,9 +9,10 @@ inquiry as accurately as the documentary evidence permits.
 
 The project has two inseparable activities:
 
-1. **Shared textual examination.** A human reader and an AI read Strauss,
-   follow his citations, reconstruct the cited authors, test competing
-   readings, and preserve uncertainty.
+1. **Shared textual examination.** Custos reads Strauss in the user’s
+   presence, follows his citations, reconstructs the cited authors, states and
+   tests the strongest reading, and preserves uncertainty. The user may
+   intervene, disagree, correct, or redirect at any point.
 2. **Documentary preservation.** GitHub records the sources, witnesses,
    provenance, versions, disagreements, decisions, and limits needed for
    another investigator to reproduce the inquiry.
@@ -34,8 +35,8 @@ conclusion selected in advance.
 Each Citation Object moves through five stages:
 
 1. **First encounter with Strauss:** Establish the exact passage, immediate
-   context, complete note, and explicit citations. Read the problem together
-   before allowing the cited source to settle its meaning.
+   context, complete note, and explicit citations. Expose and begin examining
+   the problem before allowing the cited source to settle its meaning.
 2. **Documentary recovery:** Fix identifiable textual witnesses; record
    editions, translations, locations, hashes, editorial work, OCR limits, and
    unresolved source problems.
@@ -49,10 +50,12 @@ Each Citation Object moves through five stages:
    disagreements, uncertainty, and contribution provenance without forcing
    consensus.
 
-Documentary preparation may be done independently. Substantive inquiry may
-not. Fixing witnesses, filling fields, passing validation, or committing a
-candidate does not substitute for examining the central textual problem
-together.
+Documentary preparation may be done independently. Substantive inquiry must be
+conducted openly in the shared conversation rather than hidden inside a
+finished report. Fixing witnesses, filling fields, passing validation, or
+committing a candidate does not substitute for examining the central textual
+problem. User response is not a gate: Custos bears responsibility for stating
+and testing the strongest warranted reading, and the user may intervene.
 
 ## Documentary discipline
 
@@ -77,12 +80,13 @@ Substantive propositions must be identified by kind:
 | **Documented Finding** | States what the fixed documentary evidence directly supports. |
 | **Supported Inference** | Offers a cautious synthesis built from documented findings. |
 | **Working Hypothesis** | Directs further investigation without claiming evidentiary authority. |
-| **Comparative Question** | Preserves a text-grounded problem whose answer remains open. |
+| **Comparative Question** | Preserves a text-grounded problem that Custos must investigate and may leave open when the evidence does not resolve it. |
 | **Unresolved Uncertainty** | Records a material limit, ambiguity, or missing source. |
 
-Custos also distinguishes a user’s reading, an AI proposal, and a judgment
-tested together. No proposition may silently rise above its evidence or be
-attributed to the user without support in the inquiry record.
+Custos also distinguishes an AI judgment, an express user reading, and a
+judgment tested together. User silence is neither a blocker nor agreement. No
+proposition may silently rise above its evidence or be attributed to the user
+without support in the inquiry record.
 
 ## Outer Process and Inner Sanctum
 
@@ -119,22 +123,24 @@ The released cognitive-memory entrypoint is
 ChatGPT Project governance package is
 [SPEC-000000004](records/specifications/SPEC-000000004.yaml), certified within
 the limits stated by
-[CER-000000002](records/certifications/CER-000000002.yaml).
+[CER-000000003](records/certifications/CER-000000003.yaml).
 
 ## Current production stage
 
 - **Work:** Leo Strauss, *Thoughts on Machiavelli*, Chapter I, note 1
 - **Strauss’s cited passages:** *The Prince*, chapters 1, 2, and 8, beginnings
-- **Current state:** `DOCUMENTARY_PREPARATION_READY_FOR_SHARED_EXAMINATION`
+- **Current state:** `DOCUMENTARY_PREPARATION_READY_FOR_AI_LED_SHARED_EXAMINATION`
 
 The Strauss anchor, complete note boundary, Ricci/Vincent witness, OCR limits,
 and recovered English chapter openings have been admitted and certified only
 as a bounded Evidence Record:
 [EVR-000000001](records/evidence/EVR-000000001.yaml).
 
-The procedural correction that restored shared examination is admitted and
-certified as
-[COR-000000002](records/corrections/COR-000000002.yaml).
+The first procedural correction that restored shared examination is admitted
+and certified as
+[COR-000000002](records/corrections/COR-000000002.yaml). The forward correction
+that prevents shared examination from becoming user interrogation is
+[COR-000000003](records/corrections/COR-000000003.yaml).
 
 The Citation Object itself is **not complete, admitted, or certified**. It has
 no canonical Citation Object identifier. Primary-language verification against
@@ -143,17 +149,20 @@ not been reached.
 
 ### Resume the inquiry here
 
-Open the
+Open the historical
 [Chapter I, Citation 1 Shared Examination Packet](candidates/citation-objects/chapter-01-citation-01-shared-examination-correction-v1.0.md)
-and begin with the live question:
+with its
+[Interpretive-Initiative Correction](candidates/citation-objects/chapter-01-citation-01-interpretive-initiative-correction-v1.1.md).
 
-> Before following Strauss’s note, what does his phrase **“Above all”** lead us
-> to expect that the beginnings of *The Prince* chapters 1, 2, and 8 will
-> prove about the relation between *The Prince* and the *Discourses*?
+Custos must begin by stating and testing its strongest reading of Strauss’s
+**“Above all”** and the beginnings of *The Prince* chapters 1, 2, and 8. The
+packet’s Comparative Questions are problems for Custos to work through, not a
+questionnaire for the user. Custos should continue through the textual evidence
+unless the user chooses to intervene.
 
-Do not replace this stage with another source-recovery report. Read Strauss
-first, preserve the reader’s initial understanding, follow the three citations,
-reconstruct Machiavelli, and then return to Strauss.
+Do not replace this stage with another source-recovery report or a forced-choice
+question. Read Strauss first, follow the three citations, reconstruct
+Machiavelli, test the strongest alternative, and then return to Strauss.
 
 ## Start or resume work
 
@@ -187,10 +196,12 @@ Before changing the repository:
 5. Read the active governing package:
    - [Custos Codex v1.0](candidates/chatgpt-project/v1.0/Custos_Codex_Complete_v1.0.txt)
    - [Amendment 001 — Shared Textual Examination](candidates/chatgpt-project/v1.1/Custos_Codex_Amendment_001_Shared_Textual_Examination_v1.0.txt)
-   - [Project Instructions v1.1](candidates/chatgpt-project/v1.1/Custos_ChatGPT_Project_Instructions_v1.1.txt)
-   - [Startup Procedure v1.1](candidates/chatgpt-project/v1.1/Custos_Project_Startup_Procedure_v1.1.txt)
+   - [Amendment 002 — Interpretive Initiative](candidates/chatgpt-project/v1.2/Custos_Codex_Amendment_002_Interpretive_Initiative_v1.0.txt)
+   - [Project Instructions v1.2](candidates/chatgpt-project/v1.2/Custos_ChatGPT_Project_Instructions_v1.2.txt)
+   - [Startup Procedure v1.2](candidates/chatgpt-project/v1.2/Custos_Project_Startup_Procedure_v1.2.txt)
 6. Resume the last evidenced production phase. Do not redesign the system or
-   skip the Shared-Examination Gate.
+   skip the Shared-Examination Gate. Do not turn that gate into a request for
+   the user to perform or approve the interpretation.
 
 Every work session should end with the exact state reached, affected paths,
 validation evidence, branch and commit SHA when applicable, preserved
