@@ -157,6 +157,24 @@ reconstruct Machiavelli, and then return to Strauss.
 
 ## Start or resume work
 
+### Bootstrap a fresh runtime
+
+A new Work environment may have a compatible Python interpreter but none of
+Custos's declared packages. From the repository root, bootstrap the Inquiry
+Engine before treating missing imports as a blocker:
+
+```bash
+python inquiry_engine/bootstrap.py
+```
+
+The command creates an isolated `.venv`, installs `inquiry_engine[dev]`, fetches
+full Git history when a shallow clone cannot resolve the repository's pinned
+commits, runs the complete Inquiry Engine test suite, and verifies the
+`custos-inquiry` CLI. Missing declared dependencies alone are ordinary
+environment setup—not a runtime defect or lawful stop. Stop only if the
+installation or validation command actually fails, and preserve its exact
+command and error output.
+
 Before changing the repository:
 
 1. Confirm the repository is `izzy9118-blip/custos`.
