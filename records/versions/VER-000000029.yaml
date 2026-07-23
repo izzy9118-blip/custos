@@ -1,0 +1,12 @@
+identifier: "VER-000000029"
+class: "Version Record"
+entity_id: "SPEC-000000004"
+previous_version: "1.0"
+current_version: "1.1"
+effective_date: "2026-07-23"
+change_type: "PROTECTED_INTERPRETIVE_INITIATIVE_CORRECTION"
+source_decision_id: "DDR-000000010"
+authority_id: "CAG-000000002"
+change_summary: >
+  Makes v1.2 plus Amendment 002 operative, preserves v1.1 as superseded
+  history, and removes interpretive polling and the user-response pause.

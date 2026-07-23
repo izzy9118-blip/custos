@@ -1,0 +1,52 @@
+identifier: "DDR-000000010"
+class: "Documentary Decision Record"
+decision_type: "PROTECTED_INTERPRETIVE_INITIATIVE_GOVERNANCE_CORRECTION"
+title: "Custos Interpretive-Initiative Governance Correction"
+decision_status: "PROPOSED_UNTIL_OWNER_MERGE"
+decision_outcome: "VERSION_ADMIT_AND_CERTIFY_BOUNDED_SCOPE"
+decision_date: "2026-07-23"
+authority_basis:
+  amendment_id: "AMD-000000003"
+  lane: "PROTECTED_GOVERNANCE_LANE"
+  protected_triggers:
+    - "FOUNDATIONAL_OR_CONSTITUTIONAL_CHANGE"
+    - "EVIDENCE_EPISTEMIC_OR_SAFEGUARD_CHANGE"
+  explicit_owner_direction: >
+    This is wrong, an ai running our program should never ask the user these
+    sorts of questions. If the user disagrees they will say.
+  final_authorization_event: "AUTHENTICATED_REPOSITORY_OWNER_MERGE"
+decision_instrument_path: "governance/certification-decisions/DDR-000000010_Custos_Interpretive_Initiative_Governance_Correction_v1.0.md"
+declared_actions:
+  - action: "VERSION_AND_CERTIFY_BOUNDED_SCOPE"
+    subject_id: "SPEC-000000004"
+    subject_version: "1.1"
+    certification_record_id: "CER-000000003"
+  - action: "ADMIT"
+    subject_id: "COR-000000003"
+  - action: "CERTIFY_BOUNDED_SCOPE"
+    subject_id: "COR-000000003"
+    certification_record_id: "CER-000000003"
+validation_record_id: "VAL-000000027"
+version_record_ids:
+  - "VER-000000029"
+  - "VER-000000030"
+preserved_source_commit: "47b2a410ee0fc41371eb475291b467df311d0473"
+preservation_rule: >
+  The complete v1.0 and v1.1 Project governance files and the first Shared
+  Examination Correction remain unchanged. Version 1.2 and COR-000000003
+  correct operation prospectively.
+non_authorizations:
+  - "Does not certify Chapter I, Citation 1 as a completed Citation Object."
+  - "Does not adopt an answer to the Chapter 8 or republic–principality question."
+  - "Does not infer user agreement from silence."
+  - "Does not remove Comparative Question as an epistemic class."
+  - "Does not weaken primary-text priority, independent reconstruction, Reader Transformation, or the Inner Sanctum gate."
+  - "Does not amend admitted Repository Documents 000001 through 000012."
+  - "Does not treat CI success as historical or philosophical proof."
+effective_condition: >
+  The version, admission, and bounded certifications take effect together only
+  upon authenticated repository-owner merge of the containing pull request.
+audit_history:
+  - event_date: "2026-07-23"
+    event_type: "PROTECTED_INTERPRETIVE_INITIATIVE_UNIT_PREPARED"
+    note: "The branch and pull request remain non-effective before owner merge."
