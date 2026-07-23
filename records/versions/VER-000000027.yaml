@@ -1,0 +1,13 @@
+identifier: "VER-000000027"
+class: "Version Record"
+entity_id: "EVR-000000001"
+previous_version: null
+current_version: "1.0"
+effective_date: "2026-07-22"
+change_type: "PROTECTED_BOUNDED_EVIDENCE_ADMISSION_AND_CERTIFICATION"
+source_decision_id: "DDR-000000009"
+authority_id: "CAG-000000002"
+change_summary: >
+  Admits and certifies the Chapter I, Citation 1 documentary-preparation
+  artifact as an Evidence Record without certifying a Citation Object.
+
