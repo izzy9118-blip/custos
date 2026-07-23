@@ -51,16 +51,34 @@ inquiry_engine/
 
 ## Install locally
 
-From inside this directory:
+From the repository root, use the bootstrap command:
 
 ```bash
-python -m pip install -e ".[dev]"
+python inquiry_engine/bootstrap.py
 ```
+
+It creates `.venv`, installs the package and development dependencies, fetches
+full Git history when a shallow clone cannot resolve the pinned commits used by
+integration tests, runs the complete test suite, and verifies the CLI. A
+compatible Python interpreter with missing packages is an unbootstrapped
+environment, not a runtime defect.
 
 Neo4j support is optional:
 
 ```bash
-python -m pip install -e ".[dev,neo4j]"
+python inquiry_engine/bootstrap.py --neo4j
+```
+
+For a fast install plus CLI smoke test without pytest:
+
+```bash
+python inquiry_engine/bootstrap.py --skip-tests
+```
+
+The underlying manual install remains:
+
+```bash
+python -m pip install -e "./inquiry_engine[dev]"
 ```
 
 ## Create a development run
