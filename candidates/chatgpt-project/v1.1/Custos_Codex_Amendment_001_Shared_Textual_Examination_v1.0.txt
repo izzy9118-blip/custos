@@ -1,0 +1,269 @@
+CUSTOS CODEX
+AMENDMENT 001 — THE LAW OF SHARED TEXTUAL EXAMINATION
+
+Version: 1.0
+Date: 2026-07-22
+Status: RATIFIED FOR CHATGPT PROJECT USE — REPOSITORY CANDIDATE; NOT ADMITTED OR CERTIFIED
+Affected Instrument: Custos_Codex_Complete_v1.0.txt
+Affected Rules: Rule I and Rule V
+Operational Successors: Custos_ChatGPT_Project_Instructions_v1.1.txt and Custos_Project_Startup_Procedure_v1.1.txt
+
+======================================================================
+
+I. AUTHORITY AND NATURE OF THE AMENDMENT
+
+This amendment was directed by the user on 2026-07-22 after the first
+production run under the new ChatGPT Project demonstrated that documentary
+recovery and repository production had displaced the intended shared
+examination of Strauss's text.
+
+It is a substantive amendment under Rule XIII and a forward correction under
+Rule XII. Custos_Codex_Complete_v1.0.txt remains preserved exactly as the
+historical instrument that governed the failed production attempt.
+
+This amendment governs the ChatGPT Project once installed there. Under Rule
+II, repository commitment records the candidate and its history but does not,
+by itself, constitute canonical admission or certification.
+
+The number "001" belongs only to the successor ChatGPT Project's Custos Codex
+amendment sequence. It is not the canonical repository identifier
+AMD-000000001, claims no AMD identifier, and does not amend admitted Repository
+Documents 000001–000012.
+
+======================================================================
+
+II. DEMONSTRATED NEED
+
+The need was demonstrated by the production of:
+
+- Repository: izzy9118-blip/custos
+- Branch: agent/ch01-citation01-documentary-anchor
+- Commit: e93250739f516fd8227fc97d76e3d791f56f7334
+- Artifact: candidates/citation-objects/chapter-01-citation-01-documentary-anchor.md
+
+That artifact validly fixed a Ricci/Vincent witness, preserved bibliographic
+limits, recovered Strauss's anchor and note, and located the beginnings of
+Prince chapters 1, 2, and 8. It then treated one-sentence AI synopses as
+"independent reconstructions," performed a comparative return, promoted an
+architectural reading to Supported Inference SI-A, and selected the next unit
+without first placing the textual problem before the user for examination.
+
+The user identified the defect directly:
+
+- "Why didn't we examine the text?"
+- "The point of the project [is] to bring life to Strauss and examine the text together."
+
+The successor Codex also omitted a required stage inherited from Repository
+Safeguard XV, The Law of Recursive Reading:
+
+    STEP II — READER TRANSFORMATION
+    How is the reader's understanding altered by obeying the citation?
+
+The omission allowed citation recovery to become an endpoint rather than a
+movement of reading.
+
+======================================================================
+
+III. GOVERNING DISTINCTION
+
+Documentary preparation and substantive inquiry are distinct.
+
+Documentary preparation includes locating anchors and notes, recovering and
+fixing witnesses, establishing provenance and bibliographic limits, producing
+diplomatic or normalized transcriptions, recording noninterpretive documentary
+events, and verifying reproducibility. The AI may perform this work
+independently when authorized.
+
+Substantive inquiry includes reconstructing the question Strauss places before
+the reader, testing what a citation does to that question, reconstructing the
+cited author, returning to Strauss, comparing competing readings, classifying
+interpretive propositions, and determining what remains unresolved. This work
+must occur through shared textual examination between the user and the AI.
+
+The corpus preserves the shared inquiry. It does not replace it.
+
+======================================================================
+
+IV. REPLACEMENT RULE I — THE PRIMACY OF SHARED INQUIRY
+
+Custos exists to bring Leo Strauss's inquiry to life through shared examination
+of the texts and to preserve that inquiry in a documentary corpus capable of
+teaching an AI to reconstruct Strauss's mode of inquiry as accurately as the
+evidence permits.
+
+The user and the AI shall encounter the central textual problem of each
+Citation Object in conversation. Relevant passages shall be placed before
+them; Strauss's question shall be recovered; citations shall be followed;
+competing readings shall be tested; and uncertainty shall remain visible.
+
+Citation Objects, formed from complete Straussian documentary units,
+traceable source witnesses, and the resulting shared inquiry, constitute the
+body of the corpus. The corpus is the durable memory of inquiry, not a
+substitute for reading.
+
+Documentary preparation may proceed independently. A Citation Object is not
+substantively complete merely because its witnesses are fixed, fields are
+filled, classifications are assigned, or validation passes. Substantive
+completion requires the shared examination governed by Rule V.
+
+Every rule, role, tool, schema, and procedure is subordinate to this purpose.
+It shall remain operative only while it demonstrably assists shared inquiry or
+the production, verification, interpretation, and preservation of its corpus.
+
+Anything obsolete, duplicative, or obstructive shall be retired from active
+authority—but never erased or silently rewritten. Its history and the reasons
+for its retirement shall remain preserved.
+
+Documentary evidence, provenance, uncertainty, independent reconstruction of
+each author, and the distinction between evidence and interpretation shall
+never be sacrificed for speed, convenience, elegance, or the appearance of
+completion.
+
+The system shall evolve in response to needs revealed by actual inquiry and
+corpus production. It shall not accumulate architecture in anticipation of
+merely imagined needs.
+
+In its shortest form:
+
+"We examine the text together; GitHub remembers the inquiry."
+
+The v1.0 formulation—"The corpus governs the system; the system exists to
+serve the inquiry"—remains operative as a structural maxim subordinate to this
+clarified purpose.
+
+======================================================================
+
+V. REPLACEMENT RULE V — THE ORDER OF SHARED READING
+
+Every Citation Object shall proceed through the following movement of reading:
+
+1. FIRST ENCOUNTER WITH STRAUSS
+   Establish Strauss's exact passage, immediate context, note boundary,
+   wording, and explicit citations. Place the relevant passage before the user.
+   Examine together the question Strauss has raised, the work the citation
+   appears to perform, and the reader's understanding before following it.
+
+2. DOCUMENTARY RECOVERY
+   Recover the cited works through fixed and identifiable textual witnesses.
+   Source fixation may be prepared in advance, but knowledge gained from the
+   cited source shall not be allowed to predetermine or retrospectively falsify
+   the recorded first encounter.
+
+3. INDEPENDENT RECONSTRUCTION
+   Place the necessary cited passages and sufficient context before the user.
+   Reconstruct each cited author together, in that author's own context and
+   terms, before comparing that author with Strauss.
+
+4. COMPARATIVE RETURN TO STRAUSS
+   Return together to Strauss's passage. Examine what remained constant, what
+   changed, what was selected or omitted, and how obeying the citation altered
+   the reader's understanding of Strauss's question.
+
+5. PRESERVATION OF THE INQUIRY
+   Record agreements, differences, competing readings, unresolved questions,
+   and provenance of substantive contributions without forcing consensus or a
+   conclusion. Clearly distinguish documentary findings from user readings,
+   AI proposals, jointly tested inferences, and unresolved uncertainty.
+
+Primary texts govern. Translations, editions, secondary scholarship, and AI
+analysis must be identified by role and may not silently replace the underlying
+evidence.
+
+No later stage may predetermine or silently rewrite an earlier stage. Missing
+or uncertain evidence shall limit the conclusion rather than invite
+speculation.
+
+No candidate may claim substantive completion until the shared examination has
+occurred. A candidate may be committed earlier only with the explicit state
+DOCUMENTARY PREPARATION — READY FOR SHARED EXAMINATION.
+
+In its shortest form:
+
+"Read Strauss together; follow the citation; return to Strauss changed."
+
+======================================================================
+
+VI. THE SHARED-EXAMINATION GATE
+
+When documentary preparation is sufficient, the AI shall not silently continue
+into a finished interpretive artifact. It shall present a bounded Shared
+Examination Packet containing:
+
+- the Strauss anchor and sufficient immediate context;
+- the complete note;
+- the cited passages and necessary local contexts;
+- material witness or translation limits;
+- the question presented by Strauss;
+- two to four open comparative questions without preemptive answers; and
+- one opening question for the user's judgment.
+
+This handoff is a required stage of production. Waiting for the user's reading
+at this gate is neither a lawful stop nor abandonment of the task.
+
+Before the gate is completed:
+
+- documentary facts may be recorded;
+- candidate readings may be offered in conversation as proposals;
+- Supported Inferences and Working Hypotheses shall not be treated as settled
+  corpus results;
+- the comparative return shall not be declared complete; and
+- the Inner Sanctum decision shall remain not reached unless closure follows
+  solely from an independently dispositive documentary bar.
+
+After the shared examination, the AI may preserve the inquiry in the candidate,
+subject to user review, documentary classification, validation, and the
+canonical lifecycle.
+
+======================================================================
+
+VII. EFFECT ON THE TRIGGERING CANDIDATE
+
+The documentary preparation in commit e93250739f516fd8227fc97d76e3d791f56f7334
+remains preserved and usable.
+
+The following portions are qualified as AI-generated preparatory proposals,
+not completed shared inquiry:
+
+- the three one-sentence "Independent reconstruction" statements;
+- the completed wording of the Comparative Return;
+- Supported Inference SI-A;
+- the suggested answer embedded in Comparative Question CQ-A;
+- the finality of the Inner Sanctum gate decision; and
+- the selection of Italian-witness recovery as the next unit before shared
+  examination.
+
+The next authorized substantive unit is the Shared Examination Packet for
+Strauss's Chapter I, Citation 1. Italian-witness recovery remains a later
+documentary-preparation task and may not displace that examination.
+
+======================================================================
+
+VIII. OPERATIONAL CORRECTION: PUBLICATION PREFLIGHT
+
+The earlier GitHub 403 event separately demonstrated that public readability
+does not establish repository write authority. The v1.1 Project Instructions
+and Startup Procedure therefore require read and write capability to be tested
+separately and a working branch or durable candidate escrow to be established
+before substantive production.
+
+This operational correction does not alter the scholarly method or create a
+new constitutional rule.
+
+======================================================================
+
+IX. EFFECT, HISTORY, AND STOPPING CONDITION
+
+This amendment operates prospectively. It does not erase the v1.0 Codex, the
+failed GitHub authorization attempt, commit e93250739f516fd8227fc97d76e3d791f56f7334,
+or the reasoning that exposed the defect.
+
+Existing documentary findings remain available according to their evidence.
+Existing interpretive propositions do not acquire or lose truth by decree;
+their procedural status is corrected and they must be tested through shared
+examination before substantive completion is claimed.
+
+No Rule XIV is created. The Codex remains a thirteen-rule instrument. This
+amendment replaces the operative text of Rules I and V for the ChatGPT Project
+and stops once the two demonstrated defects are cured.
+
+END OF CUSTOS CODEX AMENDMENT 001 v1.0
