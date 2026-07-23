@@ -1,6 +1,13 @@
 # Citation Object Candidate — Chapter I, Citation 1
 
-Status: PRODUCED CANDIDATE — NOT CANONICALLY IDENTIFIED, ADMITTED, OR CERTIFIED
+Status: DOCUMENTARY PREPARATION — READY FOR SHARED EXAMINATION — NOT CANONICALLY IDENTIFIED, ADMITTED, OR CERTIFIED
+
+> **Forward correction notice (2026-07-22):** This file preserves valid documentary
+> preparation but does not record a completed shared inquiry. Its AI-generated
+> reconstructions, comparative inference, Inner Sanctum decision, and former next-unit
+> selection are procedurally qualified by
+> `chapter-01-citation-01-shared-examination-correction-v1.0.md`.
+
 
 ## Production boundary
 
@@ -156,7 +163,7 @@ Following sentence, normalized from visibly corrupted OCR:
 
 Independent reconstruction: chapter 8 introduces two remaining modes of becoming prince. Its opening again marks republics as a topic that could receive fuller treatment in a different inquiry, while keeping the present discussion within the acquisition of princely rule.
 
-## Comparative return to Strauss
+## Preparatory comparative return — procedurally qualified
 
 ### Documented Finding DF-D
 
@@ -176,13 +183,13 @@ Chapter 8 repeats a boundary between the present inquiry and a fuller possible t
 
 Evidence: Ricci/Vincent witness, chapter 8 beginning.
 
-### Supported Inference SI-A
+### Preparatory AI proposal SI-A — not yet a completed Supported Inference
 
 Strauss’s three-part citation is ordered architecturally rather than redundantly: chapter 1 establishes the republic/monarchy division; chapter 2 explicitly excludes republics and names prior treatment elsewhere; chapter 8 later recalls the republic boundary at a point where another acquisition mode could be treated more fully under that heading.
 
 This inference is supported by the recovered English witness but remains provisional until checked against a fixed Italian text.
 
-### Comparative Question CQ-A
+### Comparative Question CQ-A — question retained; attached suggestion provisional
 
 Why does Strauss cite chapter 8 as well as chapters 1 and 2? The recovered sequence suggests that chapter 8 documents the persistence of the republic/principality boundary within *The Prince*, not merely the initial announcement of that boundary. Verification against the Italian wording and wider chapter-8 context is still required before promotion.
 
@@ -196,15 +203,17 @@ Why does Strauss cite chapter 8 as well as chapters 1 and 2? The recovered seque
 ## Epistemic classification
 
 - The anchor wording, note wording, note placement, and three target designations are **Documented Findings** relative to the supplied transcription.
-- The architectural account of why Strauss selected all three targets is a **Supported Inference** from the recovered English witness; its dependence on exact Italian wording remains a **Comparative Question**.
+- The architectural account of why Strauss selected all three targets was recorded as a **Supported Inference** in commit `e93250739f516fd8227fc97d76e3d791f56f7334`; it is now a preparatory AI proposal pending shared examination. Its dependence on exact Italian wording remains a **Comparative Question**.
 - Any claim about Strauss’s intention beyond the explicit surrounding argument remains a **Working Hypothesis** unless later evidence warrants promotion.
 
-## Inner Sanctum gate
+## Former Inner Sanctum gate statement — procedurally qualified
 
-CLOSED.
+Commit `e93250739f516fd8227fc97d76e3d791f56f7334` recorded this gate as CLOSED. No Inner Sanctum inquiry is authorized, but the candidate’s final gate decision is now **NOT REACHED** pending shared examination. The documentary fact that primary-language verification remains open is preserved.
 
-Reason: the Outer Sanctum remains sufficient. The three targets have been recovered and compared in a fixed derived English witness, but primary-language verification remains open. No concrete residual difficulty requires an Inner Sanctum mechanism, and no concealment inquiry is authorized.
+## Former next required unit — superseded by forward correction
 
-## Next required unit
+The prior candidate selected recovery of a fixed Italian witness for the beginnings of *The Prince* chapters 1, 2, and 8. That remains a valid future documentary-preparation task, but it is no longer the immediate next unit.
 
-Recover and fix an Italian witness for the beginnings of *The Prince* chapters 1, 2, and 8—preferably the Mazzoni–Casella 1929 text or another governed scholarly edition—then compare its exact wording and variants against the Ricci/Vincent recovery before deciding whether SI-A may be retained or revised.
+## Current next required unit
+
+Conduct the Shared Examination Packet preserved in `chapter-01-citation-01-shared-examination-correction-v1.0.md`, beginning with Strauss’s p. 15 passage and the question of what the phrase “Above all” makes note 1 appear to prove. Only after that examination may the comparative return, SI-A, the Inner Sanctum decision, and subsequent source-recovery priority be finalized in a successor candidate version.
