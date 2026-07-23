@@ -1,0 +1,59 @@
+identifier: "DDR-000000009"
+class: "Documentary Decision Record"
+decision_type: "PROTECTED_PROJECT_GOVERNANCE_AND_BOUNDED_EVIDENCE_CERTIFICATION"
+title: "Custos ChatGPT Project Governance and Chapter I Preparation Certification"
+decision_status: "PROPOSED_UNTIL_OWNER_MERGE"
+decision_outcome: "ADMIT_AND_CERTIFY_BOUNDED_SCOPE"
+decision_date: "2026-07-22"
+authority_basis:
+  amendment_id: "AMD-000000003"
+  lane: "PROTECTED_GOVERNANCE_LANE"
+  protected_triggers:
+    - "FOUNDATIONAL_OR_CONSTITUTIONAL_CHANGE"
+    - "EVIDENCE_EPISTEMIC_OR_SAFEGUARD_CHANGE"
+  explicit_owner_direction: "We need them certified"
+  final_authorization_event: "AUTHENTICATED_REPOSITORY_OWNER_MERGE"
+decision_instrument_path: "governance/certification-decisions/DDR-000000009_ChatGPT_Project_Governance_and_Chapter_I_Preparation_Certification_v1.0.md"
+declared_actions:
+  - action: "ADMIT"
+    subject_id: "SPEC-000000004"
+  - action: "CERTIFY_BOUNDED_SCOPE"
+    subject_id: "SPEC-000000004"
+    certification_record_id: "CER-000000002"
+  - action: "ADMIT"
+    subject_id: "COR-000000002"
+  - action: "CERTIFY_BOUNDED_SCOPE"
+    subject_id: "COR-000000002"
+    certification_record_id: "CER-000000002"
+  - action: "ADMIT"
+    subject_id: "EVR-000000001"
+  - action: "CERTIFY_BOUNDED_SCOPE"
+    subject_id: "EVR-000000001"
+    certification_record_id: "CER-000000002"
+validation_record_id: "VAL-000000026"
+version_record_ids:
+  - "VER-000000025"
+  - "VER-000000026"
+  - "VER-000000027"
+  - "VER-000000028"
+preserved_source_commit: "97ccdcf5ac15307993b852f4104526ce718841d3"
+preservation_rule: >
+  The eight source artifacts remain unchanged at their historical candidate
+  paths. This separately identifiable decision advances only their declared
+  bounded repository status.
+non_authorizations:
+  - "Does not certify Chapter I, Citation 1 as a completed Citation Object."
+  - "Does not allocate a canonical Citation Object identifier."
+  - "Does not represent AI proposals, SI-A, or CQ-A's suggested answer as completed shared inquiry."
+  - "Does not establish primary-language verification."
+  - "Does not finalize an Inner Sanctum gate decision."
+  - "Does not amend admitted Repository Documents 000001 through 000012."
+  - "Does not treat CI success as historical or philosophical proof."
+effective_condition: >
+  All declared admissions and bounded certifications take effect together only
+  upon authenticated repository-owner merge of the containing pull request.
+audit_history:
+  - event_date: "2026-07-22"
+    event_type: "PROTECTED_CERTIFICATION_UNIT_PREPARED"
+    note: "The branch and pull request remain non-effective before owner merge."
+
