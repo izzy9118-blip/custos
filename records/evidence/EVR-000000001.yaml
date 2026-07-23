@@ -1,0 +1,49 @@
+identifier: "EVR-000000001"
+class: "Evidence Record"
+title: "Chapter I, Citation 1 Documentary Preparation Evidence"
+version: "1.0"
+lifecycle_status:
+  identifier: "STS-000000001"
+  label: "ACTIVE"
+  controlled_vocabulary_status: "REGISTERED"
+admission_status: "ADMITTED_UPON_OWNER_MERGE"
+certification_status: "CERTIFIED_BOUNDED_PREPARATION_UPON_OWNER_MERGE"
+effective_date: "2026-07-22"
+source_artifact:
+  path: "candidates/citation-objects/chapter-01-citation-01-documentary-anchor.md"
+  sha256: "aeb79a4a7dac8323d0b24a661c54c2c59665c44af5db166563054540ba7b1c54"
+  preserved_source_commit: "97ccdcf5ac15307993b852f4104526ce718841d3"
+evidence_scope:
+  - "Strauss anchor, immediate context, and complete note boundary as recovered from the declared supplied transcription."
+  - "Ricci/Vincent witness metadata, SHA-256 fixity, OCR limitations, and derived-witness role."
+  - "Diplomatic and normalized recoveries of the beginnings of Prince chapters 1, 2, and 8."
+  - "Citation-target inventory and unresolved bibliographic or primary-language questions."
+  - "Documentary observations DF-A through DF-F at their explicitly stated witness level."
+excluded_scope:
+  - "Completed independent reconstruction of Machiavelli."
+  - "Completed comparative return to Strauss."
+  - "SI-A as a completed Supported Inference."
+  - "The suggested answer attached to CQ-A."
+  - "A final Inner Sanctum gate decision."
+  - "Primary-language verification."
+  - "Substantive completion, admission, or certification of a Citation Object."
+canonical_citation_object_identifier: null
+current_inquiry_state: "DOCUMENTARY_PREPARATION_READY_FOR_SHARED_EXAMINATION"
+governing_correction_id: "COR-000000002"
+authority_basis:
+  amendment_id: "AMD-000000003"
+  lane: "PROTECTED_GOVERNANCE_LANE"
+  decision_id: "DDR-000000009"
+  certification_record_id: "CER-000000002"
+  validation_record_id: "VAL-000000026"
+version_history:
+  - version_record_id: "VER-000000027"
+    version: "1.0"
+    event: "PROTECTED_BOUNDED_EVIDENCE_ADMISSION_AND_CERTIFICATION"
+    effective_date: "2026-07-22"
+audit_history:
+  - event_date: "2026-07-22"
+    event_type: "BOUNDED_EVIDENCE_ADMISSION_AND_CERTIFICATION_PROPOSED"
+    note: >
+      Certification applies to the completed evidence-record stage only and
+      takes effect only upon authenticated repository-owner merge.
