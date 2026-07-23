@@ -1,0 +1,12 @@
+identifier: "VER-000000028"
+class: "Version Record"
+entity_id: "LDG-000000001"
+previous_version: "1.14"
+current_version: "1.15"
+effective_date: "2026-07-22"
+change_type: "PROTECTED_PROJECT_GOVERNANCE_AND_BOUNDED_EVIDENCE_CERTIFICATION"
+source_decision_id: "DDR-000000009"
+authority_id: "CAG-000000002"
+change_summary: >
+  Adds CER-000000002, COR-000000002, DDR-000000009, EVR-000000001,
+  SPEC-000000004, VAL-000000026, and VER-000000025 through VER-000000028.
