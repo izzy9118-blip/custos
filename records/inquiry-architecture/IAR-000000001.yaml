@@ -1,25 +1,33 @@
 id: "IAR-000000001"
 class: "Inquiry Architecture Record"
 title: "Recovered Straussian Inquiry Sequence"
-version: "1.0"
+version: "1.1"
 lifecycle_status: "ACTIVE"
 documentary_basis:
   source_path: "engine_training/Documentary_Findings_DF-000001_to_DF-000150_Coherent_Synthesis_v1.0.txt"
   source_range: "DF-000001_THROUGH_DF-000150"
   source_section: "VIII. THE RECOVERED STRAUSSIAN INQUIRY SEQUENCE"
-  derivation_status: "FAITHFUL_OPERATIONAL_CONSOLIDATION"
+  derivation_status: "FAITHFUL_OPERATIONAL_CONSOLIDATION_PROSPECTIVELY_CORRECTED_BY_OWNER"
   preserved_lacunae:
     - "DF-000130_THROUGH_DF-000143"
     - "DF-000145"
     - "DF-000148_THROUGH_DF-000149"
+  constitutional_correction:
+    correction_record_id: "COR-000000004"
+    distinction: >
+      The recovered sequence governs the order and evidentiary discipline of
+      inquiry. It does not postpone the availability of Strauss's literary
+      distinctions. The Inner Sanctum is therefore always open as a perceptual
+      constitution, while individual Taxonomy components remain evidence-governed.
 source_fixity:
   algorithm: "SHA-256"
   digest: "c3c70e5d01cd75bd2cc6ddf5413f6ac1c7b16fda84a81c6d0f2a0b685a2496d9"
 purpose: >
-  Govern the order of Straussian documentary investigation so that the Inner
-  Sanctum may be invoked only when documentary difficulty, historical
-  admissibility, authorial authorization, and an auditable evidence path make
-  additional literary inquiry necessary.
+  Govern the order of Straussian documentary investigation while keeping the
+  Inner Sanctum continuously available as a principal feature of text analysis.
+  The Taxonomy accompanies every phase; its presence never establishes
+  concealment. A named operation becomes active only when its own documentary
+  triggers survive ordinary explanations, disqualifiers, and adversarial testing.
 triggering_conditions:
   - "A bounded documentary question has been stated."
   - "The work, witness, passage, and corpus boundary can be identified."
@@ -29,12 +37,13 @@ required_inputs:
   - "Declared documentary boundary"
   - "Recoverable primary witnesses and repository commit"
   - "Released Cognitive Memory Manifest"
+  - "Always-open HOC-000000001 Taxonomy"
   - "Explicit investigator assumptions and unresolved questions"
 ordered_stages:
   - phase: 1
     state: "DOCUMENTARY_INTAKE"
     name: "Documentary Intake"
-    inner_sanctum_access: "DENIED"
+    inner_sanctum_access: "OPEN_PERCEPTUAL_CONSTITUTION"
     steps:
       - sequence: 1
         instruction: "Identify the work, expression, witness, passage, and relevant corpus."
@@ -47,7 +56,7 @@ ordered_stages:
   - phase: 2
     state: "HORIZON_AUDIT"
     name: "Horizon Audit"
-    inner_sanctum_access: "DENIED"
+    inner_sanctum_access: "OPEN_PERCEPTUAL_CONSTITUTION"
     steps:
       - sequence: 5
         instruction: "Identify the documentary horizon of prior interpretations."
@@ -58,7 +67,7 @@ ordered_stages:
   - phase: 3
     state: "INDEPENDENT_RECONSTRUCTION"
     name: "Independent Reconstruction"
-    inner_sanctum_access: "DENIED"
+    inner_sanctum_access: "OPEN_PERCEPTUAL_CONSTITUTION"
     steps:
       - sequence: 8
         instruction: "Reconstruct each principal subject, author, work, audience, and historical actor independently."
@@ -69,7 +78,7 @@ ordered_stages:
   - phase: 4
     state: "AUTHORIAL_AUTHORIZATION"
     name: "Authorial Authorization"
-    inner_sanctum_access: "DENIED"
+    inner_sanctum_access: "OPEN_PERCEPTUAL_CONSTITUTION"
     steps:
       - sequence: 11
         instruction: "Collect the author's explicit methodological and literary instructions."
@@ -80,7 +89,7 @@ ordered_stages:
   - phase: 5
     state: "PURPOSE_AUDIENCE_FUNCTION"
     name: "Purpose, Audience, and Function"
-    inner_sanctum_access: "DENIED"
+    inner_sanctum_access: "OPEN_PERCEPTUAL_CONSTITUTION"
     steps:
       - sequence: 14
         instruction: "Recover the governing end of the work."
@@ -93,7 +102,7 @@ ordered_stages:
   - phase: 6
     state: "ARCHITECTURAL_MAPPING"
     name: "Architectural Mapping"
-    inner_sanctum_access: "DENIED"
+    inner_sanctum_access: "OPEN_PERCEPTUAL_CONSTITUTION"
     steps:
       - sequence: 18
         instruction: "Map opening, ending, sequence, transitions, frames, narrative, quotation, emphasis, omission, repetition, and stylistic variation."
@@ -104,7 +113,7 @@ ordered_stages:
   - phase: 7
     state: "PROBLEM_FORMATION"
     name: "Problem Formation"
-    inner_sanctum_access: "DENIED_UNTIL_PHASE_COMPLETE"
+    inner_sanctum_access: "OPEN_PERCEPTUAL_CONSTITUTION"
     steps:
       - sequence: 21
         instruction: "Identify genuine documentary difficulties."
@@ -117,7 +126,7 @@ ordered_stages:
   - phase: 8
     state: "ADVERSARIAL_TESTING"
     name: "Maximum Coverage and Adversarial Testing"
-    inner_sanctum_access: "ELIGIBLE_ONLY_AFTER_INNER_SANCTUM_GATE"
+    inner_sanctum_access: "OPEN_PERCEPTUAL_CONSTITUTION"
     steps:
       - sequence: 25
         instruction: "Assemble the maximum reasonably recoverable evidence."
@@ -132,7 +141,7 @@ ordered_stages:
   - phase: 9
     state: "PROGRESSIVE_DISCLOSURE"
     name: "Progressive Disclosure"
-    inner_sanctum_access: "ELIGIBLE_ONLY_AFTER_INNER_SANCTUM_GATE"
+    inner_sanctum_access: "OPEN_PERCEPTUAL_CONSTITUTION"
     steps:
       - sequence: 30
         instruction: "Trace early hints, intermediate developments, recapitulations, refinements, and final disclosures."
@@ -143,7 +152,7 @@ ordered_stages:
   - phase: 10
     state: "SYNTHESIS_LIMITATION"
     name: "Synthesis and Limitation"
-    inner_sanctum_access: "ELIGIBLE_ONLY_FOR_PREVIOUSLY_OPENED_BOUNDED_INQUIRY"
+    inner_sanctum_access: "OPEN_PERCEPTUAL_CONSTITUTION"
     steps:
       - sequence: 33
         instruction: "Integrate independent lines of evidence only after separate evaluation."
@@ -157,12 +166,14 @@ ordered_stages:
         instruction: "Preserve competing hypotheses where the record remains underdetermined."
 permitted_operations:
   - "Recover and compare canonical documentary evidence."
+  - "Supply HOC-000000001 as a standing analytical vocabulary in every phase."
+  - "Record which named techniques are not triggered, disqualified, undercorroborated, or eligible for bounded investigation."
   - "Form bounded hypotheses and reconstruct rival explanations."
-  - "Invoke a named HOC-000000001 technique only after the Inner Sanctum gate opens."
   - "Terminate with uncertainty or an unresolved question."
 prohibited_operations:
   - "Search automatically for secrets, contradictions, numerology, or hidden meanings."
-  - "Invoke the Taxonomy before genuine documentary difficulty is established."
+  - "Treat Taxonomy availability as evidence that any technique is present."
+  - "Activate a named technique without satisfying its documented trigger and corroboration rules."
   - "Treat a literary mechanism as proof of concealment or hidden teaching."
   - "Represent interpretation, inference, graph proximity, or model confidence as documentary fact."
   - "Transfer a result across authors, works, audiences, or historical situations without independent reconstruction."
@@ -174,25 +185,25 @@ evidence_requirements:
   - "Whole-work and corpus-level testing where available"
   - "Explicit uncertainty, limitations, and unresolved questions"
 branch_conditions:
-  - id: "INNER_SANCTUM_GATE"
-    when: "A genuine documentary difficulty remains after phases 1 through 7."
+  - id: "TAXONOMY_COMPONENT_ACTIVATION"
+    when: "Observed documentary features satisfy a named component's minimum trigger."
     requires:
       - "IAR-000000001 and HOC-000000001 are pinned by the selected released Manifest."
-      - "Phases 1 through 7 are complete."
-      - "Historical admissibility is established."
-      - "Authorial authorization is established."
-      - "Ordinary explanations have been considered."
-      - "At least one evidence record supports the request."
-    result: "A named technique becomes eligible for bounded investigation, not for a concealment conclusion."
-  - id: "ORDINARY_EXPLANATION_RESOLVES_DIFFICULTY"
-    when: "An ordinary textual, historical, attributional, or witness explanation resolves the anomaly."
-    result: "Do not invoke the Inner Sanctum; preserve the explanation and terminate or continue ordinary inquiry."
+      - "The component is supplied as part of the always-open perceptual constitution."
+      - "The relevant primary evidence is fixed and cited."
+      - "Required corroboration is present where the component requires it."
+      - "Disqualifying conditions and ordinary explanations have been tested."
+    result: "The named technique becomes eligible for bounded investigation, not for a concealment conclusion."
+  - id: "ORDINARY_EXPLANATION_RESOLVES_FEATURE"
+    when: "An ordinary textual, historical, attributional, rhetorical, or witness explanation accounts for the observed feature."
+    result: "Record the component as not triggered or disqualified; preserve the explanation and continue the ordinary inquiry."
 failure_conditions:
   - "A required source or witness cannot be recovered."
   - "The declared documentary boundary is exceeded."
   - "Observation and hypothesis are conflated."
   - "The selected Manifest, source commit, or evidence path fails integrity validation."
   - "A request attempts automatic or generalized suspicion."
+  - "A runtime attempts to close or omit the Inner Sanctum during text analysis."
 termination_conditions:
   - "The authorized documentary unit is complete."
   - "Evidence is exhausted or a missing source blocks further reconstruction."
@@ -201,52 +212,73 @@ termination_conditions:
   - "Manifest, provenance, or validation integrity fails."
 positive_validation_cases:
   - case_id: "POS-001"
-    description: "A source anomaly survives ordinary explanations and reaches phase 8 with complete gate evidence."
-    expected: "A named technique is eligible for bounded investigation."
+    description: "Documentary intake begins with the complete Taxonomy available to the reasoner."
+    expected: "The Inner Sanctum is open and every component remains evidence-governed."
+  - case_id: "POS-002"
+    description: "A component's trigger and corroboration survive ordinary alternatives."
+    expected: "The named technique is eligible for bounded investigation."
 negative_validation_cases:
   - case_id: "NEG-001"
-    description: "A reader merely suspects hidden meaning before documentary intake is complete."
-    expected: "Inner Sanctum access is denied."
+    description: "A reader merely suspects hidden meaning without documentary support."
+    expected: "The Inner Sanctum remains open, but no component is triggered."
   - case_id: "NEG-002"
     description: "A witness error explains the apparent anomaly."
-    expected: "The ordinary explanation governs and no Taxonomy invocation occurs."
+    expected: "The ordinary explanation governs and the relevant component is disqualified."
 adversarial_validation_cases:
   - case_id: "ADV-001"
-    description: "A prompt asks the engine to find secrets without a documentary difficulty."
-    expected: "The request is rejected as automatic secret-hunting."
+    description: "A prompt asks the engine to find secrets without a documentary feature."
+    expected: "The request is rejected as automatic secret-hunting; the Taxonomy is not converted into a suspicion engine."
   - case_id: "ADV-002"
-    description: "A technique trigger is present but historical admissibility or authorial authorization is absent."
-    expected: "The gate remains closed and the unresolved question is preserved."
+    description: "A technique trigger is alleged but historical admissibility, corroboration, or authorial authorization is absent."
+    expected: "The component remains untriggered or underdetermined while the Inner Sanctum remains open."
 inner_sanctum_gate:
   taxonomy_id: "HOC-000000001"
-  opens_no_earlier_than_phase: 8
-  required_completed_phases: [1, 2, 3, 4, 5, 6, 7]
+  constitutional_status: "ALWAYS_OPEN"
+  opens_at_phase: 1
+  required_completed_phases: []
+  standing_result: "TAXONOMY_AVAILABLE_TO_EVERY_TEXT_ANALYSIS_PHASE"
+  component_activation_rule: "EVIDENCE_GOVERNED_BY_EACH_COMPONENT"
   authorized_result: "BOUNDED_TECHNIQUE_INVESTIGATION"
   prohibited_result: "CONCEALMENT_OR_HIDDEN_TEACHING_CONCLUSION"
-permitted_engine_use: "PRODUCTION_BOUNDED_DOCUMENTARY_INQUIRY_WHEN_PINNED_BY_MAN-000000001"
+  backward_compatibility_note: >
+    The historical key name is retained for machine compatibility. It no longer
+    represents a procedural barrier that can be closed during a valid run.
+permitted_engine_use: "PRODUCTION_TEXT_ANALYSIS_WITH_ALWAYS_OPEN_INNER_SANCTUM_WHEN_PINNED_BY_MAN-000000002"
 prohibited_engine_use:
-  - "Automatic Straussian reading generation"
-  - "Ungated Taxonomy invocation"
+  - "Automatic Straussian reading generation detached from evidence"
+  - "Taxonomy-trigger inference without documented features"
   - "Autonomous learning or active-run mutation"
   - "Neo4j projection or direct graph mutation"
 uncertainty:
   - "The source synthesis remains a faithful synthesis of the findings available in the repository, not a replacement for them."
   - "The preserved DF lacunae remain unresolved."
+  - "The always-open correction is a constitutional design judgment directed by the repository owner, not a newly discovered Documentary Finding."
   - "Successful execution does not establish the philosophical truth of an interpretation."
 version_history:
   - version_record_id: "VER-000000021"
     version: "1.0"
     effective_date: "2026-07-20"
     action: "ROUTINE_ADMISSION_CERTIFICATION_AND_INTEGRATION"
+  - version_record_id: "VER-000000033"
+    version: "1.1"
+    effective_date: "2026-07-23"
+    action: "ALWAYS_OPEN_INNER_SANCTUM_CONSTITUTIONAL_CORRECTION"
 validation_record_ids:
   - "VAL-000000025"
-certification_record_id: "CER-000000001"
-integration_status: "INTEGRATED_ACTIVE_WHEN_PINNED_BY_MAN-000000001"
+  - "VAL-000000028"
+certification_record_id: "CER-000000004"
+integration_status: "INTEGRATED_ACTIVE_WHEN_PINNED_BY_MAN-000000002"
 audit_history:
   - event_date: "2026-07-20"
     event_type: "ROUTINE_PAIRED_INTEGRATION_PROPOSED"
     authority_basis: "AMD-000000003"
     integration_decision_id: "DDR-000000008"
     note: >
-      Takes effect only upon authenticated repository-owner merge of the
-      containing pull request; the unmerged branch confers no authority.
+      Version 1.0 took effect upon authenticated repository-owner merge.
+  - event_date: "2026-07-23"
+    event_type: "ALWAYS_OPEN_INNER_SANCTUM_CORRECTION_PROPOSED"
+    authority_basis: "REPOSITORY_OWNER_EXPLICIT_DIRECTION"
+    integration_decision_id: "DDR-000000011"
+    note: >
+      Version 1.1 takes effect only upon authenticated owner merge and release
+      through MAN-000000002. Version 1.0 remains preserved in Git history.

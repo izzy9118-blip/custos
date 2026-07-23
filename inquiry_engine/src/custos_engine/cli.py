@@ -224,38 +224,41 @@ def run_command(args: argparse.Namespace) -> int:
         source_entity_ids=question.get("source_entity_ids", []),
     )
 
-    gate_decision = None
-    gate_context_data = question.get("inner_sanctum_gate_context")
-    if gate_context_data is not None:
-        gate_context = HermeneuticGateContext.model_validate(gate_context_data)
-        gate_decision = evaluate_inner_sanctum_gate(gate_context).model_dump(
-            mode="json"
+    supplied_gate_context = question.get("inner_sanctum_gate_context", {})
+    if not isinstance(supplied_gate_context, dict):
+        raise ValueError("inner_sanctum_gate_context must be an object")
+    gate_context_data = {
+        "procedure_id": manifest.procedure_source.canonical_id,
+        "taxonomy_id": manifest.taxonomy_source.canonical_id,
+        "cognitive_memory_manifest_id": manifest.manifest_id,
+        "current_state": run.current_state,
+    }
+    gate_context_data.update(supplied_gate_context)
+    gate_context = HermeneuticGateContext.model_validate(gate_context_data)
+    gate_decision_model = evaluate_inner_sanctum_gate(gate_context)
+    gate_decision = gate_decision_model.model_dump(mode="json")
+    if not gate_decision_model.authorized:
+        raise PermissionError(
+            "The canonical always-open Inner Sanctum could not initialize: "
+            + " ".join(gate_decision_model.reasons)
         )
 
-    requested_technique_ids = question.get("inner_sanctum_technique_ids", [])
-    if not isinstance(requested_technique_ids, list) or not all(
-        isinstance(technique_id, str) for technique_id in requested_technique_ids
+    declared_focus_technique_ids = question.get("inner_sanctum_technique_ids", [])
+    if not isinstance(declared_focus_technique_ids, list) or not all(
+        isinstance(technique_id, str)
+        for technique_id in declared_focus_technique_ids
     ):
         raise ValueError("inner_sanctum_technique_ids must be an array of strings")
     available_technique_ids = {
         component.component_id for component in taxonomy_components
     }
     unavailable_technique_ids = sorted(
-        set(requested_technique_ids).difference(available_technique_ids)
+        set(declared_focus_technique_ids).difference(available_technique_ids)
     )
     if unavailable_technique_ids:
         raise ValueError(
-            "Requested Taxonomy techniques are not present in the pinned Manifest: "
+            "Declared Taxonomy focus techniques are not present in the pinned Manifest: "
             + ", ".join(unavailable_technique_ids)
-        )
-    gate_authorized = bool(gate_decision and gate_decision["authorized"])
-    if requested_technique_ids and not gate_authorized:
-        raise PermissionError(
-            "Inner Sanctum techniques were requested while the recorded gate is closed"
-        )
-    if gate_authorized and not requested_technique_ids:
-        raise ValueError(
-            "An authorized Inner Sanctum inquiry must name at least one Taxonomy technique"
         )
 
     phase_reasoning_records = None
@@ -315,12 +318,8 @@ def run_command(args: argparse.Namespace) -> int:
             run,
             procedure,
             documentary_inputs,
-            inner_sanctum_authorized=gate_authorized,
-            permitted_taxonomy_techniques=[
-                component
-                for component in taxonomy_components
-                if component.component_id in requested_technique_ids
-            ],
+            inner_sanctum_authorized=True,
+            permitted_taxonomy_techniques=taxonomy_components,
         )
     else:
         InquiryStateMachine().run_to_termination(run)

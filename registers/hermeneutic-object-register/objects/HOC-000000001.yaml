@@ -1,21 +1,23 @@
 identifier: "HOC-000000001"
 class: "Hermeneutic Object C"
 title: "Strauss's Taxonomy of Literary Concealment"
-version: "1.1"
+version: "1.2"
 admission_status: "ADMITTED"
 admission_date: "2026-07-20"
-effective_date: "2026-07-20"
+effective_date: "2026-07-23"
 bounded_inquiry_scope:
   subject: "Literary techniques of concealment identified or reconstructed by Leo Strauss."
   current_primary_source_range: "pp. 70–77"
   included_scope:
     - "Techniques explicitly named, enumerated, distinguished, or reconstructed in the documented range."
     - "Documentary mechanisms, examples, investigative requirements, and stated uncertainty preserved by the source reconstruction."
+    - "Continuous availability of the Taxonomy as a perceptual vocabulary during every phase of text analysis."
   excluded_scope:
     - "The remainder of the essay after p. 77."
     - "Corpus-wide verification across Strauss's writings."
     - "Comparative reconstruction with Maimonides or other authors."
     - "Any inference that a particular text contains a concealed teaching."
+    - "Automatic activation of a technique merely because the Taxonomy is available."
 source_inquiry:
   governing_question: >
     Which literary techniques of concealment does Strauss explicitly name,
@@ -53,6 +55,13 @@ claims:
     statement: >
       The seven taxonomic groupings are repository aids and do not replace
       Strauss's own enumeration or terminology.
+  - claim_key: "TAXONOMY-CLAIM-004"
+    evidentiary_status: "CONSTITUTIONAL_DESIGN_JUDGMENT"
+    statement: >
+      The Taxonomy is continuously available as a principal feature of text
+      analysis. Availability is distinct from evidentiary activation: each
+      technique remains governed by its own trigger, corroboration,
+      ordinary-alternative, disqualifier, and uncertainty rules.
 questions:
   - "What additional devices are named after p. 77 in the remainder of the essay?"
   - "Where does Strauss repeat, refine, or alter these distinctions elsewhere in his corpus?"
@@ -60,7 +69,7 @@ questions:
   - "What complete citation table links each technique to every recoverable example?"
   - "Does Strauss offer a broader taxonomy of exoteric writing elsewhere?"
   - "Which named devices remain insufficiently elaborated for a complete operational account?"
-  - "What ordinary explanations must be tested before any technique is applied to a new text?"
+  - "What ordinary explanations must be tested before any technique is activated in a new text?"
 provenance:
   candidate_source_path: "engine_training/Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0.txt"
   candidate_source_commit: "7100700ef10d68621f4859b5fe94fac6e5e0fcea"
@@ -72,11 +81,12 @@ provenance:
   provenance_note: >
     The canonical record promotes the existing active taxonomy reconstruction
     without retaining a second content copy. Git history preserves its earlier
-    unadmitted state.
+    unadmitted and gated states. Version 1.2 changes constitutional availability,
+    not the source-derived content of LC-001 through LC-022.
 reconstruction_status:
   label: "ACTIVE — OPEN DOCUMENTARY RECONSTRUCTION"
   documentary_layer: "PARTIAL — PP. 70–77 RECONSTRUCTED"
-  taxonomic_layer: "ACTIVE"
+  taxonomic_layer: "ACTIVE_AND_ALWAYS_AVAILABLE"
   corpus_wide_verification: "NOT_YET_COMPLETE"
   comparative_layer: "NOT_AUTHORIZED"
 uncertainty:
@@ -86,6 +96,7 @@ uncertainty:
     - "Several devices are named without a fully elaborated mechanism or subtype inventory."
     - "Repository groupings are analytical aids rather than Strauss's own formal taxonomy."
     - "A technique's presence does not prove concealment, hidden teaching, authorial intention, intended audience, or doctrinal truth."
+    - "The always-open rule is a repository constitutional correction, not a claim that Strauss explicitly formulated software architecture."
 lifecycle_status:
   identifier: "STS-000000001"
   label: "ACTIVE"
@@ -113,11 +124,14 @@ governing_references:
   - identifier: "AMD-000000003"
     version: "1.0"
     effect: "Authorizes one owner-merged routine unit to certify, integrate, release, and activate the declared bounded scope."
+  - identifier: "COR-000000004"
+    version: "1.0"
+    effect: "Prospectively corrects the gated architecture and requires continuous Taxonomy availability."
   - identifier: "IAR-000000001"
-    version: "1.0"
-    relationship: "MANDATORY_OUTER_PROCESS_GATE"
+    version: "1.1"
+    relationship: "ALWAYS_OPEN_PERCEPTUAL_CONSTITUTION_AND_EVIDENCE_GOVERNED_PROCEDURE"
   - identifier: "REG-000000004"
-    version: "1.0"
+    version: "1.1"
     relationship: "COGNITIVE_MEMORY_INTEGRATION"
 version_history:
   - version_record_id: "VER-000000010"
@@ -130,6 +144,11 @@ version_history:
     effective_date: "2026-07-20"
     authority_id: "REPOSITORY_OWNER_UNDER_AMD-000000003"
     action: "BOUNDED_COGNITIVE_INTEGRATION"
+  - version_record_id: "VER-000000034"
+    version: "1.2"
+    effective_date: "2026-07-23"
+    authority_id: "REPOSITORY_OWNER"
+    action: "ALWAYS_OPEN_PERCEPTUAL_CONSTITUTION"
 audit_history:
   - event_date: "2026-07-20"
     event_type: "NATIVE_CLASS_ADMISSION"
@@ -143,33 +162,45 @@ audit_history:
     authority_basis: "AMD-000000003"
     decision_id: "DDR-000000008"
     event_note: >
-      Certifies LC-001 through LC-022 only for bounded investigation after
-      IAR-000000001 opens the Inner Sanctum gate. Effective only upon owner
-      merge and activation by MAN-000000001.
+      Certified LC-001 through LC-022 only for bounded investigation after
+      IAR-000000001 opened the historical Inner Sanctum gate. That version
+      remains preserved as the predecessor architecture.
+  - event_date: "2026-07-23"
+    event_type: "ALWAYS_OPEN_COGNITIVE_INTEGRATION_PROPOSED"
+    authority_basis: "REPOSITORY_OWNER_EXPLICIT_DIRECTION"
+    decision_id: "DDR-000000011"
+    event_note: >
+      Makes the Taxonomy available during every phase of text analysis while
+      preserving evidence-governed component activation and all prohibited
+      inferences. Effective only upon owner merge and MAN-000000002 release.
 admission_record_reference: "DDR-000000004"
 specialized_determination_ids:
   - "VAL-000000009"
   - "VAL-000000010"
   - "VAL-000000011"
   - "VAL-000000012"
+  - "VAL-000000028"
 certification_eligibility:
-  status: "CERTIFIED_FOR_BOUNDED_INVESTIGATIVE_SCOPE_UPON_OWNER_MERGE"
-  certification_record_id: "CER-000000001"
+  status: "CERTIFIED_FOR_ALWAYS_AVAILABLE_BOUNDED_ANALYTICAL_SCOPE_UPON_OWNER_MERGE"
+  certification_record_id: "CER-000000004"
   reason: >
-    Corpus-wide completeness remains uncertified, while the documented
-    LC-001 through LC-022 operations are certified for a narrower gated use.
+    Corpus-wide completeness remains uncertified. The documented LC-001 through
+    LC-022 operations are certified as an always-available analytical vocabulary,
+    with component activation bounded by their own evidentiary rules.
 engine_use_authorization_state:
-  status: "AUTHORIZED_ONLY_WHEN_PINNED_BY_MAN-000000001_AFTER_OWNER_MERGE"
-  scope: "GATED_BOUNDED_PRODUCTION_INVESTIGATION"
+  status: "AUTHORIZED_WHEN_PINNED_BY_MAN-000000002_AFTER_OWNER_MERGE"
+  scope: "CONTINUOUS_TEXT_ANALYSIS_WITH_EVIDENCE_GOVERNED_COMPONENT_ACTIVATION"
+  activation_rule: "EVIDENCE_ALONE_ACTIVATES_A_NAMED_TECHNIQUE"
   note: >
-    IAR-000000001 must complete phases 1 through 7 and open the explicit gate.
-    Authorization never extends to proof of concealment, hidden teaching,
-    authorial intention, intended audience, or doctrinal truth.
+    HOC-000000001 is supplied from the first phase through final limitation.
+    Availability never proves that a component is present. Authorization never
+    extends to proof of concealment, hidden teaching, authorial intention,
+    intended audience, or doctrinal truth.
 cognitive_memory_integration:
   register_id: "REG-000000004"
-  certification_record_id: "CER-000000001"
-  integration_decision_id: "DDR-000000008"
-  activating_manifest_id: "MAN-000000001"
+  certification_record_id: "CER-000000004"
+  integration_decision_id: "DDR-000000011"
+  activating_manifest_id: "MAN-000000002"
   dependency: "IAR-000000001"
 technical_projection_boundary:
   integration_status: "CERTIFIED_TECHNICAL_INTEGRATION"

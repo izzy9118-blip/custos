@@ -195,10 +195,24 @@ class InquiryReasoningExecutor:
         procedure: dict[str, Any],
         documentary_inputs: list[DocumentaryInput],
         *,
-        inner_sanctum_authorized: bool = False,
+        inner_sanctum_authorized: bool = True,
         permitted_taxonomy_techniques: Sequence[TaxonomyComponent] = (),
         maximum_steps: int = 32,
     ) -> list[PhaseReasoningRecord]:
+        if not inner_sanctum_authorized:
+            raise ValueError(
+                "The Inner Sanctum cannot be closed during a text-analysis run"
+            )
+
+        techniques = list(permitted_taxonomy_techniques)
+        if not techniques:
+            raise ValueError(
+                "Text analysis requires the always-open Inner Sanctum Taxonomy"
+            )
+        technique_ids = [component.component_id for component in techniques]
+        if len(technique_ids) != len(set(technique_ids)):
+            raise ValueError("Taxonomy technique identifiers must be unique")
+
         phase_map = self._phase_map(procedure)
         records: list[PhaseReasoningRecord] = []
         prior_summaries: list[str] = []
@@ -213,11 +227,6 @@ class InquiryReasoningExecutor:
 
             phase = phase_map[run.current_state]
             phase_number = int(phase["phase"])
-            techniques = (
-                list(permitted_taxonomy_techniques)
-                if inner_sanctum_authorized and phase_number >= 8
-                else []
-            )
             request = PhaseReasoningRequest(
                 run_id=run.run_id,
                 repository_full_name=run.repository_full_name,
@@ -234,7 +243,7 @@ class InquiryReasoningExecutor:
                 documentary_boundary=run.documentary_boundary,
                 documentary_inputs=documentary_inputs,
                 prior_phase_summaries=prior_summaries,
-                inner_sanctum_authorized=inner_sanctum_authorized,
+                inner_sanctum_authorized=True,
                 permitted_taxonomy_techniques=techniques,
                 epistemic_limit=EPISTEMIC_LIMIT,
             )

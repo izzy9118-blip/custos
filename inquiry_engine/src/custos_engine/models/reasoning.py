@@ -44,23 +44,23 @@ class PhaseReasoningRequest(StrictModel):
     documentary_boundary: str = Field(min_length=1)
     documentary_inputs: list[DocumentaryInput] = Field(min_length=1)
     prior_phase_summaries: list[str] = Field(default_factory=list)
-    inner_sanctum_authorized: bool = False
-    permitted_taxonomy_techniques: list[TaxonomyComponent] = Field(
-        default_factory=list
+    inner_sanctum_authorized: bool = True
+    inner_sanctum_status: str = Field(
+        default="ALWAYS_OPEN",
+        pattern=r"^ALWAYS_OPEN$",
     )
+    permitted_taxonomy_techniques: list[TaxonomyComponent] = Field(min_length=1)
     epistemic_limit: str = Field(min_length=1)
 
     @model_validator(mode="after")
-    def taxonomy_permission_requires_gate(self) -> "PhaseReasoningRequest":
+    def always_open_taxonomy_contract(self) -> "PhaseReasoningRequest":
         evidence_ids = [item.evidence_id for item in self.documentary_inputs]
         if len(evidence_ids) != len(set(evidence_ids)):
             raise ValueError("Documentary input evidence identifiers must be unique")
-        if self.permitted_taxonomy_techniques and not self.inner_sanctum_authorized:
+        if not self.inner_sanctum_authorized:
             raise ValueError(
-                "Taxonomy techniques cannot be supplied while the Inner Sanctum gate is closed"
+                "The Inner Sanctum is a mandatory always-open feature of text analysis"
             )
-        if self.phase_number < 8 and self.permitted_taxonomy_techniques:
-            raise ValueError("Taxonomy techniques cannot be supplied before phase 8")
         return self
 
 

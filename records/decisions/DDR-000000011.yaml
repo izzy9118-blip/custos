@@ -1,0 +1,26 @@
+identifier: "DDR-000000011"
+class: "Documentary Decision Record"
+decision_type: "PROTECTED_ALWAYS_OPEN_INNER_SANCTUM_CORRECTION"
+title: "Always-Open Inner Sanctum Foundational Correction"
+decision_status: "PROPOSED_UNTIL_OWNER_MERGE"
+decision_outcome: "VERSION_ADMIT_CERTIFY_AND_ACTIVATE_BOUNDED_CORRECTION"
+decision_date: "2026-07-23"
+authority_basis:
+  lane: "PROTECTED_GOVERNANCE_LANE"
+  explicit_owner_direction: >
+    we have a foundational problim. the inner gate should always open
+
+    it must be a main feature of text analysis. compiled and documented
+  final_authorization_event: "AUTHENTICATED_REPOSITORY_OWNER_MERGE"
+declared_actions:
+  - {action: "VERSION_AND_ACTIVATE", subject_id: "IAR-000000001", subject_version: "1.1"}
+  - {action: "VERSION_AND_ACTIVATE", subject_id: "HOC-000000001", subject_version: "1.2"}
+  - {action: "ADMIT_BOUNDED_CORRECTION", subject_id: "COR-000000004"}
+  - {action: "ACTIVATE_PROJECT_GOVERNANCE", subject_id: "AMENDMENT-003"}
+governing_rule: >
+  The Inner Sanctum is available throughout every text-analysis phase. Its availability does not establish any literary mechanism. Evidence alone activates a named component.
+non_authorizations:
+  - "No automatic secret-hunting or generalized suspicion."
+  - "No concealment, hidden-teaching, intention, audience, or doctrinal-truth conclusion."
+  - "No engine or model self-admission or self-certification."
+effective_condition: "Authenticated repository-owner merge of the containing pull request."

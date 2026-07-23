@@ -5,28 +5,29 @@ from pydantic import Field
 from custos_engine.models.base import InquiryState, StrictModel
 
 
-AUTHORIZED_INNER_SANCTUM_STATES = frozenset(
-    {
-        InquiryState.ADVERSARIAL_TESTING,
-        InquiryState.PROGRESSIVE_DISCLOSURE,
-        InquiryState.SYNTHESIS_LIMITATION,
-        InquiryState.CERTIFICATION_PREPARATION,
-    }
-)
+CANONICAL_PROCEDURE_ID = "IAR-000000001"
+CANONICAL_TAXONOMY_ID = "HOC-000000001"
+CANONICAL_MANIFEST_IDS = frozenset({"MAN-000000001", "MAN-000000002"})
 
 
 class HermeneuticGateContext(StrictModel):
-    """Auditable Outer-Process evidence required before Taxonomy invocation."""
+    """Auditable binding for the always-open Inner Sanctum.
+
+    The procedural evidence fields are retained for backward-compatible inquiry
+    records. They govern whether a named Taxonomy component is evidentially
+    triggered; they no longer govern whether the Taxonomy is available to text
+    analysis.
+    """
 
     procedure_id: str = Field(pattern=r"^IAR-[0-9]{9}$")
     taxonomy_id: str = Field(pattern=r"^HOC-[0-9]{9}$")
     cognitive_memory_manifest_id: str = Field(pattern=r"^MAN-[0-9]{9}$")
-    current_state: InquiryState
+    current_state: InquiryState = InquiryState.DOCUMENTARY_INTAKE
     completed_phase_numbers: list[int] = Field(default_factory=list)
-    documentary_difficulty_identified: bool
-    historical_admissibility_established: bool
-    authorial_authorization_established: bool
-    ordinary_explanations_considered: bool
+    documentary_difficulty_identified: bool = False
+    historical_admissibility_established: bool = False
+    authorial_authorization_established: bool = False
+    ordinary_explanations_considered: bool = False
     evidence_record_ids: list[str] = Field(default_factory=list)
 
 
@@ -37,42 +38,40 @@ class HermeneuticGateDecision(StrictModel):
 
 
 EPISTEMIC_LIMIT = (
-    "Inner-Sanctum access authorizes only a bounded investigation of a named "
-    "literary mechanism. It does not establish concealment, hidden teaching, "
-    "authorial intention, intended audience, or doctrinal truth."
+    "The Inner Sanctum is a standing perceptual constitution of text analysis. "
+    "Its availability does not establish that any literary mechanism is present "
+    "and does not establish concealment, hidden teaching, authorial intention, "
+    "intended audience, or doctrinal truth. A named Taxonomy component becomes "
+    "operative only when its documentary trigger, corroboration, ordinary-"
+    "alternative, and disqualifier rules are satisfied and preserved."
 )
 
 
 def evaluate_inner_sanctum_gate(
     context: HermeneuticGateContext,
 ) -> HermeneuticGateDecision:
+    """Confirm the canonical binding through which the always-open Sanctum runs.
+
+    This function retains the historical ``gate`` API so existing inquiry records
+    remain readable. Under the corrected constitution, phase completion and the
+    presence of a prior documentary difficulty never close the Inner Sanctum.
+    """
+
     failures: list[str] = []
 
-    if context.procedure_id != "IAR-000000001":
-        failures.append("The canonical Outer Process IAR-000000001 is not selected.")
-    if context.taxonomy_id != "HOC-000000001":
-        failures.append("The canonical Inner Sanctum HOC-000000001 is not selected.")
-    if context.cognitive_memory_manifest_id != "MAN-000000001":
+    if context.procedure_id != CANONICAL_PROCEDURE_ID:
         failures.append(
-            "The released paired Cognitive Memory Manifest MAN-000000001 is not selected."
+            f"The canonical inquiry procedure {CANONICAL_PROCEDURE_ID} is not selected."
         )
-    if context.current_state not in AUTHORIZED_INNER_SANCTUM_STATES:
+    if context.taxonomy_id != CANONICAL_TAXONOMY_ID:
         failures.append(
-            "The inquiry has not reached an Outer-Process state eligible for "
-            "Inner-Sanctum invocation."
+            f"The canonical Inner Sanctum {CANONICAL_TAXONOMY_ID} is not selected."
         )
-    if not set(range(1, 8)).issubset(context.completed_phase_numbers):
-        failures.append("Outer-Process phases 1 through 7 are not complete.")
-    if not context.documentary_difficulty_identified:
-        failures.append("No genuine documentary difficulty has been identified.")
-    if not context.historical_admissibility_established:
-        failures.append("Historical admissibility has not been established.")
-    if not context.authorial_authorization_established:
-        failures.append("Authorial authorization has not been established.")
-    if not context.ordinary_explanations_considered:
-        failures.append("Ordinary explanations have not been considered.")
-    if not context.evidence_record_ids:
-        failures.append("No auditable evidence record supports the gate request.")
+    if context.cognitive_memory_manifest_id not in CANONICAL_MANIFEST_IDS:
+        failures.append(
+            "A released Cognitive Memory Manifest authorizing the canonical pair "
+            "is not selected."
+        )
 
     if failures:
         return HermeneuticGateDecision(
@@ -84,9 +83,11 @@ def evaluate_inner_sanctum_gate(
     return HermeneuticGateDecision(
         authorized=True,
         reasons=[
-            "The canonical Outer Process has reached adversarial testing or later.",
-            "Documentary necessity, historical admissibility, authorial authorization, "
-            "ordinary alternatives, and an evidence path are recorded.",
+            "The canonical inquiry procedure, Taxonomy, and released Manifest are selected.",
+            "The Inner Sanctum is constitutionally open from documentary intake "
+            "through synthesis and limitation.",
+            "Individual Taxonomy components remain evidence-governed and may return "
+            "not triggered, disqualified, or underdetermined.",
         ],
         epistemic_limit=EPISTEMIC_LIMIT,
     )
@@ -96,6 +97,5 @@ def require_inner_sanctum_access(context: HermeneuticGateContext) -> None:
     decision = evaluate_inner_sanctum_gate(context)
     if not decision.authorized:
         raise PermissionError(
-            "Inner Sanctum access denied by IAR-000000001: "
-            + " ".join(decision.reasons)
+            "Inner Sanctum initialization failed: " + " ".join(decision.reasons)
         )
