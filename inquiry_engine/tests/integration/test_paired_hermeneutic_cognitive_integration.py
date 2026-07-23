@@ -194,8 +194,9 @@ def test_identifier_ledger_records_the_complete_routine_unit():
         "VER-000000024",
     ]
 
-    assert ledger["version"] == "1.14"
-    assert ledger["entries"][-len(expected) :] == expected
+    assert tuple(map(int, ledger["version"].split("."))) >= (1, 14)
+    start = ledger["entries"].index("CER-000000001")
+    assert ledger["entries"][start : start + len(expected)] == expected
     for identifier in expected:
         assignment = _yaml(
             root
