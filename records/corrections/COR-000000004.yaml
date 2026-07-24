@@ -2,6 +2,7 @@ identifier: "COR-000000004"
 class: "Correction Record"
 title: "Always-Open Inner Sanctum Foundational Correction"
 version: "1.0"
+version_record_id: "VER-000000031"
 lifecycle_status: "ACTIVE"
 effective_date: "2026-07-23"
 triggering_event:
@@ -14,9 +15,10 @@ demonstrated_defect:
   - "The runtime withheld Taxonomy components until phase 8."
   - "Project instructions described the Inner Sanctum as closed by default."
 correction_scope:
-  - "Makes the Inner Sanctum always open from initialization through termination."
-  - "Makes the complete governed Taxonomy available in every text-analysis phase."
-  - "Replaces phase-based access control with canonical provenance binding and component-specific evidentiary activation."
+  - "Makes the Inner Sanctum always open from initialization through termination under MAN-000000002."
+  - "Makes the complete governed Taxonomy available in every text-analysis phase under the successor Manifest."
+  - "Preserves MAN-000000001 as the reproducible historical gated release."
+  - "Replaces phase-based access control in the active release with canonical provenance binding and component-specific evidentiary activation."
   - "Preserves ordinary explanations, disqualifiers, prohibited inferences, uncertainty, and anti-secret-hunting safeguards."
 epistemic_classification:
   owner_design_judgment: "CONSTITUTIONAL_CORRECTION"
@@ -28,6 +30,10 @@ certified_limitations:
 authority_basis:
   lane: "PROTECTED_GOVERNANCE_LANE"
   decision_id: "DDR-000000011"
+identifier_governance:
+  ledger_id: "LDG-000000001"
+  ledger_version: "1.17"
+  assignment_record: "ledgers/identifier-assignment-ledger/assignments/COR-000000004.yaml"
 audit_history:
   - event_date: "2026-07-23"
     event_type: "ALWAYS_OPEN_CORRECTION_PROPOSED"
