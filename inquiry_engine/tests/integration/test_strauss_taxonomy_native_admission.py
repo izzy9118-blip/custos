@@ -34,10 +34,13 @@ def test_taxonomy_is_an_admitted_open_native_hoc_record():
         "NOT_YET_COMPLETE"
     )
     assert hoc["certification_eligibility"]["status"] == (
-        "CERTIFIED_FOR_BOUNDED_INVESTIGATIVE_SCOPE_UPON_OWNER_MERGE"
+        "CERTIFIED_FOR_ALWAYS_AVAILABLE_BOUNDED_ANALYTICAL_SCOPE_UPON_OWNER_MERGE"
     )
     assert hoc["engine_use_authorization_state"]["status"] == (
-        "AUTHORIZED_ONLY_WHEN_PINNED_BY_MAN-000000001_AFTER_OWNER_MERGE"
+        "AUTHORIZED_WHEN_PINNED_BY_MAN-000000002_AFTER_OWNER_MERGE"
+    )
+    assert hoc["engine_use_authorization_state"]["activation_rule"] == (
+        "EVIDENCE_ALONE_ACTIVATES_A_NAMED_TECHNIQUE"
     )
     assert hoc["reconstruction_status"]["corpus_wide_verification"] == (
         "NOT_YET_COMPLETE"
