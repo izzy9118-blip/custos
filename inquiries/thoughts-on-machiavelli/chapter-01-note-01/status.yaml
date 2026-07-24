@@ -1,0 +1,14 @@
+version: 1
+inquiry_id: TM-CH01-N01
+state: active
+stage: comparative_return
+evidence_status: partial
+current_judgment_status: supported_inference
+next_action: Verify the Italian beginnings of Prince chapters 1, 2, and 8 and test
+  the present reading against the full context of chapter 8.
+blocked_by: []
+open_uncertainties:
+- Primary-language verification
+- Whether chapter 8 merely corroborates or materially complicates the republic–principality
+  division
+- Whether the wider chapter 8 context changes the function of Strauss’s citation sequence

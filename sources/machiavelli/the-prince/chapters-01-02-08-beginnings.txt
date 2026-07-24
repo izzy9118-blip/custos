@@ -1,0 +1,31 @@
+SOURCE: Niccolò Machiavelli, The Prince, Luigi Ricci translation revised by E. R. P. Vincent, Oxford World's Classics.
+WITNESS: user-supplied OCR-derived English transcription.
+SCOPE: beginnings of chapters 1, 2, and 8.
+
+CHAPTER 1 — DIPLOMATIC OCR
+
+,L states and dominions which hold or have held sway over mankind are either republics or monarchies. Monarchies are either hereditary in which the rulers have been for many years of the same family, or else they are of recent foundation.
+
+CHAPTER 1 — NORMALIZED RECOVERY
+
+All states and dominions which hold or have held sway over mankind are either republics or monarchies. Monarchies are either hereditary, in which the rulers have been for many years of the same family, or else they are of recent foundation.
+
+CHAPTER 2 — DIPLOMATIC OCR
+
+will not here speak of republics, having I already treated of them fully in another place. R will d eal only wit h monarchies, and will^discuss how the various kinds descr ibed above cap be governed and maintained.
+
+CHAPTER 2 — NORMALIZED RECOVERY
+
+I will not here speak of republics, having already treated of them fully in another place. I will deal only with monarchies, and will discuss how the various kinds described above can be governed and maintained.
+
+CHAPTER 8 — DIPLOMATIC OCR
+
+B utwhich as there are still two ways of becoming prince cannot be attributed entirely either to fortune or to ability, they must not be passed over, although one of them could be more fully discussed if we were treating of republics.
+
+CHAPTER 8 — NORMALIZED RECOVERY
+
+But as there are still two ways of becoming prince which cannot be attributed entirely either to fortune or to ability, they must not be passed over, although one of them could be more fully discussed if we were treating of republics.
+
+LIMITS
+
+The OCR visibly drops initials, joins words, and corrupts spacing. The normalized readings are editorial recoveries. Exact Italian wording and a stable primary-language witness remain unresolved.

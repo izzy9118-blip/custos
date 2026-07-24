@@ -1,0 +1,215 @@
+version: 1
+title: Strauss's taxonomy of literary concealment — active bounded inventory
+source:
+  author: Leo Strauss
+  work: The Literary Character of the Guide for the Perplexed
+  container: Persecution and the Art of Writing
+  documented_range: pp. 70–77
+  repository_reconstruction_source: Hermeneutic_Object_Strauss_Taxonomy_of_Literary_Concealment_v1.0
+  status: partial; not corpus-wide complete
+repository_rule:
+  always_available: true
+  availability_is_not_presence: true
+  activation_requires_fixed_textual_evidence: true
+  ordinary_alternatives_must_be_tested: true
+  allowed_results:
+  - not_evaluated
+  - observed
+  - incomplete
+  - disqualified
+  - eligible
+  prohibited_conclusions:
+  - concealment proved
+  - hidden teaching proved
+  - authorial intention proved
+  - audience differentiation proved
+  - doctrinal truth proved
+techniques:
+- id: LC-001
+  name: Separation by Distant Placement
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: '"to speak of the same subject in a contradictory manner on pages far apart from each other"'
+  source_location: p. 70
+  mechanism: Two contradictory statements concerning the same subject are separated by substantial textual distance. Ordinary reading fails to hold both statements together, allowing the contradiction to remain concealed.
+  documentary_function: The distance between the statements prevents casual recognition of their incompatibility.
+  investigative_requirement: The reader must compare statements across the whole work rather than relying on local context alone.
+  status: EXPLICITLY NAMED AND ENUMERATED
+- id: LC-002
+  name: Incidental Placement of One Contradictory Statement
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: '"to make one of the two contradictory statements in passing, as it were"'
+  source_location: p. 70
+  mechanism: One statement is prominently presented while its contradiction appears incidentally, parenthetically, or as an apparently subordinate remark.
+  documentary_function: The unequal prominence of the two statements causes the incidental statement to escape notice or to be denied equal interpretive weight.
+  investigative_requirement: Incidental remarks must be indexed and compared with prominent declarations concerning the same subject.
+  status: EXPLICITLY NAMED AND ENUMERATED
+- id: LC-003
+  name: Contradiction of Implications Rather Than Direct Statement
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: '"to contradict the first statement not directly, but by contradicting its implications"'
+  source_location: pp. 70–71
+  mechanism: A statement is not directly denied. Instead, another statement denies a proposition that follows from it. The contradiction becomes visible only after the unstated implications are reconstructed.
+  documentary_function: The contradiction remains concealed because the incompatible propositions are never placed in direct verbal opposition.
+  investigative_requirement: The reader must reconstruct logical implications and compare them with later statements.
+  status: EXPLICITLY NAMED AND ENUMERATED
+- id: LC-004
+  name: Apparent Repetition with Minute Addition or Omission
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: '"to contradict the first statement not directly, but by seemingly repeating it while actually adding to it, or omitting from it, an apparently negligible expression"'
+  source_location: p. 71
+  mechanism: A later statement appears to repeat an earlier statement but changes it by adding or omitting a small expression. The minute verbal difference produces a substantive contradiction.
+  documentary_function: The appearance of repetition conceals the change. The reader's expectation of sameness prevents close examination of the altered wording.
+  investigative_requirement: Parallel passages must be compared word by word. Additions and omissions, however small, must be recorded.
+  status: EXPLICITLY NAMED AND ENUMERATED
+- id: LC-005
+  name: Intermediary Assertion and Creeping Contradiction
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: '"to introduce between the two contradictory statements an intermediary assertion"'
+  source_location: p. 71
+  mechanism: An intermediary statement is introduced. By itself, it does not contradict the first statement. Through the addition or omission of an apparently negligible expression, however, the intermediary statement is later repeated in a form that contradicts the first. Strauss says that "the contradictory statement creeps in as a repetition of the intermediary statement."
+  documentary_function: The intermediary assertion masks the transition from the first position to its contradiction. The final statement appears continuous with what precedes it.
+  investigative_requirement: The reader must reconstruct the sequence of formulations, not merely compare the first and final statements.
+  status: EXPLICITLY NAMED AND ENUMERATED
+- id: LC-006
+  name: Use of Ambiguous Words
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: '"To use ambiguous words."'
+  source_location: pp. 71–72
+  mechanism: A word carries more than one meaning. One meaning supports the exterior or conventional teaching; another supports the interior or concealed teaching.
+  documentary_function: The same verbal surface communicates differently to different readers.
+  investigative_requirement: Words must be examined for both technical and nontechnical meanings, as well as for exterior and interior senses.
+  status: EXPLICITLY NAMED AND ENUMERATED
+- id: LC-007
+  name: Two-Faced Speech
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_description: A speech may have "two faces," an exterior face useful for social or political purposes and an inner face useful for knowledge of the truth.
+  source_location: p. 72
+  mechanism: The same speech is directed toward two audiences. The vulgar receive the exterior meaning; the independent reader may recover the inner meaning.
+  documentary_function: Audience differentiation permits simultaneous revelation and concealment.
+  status: EXPLICITLY DISTINGUISHED
+  relationship: This is the broader communicative structure within which LC-006 operates.
+- id: LC-008
+  name: Concealment in a Single Common Word
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_description: A secret is more perfectly concealed in a word than in a sentence because the word is smaller and therefore a better hiding place. Common words placed unobtrusively within unobtrusive sentences are especially effective.
+  source_location: p. 72
+  mechanism: A decisive hidden meaning is concentrated in an ordinary word that does not attract attention.
+  documentary_function: The ordinary appearance of the word prevents the reader from recognizing its doctrinal force.
+  investigative_requirement: Every word must be scrutinized, especially common words that appear incidental.
+  status: EXPLICITLY RECONSTRUCTED
+- id: LC-009
+  name: Secret Terminology
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: '"We may call those words secret words. His secret terminology requires a special study."'
+  source_location: pp. 74–75
+  mechanism: A recurring vocabulary contains words that possess, or may possess, concealed meanings. Some are ambiguous; others are unambiguous but technically or contextually coded.
+  documentary_function: A controlled vocabulary allows concealed teaching to recur without explicit disclosure.
+  investigative_requirement: Construct a complete index of words that have or may have secret meaning.
+  status: EXPLICITLY NAMED
+- id: LC-010
+  name: Intentional Sophism
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: Strauss refers to "intentional sophisms" as devices used by Maimonides, though he does not elaborate them in this immediate passage.
+  source_location: p. 74
+  mechanism: A deliberately fallacious or misleading argument may protect or obscure the actual teaching.
+  documentary_limit: The present passage names but does not classify subtypes.
+  status: EXPLICITLY NAMED — REQUIRES FURTHER DOCUMENTARY DEVELOPMENT
+- id: LC-011
+  name: Ironical Remark
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: Strauss names "ironical remarks" among Maimonides' devices without elaborating their varieties here.
+  source_location: p. 74
+  mechanism: The apparent meaning of a statement differs from the meaning intended for the attentive reader.
+  documentary_limit: The present passage names the device but does not provide a complete operational account.
+  status: EXPLICITLY NAMED — REQUIRES FURTHER DOCUMENTARY DEVELOPMENT
+- id: LC-012
+  name: Apostrophe to the Reader
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: '"various kinds of apostrophes to the reader"'
+  source_location: p. 75
+  mechanism: Direct addresses to the reader may signal audience, level of disclosure, warning, invitation, or restriction.
+  documentary_function: The form and placement of direct address may distinguish intended readers or mark concealed instruction.
+  status: EXPLICITLY NAMED — SUBTYPES NOT YET RECONSTRUCTED
+- id: LC-013
+  name: Mottoes
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: '"mottoes prefixed to the whole work or to individual parts"'
+  source_location: p. 75
+  mechanism: A prefatory saying or scriptural phrase supplies an indirect interpretive key to the work or section it precedes.
+  documentary_function: The motto communicates through allusion rather than direct exposition.
+  status: EXPLICITLY NAMED — EXAMPLES REQUIRE CONTINUED COLLECTION
+- id: LC-014
+  name: Silence or Significant Omission
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: '"Another device consists in silence, i.e., the omission of something which only the learned, or the learned who are able to understand of themselves, would miss."'
+  source_location: pp. 75–77
+  mechanism: Expected information is withheld. Only readers possessing the relevant knowledge recognize that something is absent.
+  documentary_function: The omission differentiates readers while signaling the exoteric character of the surrounding passage.
+  investigative_requirement: Recover the expected source or doctrinal context and document what is missing.
+  status: EXPLICITLY NAMED AND EXEMPLIFIED
+- id: LC-015
+  name: Deliberate Misquotation Through Omission
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  source_location: pp. 75–76
+  mechanism: A cited statement omits words that would substantially alter its meaning or disclose its status.
+  documentary_function: The altered quotation supports an exterior teaching while allowing knowledgeable readers to recover the concealed qualification.
+  status: EXPLICITLY RECONSTRUCTED
+  relationship: A specific subtype of LC-014, but retained separately because Strauss's example identifies citation alteration as a distinct documentary operation.
+- id: LC-016
+  name: Repetition as Leitmotif
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_description: Fourfold repetition of an express quotation in a carefully worded book proves that the quotation is "something like a leitmotif."
+  source_location: p. 75
+  mechanism: Repeated language marks a theme for special attention while its altered or incomplete form may conceal its true significance.
+  documentary_function: Repetition signals importance, but must be examined together with exact wording and source recovery.
+  status: EXPLICITLY RECONSTRUCTED
+- id: LC-017
+  name: Rashei Perakim — Beginnings of Chapters
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  strausss_formulation: The expression may mean not only "chapter headings" but also "beginnings of chapters." Maimonides sometimes gives important hints through the initial word or words of a chapter.
+  source_location: p. 77
+  mechanism: A chapter's opening word or phrase indirectly signals the subject, division, or doctrinal relation of the section.
+  documentary_function: Initial placement gives a small lexical item architectonic force.
+  investigative_requirement: Record the first word or words of every chapter and test them against the structure of the work.
+  status: EXPLICITLY NAMED AND EXEMPLIFIED
+- id: LC-018
+  name: Rare Statement of the Unconventional Teaching
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  source_location: pp. 73–74
+  mechanism: The conventional view is repeated frequently, while the unconventional or true view is stated rarely, perhaps only once.
+  documentary_function: Frequency protects the conventional teaching; rarity conceals the truth from inattentive readers.
+  status: EXPLICITLY FORMULATED RULE OF DISCERNMENT
+  strausss_rule: Of two contradictory statements, the statement occurring least frequently is presumptively the one Maimonides considered true.
+- id: LC-019
+  name: Frequent Repetition of the Conventional View
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  source_location: p. 74
+  mechanism: Views suitable to or accepted by the vulgar are repeated as frequently as possible.
+  documentary_function: Repetition gives the surface teaching apparent authority and familiarity while covering the rarer contrary statement.
+  status: EXPLICITLY RECONSTRUCTED
+  relationship: Operates jointly with LC-018.
+- id: LC-020
+  name: Hint
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  source_location: p. 74
+  mechanism: A small textual indication assists the attentive reader in discovering a contradiction or determining which contradictory statement is true.
+  documentary_function: Hints guide readers capable of understanding by themselves without directly disclosing the teaching.
+  status: EXPLICITLY NAMED — SUBTYPES PARTLY IDENTIFIED THROUGH OTHER DEVICES
+- id: LC-021
+  name: Inappropriate Expression
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  source_location: p. 74
+  mechanism: A seemingly ill-fitting expression may function as a stumbling block that directs attention beneath the surface.
+  documentary_limit: Strauss notes that it can also be dismissed as merely inappropriate; therefore it does not compel inquiry as strongly as a contradiction.
+  status: EXPLICITLY NAMED AS A POSSIBLE DEVICE
+- id: LC-022
+  name: Clumsy Transition
+  derivation: source_derived_from_bounded_reconstruction_pp_70_77
+  source_location: p. 74
+  mechanism: An awkward movement between subjects may signal a concealed relationship or structural break.
+  documentary_limit: Like an inappropriate expression, it may be dismissed as mere clumsiness unless corroborated.
+  status: EXPLICITLY NAMED AS A POSSIBLE DEVICE
+uncertainty:
+- The source-derived reconstruction covers pages 70–77 only.
+- Several named devices lack a complete operational account in the documented range.
+- The inventory must not be treated as a general suspicion engine.

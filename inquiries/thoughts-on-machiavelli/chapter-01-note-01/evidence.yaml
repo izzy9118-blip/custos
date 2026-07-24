@@ -1,0 +1,25 @@
+version: 1
+inquiry_id: TM-CH01-N01
+evidence:
+- id: E1
+  role: primary_strauss_excerpt
+  path: sources/strauss/thoughts-on-machiavelli/chapter-01-note-01.txt
+  sha256: e3e50a2d68462d1d79bd68d8d6cf45ad31df3ebd3ccf71ffbe047cb85853a25b
+  status: fixed_excerpt
+  limitations:
+  - OCR-derived transcription
+  - not a complete witness
+  - exact typography and note placement require stable-edition verification
+- id: E2
+  role: cited_author_excerpt
+  path: sources/machiavelli/the-prince/chapters-01-02-08-beginnings.txt
+  sha256: 5e71e1b16dfb8e3c07b92cd732eb0ee7920758b4f95c9bd389fc5a6a5b0b0a94
+  status: fixed_excerpt
+  limitations:
+  - English translation
+  - visibly corrupted OCR
+  - normalized readings are editorial recoveries
+  - Italian verification unresolved
+missing_evidence:
+- Fixed primary-language Italian witness for chapter 1, 2, and 8 beginnings
+- Stable page-image verification of Strauss passage and note
