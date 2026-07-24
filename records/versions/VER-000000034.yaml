@@ -1,0 +1,13 @@
+identifier: "VER-000000034"
+class: "Version Record"
+entity_id: "HOC-000000001"
+previous_version: "1.1"
+current_version: "1.2"
+effective_date: "2026-07-23"
+change_type: "ALWAYS_AVAILABLE_EVIDENCE_GOVERNED_TAXONOMY"
+source_decision_id: "DDR-000000011"
+authority_id: "CAG-000000002"
+change_summary: >
+  Makes the admitted twenty-two-component Taxonomy continuously available to
+  text analysis without changing its source-derived content or permitting any
+  component to activate without documentary evidence.

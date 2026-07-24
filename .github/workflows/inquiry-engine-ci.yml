@@ -44,9 +44,6 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v4
         with:
-          # Released Cognitive Memory Manifests pin governed source commits.
-          # Full history lets CI prove that each pinned commit remains an
-          # ancestor of the release instead of accepting a severing squash.
           fetch-depth: 0
 
       - name: Set up Python

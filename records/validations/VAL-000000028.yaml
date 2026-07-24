@@ -1,0 +1,41 @@
+identifier: "VAL-000000028"
+class: "Validation Record"
+title: "Always-Open Inner Sanctum Correction Validation"
+version: "1.0"
+validation_date: "2026-07-23"
+validation_status: "PASS_SUBJECT_TO_OWNER_MERGE"
+validation_scope:
+  - "Continuous Taxonomy availability across all ten IAR phases under MAN-000000002"
+  - "Reproducible historical MAN-000000001 gated behavior"
+  - "Component-specific evidentiary activation and epistemic limits"
+  - "Runtime, CLI, documentation, identifier governance, and regression-test coherence"
+validated_objects:
+  - "COR-000000004"
+  - "IAR-000000001"
+  - "HOC-000000001"
+  - "MAN-000000002"
+  - "LDG-000000001"
+validation_findings:
+  inner_sanctum_available_from_phase_one_under_successor: "PASS"
+  complete_taxonomy_supplied_to_every_successor_reasoning_phase: "PASS"
+  predecessor_manifest_reproducibility_preserved: "PASS"
+  component_activation_remains_evidence_governed: "PASS"
+  automatic_secret_hunting_remains_prohibited: "PASS"
+  source_taxonomy_content_preserved: "PASS"
+  identifier_and_version_history_complete: "PASS"
+  predecessor_history_preserved: "PASS"
+test_evidence:
+  workflow: "Inquiry Engine CI"
+  python: "3.12"
+  conclusion: "SUCCESS"
+  run_id: 30055891523
+  validated_commit: "bef3a515aba47207df2bcb88d02d031724037d13"
+limitations:
+  - "Validation establishes internal conformity, not historical or philosophical truth."
+  - "No LC component is activated for the active Citation Object by this record."
+  - "Final authority depends on authenticated repository-owner merge."
+authority_basis:
+  decision_id: "DDR-000000011"
+  lane: "PROTECTED_GOVERNANCE_LANE"
+identifier_governance:
+  assignment_record: "ledgers/identifier-assignment-ledger/assignments/VAL-000000028.yaml"

@@ -1,0 +1,13 @@
+identifier: "VER-000000032"
+class: "Version Record"
+entity_id: "MAN-000000002"
+previous_version: null
+current_version: "1.0"
+effective_date: "2026-07-23"
+change_type: "ALWAYS_OPEN_COGNITIVE_MEMORY_RELEASE"
+source_decision_id: "DDR-000000011"
+authority_id: "CAG-000000002"
+change_summary: >
+  Releases the successor Cognitive Memory Manifest that pins IAR-000000001
+  version 1.1 and HOC-000000001 version 1.2 while preserving MAN-000000001 as
+  the reproducible historical gated release.

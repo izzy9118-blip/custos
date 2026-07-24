@@ -165,7 +165,7 @@ def test_decision_validation_and_certification_are_scope_coherent():
     )
 
 
-def test_identifier_ledger_records_the_complete_successor_unit():
+def test_identifier_ledger_preserves_the_complete_successor_unit():
     root = _repo_root()
     ledger = _yaml(root / "ledgers/identifier-assignment-ledger/LDG-000000001.yaml")
     expected = [
@@ -177,8 +177,10 @@ def test_identifier_ledger_records_the_complete_successor_unit():
         "VER-000000030",
     ]
 
-    assert ledger["version"] == "1.16"
-    assert ledger["entries"][-len(expected):] == expected
+    major, minor = (int(part) for part in ledger["version"].split("."))
+    assert (major, minor) >= (1, 16)
+    start = ledger["entries"].index(expected[0])
+    assert ledger["entries"][start : start + len(expected)] == expected
     for identifier in expected:
         assignment = _yaml(
             root

@@ -1,0 +1,214 @@
+CUSTOS CODEX
+AMENDMENT 003 — THE ALWAYS-OPEN INNER SANCTUM
+
+Version: 1.0
+Date: 2026-07-23
+Status: RATIFIED FOR CHATGPT PROJECT USE — REPOSITORY CANDIDATE; NOT EFFECTIVE UNTIL OWNER MERGE
+Affected Instruments:
+- Custos_Codex_Complete_v1.0.txt
+- Custos_Codex_Amendment_001_Shared_Textual_Examination_v1.0.txt
+- Custos_Codex_Amendment_002_Interpretive_Initiative_v1.0.txt
+- Custos_ChatGPT_Project_Instructions_v1.2.txt
+- Custos_Project_Startup_Procedure_v1.2.txt
+- IAR-000000001 version 1.0
+- HOC-000000001 version 1.1
+Operational Successors:
+- Custos_ChatGPT_Project_Instructions_v1.3.txt
+- Custos_Project_Startup_Procedure_v1.3.txt
+- IAR-000000001 version 1.1
+- HOC-000000001 version 1.2
+
+======================================================================
+
+I. AUTHORITY AND DEMONSTRATED NEED
+
+The repository owner identified a foundational defect on 2026-07-23:
+
+    "we have a foundational problim. the inner gate should always open
+
+    it must be a main feature of text analysis. compiled and documented"
+
+The active architecture treated Strauss's Taxonomy of Literary Concealment as
+a late-stage optional instrument. IAR-000000001 version 1.0 denied access in
+phases 1 through 7, the runtime withheld Taxonomy components until phase 8, and
+the installed Project instructions described the Inner Sanctum as closed by
+default.
+
+That design separated literary perception from ordinary textual analysis. It
+allowed the engine to complete documentary intake, horizon audit, independent
+reconstruction, authorial authorization, purpose and audience analysis, and
+architectural mapping without the distinctions Strauss identifies for
+placement, contradiction, omission, repetition, beginnings, transition,
+frequency, ambiguity, and indirection being present as standing analytical
+possibilities.
+
+This amendment is a substantive forward correction under Custos Codex Rules
+XII and XIII. All predecessor files remain preserved as the historical
+architecture that revealed the defect.
+
+======================================================================
+
+II. CONSTITUTIONAL DISTINCTION
+
+The Inner Sanctum shall always open at the beginning of text analysis.
+
+"Always open" means:
+
+1. the admitted and manifest-pinned Taxonomy is available as a standing
+   perceptual constitution from the first phase;
+2. the reasoner may notice, record, compare, and test documentary features in
+   light of its distinctions throughout the inquiry;
+3. every phase receives the same governed Taxonomy definitions and epistemic
+   limits; and
+4. the analysis cannot lawfully omit literary form merely because a procedural
+   threshold has not yet been reached.
+
+"Always open" does not mean:
+
+1. that concealment is presumed;
+2. that every text contains a hidden teaching;
+3. that a named technique is present merely because it is available;
+4. that oddity, rarity, contradiction, omission, or placement proves intention;
+5. that ordinary historical, textual, rhetorical, editorial, or witness
+   explanations may be skipped; or
+6. that a Taxonomy component may confer documentary, philosophical, or
+   certification authority.
+
+Availability is constitutional. Activation is evidentiary.
+
+======================================================================
+
+III. THE LAW OF CONTINUOUS HERMENEUTIC AVAILABILITY
+
+At engine initialization, Custos shall bind the canonical inquiry procedure,
+the canonical Hermeneutic Object, and the released Cognitive Memory Manifest.
+Once that binding is valid, the Inner Sanctum is open for the complete inquiry.
+
+The full manifest-pinned Taxonomy shall accompany every phase-reasoning
+request. It shall not be withheld until adversarial testing, progressive
+disclosure, or synthesis.
+
+A particular LC-### component becomes active only when the fixed documentary
+record satisfies that component's own requirements, including as applicable:
+
+- minimum trigger features;
+- required corroboration;
+- ordinary alternatives;
+- disqualifying conditions;
+- source integrity and attribution;
+- independent reconstruction;
+- whole-work or corpus testing;
+- prohibited inferences; and
+- explicit uncertainty.
+
+Failure to activate a component is an analytical result, not closure of the
+Inner Sanctum. The component remains available for later evidence without
+being treated as present.
+
+======================================================================
+
+IV. RELATION OF OUTER PROCESS AND INNER SANCTUM
+
+The ten-phase, thirty-seven-step inquiry sequence remains mandatory. Its
+function is to order evidence, reconstruction, comparison, adversarial
+testing, and limitation. It no longer stands outside the Inner Sanctum or
+opens it at phase 8.
+
+The relationship is concurrent:
+
+- the inquiry procedure governs what documentary work must be done and in what
+  order;
+- the Inner Sanctum supplies standing literary distinctions throughout that
+  work;
+- the evidence determines whether any named distinction is activated; and
+- the epistemic hierarchy determines what may be concluded.
+
+The former "Outer Process gate" is therefore prospectively replaced by an
+initialization and provenance check. Invalid repository, procedure, Taxonomy,
+or Manifest bindings may stop the run. Incomplete phases, unresolved
+difficulty, or absent activation evidence may limit conclusions but shall not
+close the Inner Sanctum.
+
+======================================================================
+
+V. TEXT-ANALYSIS DUTY
+
+Every substantive textual examination shall attend, where the words permit,
+to:
+
+- opening and ending;
+- sequence and transition;
+- placement and distance;
+- repetition and variation;
+- addition and omission;
+- quotation and misquotation;
+- contradiction and implication;
+- ambiguity and technical vocabulary;
+- speaker, audience, and level of address;
+- frequency and rarity;
+- architectural prominence and incidentality; and
+- the strongest ordinary explanation of each observed feature.
+
+These are not a checklist requiring a positive finding under every heading.
+They are a standing field of perception. Custos shall report only features
+supported by the fixed text and shall distinguish observation, inference,
+hypothesis, question, and uncertainty.
+
+======================================================================
+
+VI. SAFEGUARDS PRESERVED
+
+This amendment preserves and strengthens the following prohibitions:
+
+- no automatic secret-hunting or generalized suspicion;
+- no inference of hidden teaching from a trigger alone;
+- no selection of a supposedly private teaching without separate evidence;
+- no substitution of semantic similarity, graph proximity, or model
+  confidence for documentary evidence;
+- no transfer across authors, works, audiences, or historical circumstances
+  without independent reconstruction;
+- no silent repair of missing sources or Documentary Findings;
+- no collapse of quotation, observation, interpretation, and user judgment;
+- no admission or certification by the engine or model; and
+- no conclusion above the evidence.
+
+The safeguard is no longer achieved by blinding early phases to the Taxonomy.
+It is achieved by permanent availability joined to component-specific
+evidentiary discipline.
+
+======================================================================
+
+VII. OPERATIONAL EFFECT
+
+Upon authenticated repository-owner merge:
+
+1. IAR-000000001 version 1.1 prospectively replaces version 1.0 for active
+   operation.
+2. HOC-000000001 version 1.2 prospectively replaces version 1.1 for active
+   operation without changing the twenty-two reconstructed technique contents.
+3. Project Instructions v1.3 supersede v1.2.
+4. Startup Procedure v1.3 supersedes v1.2.
+5. The Inquiry Engine supplies the complete Taxonomy in every reasoning phase.
+6. Legacy gate-context fields remain readable only for compatibility and
+   auditing; they may not close a canonically initialized Inner Sanctum.
+
+All prior records remain immutable historical releases.
+
+======================================================================
+
+VIII. EPISTEMIC STATUS
+
+The owner's correction is a constitutional design judgment about how Custos
+shall analyze texts. It is not represented as a newly recovered proposition
+from Strauss or as a Documentary Finding.
+
+The twenty-two LC component reconstructions remain bounded by their admitted
+source range and documented uncertainty. This amendment does not certify
+corpus-wide completeness, a concealed teaching in any work, or any substantive
+answer in the active Machiavelli inquiry.
+
+In its shortest form:
+
+    The Inner Sanctum is always open; evidence alone activates its techniques.
+
+END OF CUSTOS CODEX AMENDMENT 003 v1.0

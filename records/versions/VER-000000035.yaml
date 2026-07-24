@@ -1,0 +1,13 @@
+identifier: "VER-000000035"
+class: "Version Record"
+entity_id: "LDG-000000001"
+previous_version: "1.16"
+current_version: "1.17"
+effective_date: "2026-07-23"
+change_type: "PROTECTED_ALWAYS_OPEN_CORRECTION_IDENTIFIER_INTEGRATION"
+source_decision_id: "DDR-000000011"
+authority_id: "CAG-000000002"
+change_summary: >
+  Appends DDR-000000011, COR-000000004, MAN-000000002, VAL-000000028,
+  CER-000000004, and VER-000000031 through VER-000000035 to the Identifier
+  Assignment Ledger.
