@@ -1,0 +1,13 @@
+version: 1
+instructions: CUSTOS.md
+reading_protocol: protocol/reading.yaml
+literary_techniques: protocol/literary-techniques.yaml
+active_inquiry: inquiries/thoughts-on-machiavelli/chapter-01-note-01
+sources_root: sources
+runs_root: runs
+integrations:
+  sanctum:
+    enabled: true
+    path: integrations/sanctum
+  neo4j:
+    enabled: false

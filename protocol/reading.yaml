@@ -1,0 +1,62 @@
+version: 1
+name: Custos five-stage documentary reading protocol
+ordinary_unit: One bounded documentary problem established by Strauss, normally a
+  governing passage plus its complete note and cited passages.
+literary_attention:
+  always_open: true
+  rule: The inventory is available at every stage; evidence alone activates a named
+    technique.
+  prohibited_shortcut: Availability, oddity, semantic similarity, graph proximity,
+    or model confidence is not evidence of concealment.
+stages:
+- id: 1
+  key: encounter_strauss
+  name: Encounter Strauss
+  required_actions:
+  - Fix the Strauss passage, immediate context, complete note, and explicit citation
+    targets.
+  - State the initial textual problem before cited sources settle its meaning.
+  - Record investigator assumptions and distinguish observations from hypotheses.
+  - Notice placement, beginnings, endings, sequence, emphasis, omission, and repetition
+    without assigning concealed meaning.
+  completion: The bounded question and source chain are explicit.
+- id: 2
+  key: recover_sources
+  name: Recover the documentary chain
+  required_actions:
+  - Identify each work, expression, witness, passage, language, and locator.
+  - Preserve diplomatic wording before normalization.
+  - Record hashes, provenance, OCR defects, editorial interventions, and missing witnesses.
+  - Stop or limit claims when a required source cannot be recovered.
+  completion: Every used passage has a recoverable witness and declared limitation.
+- id: 3
+  key: independent_reconstruction
+  name: Reconstruct cited authors independently
+  required_actions:
+  - Reconstruct each cited author, work, genre, audience, terms, and historical setting
+    independently.
+  - Do not allow Strauss or a later author to redefine the cited author in advance.
+  - Map the cited work’s local and whole-work architecture where evidence permits.
+  - Preserve historically admissible alternatives.
+  completion: The cited author’s position is stated independently of Strauss’s use.
+- id: 4
+  key: comparative_return
+  name: Return comparatively to Strauss
+  required_actions:
+  - Compare what Strauss selected, omitted, altered, ordered, repeated, or placed.
+  - State the strongest evidence-supported reading.
+  - Reconstruct and test the strongest serious alternative against the same evidence.
+  - Evaluate relevant LC techniques using their source-derived descriptions and ordinary
+    alternatives.
+  - Test local readings against the work and corpus when evidence is available.
+  completion: The present reading, rival, literary evaluations, and limits are explicit.
+- id: 5
+  key: preserve
+  name: Preserve the inquiry
+  required_actions:
+  - Classify every proposition by epistemic status.
+  - Preserve exact evidence, source hashes, interpretations, alternatives, dissent,
+    and uncertainty.
+  - Record the state reached and the next textual act.
+  - Write a new Git version rather than retaining competing active instructions.
+  completion: Another investigator can reproduce and continue the inquiry.

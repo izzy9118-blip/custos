@@ -1,7 +1,0 @@
-Documentary Finding DF-000143
-
-Status: NOT AVAILABLE
-
-This finding is not present in the current conversation context. No
-reconstruction has been performed in order to preserve documentary
-integrity.
