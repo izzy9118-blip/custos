@@ -1,0 +1,238 @@
+name: Apply Inner Sanctum Reproducibility Patch
+
+on:
+  push:
+    branches:
+      - agent/inner-sanctum-always-open
+
+permissions:
+  contents: write
+
+jobs:
+  patch:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: agent/inner-sanctum-always-open
+          fetch-depth: 0
+
+      - name: Apply versioned runtime patch
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          cli = Path('inquiry_engine/src/custos_engine/cli.py')
+          text = cli.read_text(encoding='utf-8')
+          old = '''    supplied_gate_context = question.get("inner_sanctum_gate_context", {})
+    if not isinstance(supplied_gate_context, dict):
+        raise ValueError("inner_sanctum_gate_context must be an object")
+    gate_context_data = {
+        "procedure_id": manifest.procedure_source.canonical_id,
+        "taxonomy_id": manifest.taxonomy_source.canonical_id,
+        "cognitive_memory_manifest_id": manifest.manifest_id,
+        "current_state": run.current_state,
+    }
+    gate_context_data.update(supplied_gate_context)
+    gate_context = HermeneuticGateContext.model_validate(gate_context_data)
+    gate_decision_model = evaluate_inner_sanctum_gate(gate_context)
+    gate_decision = gate_decision_model.model_dump(mode="json")
+    if not gate_decision_model.authorized:
+        raise PermissionError(
+            "The canonical always-open Inner Sanctum could not initialize: "
+            + " ".join(gate_decision_model.reasons)
+        )
+
+    declared_focus_technique_ids = question.get("inner_sanctum_technique_ids", [])
+    if not isinstance(declared_focus_technique_ids, list) or not all(
+        isinstance(technique_id, str)
+        for technique_id in declared_focus_technique_ids
+    ):
+        raise ValueError("inner_sanctum_technique_ids must be an array of strings")
+    available_technique_ids = {
+        component.component_id for component in taxonomy_components
+    }
+    unavailable_technique_ids = sorted(
+        set(declared_focus_technique_ids).difference(available_technique_ids)
+    )
+    if unavailable_technique_ids:
+        raise ValueError(
+            "Declared Taxonomy focus techniques are not present in the pinned Manifest: "
+            + ", ".join(unavailable_technique_ids)
+        )
+'''
+          new = '''    declared_focus_technique_ids = question.get("inner_sanctum_technique_ids", [])
+    if not isinstance(declared_focus_technique_ids, list) or not all(
+        isinstance(technique_id, str)
+        for technique_id in declared_focus_technique_ids
+    ):
+        raise ValueError("inner_sanctum_technique_ids must be an array of strings")
+    available_technique_ids = {
+        component.component_id for component in taxonomy_components
+    }
+    unavailable_technique_ids = sorted(
+        set(declared_focus_technique_ids).difference(available_technique_ids)
+    )
+    if unavailable_technique_ids:
+        raise ValueError(
+            "Declared Taxonomy focus techniques are not present in the pinned Manifest: "
+            + ", ".join(unavailable_technique_ids)
+        )
+
+    always_open_release = manifest.manifest_id == "MAN-000000002"
+    supplied_gate_context = question.get("inner_sanctum_gate_context")
+    gate_decision = None
+    if always_open_release:
+        if supplied_gate_context is None:
+            supplied_gate_context = {}
+        if not isinstance(supplied_gate_context, dict):
+            raise ValueError("inner_sanctum_gate_context must be an object")
+        gate_context_data = {
+            "procedure_id": manifest.procedure_source.canonical_id,
+            "taxonomy_id": manifest.taxonomy_source.canonical_id,
+            "cognitive_memory_manifest_id": manifest.manifest_id,
+            "current_state": run.current_state,
+        }
+        gate_context_data.update(supplied_gate_context)
+        gate_decision_model = evaluate_inner_sanctum_gate(
+            HermeneuticGateContext.model_validate(gate_context_data)
+        )
+        gate_decision = gate_decision_model.model_dump(mode="json")
+        if not gate_decision_model.authorized:
+            raise PermissionError(
+                "The canonical always-open Inner Sanctum could not initialize: "
+                + " ".join(gate_decision_model.reasons)
+            )
+        gate_authorized = True
+        reasoning_techniques = taxonomy_components
+        inner_sanctum_status = "ALWAYS_OPEN"
+    else:
+        if supplied_gate_context is not None:
+            if not isinstance(supplied_gate_context, dict):
+                raise ValueError("inner_sanctum_gate_context must be an object")
+            gate_decision_model = evaluate_inner_sanctum_gate(
+                HermeneuticGateContext.model_validate(supplied_gate_context)
+            )
+            gate_decision = gate_decision_model.model_dump(mode="json")
+        gate_authorized = bool(gate_decision and gate_decision["authorized"])
+        if declared_focus_technique_ids and not gate_authorized:
+            raise PermissionError(
+                "Historical Inner Sanctum techniques were requested while the recorded gate is closed"
+            )
+        if gate_authorized and not declared_focus_technique_ids:
+            raise ValueError(
+                "A historical authorized Inner Sanctum inquiry must name at least one Taxonomy technique"
+            )
+        focus_ids = set(declared_focus_technique_ids)
+        reasoning_techniques = [
+            component
+            for component in taxonomy_components
+            if component.component_id in focus_ids
+        ]
+        inner_sanctum_status = "LEGACY_GATED"
+'''
+          if old not in text:
+              raise SystemExit('CLI gate block not found')
+          text = text.replace(old, new, 1)
+          old_call = '''            inner_sanctum_authorized=True,
+            permitted_taxonomy_techniques=taxonomy_components,
+'''
+          new_call = '''            inner_sanctum_authorized=gate_authorized,
+            inner_sanctum_status=inner_sanctum_status,
+            permitted_taxonomy_techniques=reasoning_techniques,
+'''
+          if old_call not in text:
+              raise SystemExit('CLI executor call not found')
+          cli.write_text(text.replace(old_call, new_call, 1), encoding='utf-8')
+
+          test = Path('inquiry_engine/tests/integration/test_strauss_taxonomy_native_admission.py')
+          text = test.read_text(encoding='utf-8')
+          text = text.replace(
+              'CERTIFIED_FOR_BOUNDED_INVESTIGATIVE_SCOPE_UPON_OWNER_MERGE',
+              'CERTIFIED_FOR_ALWAYS_AVAILABLE_BOUNDED_ANALYTICAL_SCOPE_UPON_OWNER_MERGE',
+              1,
+          )
+          text = text.replace(
+              'AUTHORIZED_ONLY_WHEN_PINNED_BY_MAN-000000001_AFTER_OWNER_MERGE',
+              'AUTHORIZED_WHEN_PINNED_BY_MAN-000000002_AFTER_OWNER_MERGE',
+              1,
+          )
+          test.write_text(text, encoding='utf-8')
+
+          Path('.github/workflows/inquiry-engine-ci.yml').write_text('''name: Inquiry Engine CI
+
+on:
+  pull_request:
+    paths:
+      - "amendments/**"
+      - "candidates/**"
+      - "engine_training/**"
+      - "governance/**"
+      - "inquiry_engine/**"
+      - "ledgers/**"
+      - "manifests/**"
+      - "records/**"
+      - "registers/**"
+      - "specifications/**"
+      - ".github/workflows/inquiry-engine-ci.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "amendments/**"
+      - "candidates/**"
+      - "engine_training/**"
+      - "governance/**"
+      - "inquiry_engine/**"
+      - "ledgers/**"
+      - "manifests/**"
+      - "records/**"
+      - "registers/**"
+      - "specifications/**"
+      - ".github/workflows/inquiry-engine-ci.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Python 3.12 full suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          # Released Cognitive Memory Manifests pin governed source commits.
+          # Full history lets CI prove that each pinned commit remains an
+          # ancestor of the release instead of accepting a severing squash.
+          fetch-depth: 0
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: inquiry_engine/pyproject.toml
+
+      - name: Install Inquiry Engine
+        run: python -m pip install -e './inquiry_engine[dev]'
+
+      - name: Run complete Inquiry Engine test suite
+        run: python -m pytest -q inquiry_engine/tests
+''', encoding='utf-8')
+
+          Path('.github/workflows/apply-inner-sanctum-reproducibility-patch.yml').unlink()
+          PY
+
+      - name: Commit corrected package
+        shell: bash
+        run: |
+          git config user.name "custos-repository-agent"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git commit -m "Complete versioned always-open runtime correction"
+          git push origin HEAD:agent/inner-sanctum-always-open
