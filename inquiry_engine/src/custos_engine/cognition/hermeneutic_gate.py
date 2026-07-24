@@ -7,17 +7,20 @@ from custos_engine.models.base import InquiryState, StrictModel
 
 CANONICAL_PROCEDURE_ID = "IAR-000000001"
 CANONICAL_TAXONOMY_ID = "HOC-000000001"
-CANONICAL_MANIFEST_IDS = frozenset({"MAN-000000001", "MAN-000000002"})
+LEGACY_MANIFEST_ID = "MAN-000000001"
+ALWAYS_OPEN_MANIFEST_ID = "MAN-000000002"
+LEGACY_AUTHORIZED_STATES = frozenset(
+    {
+        InquiryState.ADVERSARIAL_TESTING,
+        InquiryState.PROGRESSIVE_DISCLOSURE,
+        InquiryState.SYNTHESIS_LIMITATION,
+        InquiryState.CERTIFICATION_PREPARATION,
+    }
+)
 
 
 class HermeneuticGateContext(StrictModel):
-    """Auditable binding for the always-open Inner Sanctum.
-
-    The procedural evidence fields are retained for backward-compatible inquiry
-    records. They govern whether a named Taxonomy component is evidentially
-    triggered; they no longer govern whether the Taxonomy is available to text
-    analysis.
-    """
+    """Auditable binding for versioned Inner-Sanctum operation."""
 
     procedure_id: str = Field(pattern=r"^IAR-[0-9]{9}$")
     taxonomy_id: str = Field(pattern=r"^HOC-[0-9]{9}$")
@@ -46,19 +49,15 @@ EPISTEMIC_LIMIT = (
     "alternative, and disqualifier rules are satisfied and preserved."
 )
 
+LEGACY_EPISTEMIC_LIMIT = (
+    "Historical MAN-000000001 authorizes only a bounded investigation of a named "
+    "literary mechanism after its phase gate. It does not establish concealment, "
+    "hidden teaching, authorial intention, intended audience, or doctrinal truth."
+)
 
-def evaluate_inner_sanctum_gate(
-    context: HermeneuticGateContext,
-) -> HermeneuticGateDecision:
-    """Confirm the canonical binding through which the always-open Sanctum runs.
 
-    This function retains the historical ``gate`` API so existing inquiry records
-    remain readable. Under the corrected constitution, phase completion and the
-    presence of a prior documentary difficulty never close the Inner Sanctum.
-    """
-
+def _canonical_binding_failures(context: HermeneuticGateContext) -> list[str]:
     failures: list[str] = []
-
     if context.procedure_id != CANONICAL_PROCEDURE_ID:
         failures.append(
             f"The canonical inquiry procedure {CANONICAL_PROCEDURE_ID} is not selected."
@@ -67,12 +66,64 @@ def evaluate_inner_sanctum_gate(
         failures.append(
             f"The canonical Inner Sanctum {CANONICAL_TAXONOMY_ID} is not selected."
         )
-    if context.cognitive_memory_manifest_id not in CANONICAL_MANIFEST_IDS:
-        failures.append(
-            "A released Cognitive Memory Manifest authorizing the canonical pair "
-            "is not selected."
-        )
+    return failures
 
+
+def _evaluate_legacy_gate(
+    context: HermeneuticGateContext,
+) -> HermeneuticGateDecision:
+    failures = _canonical_binding_failures(context)
+    if context.current_state not in LEGACY_AUTHORIZED_STATES:
+        failures.append(
+            "The historical inquiry has not reached a phase eligible for "
+            "Inner-Sanctum invocation."
+        )
+    if not set(range(1, 8)).issubset(context.completed_phase_numbers):
+        failures.append("Historical Outer-Process phases 1 through 7 are not complete.")
+    if not context.documentary_difficulty_identified:
+        failures.append("No genuine documentary difficulty has been identified.")
+    if not context.historical_admissibility_established:
+        failures.append("Historical admissibility has not been established.")
+    if not context.authorial_authorization_established:
+        failures.append("Authorial authorization has not been established.")
+    if not context.ordinary_explanations_considered:
+        failures.append("Ordinary explanations have not been considered.")
+    if not context.evidence_record_ids:
+        failures.append("No auditable evidence record supports the historical gate request.")
+
+    if failures:
+        return HermeneuticGateDecision(
+            authorized=False,
+            reasons=failures,
+            epistemic_limit=LEGACY_EPISTEMIC_LIMIT,
+        )
+    return HermeneuticGateDecision(
+        authorized=True,
+        reasons=[
+            "Historical MAN-000000001 reached adversarial testing or later.",
+            "The predecessor gate evidence is complete and auditable.",
+        ],
+        epistemic_limit=LEGACY_EPISTEMIC_LIMIT,
+    )
+
+
+def evaluate_inner_sanctum_gate(
+    context: HermeneuticGateContext,
+) -> HermeneuticGateDecision:
+    """Evaluate the manifest-pinned constitution without rewriting history.
+
+    MAN-000000001 remains reproducibly gated. MAN-000000002 and its successors
+    establish the always-open Inner Sanctum as the active text-analysis design.
+    """
+
+    if context.cognitive_memory_manifest_id == LEGACY_MANIFEST_ID:
+        return _evaluate_legacy_gate(context)
+
+    failures = _canonical_binding_failures(context)
+    if context.cognitive_memory_manifest_id != ALWAYS_OPEN_MANIFEST_ID:
+        failures.append(
+            "The always-open Cognitive Memory Manifest MAN-000000002 is not selected."
+        )
     if failures:
         return HermeneuticGateDecision(
             authorized=False,
@@ -83,7 +134,7 @@ def evaluate_inner_sanctum_gate(
     return HermeneuticGateDecision(
         authorized=True,
         reasons=[
-            "The canonical inquiry procedure, Taxonomy, and released Manifest are selected.",
+            "The canonical inquiry procedure, Taxonomy, and always-open Manifest are selected.",
             "The Inner Sanctum is constitutionally open from documentary intake "
             "through synthesis and limitation.",
             "Individual Taxonomy components remain evidence-governed and may return "
@@ -97,5 +148,6 @@ def require_inner_sanctum_access(context: HermeneuticGateContext) -> None:
     decision = evaluate_inner_sanctum_gate(context)
     if not decision.authorized:
         raise PermissionError(
-            "Inner Sanctum initialization failed: " + " ".join(decision.reasons)
+            "Inner Sanctum initialization or historical gate failed: "
+            + " ".join(decision.reasons)
         )

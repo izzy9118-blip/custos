@@ -19,7 +19,7 @@ def _context(**changes) -> HermeneuticGateContext:
     return HermeneuticGateContext(**values)
 
 
-def test_inner_sanctum_is_open_at_documentary_intake():
+def test_inner_sanctum_is_open_at_documentary_intake_under_successor_manifest():
     decision = evaluate_inner_sanctum_gate(_context())
     assert decision.authorized is True
     assert any("open from documentary intake" in reason for reason in decision.reasons)
@@ -40,27 +40,41 @@ def test_inner_sanctum_is_open_at_documentary_intake():
         {"current_state": InquiryState.SYNTHESIS_LIMITATION},
     ],
 )
-def test_procedural_thresholds_do_not_close_the_inner_sanctum(changes):
+def test_successor_procedural_thresholds_do_not_close_the_inner_sanctum(changes):
     assert evaluate_inner_sanctum_gate(_context(**changes)).authorized is True
 
 
 @pytest.mark.parametrize(
     ("changes", "expected_reason"),
     [
-        ({"cognitive_memory_manifest_id": "MAN-999999999"}, "released Cognitive Memory Manifest"),
+        ({"cognitive_memory_manifest_id": "MAN-999999999"}, "MAN-000000002"),
         ({"procedure_id": "IAR-999999999"}, "IAR-000000001"),
         ({"taxonomy_id": "HOC-999999999"}, "HOC-000000001"),
     ],
 )
-def test_invalid_canonical_binding_fails_initialization(changes, expected_reason):
+def test_invalid_successor_binding_fails_initialization(changes, expected_reason):
     decision = evaluate_inner_sanctum_gate(_context(**changes))
     assert decision.authorized is False
     assert any(expected_reason in reason for reason in decision.reasons)
-    with pytest.raises(PermissionError, match="initialization failed"):
+    with pytest.raises(PermissionError, match="failed"):
         require_inner_sanctum_access(_context(**changes))
 
 
-def test_predecessor_manifest_remains_readable_under_versioned_runtime():
-    assert evaluate_inner_sanctum_gate(
+def test_predecessor_manifest_remains_reproducibly_gated():
+    closed = evaluate_inner_sanctum_gate(
         _context(cognitive_memory_manifest_id="MAN-000000001")
-    ).authorized
+    )
+    assert closed.authorized is False
+    opened = evaluate_inner_sanctum_gate(
+        _context(
+            cognitive_memory_manifest_id="MAN-000000001",
+            current_state=InquiryState.ADVERSARIAL_TESTING,
+            completed_phase_numbers=list(range(1, 8)),
+            documentary_difficulty_identified=True,
+            historical_admissibility_established=True,
+            authorial_authorization_established=True,
+            ordinary_explanations_considered=True,
+            evidence_record_ids=["EVR-000000001"],
+        )
+    )
+    assert opened.authorized is True
