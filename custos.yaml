@@ -1,8 +1,8 @@
-version: 1
+version: 2
 instructions: CUSTOS.md
 reading_protocol: protocol/reading.yaml
 literary_techniques: protocol/literary-techniques.yaml
-active_inquiry: inquiries/thoughts-on-machiavelli/chapter-01-note-01
+inquiries_root: inquiries
 sources_root: sources
 runs_root: runs
 integrations:
