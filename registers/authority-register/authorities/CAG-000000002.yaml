@@ -1,0 +1,25 @@
+id: "CAG-000000002"
+class: "Collective Agent"
+authority_role_label: "Identifier Governance Authority"
+version: "1.0"
+lifecycle_status:
+  label: "ACTIVE"
+  controlled_vocabulary_status: "PENDING_REGISTRATION"
+effective_date: "2026-07-14"
+responsibilities:
+  - "Determine identifier families."
+  - "Determine identifier allocation rules."
+  - "Allocate canonical identifiers under approved families."
+limitations:
+  - "May not redefine ontology classes."
+  - "May not redefine predicate semantics."
+  - "May not create controlled vocabulary families without formal amendment."
+governing_specifications:
+  - document_number: "000001"
+    section: "VI. GOVERNANCE JURISDICTION"
+  - document_number: "000002"
+    section: "IX. GOVERNANCE JURISDICTION"
+related_authorities:
+  - "CAG-000000001"
+  - "CAG-000000003"
+  - "CAG-000000004"
