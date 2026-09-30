@@ -1,14 +1,29 @@
-version: 1
+version: 2
 inquiry_id: TM-CH01-N01
 state: active
 stage: comparative_return
 evidence_status: partial
 current_judgment_status: supported_inference
-next_action: Verify the Italian beginnings of Prince chapters 1, 2, and 8 and test
-  the present reading against the full context of chapter 8.
+last_updated: '2026-09-30'
+last_completed_act:
+  status: CLOSE_READING_ACT_COMPLETE
+  mode: close
+  execution: conversational_reasoning
+  scope: Test note 1 against English Prince I–II and VIII–IX and Strauss’s opening argument on printed
+    pp. 15–17.
+  examination: inquiry.md
+  completion_limit: This bounded English-language act is complete; it does not certify the whole inquiry
+    or complete later notes.
+next_action: 'Proceed to Strauss’s next bounded question on printed p. 16: why Discourses on Livy rather
+  than De Republica? Recover the complete notes 2–3 and their cited passages, then test the proposed ancient/modern
+  explanation.'
 blocked_by: []
+verification_policy:
+  italian: deferred_at_user_direction
+  blocks_progress: false
 open_uncertainties:
-- Primary-language verification
-- Whether chapter 8 merely corroborates or materially complicates the republic–principality
-  division
-- Whether the wider chapter 8 context changes the function of Strauss’s citation sequence
+- Exact Italian wording and translation equivalence were not examined and do not block continuation.
+- The precise antecedent of one of them in the chapter VIII opening is not resolved here.
+- Strauss’s selection of chapter VIII does not by itself establish an intention to encode a concealed
+  qualification.
+- Page-image verification and the independent Discourses evidence needed for subsequent acts remain outstanding.

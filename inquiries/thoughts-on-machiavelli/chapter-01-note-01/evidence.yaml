@@ -1,4 +1,4 @@
-version: 1
+version: 2
 inquiry_id: TM-CH01-N01
 evidence:
 - id: E1
@@ -20,6 +20,80 @@ evidence:
   - visibly corrupted OCR
   - normalized readings are editorial recoveries
   - Italian verification unresolved
+- id: E3
+  role: cited_author_context
+  path: sources/machiavelli/the-prince/chapters-01-02-ricci-vincent-ocr.txt
+  sha256: af56c74254280b5b923aaa14cb6bb41151fa8f904157123eb52aad16943b45cc
+  status: fixed_diplomatic_excerpt
+  scope: Complete chapters I and II as transmitted in the supplied Ricci/Vincent English OCR.
+  provenance:
+    original_uploaded_filename: the prince ricci clean.txt
+    library_file_id: libfile_7a906625128c819194ee2f6bf5880e67
+    source_sha256: 472c4ad8e0025747af4f4a783823080679a5fead7d6f47882dd012a59ddb89c6
+    source_lines_inclusive:
+    - 76
+    - 85
+    source_byte_range_utf8_half_open:
+    - 9084
+    - 11391
+    extraction: Exact UTF-8 byte slice of the user-supplied transcription; no normalization or emendation.
+  limitations:
+  - OCR-derived transcription; spacing, line breaks, stray marks, and disordered words preserved.
+  - No new page-image or primary-language verification.
+- id: E4
+  role: cited_author_context
+  path: sources/machiavelli/the-prince/chapters-08-09-ricci-vincent-ocr.txt
+  sha256: adbe265af0c315bbb227fe6864537d22715bdbeba394c37ae2cdc2f6ce09fafb
+  status: fixed_diplomatic_excerpt
+  scope: Complete chapters VIII and IX as transmitted in the supplied Ricci/Vincent English OCR.
+  provenance:
+    original_uploaded_filename: the prince ricci clean.txt
+    library_file_id: libfile_7a906625128c819194ee2f6bf5880e67
+    source_sha256: 472c4ad8e0025747af4f4a783823080679a5fead7d6f47882dd012a59ddb89c6
+    source_lines_inclusive:
+    - 128
+    - 151
+    source_byte_range_utf8_half_open:
+    - 56650
+    - 72009
+    extraction: Exact UTF-8 byte slice of the user-supplied transcription; no normalization or emendation.
+  limitations:
+  - OCR-derived transcription; spacing, line breaks, stray marks, and disordered words preserved.
+  - No new page-image or primary-language verification.
+- id: E5
+  role: primary_strauss_context
+  path: sources/strauss/thoughts-on-machiavelli/chapter-01-opening-pp15-17-ocr.txt
+  sha256: 59eb095282e11d67962fcdc446e2c8bc0a412d4e918345e6c7b9191932334797
+  status: fixed_diplomatic_excerpt
+  scope: Chapter I, printed pp. 15–17, from the chapter opening through the paragraph ending with the
+    Epistles Dedicatory of his other works. The rest of printed p. 17 is outside this excerpt.
+  provenance:
+    original_uploaded_filename: Strauss Thoughts on Machiavelli Part1.txt
+    library_file_id: libfile_e4e678e489048191b33ea657260a5e07
+    source_sha256: 183a0f82c38f4d221c19904ea2015bdaef36700ef1aaac5c4366cdff19061711
+    source_lines_inclusive:
+    - 365
+    - 475
+    source_byte_range_utf8_half_open:
+    - 15751
+    - 21202
+    extraction: Exact UTF-8 byte slice of the user-supplied transcription; no normalization or emendation.
+  limitations:
+  - OCR-derived transcription; spacing, line breaks, stray marks, and disordered words preserved.
+  - No new page-image or primary-language verification.
 missing_evidence:
-- Fixed primary-language Italian witness for chapter 1, 2, and 8 beginnings
-- Stable page-image verification of Strauss passage and note
+- Italian wording remains unverified; expressly deferred by the user and nonblocking for this English-language
+  act.
+- Stable page-image verification of the Strauss passage and note remains outstanding.
+- The complete note 1 is carried forward from E1 and its repository provenance; the supplied Part1 transcription
+  fixes the main-text note marker but does not independently supply the endnote.
+- The Discourses dedication and other Discourses passages discussed by Strauss on pp. 16–17 were not independently
+  recovered in this act.
+verification_scope:
+  recorded_on: '2026-09-30'
+  user_direction: Let us resume this work. Don’t worry about italian verification
+  working_language: English
+  italian_verification: deferred_at_user_direction
+  blocks_current_act: false
+  rule: Retain translation and OCR limits; neither claim Italian verification nor make it the next required
+    act.
