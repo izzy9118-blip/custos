@@ -81,14 +81,93 @@ evidence:
   limitations:
   - OCR-derived transcription; spacing, line breaks, stray marks, and disordered words preserved.
   - No new page-image or primary-language verification.
+- id: E6
+  role: primary_strauss_note
+  path: sources/strauss/thoughts-on-machiavelli/chapter-01-note-01-epub-ocr.txt
+  sha256: b3f96fc6bf193ebdb1634e5e75fb266a21bc291c239bd223f8523b6f46652d4a
+  status: fixed_extracted_ocr
+  scope: Complete Chapter I, note 1, printed p. 301.
+  provenance:
+    original_uploaded_filename: LEO STRAUSS - THOUGHTS ON MACHIAVELLI [1958] 2.epub
+    library_file_id: libfile_4e4f66c1f6948191b5ed4b95beedf2ff
+    source_sha256: ad83aa71f41a44d7372b43081066d99177a8e7d07d14eff808670da2912bfb42
+    epub_member: EPUB/page_288.html
+    epub_member_sha256: d3a05aab85c579a459cbe99fb5b8d4898c433c54fd147ff6e15001b0d670cf10
+    extraction: Parse HTML with lxml, remove head/style/script, join stripped text nodes in document order
+      with one space. Retain the slice from Chapter I through note 1, ending before 2. Discourses; append
+      a terminal newline. No lexical repair.
+  limitations:
+  - OCR extraction; original page image and exact typography not verified.
+  - Recovery from a newly supplied file does not establish an independent edition.
+  related_source_check:
+    epub_member: EPUB/page_13.html
+    printed_page: 16
+    epub_member_sha256: 621f3cfeb107aec77dd26d405672b07aa194d2226bed3e9133f287646f66c918
+    extracted_text: »16
+    finding: The supplied EPUB omits the body text of printed p. 16. E5 supplies the surrounding argument
+      from the earlier TXT.
+- id: E7
+  role: cited_author_context
+  path: sources/machiavelli/the-prince/chapters-01-02-08-ricci-vincent-epub-ocr.txt
+  sha256: cab1a3900e2b3f3199d85c7f76b4a5f88c04c4fba85741c44b3c8d15218985ec
+  status: fixed_extracted_ocr
+  scope: Complete Prince I, II, and VIII in the supplied Ricci translation revised by E. R. P. Vincent;
+    printed pp. 3, 4, 36–41.
+  provenance:
+    original_uploaded_filename: prince01mach_1.epub
+    library_file_id: libfile_4a5a2ba6922c819183a7cb6049a759c3
+    source_sha256: 5bfbccca54aa8d1ef4e95c02509c56cc4e2a1e5ecde3ea1183c04c2b96c590c6
+    epub_members:
+    - member: EPUB/page_19.html
+      printed_page: 3
+      sha256: dcd5dc03057bbd27ab092bb59c5e85367f0265b19f208dcc62af194eaf01a995
+    - member: EPUB/page_20.html
+      printed_page: 4
+      sha256: 512d34698d5ac341ad0dad48adbee8ae639fe4390cae93cd102787775ab26609
+    - member: EPUB/page_52.html
+      printed_page: 36
+      sha256: 32834cf83fc3c3bbae27b6426318519e56c4909e11f22f42ad5675033d76a886
+    - member: EPUB/page_53.html
+      printed_page: 37
+      sha256: 289c01d6cb0d23483d465ee09c1095462f83ca903d6c84f4656d8cbc371a9144
+    - member: EPUB/page_54.html
+      printed_page: 38
+      sha256: ec13b668d49d9f56c6669b5a52cc5949b1cc08d7b99c634b3a544f3a44d1bc73
+    - member: EPUB/page_55.html
+      printed_page: 39
+      sha256: b4d07db7cb83ac29812ddfac28de235b4613c6a1658bdbdfbf00ec61fb3ba65f
+    - member: EPUB/page_56.html
+      printed_page: 40
+      sha256: 842b9f34ab936991cebe3e1616452c27d3987f75c6098b8c9afb3ccc78f166fe
+    - member: EPUB/page_57.html
+      printed_page: 41
+      sha256: f0956b8cf673ada1ba8f65a90b7f70469ad00924209ed2d5fc1ba5f3b11d860c
+    extraction: Parse each HTML page with lxml, remove head/style/script, join stripped text nodes in
+      document order with one space. Preserve OCR words and marks. Insert the clearly marked member/page
+      labels and blank lines; no lexical repair.
+  limitations:
+  - English translation with OCR corruption; no Italian or page-image verification.
+  - The TXT and EPUB use the same Ricci/Vincent translation and are not treated as independent edition-level
+    verification.
+  editorial_recoveries_in_inquiry_only:
+  - location: Prince I opening
+    transmitted: ',L states'
+    reading: All states
+    basis: Evident corruption of the opening word; not verified against a page image.
+  - location: Prince II opening
+    transmitted: Rwill deal only with monarchies, and will^discuss how the various kinds described above
+      cap be governed and maintained.
+    reading: I will deal only with monarchies, and will discuss how the various kinds described above
+      can be governed and maintained.
+    basis: Evident OCR letter and stray-mark errors; the saved source remains unaltered.
 missing_evidence:
-- Italian wording remains unverified; expressly deferred by the user and nonblocking for this English-language
-  act.
-- Stable page-image verification of the Strauss passage and note remains outstanding.
-- The complete note 1 is carried forward from E1 and its repository provenance; the supplied Part1 transcription
-  fixes the main-text note marker but does not independently supply the endnote.
-- The Discourses dedication and other Discourses passages discussed by Strauss on pp. 16–17 were not independently
-  recovered in this act.
+- Italian wording remains unverified, expressly deferred by the user and nonblocking for finalization
+  of this English-language act.
+- Stable page-image verification of the passages and note remains outstanding.
+- The supplied Strauss EPUB lacks the body of printed p. 16; E5 supplies that text. Note 1 is now directly
+  recovered in E6.
+- The Discourses and its dedication have not been independently reconstructed in this act; statements
+  about them in E5 remain attributed to Strauss.
 verification_scope:
   recorded_on: '2026-09-30'
   user_direction: Let us resume this work. Don’t worry about italian verification
@@ -97,3 +176,4 @@ verification_scope:
   blocks_current_act: false
   rule: Retain translation and OCR limits; neither claim Italian verification nor make it the next required
     act.
+  blocks_finalization: false

@@ -1,102 +1,135 @@
 # Thoughts on Machiavelli — Chapter I, note 1
 
-- **Inquiry ID:** `TM-CH01-N01`
-- **State:** active; a further bounded reading act completed
-- **Current stage:** comparative return
-- **Evidence:** partial, English witnesses
-- **Last examination:** 2026-09-30
+- **Inquiry ID:** TM-CH01-N01
+- **State:** current findings finalized at the user's request
+- **Current stage:** preservation
+- **Evidence:** bounded English witnesses; Italian verification deferred
+- **Recorded on:** 2026-09-30
+- **Leading interpretation:** working hypothesis WH-01, grounded in the documented findings below
 
-## Scope and evidence
+## Scope and user direction
 
-The user directed: “Let us resume this work. Don’t worry about italian verification”. Italian verification is deferred and does not block this act or the next one. Translation and OCR limitations remain recorded; no Italian verification is claimed.
+The unit is Strauss's Chapter I, note 1: the sentence it annotates, the beginnings of Prince I, II, and VIII, and the immediate context needed to understand their relation. This is not a sequential commentary on The Prince or a completed reading of either whole book. The earlier conversational excursion into Prince III is outside the present findings.
 
-The question is what note 1 establishes about the relation between *The Prince* and the *Discourses*, particularly why Strauss cites chapter 8 alongside chapters 1 and 2. This act reads *Prince* I–II and VIII–IX and Strauss’s opening argument on printed pp. 15–17. Chapter IX is immediate context for the second mode announced in VIII; it is not an additional target in Strauss’s note.
+The user directed a slow reading of one note, recovery and independent reading of its cited passages, and a comparative return to Strauss, with attention to possible esoteric significance. Italian verification was expressly deferred and does not block finalization.
 
-The complete note remains the wording preserved in E1:
+After the comparative synthesis, the user stated:
+
+> I believe that the notes are meant to point to the idea that Machiavelli does discuss republics but pretends not to
+
+The assistant developed this as a working interpretation. When the assistant proposed a further inquiry into what VIII could teach a defender of republican freedom, the user declined that extension and requested finalization in Custos's format. That proposed extension has not been performed. The user’s interpretation is preserved as WH-01; its attribution does not turn authorial intention into a documented fact.
+
+## Documentary chain
+
+The evidence manifest fixes paths, hashes, extraction procedures, locations, and limitations.
+
+| Evidence | Function in this record |
+|---|---|
+| E1–E2 | Earlier registered Strauss excerpt and Machiavelli beginnings, with their inherited provenance and editorial recoveries retained. |
+| E3 | Complete Prince I–II in the supplied Ricci/Vincent TXT. |
+| E4 | Complete Prince VIII–IX in that TXT. IX is adjacent context previously examined, not a fourth citation in note 1 or an independent basis for the finalized interpretation. |
+| E5 | Strauss's opening argument on printed pp. 15–17, through the paragraph concerning the other dedicatory epistles. |
+| E6 | Note 1 recovered directly from the newly supplied Strauss EPUB, printed p. 301, EPUB/page_288.html. |
+| E7 | Prince I, II, and VIII in the newly supplied Ricci/Vincent EPUB: printed pp. 3, 4, and 36–41. |
+
+E6 independently supplies the note within the newly uploaded file; this is recovery from an additional supplied witness, not verification against an independent edition. The Strauss EPUB has only the page-number text for printed p. 16 in EPUB/page_13.html. E5 supplies that page's argument. No text has been invented to fill the EPUB gap.
+
+Source files preserve the transmitted OCR before editorial repair. Quotations below normalize whitespace and repair the evident OCR corruption in the first word of Prince I and the opening of II. The manifest specifies those repairs. Ricci/Vincent's “monarchies” and Strauss's “principalities” remain their respective wording; no argument about concealment rests on this translation difference.
+
+## 1. Encounter Strauss
+
+**Documented finding DF-01 — E5, pp. 15–16.** Strauss's opening problem is the relation between Machiavelli's two books. He first assembles a plausible division by subject: The Prince concerns principalities and the Discourses concerns republics. The passage carrying note 1 reads:
+
+> Above all, Machiavelli says explicitly that in the Prince he will deal solely with principalities and will not discuss republics there since he has done so elsewhere at length.
+
+The complete note is:
 
 > Prince chs. 1 beginning, 2 beginning and 8 beginning.
 
-The currently supplied Strauss Part1 witness independently supplies the main passage and its note marker, but not the endnote itself. Its wording is inherited from the earlier inquiry, with that provenance retained.
+**Supported inference SI-01.** Strauss's sentence reports Machiavelli's explicit announcement. It does not by itself assert that the entire book contains no republican material. The difference between a writer's announcement and the performance of his work is therefore part of the problem to investigate.
 
-See [evidence.yaml](evidence.yaml) for exact paths, hashes, original upload identifiers, and extraction ranges.
+**Comparative question CQ-01.** Why does Strauss direct the reader to all three beginnings, including VIII, when II already contains the express exclusion and reference to previous treatment?
 
-| Evidence | Scope |
-|---|---|
-| E1 | Previously fixed Strauss passage and complete note 1. |
-| E2 | Previously fixed Prince I, II, and VIII beginnings, with declared editorial recoveries. |
-| E3 | Exact supplied OCR of complete Prince I–II. |
-| E4 | Exact supplied OCR of complete Prince VIII–IX. |
-| E5 | Exact supplied Strauss OCR: chapter opening on printed p. 15 through the paragraph about his other works’ dedicatory epistles on p. 17. |
+## 2. Reconstruct Machiavelli independently
 
-The new excerpts preserve the OCR without alteration. Prose below paraphrases recoverable passages unless quotation marks indicate quotation. Joining line-end words in Strauss is typographic normalization, not evidence about original typography. Ricci/Vincent’s “monarchies” and Strauss’s “principalities” are retained as their respective wording; technical equivalence is not independently established.
+**Documented finding DF-02 — E3 and E7, Prince I.** The opening divides states into republics and monarchies, then develops the monarchical branch. Among acquired dominions it includes those formerly free. The chapter supplies a classification of regimes and acquisitions; it does not itself assign every political subject exclusively to one of two books.
 
-The judgments below belong to the assistant. The user authorized continuation and the verification scope; the user has not endorsed an interpretation.
+**Documented finding DF-03 — E3 and E7, Prince II.** Machiavelli announces:
 
-## Encounter Strauss
+> I will not here speak of republics, having already treated of them fully in another place.
 
-**Documented finding DF-01 — E5, p. 15.** Strauss first compares Machiavelli’s two books with Plato’s and Hobbes’s multiple presentations of political teaching. In the latter cases hierarchy or successive exposition clarifies the relationship. Machiavelli’s case remains obscure. The question is how the two books relate, not simply whether two forms of government differ.
+He turns to how monarchies can be governed and maintained. The earlier treatment is unnamed here. Strauss's subsequent identification with the Discourses is not a title supplied by this cited sentence.
 
-**Documented finding DF-02 — E1 and E5, pp. 15–16.** Strauss assembles the opening classification, title, dedication, and chapter headings, then adds “Above all” before Machiavelli’s express declaration of scope. The proposed division between the books “seems reasonable”.
+**Documented finding DF-04 — E4 and E7, Prince VIII beginning.** Machiavelli introduces two further ways of becoming prince:
 
-**Supported inference SI-01.** “Above all” gives special evidentiary weight to the author’s express declaration within this opening argument. It does not certify that the division finally explains the books. The tentative conclusion and the subsequent explicit qualifications distinguish a warranted starting account from a sufficient final account.
+> But as there are still two ways of becoming prince which cannot be attributed entirely either to fortune or to ability, they must not be passed over, although one of them could be more fully discussed if we were treating of republics.
 
-The earlier assumption that chapter 2’s sufficiency necessarily makes chapter 8 noncorroborative requires correction. Multiple citations can support different elements of a compound claim or demonstrate that a declared scope persists. Inclusion of a third passage alone does not establish hidden intention.
+These are acquisition through villainy and acquisition through fellow citizens' favour. The opening proceeds to the former, offering an ancient and a modern example. The phrase “one of them” is not resolved to a particular mode in these findings.
 
-## Reconstruct Machiavelli independently
+**Documented finding DF-05 — E4 and E7, Prince VIII context.** In Machiavelli's account, Agathocles turns constitutionally conferred office into personal dominion. He assembles the people and senate under the appearance of deliberating republican business, then has the senators and wealthiest citizens killed. Oliverotto's account likewise describes the destruction of civic liberty and the establishment of personal rule. These findings concern the narrated text, not independent historical verification.
 
-**Documented finding DF-03 — E2–E3, Prince I–II.** Chapter I divides states into republics and monarchies, then differentiates monarchies and their acquisition. It already includes acquired dominions that had previously been free. Chapter II expressly sets republics aside because they have been treated elsewhere, and turns to governing and maintaining monarchies.
+The chapter continues with the security of such rulers, the handling of cruelty, and their relations with subjects. It also distinguishes obtaining power from obtaining glory. Its declared inquiry into becoming and remaining prince remains intelligible in its own terms.
 
-**Documented finding DF-04 — E2 and E4, Prince VIII opening.** Chapter VIII introduces two further modes of becoming prince: criminal acquisition and acquisition through fellow citizens’ favour. It says one could receive fuller discussion in a treatment of republics, then proceeds with the first mode. Unlike chapter II, VIII does not itself state that republics have already been treated elsewhere.
+**Supported inference SI-02.** VIII discusses republican offices, civic life, and the loss of liberty in explaining princely acquisition. Its political material extends into the republican setting even while the discussion is presented as concerning princes.
 
-**Documented finding DF-05 — E4, Prince VIII.** Agathocles converts constitutionally obtained office into personal rule, using a supposed deliberation on republican business to assemble and kill senators and wealthy citizens. Oliverotto gains assistance from citizens described as preferring servitude to their country’s liberty, kills leading men, and coerces the magistracy into a government with himself as prince. These are Machiavelli’s narrated examples; their historical accuracy is not independently verified here.
+**Supported inference SI-03.** The same account of Agathocles can make a republic's vulnerability intelligible to a reader concerned with its preservation. That possible use follows from the described mechanism of its overthrow. An intended second audience, a hidden program of republican defense, and Machiavelli's political allegiance do not follow automatically. A further investigation of that possibility was proposed but declined for this act.
 
-The chapter then asks how such rulers remain secure, distinguishes the handling of cruelties, turns to benefits for subjects, and ends with the prince’s conduct toward them. Its distinction between gaining power and gaining glory also remains visible. This reading does not reduce the chapter to an unqualified recommendation of effective violence.
+## 3. Return comparatively to Strauss
 
-**Supported inference SI-02.** Explaining princely acquisition can require discussion of republican offices, civic liberty, and their overthrow. Such overlap does not make the forms of government identical. It shows why a declared focus on princes need not exclude republican material. The movement from acquisition to maintenance keeps these examples within the princely problem announced in II.
+**Supported inference SI-04 — grounded in DF-02–DF-04.**
 
-**Documented finding DF-06 — E4, Prince IX.** The next chapter takes up becoming prince through fellow citizens’ favour. It examines the conflicting desires of the people and the great, different political outcomes of civic conflict, the prince’s dependence on support, and the role of magistrates when a civic ruler seeks absolute authority.
-
-**Supported inference SI-03.** The beginning of VIII introduces material developed across VIII–IX. Its republican qualification cannot simply be assumed to describe only the criminal example immediately following it. Conversely, this act does not decide which mode “one of them” specifically identifies. The argument about overlapping material does not depend on resolving that antecedent.
-
-## Return to Strauss
-
-| Citation | Documented content | Narrow contribution to the opening case |
+| Citation | Direct contribution | Pressure on a strict separation |
 |---|---|---|
-| Prince I, beginning | Classification of states into republics and monarchies. | Supplies the basic division presupposed by the account of two books. |
-| Prince II, beginning | Express exclusion and reference to previous treatment elsewhere. | Most directly supports the sentence carrying note 1. |
-| Prince VIII, beginning | Later reminder of scope while announcing material that could receive fuller republican treatment. | Confirms the continuing declared focus and makes overlapping material available for examination. |
+| I, beginning | Supplies the division between republics and monarchies. | A division between kinds of government does not establish separate bodies of political knowledge. |
+| II, beginning | Supplies the explicit exclusion and reference to earlier treatment. | It establishes what Machiavelli announces, which must still be compared with what he discusses. |
+| VIII, beginning | Repeats the posture of not treating republics. | “More fully discussed” places material being discussed here in relation to a fuller republican treatment; “must not be passed over” makes its inclusion necessary to the present inquiry. |
 
-The final column is **supported inference SI-04**, grounded in DF-03–DF-06. VIII does not independently prove the existence or identity of the earlier work mentioned in II. The three citations support different elements of Strauss’s paragraph.
+VIII thus sustains the announced boundary through “if we were treating of republics” while making its completeness questionable through “more fully discussed”. The source offers both aspects together.
 
-**Documented finding DF-07 — E5, pp. 16–17.** Strauss explicitly qualifies the subject-matter division. He says that the *Discourses* treats both republics and principalities and that *The Prince* abounds in references to republics. He rejects reducing the difficulty to which subject each book treats chiefly. He proposes a difference in point of view, then examines a possible whole–part relationship.
+**Documented finding DF-06 — E5, p. 16.** Strauss subsequently states:
 
-**Documented finding DF-08 — E5, p. 17.** Strauss returns to the dedicatory epistles and argues that each book claims to contain everything Machiavelli knows. This further challenges simple partition or subordination. This finding documents Strauss’s argument; the *Discourses* dedication has not been independently recovered and examined in this act.
+> As for the Prince, it abounds with references to republics.
 
-**Strongest present reading — supported inference SI-05.** Note 1 immediately corroborates a plausible initial account through Machiavelli’s declarations. Reading VIII in context shows that its announced focus coexists with discussion of republican life. Strauss’s following paragraphs openly develop the inadequacy of a simple division of subject matter. The sequence makes both the initial account and its later qualification intelligible. It does not establish that Strauss concealed the qualification in the note.
+He also says that describing the books as chiefly about principalities and chiefly about republics obscures the difficulty. These are Strauss's own explicit qualifications of the initial division; they were not independently inferred from an absent EPUB page.
 
-The decisive distinction is between **a book’s declared focus** and **the political material it must discuss**. Establishing the former does not establish mutually exclusive subject matter for the two books.
+**Supported inference SI-05.** Strauss's argument moves from a reasonable initial division toward questioning its adequacy. A reader who follows note 1 encounters material that complicates the division within the references offered in its support. Confirmation and an invitation to reconsider can operate together.
 
-## Strongest alternative and test
+## 4. Finalized interpretation and strongest alternative
 
-The strongest ordinary alternative is that VIII is cited only as another explicit confirmation that *The Prince* is not presented as a treatise on republics. That explains its immediate evidentiary function and remains viable. Its limitation arises if it is enlarged into the claim that the opening division completely explains the books. That larger claim cannot account for the republican material in VIII–IX or Strauss’s express qualification on pp. 16–17.
+**Working hypothesis WH-01 — user-originated; developed in the comparative reading.**
 
-Confirmation and complication need not be mutually exclusive. This act distinguishes what the citation directly confirms from what examination of its context reveals. Strauss’s exact reason for selecting this particular corroborative passage remains an interpretive question; no concealed intention is required for the present result.
+> Machiavelli discusses republics while presenting himself as not doing so; Strauss's note directs the attentive reader toward that discrepancy.
 
-## Literary attention and revision
+On this reading, the announced exclusion is itself part of Machiavelli's manner of writing. Teaching about republican political life can be conveyed within an expressly princely subject. Strauss's selection of VIII can then function as an indirect invitation to compare the announcement with the actual discussion.
 
-| Technique | Current result | Evidence and limit |
+The evidence supporting this hypothesis is specific: II's explicit disclaimer; VIII's conditional repetition of the disclaimer together with “more fully”; the republican material in VIII's examples; and Strauss's own subsequent acknowledgment of that material. “Pretends not to” names the proposed deliberate literary strategy. It is retained as the user's interpretation and the inquiry's leading working hypothesis, rather than silently replaced by a purely accidental overlap.
+
+**Working hypothesis WH-02 — strongest serious alternative.** Machiavelli's disclaimer concerns a sustained treatment of republics as the book's principal subject. A work directed toward princes can openly discuss republican circumstances relevant to their acquisition and maintenance of power. Strauss may cite VIII simply to corroborate that continuing declared scope, then explicitly qualify the initial division in the main text.
+
+**Supported inference SI-06 — comparative assessment.** WH-02 accounts for the explicit wording and the continued princely purpose of VIII. WH-01 gives greater interpretive weight to the renewed disclaimer at the very point where republican material enters and to Strauss's choice of that passage as a supporting reference. The local record supports preserving WH-01 as a serious reading; it does not settle the deliberate intention of either author. The presence of the ordinary alternative is neither a refutation of the esoteric possibility nor evidence for it.
+
+**Comparative question CQ-02, retained without extending this act.** Does the distinction between republics and principalities adequately divide the political knowledge needed to understand them?
+
+## 5. Literary attention
+
+These results apply the existing inventory's specific mechanisms; they do not reduce the interpretation to technique labels.
+
+| Technique | Result | Fixed trigger and limit |
 |---|---|---|
-| LC-017 — Beginnings of chapters | **observed**, revised from eligible | Strauss explicitly names beginnings. The source-derived mechanism concerns indirect hints in initial words; citation of beginnings alone does not establish it. |
-| LC-016 — Repetition as leitmotif | **incomplete** | The subject recurs, but these are not four repetitions of an express quotation of the kind described by the source-derived rule. |
-| LC-004 — Minute addition or omission | **observed**, mechanism unestablished | II and VIII formulate scope differently. An apparent repetition producing contradiction through a minute alteration has not been demonstrated. |
-| Other techniques | **not_evaluated** | No additional bounded trigger is established; ordinary explanation suffices. |
+| LC-017 — Beginnings of chapters | observed | Strauss expressly directs attention to three beginnings. A hint carried by an initial word or phrase, as specified in the source-derived mechanism, has not separately been established. |
+| LC-003 — Contradiction of implications | incomplete | The relation between excluding republics and including republican material is under examination. Its force depends on the meaning of “discuss”; a strict logical contradiction is not yet fixed. |
+| LC-004 — Apparent repetition with minute addition or omission | observed | II and VIII renew the scope declaration in different formulations, especially “more fully”. They are not established as a repeated statement altered by one minute change producing contradiction. |
+| LC-007 — Two-faced speech | incomplete | The possible princely and republican uses of VIII motivate the hypothesis; the source-defined audience structure has not been demonstrated. |
+| LC-020 — Hint | incomplete | The selection of VIII may direct an attentive reader toward the discrepancy. Corroboration remains a serious alternative explanation of that selection. |
+| LC-016 — Repetition as leitmotif | incomplete | The earlier evaluation is retained: the cited passages do not establish the source-described fourfold repetition of an express quotation. |
+| Other techniques | not_evaluated | No further technique claim is made in this bounded record. |
 
-The previous formulation, “architectonic rather than merely confirmatory”, is replaced by the differentiated account above. It opposed functions that can coexist and gave too little weight to ordinary corroboration. The prior LC-017 eligibility exceeded the evidence for the specific mechanism. Git preserves those previous judgments. The evidence and attributed user direction are unchanged.
+## 6. Limits, revision, and completion
 
-## Uncertainty and continuation
+**Unresolved uncertainties U-01–U-04.** Italian wording and translation equivalence remain unchecked at the user's direction; the antecedent of “one of them” remains open; deliberate intention and audience differentiation remain interpretive questions; and page-image verification and an independent reconstruction of the Discourses have not been performed. These limits do not block finalization of the current findings.
 
-No new hypothesis about hidden teaching is proposed. Remaining uncertainties concern exact Italian wording and translation equivalence; the antecedent of “one of them”; the intention behind Strauss’s selection; and page-image and independent-source verification. Italian checking is expressly nonblocking.
+This record supersedes the earlier assistant-only interpretation, its statement that no concealment hypothesis was proposed, and its instruction to advance immediately to notes 2–3. It records the user's subsequent interpretation and correction of the drift into sequential Prince commentary. Git retains the earlier record. No old source excerpt is altered.
 
-This act is `CLOSE_READING_ACT_COMPLETE`: a substantive bounded English examination conducted conversationally. This does not claim that `custos read` was invoked, that the entire inquiry is finally settled, or that later notes have been analyzed. The inquiry remains active with a supported inference.
+**Completion:** CLOSE_READING_ACT_COMPLETE. The present findings are finalized in Custos's preservation stage at the user's request. This records a conversational reading act; it does not claim that the custos read command was executed or that authorial intention has been proved.
 
-**Next textual act:** examine Strauss’s next question on printed p. 16: why *Discourses on Livy* rather than a *De Republica*? Recover complete notes 2–3 and their cited passages, then test the proposed ancient/modern explanation. Existing English witnesses remain usable; only missing documentary material needs to be supplied or recovered.
+**Continuation:** no additional analysis is initiated. If the user elects to continue in order, the next bounded act is to fix Chapter I, note 2, its attached Strauss passage, and its cited sources as a separate inquiry. Reopening note 1 also remains possible at the user's direction. Neither step has been started here.

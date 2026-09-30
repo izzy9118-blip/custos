@@ -1,29 +1,51 @@
 version: 2
 inquiry_id: TM-CH01-N01
-state: active
-stage: comparative_return
+state: finalized
+stage: preserve
 evidence_status: partial
-current_judgment_status: supported_inference
+current_judgment_status: working_hypothesis
 last_updated: '2026-09-30'
 last_completed_act:
   status: CLOSE_READING_ACT_COMPLETE
   mode: close
   execution: conversational_reasoning
-  scope: Test note 1 against English Prince I–II and VIII–IX and Strauss’s opening argument on printed
-    pp. 15–17.
+  scope: 'Finalize Chapter I, note 1: compare the Prince I, II, and VIII beginnings and relevant VIII
+    context with Strauss’s opening argument; preserve the user’s deliberate-concealment interpretation
+    and the serious alternative.'
   examination: inquiry.md
-  completion_limit: This bounded English-language act is complete; it does not certify the whole inquiry
-    or complete later notes.
-next_action: 'Proceed to Strauss’s next bounded question on printed p. 16: why Discourses on Livy rather
-  than De Republica? Recover the complete notes 2–3 and their cited passages, then test the proposed ancient/modern
-  explanation.'
+  completion_limit: The current bounded findings are finalized at the user’s request. Deliberate intention
+    remains a working hypothesis. No full-book reading, further republican-defense investigation, or subsequent
+    note is claimed complete.
+leading_interpretation:
+  id: WH-01
+  classification: working_hypothesis
+  origin: explicit_user_interpretation
+  statement: Machiavelli discusses republics while presenting himself as not doing so; Strauss’s note
+    directs the attentive reader toward that discrepancy.
+  supported_by:
+  - DF-03
+  - DF-04
+  - DF-05
+  - DF-06
+  - SI-02
+  - SI-05
+  alternative: WH-02
+finalization:
+  requested_by: user
+  request: No. Thats good let’s finalize our findings in the formate of the custos
+  user_interpretation: I believe that the notes are meant to point to the idea that Machiavelli does discuss
+    republics but pretends not to
+  further_analysis: not_initiated
+next_action: Await the user’s choice of a next bounded act. If continuing in order, fix Chapter I, note
+  2, its attached passage and cited sources as a separate inquiry; no subsequent note has been begun.
+  Note 1 can also be reopened at the user’s direction.
 blocked_by: []
 verification_policy:
   italian: deferred_at_user_direction
   blocks_progress: false
+  blocks_finalization: false
 open_uncertainties:
-- Exact Italian wording and translation equivalence were not examined and do not block continuation.
-- The precise antecedent of one of them in the chapter VIII opening is not resolved here.
-- Strauss’s selection of chapter VIII does not by itself establish an intention to encode a concealed
-  qualification.
-- Page-image verification and the independent Discourses evidence needed for subsequent acts remain outstanding.
+- Exact Italian wording and translation equivalence remain unexamined and nonblocking.
+- The antecedent of one of them in the chapter VIII opening is unresolved.
+- The deliberate intention of Machiavelli or Strauss and an intended second audience remain hypotheses.
+- Page-image verification and independent Discourses reconstruction have not been performed.

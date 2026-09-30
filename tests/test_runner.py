@@ -5,6 +5,7 @@ import sys
 
 import pytest
 
+from custos.config import load_yaml
 from custos.runner import (
     ReaderReasonerRequired,
     build_reader_request,
@@ -28,7 +29,8 @@ def test_close_request_is_self_contained():
     assert request["reader_mode"] == "close"
     assert request["gates"]["outer"]["protocol"]["literary_attention"]["always_open"] is True
     assert len(request["gates"]["inner"]["taxonomy"]["techniques"]) == 22
-    assert request["input"]["status"]["stage"] == "comparative_return"
+    expected_status = load_yaml(root() / inquiry_path() / "status.yaml")
+    assert request["input"]["status"] == expected_status
 
 
 def test_sweep_request_accepts_an_explicit_source(tmp_path):
