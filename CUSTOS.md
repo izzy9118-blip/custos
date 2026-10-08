@@ -164,6 +164,13 @@ attribute a judgment to the user unless the user explicitly made it.
 
 ## 10. Execution contract
 
+`custos context` exposes the full active instructions, configuration, outer protocol,
+and inner literary inventory to external harnesses through `custos.reader-context.v1`.
+Every Reader request includes the governing instruction text and authority-document
+hashes. Loading context selects no source or inquiry and claims no completed analysis.
+The Strauss harness consumes this Reader; it does not replace these instructions with
+ministerial reporting rules. See `integrations/strauss/README.md`.
+
 `custos prepare` creates a Reader request package only. Its terminal status is
 `PREPARED_FOR_REASONER`. This is not analysis.
 

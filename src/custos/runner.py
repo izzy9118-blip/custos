@@ -8,8 +8,9 @@ import json
 import shlex
 import subprocess
 
-from .config import load_config, load_yaml
-from .validation import validate_inquiry, validate_repository
+from .config import load_yaml
+from .reader_context import build_reader_context, git_head
+from .validation import validate_inquiry
 
 
 READER_MODES = ("close", "sweep")
@@ -21,20 +22,6 @@ class ReaderError(RuntimeError):
 
 class ReaderReasonerRequired(ReaderError):
     pass
-
-
-def git_head(root: Path) -> str:
-    try:
-        result = subprocess.run(
-            ["git", "-C", str(root), "rev-parse", "HEAD"],
-            check=True,
-            capture_output=True,
-            text=True,
-            timeout=10,
-        )
-        return result.stdout.strip()
-    except Exception:
-        return "UNAVAILABLE"
 
 
 def _source_record(source: Path) -> dict[str, Any]:
@@ -108,11 +95,11 @@ def build_reader_request(
     if (source is None) == (inquiry is None):
         raise ValueError("Supply exactly one Reader input: --source or --inquiry")
 
-    validation = validate_repository(root, inquiry=inquiry)
-    config = load_config(root)
+    context = build_reader_context(root)
+    validation = context["validation"].copy()
+    if inquiry is not None:
+        validation["inquiry"] = validate_inquiry(root, inquiry)
     reader_input = _source_record(source) if source is not None else _inquiry_record(root, inquiry)  # type: ignore[arg-type]
-    protocol = load_yaml(root / config["reading_protocol"])
-    taxonomy = load_yaml(root / config["literary_techniques"])
 
     mode_instruction = (
         "Complete one slow, bounded textual act. Preserve the next act so the examination can continue with the user."
@@ -122,23 +109,14 @@ def build_reader_request(
 
     return {
         "contract": "custos.reader-request.v1",
-        "repository_commit": git_head(root),
-        "instructions_path": config["instructions"],
+        "repository": context["repository"],
+        "repository_commit": context["repository_commit"],
+        "instructions_path": context["instructions_path"],
+        "instructions": context["instructions"],
+        "authority_documents": context["authority_documents"],
         "reader_mode": mode,
         "mode_instruction": mode_instruction,
-        "gates": {
-            "outer": {
-                "name": "documentary inquiry sequence",
-                "source": config["reading_protocol"],
-                "protocol": protocol,
-            },
-            "inner": {
-                "name": "literary-technique discernment",
-                "source": config["literary_techniques"],
-                "taxonomy": taxonomy,
-                "rule": "Availability is not presence; evidence alone activates a technique evaluation.",
-            },
-        },
+        "gates": context["gates"],
         "input": reader_input,
         "validation": validation,
         "required_response": _required_response(mode),

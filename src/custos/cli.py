@@ -6,6 +6,7 @@ import argparse
 import json
 
 from .config import find_repo_root, load_config
+from .reader_context import build_reader_context
 from .runner import READER_MODES, execute_reader, prepare_reader, sanctum_report
 from .validation import validate_inquiry, validate_repository
 
@@ -22,6 +23,8 @@ def build_parser() -> argparse.ArgumentParser:
     parser = argparse.ArgumentParser(prog="custos")
     parser.add_argument("--repo-root")
     sub = parser.add_subparsers(dest="command", required=True)
+
+    sub.add_parser("context", help="Load the active Reader instructions and gates without selecting an inquiry")
 
     validate = sub.add_parser("validate")
     validate.add_argument("--inquiry")
@@ -52,6 +55,10 @@ def _reader_paths(args: argparse.Namespace) -> tuple[Path | None, Path | None]:
 def main() -> int:
     args = build_parser().parse_args()
     root = find_repo_root(Path(args.repo_root) if args.repo_root else None)
+
+    if args.command == "context":
+        print(json.dumps(build_reader_context(root), ensure_ascii=False, indent=2))
+        return 0
 
     if args.command == "validate":
         print(json.dumps(validate_repository(root, inquiry=args.inquiry), indent=2))

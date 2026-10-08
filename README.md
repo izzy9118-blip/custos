@@ -99,6 +99,7 @@ a bounded technique evaluation.
 ```bash
 python -m pip install -e '.[dev]'
 custos validate
+custos context
 custos validate --inquiry inquiries/thoughts-on-machiavelli/chapter-01-note-01
 custos show --inquiry inquiries/thoughts-on-machiavelli/chapter-01-note-01
 custos prepare --mode close --source path/to/witness.txt
@@ -106,6 +107,10 @@ custos read --mode close --source path/to/witness.txt --reasoner-command "..."
 custos read --mode sweep --source path/to/witness.txt --reasoner-command "..."
 pytest
 ```
+
+The [Strauss harness integration](integrations/strauss/README.md) exposes the complete
+Reader instructions and both gates through `custos context`. It allows Strauss to
+activate this Reader without maintaining a second copy of its methodology.
 
 Sanctum federation remains isolated under [`integrations/sanctum`](integrations/sanctum/README.md).
 It does not govern ordinary Custos reading. Its substantive Strauss Minister will be
